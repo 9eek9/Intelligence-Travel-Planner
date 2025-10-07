@@ -1,0 +1,210 @@
+{
+  "destination": "string",
+  "itinerary_text": "## London, Ontario Luxury Family Itinerary: 3 Days of Fun\n\nThis itinerary focuses on high-end experiences and kid-friendly activities in London, Ontario.  Private car service is assumed throughout.\n\n**Day 1: Parks & Pioneer Charm**\n\n* **Morning:** Begin your day with a private chauffeured tour of Springbank Park. Enjoy the expansive green spaces, perhaps renting a private boat for a leisurely paddle.  Kids will love the open areas for running and playing.\n* **Afternoon:** Immerse yourselves in history at Fanshawe Pioneer Village. This living history museum offers a captivating glimpse into 19th-century life, with interactive exhibits perfect for children.\n* **Evening:** Indulge in a delicious and family-friendly dinner at **Sinbad Restaurant**. Their diverse menu caters to various tastes.\n\n\n**Day 2: Victorian Elegance & Archaeological Wonders**\n\n* **Morning:** Start with a relaxing stroll through Victoria Park, enjoying the picturesque scenery and perhaps taking a ride on the carousel.\n* **Afternoon:** Delve into the fascinating world of Ontario's past at the Museum of Ontario Archaeology.  While the exhibits might be more engaging for older children, the interactive elements can still spark curiosity in younger ones.\n* **Evening:** Enjoy a sophisticated yet family-friendly Italian dinner at **Scaddabush Italian Kitchen & Bar London**. Their ambiance and menu are perfect for a celebratory meal.\n\n\n**Day 3: Relaxation & Culinary Delights**\n\n* **Morning:** Enjoy a leisurely morning at your luxury hotel, perhaps utilizing the spa facilities or indulging in a private breakfast.  This day is designed for flexibility, based on your family's preferences.\n* **Afternoon:** Depending on your family's preference, you could opt for shopping at a high-end boutique or exploring a local artisan market.\n* **Evening:** Conclude your London adventure with a delightful dinner at **Twin Dem Kitchen**. This restaurant offers a more relaxed atmosphere to unwind after your vacation.  Their menu is kid-friendly while offering unique options for adults.\n",
+  "plan_struct": [
+    {
+      "day": 1,
+      "attractions": [
+        {
+          "name": "Springbank Park",
+          "address": "1085 Commissioners Rd W, London, ON N6K 4Y6, Canada",
+          "lat": 42.9583691,
+          "lon": -81.3221983,
+          "rating": 4.7,
+          "user_ratings_total": 4950,
+          "price_level": null,
+          "types": [
+            "park",
+            "tourist_attraction",
+            "point_of_interest",
+            "establishment"
+          ]
+        },
+        {
+          "name": "Fanshawe Pioneer Village",
+          "address": "Spriet Family Visitor Centre, inside of, 1424 Clarke Rd, London, ON N5X 4A1, Canada",
+          "lat": 43.0553469,
+          "lon": -81.18170769999999,
+          "rating": 4.7,
+          "user_ratings_total": 825,
+          "price_level": null,
+          "types": [
+            "tourist_attraction",
+            "museum",
+            "point_of_interest",
+            "establishment"
+          ]
+        },
+        {
+          "name": "Westminster Ponds/Pond Mills Conservation Area",
+          "address": "696 Wellington Rd, London, ON N6C 4R2, Canada",
+          "lat": 42.9477273,
+          "lon": -81.2269331,
+          "rating": 4.6,
+          "user_ratings_total": 1096,
+          "price_level": null,
+          "types": [
+            "tourist_attraction",
+            "park",
+            "point_of_interest",
+            "establishment"
+          ]
+        },
+        {
+          "name": "Sifton Bog",
+          "address": "1210 Oxford St W, London, ON N6H 1V7, Canada",
+          "lat": 42.9742229,
+          "lon": -81.3238251,
+          "rating": 4.6,
+          "user_ratings_total": 734,
+          "price_level": null,
+          "types": [
+            "park",
+            "tourist_attraction",
+            "point_of_interest",
+            "establishment"
+          ]
+        }
+      ],
+      "restaurants": [
+        {
+          "name": "Sinbad Restaurant",
+          "address": "1286 Jalna Blvd Unit 1, London, ON N6E 2R6, Canada",
+          "lat": 42.925768,
+          "lon": -81.23173000000001,
+          "rating": 4.9,
+          "user_ratings_total": 1390,
+          "price_level": null,
+          "types": [
+            "restaurant",
+            "food",
+            "point_of_interest",
+            "establishment"
+          ]
+        },
+        {
+          "name": "Sagi",
+          "address": "175 Wortley Rd, London, ON N6C 3P6, Canada",
+          "lat": 42.9717282,
+          "lon": -81.2529475,
+          "rating": 4.9,
+          "user_ratings_total": 346,
+          "price_level": null,
+          "types": [
+            "restaurant",
+            "food",
+            "point_of_interest",
+            "establishment"
+          ]
+        }
+      ]
+    },
+    {
+      "day": 2,
+      "attractions": [
+        {
+          "name": "Victoria Park",
+          "address": "580 Clarence St, London, ON N6A 3N1, Canada",
+          "lat": 42.9892363,
+          "lon": -81.2484415,
+          "rating": 4.5,
+          "user_ratings_total": 6249,
+          "price_level": null,
+          "types": [
+            "park",
+            "tourist_attraction",
+            "point_of_interest",
+            "establishment"
+          ]
+        },
+        {
+          "name": "Museum of Ontario Archaeology",
+          "address": "1600 Attawandaron Rd, London, ON N6G 3M6, Canada",
+          "lat": 43.0135454,
+          "lon": -81.3057778,
+          "rating": 4.3,
+          "user_ratings_total": 272,
+          "price_level": null,
+          "types": [
+            "tourist_attraction",
+            "museum",
+            "point_of_interest",
+            "establishment"
+          ]
+        }
+      ],
+      "restaurants": [
+        {
+          "name": "Scaddabush Italian Kitchen & Bar London",
+          "address": "425 Southdale Rd W, London, ON N6K 3X4, Canada",
+          "lat": 42.9385069,
+          "lon": -81.2828467,
+          "rating": 4.8,
+          "user_ratings_total": 3473,
+          "price_level": 2,
+          "types": [
+            "bar",
+            "restaurant",
+            "food",
+            "store",
+            "point_of_interest",
+            "establishment"
+          ]
+        },
+        {
+          "name": "peppermoon restaurant & bar",
+          "address": "1100 Commissioners Rd E, London, ON N5Z 4W8, Canada",
+          "lat": 42.9624455,
+          "lon": -81.1987331,
+          "rating": 4.8,
+          "user_ratings_total": 503,
+          "price_level": null,
+          "types": [
+            "restaurant",
+            "night_club",
+            "bar",
+            "food",
+            "point_of_interest",
+            "establishment"
+          ]
+        }
+      ]
+    },
+    {
+      "day": 3,
+      "attractions": [],
+      "restaurants": [
+        {
+          "name": "Twin Dem Kitchen",
+          "address": "1286 Jalna Blvd #8, London, ON N6E 2R6, Canada",
+          "lat": 42.9254524,
+          "lon": -81.23164899999999,
+          "rating": 4.8,
+          "user_ratings_total": 90,
+          "price_level": null,
+          "types": [
+            "restaurant",
+            "food",
+            "point_of_interest",
+            "establishment"
+          ]
+        },
+        {
+          "name": "Spice 8 Srilankan Fusion Cuisine",
+          "address": "460 Berkshire Dr, London, ON N6J 3S1, Canada",
+          "lat": 42.9623281,
+          "lon": -81.2852949,
+          "rating": 4.8,
+          "user_ratings_total": 43,
+          "price_level": null,
+          "types": [
+            "restaurant",
+            "food",
+            "point_of_interest",
+            "establishment"
+          ]
+        }
+      ]
+    }
+  ]
+}
