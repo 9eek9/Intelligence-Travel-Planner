@@ -1,5 +1,5 @@
 from pydantic import BaseModel, Field
-from typing import List, Dict, Any
+from typing import List, Dict, Any, Optional
 
 # Request body model
 class ItineraryRequest(BaseModel):
@@ -7,6 +7,8 @@ class ItineraryRequest(BaseModel):
     days: int = Field(..., example=3)
     budget: int = Field(..., example=2, description="0=Free, 1=Inexpensive, 2=Moderate, 3=Expensive, 4=Luxury")
     kid_friendly: bool = Field(False, example=True)
+    travel_type: Optional[str] = Field(None, example="couple", description="solo | couple | family | friends")
+    activity_theme: Optional[str] = Field(None, example="adventure", description="relaxing | adventure | cultural | shopping")
 
 
 # One day of itinerary (nested inside response)

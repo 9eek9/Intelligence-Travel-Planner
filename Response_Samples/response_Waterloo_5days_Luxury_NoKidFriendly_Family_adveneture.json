@@ -1,0 +1,682 @@
+{
+  "destination": "Waterloo",
+  "days": 5,
+  "budget": 4,
+  "budget_label": "Luxury",
+  "budget_description": "luxury options including Michelin-starred restaurants, exclusive experiences, and luxury transport",
+  "kid_friendly": false,
+  "itinerary_text": "Welcome to Waterloo! Prepare for a luxurious 5-day adventure designed to immerse you in thrilling challenges, captivating nature, and exquisite dining experiences. This itinerary focuses on upscale activities and culinary delights, perfect for a discerning family seeking an adventurous escape without young children.\n\n---\n\n## **Waterloo Luxury Adventure: 5-Day Itinerary**\n\n**Accommodation Recommendation:** For a truly luxurious stay, consider the **Delta Hotels by Marriott Waterloo** or a high-end boutique hotel for personalized service and elegant amenities.\n\n### **Day 1: Enigmatic Challenges & Culinary Delights**\n\n*   **Morning (Outdoor Exploration): Huron Natural Area**\n    *   Begin your adventure with a refreshing immersion in nature at the **Huron Natural Area**. This expansive natural oasis offers miles of pristine trails for hiking, allowing you to connect with local wildlife and enjoy serene landscapes. It's an invigorating start to your trip.\n    *   *Price: Free entry*\n*   **Afternoon (Interactive Adventure): Escapology Escape Rooms Waterloo**\n    *   Dive into an exhilarating challenge at **Escapology Escape Rooms Waterloo**. Choose from a variety of themed rooms, each meticulously designed to test your problem-solving skills and teamwork. This luxury experience promises high-stakes fun and an adrenaline rush.\n    *   *Price: Luxury experience*\n*   **Evening (Refined Japanese Dining): Katsuya - Waterloo**\n    *   Savour an evening of exquisite Japanese cuisine at **Katsuya - Waterloo**. Known for its artfully prepared dishes and elegant ambiance, it offers a sophisticated dining experience to reflect on your day's triumphs.\n    *   *Price: Luxury dining*\n\n### **Day 2: Park Retreats & Upscale Socializing**\n\n*   **Morning (Mind-Bending Puzzles): Adventure Rooms Canada Escape Rooms KW**\n    *   Continue your quest for adventure at **Adventure Rooms Canada Escape Rooms KW**. Located in the historic Old Boehmer Box Factory, these escape rooms offer unique and complex puzzles, providing another thrilling luxury experience for your group.\n    *   *Price: Luxury experience*\n*   **Afternoon (Lakeside Serenity): Waterloo Park**\n    *   Unwind and enjoy the tranquil beauty of **Waterloo Park**. Stroll along the scenic paths, admire the public art, or simply relax by the lake. This urban oasis provides a perfect balance to your adventurous morning.\n    *   *Price: Free entry*\n*   **Evening (Contemporary Canadian Cuisine): Trio Restaurant**\n    *   Indulge in a sophisticated dinner at **Trio Restaurant**. With a reputation for modern Canadian cuisine and an intimate atmosphere, it's the ideal spot for a luxurious evening meal.\n    *   *Price: Luxury dining (price level 3)*\n\n### **Day 3: Earth's Wonders & Southern Flavors**\n\n*   **Morning (Geological Wonders): Earth Sciences Museum**\n    *   Embark on an intellectual adventure at the **Earth Sciences Museum**. Discover fascinating exhibits on dinosaurs, minerals, and the geological history of our planet. It's an educational and engaging experience for curious minds.\n    *   *Price: Free entry*\n*   **Afternoon (Nature's Embrace): Laurel Creek Conservation Area**\n    *   Explore the picturesque **Laurel Creek Conservation Area**. Offering hiking trails and scenic views, it’s a wonderful place for a leisurely walk or a more vigorous hike, providing a peaceful escape into nature.\n    *   *Price: Free entry (conservation area fee may apply, but not specified in data)*\n*   **Evening (Premium Steak & Seafood): Charcoal Steak House**\n    *   Treat yourselves to a classic, luxurious dining experience at the **Charcoal Steak House**. Renowned for its prime cuts and impeccable service, it promises a memorable meal in an elegant setting.\n    *   *Price: Luxury dining (price level 3)*\n\n### **Day 4: Heritage Journeys & Equestrian Elegance**\n\n*   **Morning (Horseback Riding Adventure): Conestogo River Horseback Adventures**\n    *   Experience the unique thrill of **Conestogo River Horseback Adventures**. Enjoy a guided ride through stunning landscapes, a truly memorable and luxurious way to connect with nature and local heritage.\n    *   *Price: Luxury experience*\n*   **Afternoon (Historic Train Ride & Pioneer Life): Waterloo Central Railway & Brubacher House**\n    *   Step back in time with a scenic journey on the **Waterloo Central Railway**. Experience the charm of vintage train travel through the countryside. Afterwards, visit the historic **Brubacher House**, a preserved Mennonite farmhouse offering insights into pioneer life (free entry).\n    *   *Price: Luxury experience (railway), Free entry (Brubacher House)*\n*   **Evening (Modern & Lively Dining): PUBLIC Kitchen & Bar**\n    *   Dine at **PUBLIC Kitchen & Bar**, a vibrant restaurant offering an innovative menu and a stylish ambiance. It’s the perfect setting for a lively and luxurious dinner.\n    *   *Price: Luxury dining (price level 3)*\n\n### **Day 5: Active Thrills & Urban Heritage**\n\n*   **Morning (Outdoor Fun): Chicopee Tube Park**\n    *   For an active and thrilling end to your adventure, head to **Chicopee Tube Park**. Depending on the season, enjoy exhilarating snow tubing or summer downhill activities. It’s a fun-filled luxury experience that will get your adrenaline pumping.\n    *   *Price: Luxury experience*\n*   **Afternoon (Local History & Culture): City of Waterloo Museum**\n    *   Delve into the rich history of Waterloo at the **City of Waterloo Museum**. Discover engaging exhibits that tell the story of the city and its people.\n    *   *Price: Free entry*\n*   **Evening (Trendy Farewell Dinner): Wildcraft Grill + Long Bar**\n    *   Conclude your Waterloo adventure with a farewell dinner at **Wildcraft Grill + Long Bar**. This upscale eatery is celebrated for its delicious grilled dishes and vibrant bar atmosphere, providing a fittingly luxurious end to your trip.\n    *   *Price: Luxury dining (price level 3)*\n\n---\n\nEnjoy your luxurious and adventurous journey through Waterloo!",
+  "plan_struct": [
+    {
+      "day": 1,
+      "attractions": [
+        {
+          "name": "TRAPPED KW - Escape Rooms & Events",
+          "address": "100 Lodge St, Waterloo, ON N2J 2V5, Canada",
+          "lat": 43.475853,
+          "lon": -80.5189699,
+          "rating": 5,
+          "user_ratings_total": 1106,
+          "price_level": null,
+          "types": [
+            "point_of_interest",
+            "establishment"
+          ],
+          "photo_urls": [
+            "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AciIO2d-5n6wj8WGIebtf-zW7VvtlTedtD6J617tXurjjFFD8X_NMHzrqMjlO8eHzbADGux36SfL7I2hgZcrIPpi9MNSOnEvgKTsUj4W64dVE2iqEN1Gp4jpKJ0pKpU8x9_0zfvQBmnlUJl_3h0mmm29kK6_DZ7WKAKi9N8o5VqGivKtdUxB46aueucPkL77X0KezsbIbMPsaq2vXZIulFZ4FSoLQ172hk4Ex8Qt2ieLCEgUAUf2FRMlY_rLK4qkq0ogUcM_uwyLixJbjmdT5OPvVrrD7O7VxBYRv0KtoFTP8T198esjpFsEVGg-Ey4vPsEH_M1ITqa_nEmJWvVsKsi_2vXA5ImC48Rm613V6BY3GAxQr3At9pfQoagJo680ali7oO17oiejoMt8Ur0uw-U91lnltJqwH6qMGJwyRWEaHfZxycw1iQ5UNAiFmeHNkYh9xvrWQ6EAUqJ5bQaV1YA2da-87V33414hE4U2XmskHDBkBjF7XPXxKCnlgdYOfH3QemqAPLRpavW91VpMrljwtYbtZjAvdcmMJAli8bZxUto1uftUCS0bKv8hz_MduKmZiUNChQY_&key=AIzaSyBp_fb7LJGpzvEvwEVVSy9-f3uqqftNWts",
+            "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AciIO2eVTfHVB3Og7_XnpvyJBrRxCDv6Iq2u-6CY2wQ8acXtRGdQJ97seQMWlbNmVz_pIVAkuG0dcRWjx0m5dTFUsFVqBCjzqQ5QKi0BVMrWWOFqXgEifIBOgHaYjCnkI26z73ITxPjiV8iGMH_IvOkDI3AoPHGG5rGv8YgHf_Nfh-RjpudSMcSh5CLN2GJCrxMTfLaxp9rsrfRbtTqj9ZUHQbibYybdWFheuTi3-D6iJXMVBmjMONUAmLWIX5qYI3UCqXnlWGvbFKfe5PMCe5p_LF5wxPIqhOkPEJkK8TMAWAFly670x-po749EhxfAjS-VTnMmRO9i18KQwZhw2YKXG1J6mmeKmRI_buc9LVth1xYlHHmWJR5StBmHqwn_epmdjb0pehI4N3ZNDKYa_rCVxl96YUkCidjy3TwC1_x3NhMlPDNd&key=AIzaSyBp_fb7LJGpzvEvwEVVSy9-f3uqqftNWts",
+            "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AciIO2fVOsjx7_I6u7-5K0nZY96PWq1zz6DBG3CYcdg_-vH4Y7aSXhaJRVTH3hGJ3pn2SQ9bex6sZ1H8Mng43c0cpzvrewXFkFbN5V3apY5PeATuXM_U_UVbxUFnm3AUwPpl6rOjwPrQPSH6yvDGZelxcK-8jQ7tjUekNU0rsW4j3OMLWf_uoPSCvQZD7O_MQnl8YXy_sVQHaEfM-dN3p7b8_gDRxbZbtPe3v07afxAamqBx_IunisQHjJG9aOz-I79mOvGpbdUKxVCsFru_VLJ4b1S-b1VxztGAEQ0kNnANjFZadA&key=AIzaSyBp_fb7LJGpzvEvwEVVSy9-f3uqqftNWts",
+            "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AciIO2fCR1ZC78OpODNsG5gWY9VDKJZGYt1NUwc4TaU_mtEJ-55mOtfWXHngVYcaOn596GmyiWep21JTTjRwws63wcSgS5UvzkuK-HZyLZk7qNbzpvs9O8S_EH46Q1FAtwiVGD2FTYqkgM2H86weqKTqOwlmeQk8UsSlsLDoMNkAGMNyVy7O7-DjmJw_DkbsJ8bjgj_8y7ZxrGJS9Bq1zmTacZfInzC7PXmNo_gXhoqs8CS86K7rvjKQgapIUgA9VmWrGSb-jFuTE87K37TWSa47QLS-A-Olz6dQFM0uSyVz5HSQqw&key=AIzaSyBp_fb7LJGpzvEvwEVVSy9-f3uqqftNWts",
+            "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AciIO2e6KRRwpC5FH62cgpbBHyj4jmOrg5hXIUbhEFc5UyXBHeZS2Jc7Fv8JFec9nvPM0k8rbtQ1iVEzISOciN104qayeB9AkP6zBDOS7afiH_tugrczYI0PeoHgKaEousDnDVfs79PrlZjWFutNf-Hew57kVGDJenAiO4uior87F2Bv33HxP_wuKIDTk8CzGAOHcz2FEAbdx39fDE4cAbRwMLvwUl-6WW2IRsTVNaVUSFcZtiLOgKtzzt4NMS_HByk9F_AdBqxH1jkhgpVWJv3fqdTErTbDxmTdfcz2vgF7529wOw&key=AIzaSyBp_fb7LJGpzvEvwEVVSy9-f3uqqftNWts",
+            "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AciIO2cmsVO7OT9tJZO9bCVdmSsFgVh7hXi23ywNyxxamY4n4O9wZXceFALucTK8c3HbNg4vBDQYRJ12yMoQlZw1Qw8HvxapWIxtmWu9Ei63haGwNlG4_b5Z6IyKh-ZwSA-k9gatT8HZei3G7Tgv4TQQWRFs0beo7Ri9CZIKO6aLs14BOeoXVXvLzfVYyJmhVlOhyROw1_QxwQaOddqcKObMLbmNlAi3MdTofP4cZhL8mt6dwtnKcGweHZUhTggiE0skYdMSOalF81w1aRzj4UM8i9vA2I_r_t5IiI5Qr2LG7xdKioYbLO_2c18TGDP6rZmxd2b0jqHGRHwJ5cxVSvTgbdaoMMTumMLfcwelll-IS1r4z_xT9c-2TP-94YxCwcO0f5M1ogxQSkypYeppSJatJN1GCJLY2cVP_cuisfhHqFt_hg&key=AIzaSyBp_fb7LJGpzvEvwEVVSy9-f3uqqftNWts"
+          ]
+        },
+        {
+          "name": "VR Escapism Waterloo - Escape Rooms & Arcades",
+          "address": "258 King St N, Waterloo, ON N2J 2Y9, Canada",
+          "lat": 43.47719439999999,
+          "lon": -80.5248908,
+          "rating": 5,
+          "user_ratings_total": 301,
+          "price_level": null,
+          "types": [
+            "point_of_interest",
+            "establishment"
+          ],
+          "photo_urls": [
+            "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AciIO2escgpxv0t_UwSBVfBA_NerfnTxMJTUAavIjGnyTtirns_4Qo3FJ2vAU3A3McRxKmkdGysT9eOSEbNbh5MlCtTcvVg6M0AlJnlldJZJbb5_DB77yufNV7js2O5CnNAbZL3S4llZUbUZl_Hp696-mRixflZSUl4Y-v-5MA1sevKwJp8dMZ7gjMqqjb7pqiFJop7lSPo_rleU77MeEqfgTR7q4vrAp7eVW1IjByLX9Aaxwfl6myRbvA_WE663503BWR0JQi3G5gOtPCsTMC_7iveOC3gPS8uO1ghfQmzv8wXabjWK2rG06Fthtt6zfBq78Jsarbko2QsJ305OefKa24v2fnaoCWJzerMXchlbK_FcB__hq0HSjj5drTnGaC5D7TADODQcqg22pj9wn1dNufGajmysDl1Mv6MVC3brZQmMDWgdN360TE85_ZoFsVNkyykagWa9jlsKvhl580Yd0miAtpahpPIYU4X3cptYLC15xfrXQGHcF6tZB_laQl1syvqT_G68KEo5Tfar8GE-j3qx_JkGjWmyxIKsRJGTDK4yu_jbwjULbeTCf6ymFeYUNqkpqI6X&key=AIzaSyBp_fb7LJGpzvEvwEVVSy9-f3uqqftNWts",
+            "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AciIO2dEqQFj0Ov4eDMoZQbBN0ka_LrJ5pUhhXBcEEReg0kvoa-mUuyIiqtG0R4gTmIk8O8h9r8Kk9OKRxabE9ODw3DnR-8lzdGm_MulaN6sSCVg6bLEHk0jsx8EZ33Fzr7XtvnQi7ujcIcjbRTtXVkZk6iPTqr7qQxGesDpZfujJ9KjwYHsSrTnQaMrbG8JpGanSiaRu8NZnSwOrFPG4eij5CggyFFf2Ku-EoJpDZWPFBL2DnODFGjL5dvb8uC54FGpMaXbbF4k0EzAb_Bbf-sYzvgxAyA0vd9NFcEaDX-Pb18h9Cct2FFWXcROhAg6mlUK3AJhejDK8kW3RAfWdb2zmShkavnwL_WEsgnqeBBTKz3-0Wekev1i0QuSturQUnDWjbz8sYB3akVRXmF6_LC3AypvOn0dTYj9DYgvwP4Lp_1yvA&key=AIzaSyBp_fb7LJGpzvEvwEVVSy9-f3uqqftNWts",
+            "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AciIO2eOvoirmX9c7Fm-hCgz-5PCGns2ZWd-HdHNCIakYcNAyPV34SRwF-5ROEygEtaBzk62goho_E1L699NfzmNYpjoAt3pQu8ec_zrNgGcx57_f1vNoyXo0v_H0lPtGHsxpKgNk1Mi0bDXcRPTj6IAQtikV50C2_kEz920NRO5Iu5cwNIBlWHtyt-4N3K6WaXnvW-BTG2RqfnE_3ygS9i7hotViccXj4L5m0JEYeLv230m7EZZ-11QLeJKU0cmti5MmWE7H7I0RBTHRclTx4LgCA-d5ME9lANOypl2bNC03WauRw&key=AIzaSyBp_fb7LJGpzvEvwEVVSy9-f3uqqftNWts",
+            "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AciIO2ctu4-U-qw7lTmOJJO7IMrQZQAmmcSpExL_1jGKbD9IsXBsHTBv9Y4qzbv-lbnUIp0NMt3U_o5XRmPmlnc9vavuItw-Evag2Utyqifi8QOd7K-jRiK1TyDZRNHfBmtergHhagqcLm5DOYc4IiqauS_WTnH--_iy133K7yBKzbDxOfnd_oHptz1pj1MHDNJUwqCdy9-9VKDoS_QIz6Xo7VpjLfIBJHSnEPW92olEyKGTQvF29UnwYmVe9BLksS1eG-OFI-WOGi1goiDSEiTwVNEWsOjduFcsxzJimfJgni6xrA&key=AIzaSyBp_fb7LJGpzvEvwEVVSy9-f3uqqftNWts",
+            "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AciIO2dGWYyrGs7tpDGoKCKLL14yj8kaDuISWNbOZ8uZxJqMosA4R8oOmhx4SjsgCEqATHsJ-JpftIBAcrRoFLcUdnC3keJqgX94o97IZ4wqDY84H8VTi455sou0jVT-G3sHnB-CT3FckuWroSE6wIDpMlR2eHE8zP2-Tv2PzXnkYkR-YBdQhDNJXH57I6E32s3xSAmI0a5pli0fI2BULEYL3vJTfPnmGnRQt3ACeocwEkINZfwKlx8mBemcdydmS1C8Rnjtvc3lO1NYykHeWp2F7QelMJxLLc8ctAWxCaAgoogvzg&key=AIzaSyBp_fb7LJGpzvEvwEVVSy9-f3uqqftNWts",
+            "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AciIO2cJQCOStrA4ELEXjZVizD3Kzuo2eKVPIFVB4QdduLRyhMdhWx1jxMdA7HBNYLB-kSqpRH_VW1BVlRbP3YqJRibfDdvRzMJPVmFVTtkRb0uRdY8Qt9JNXnytcRcZCQ4VUU27jWukk02Wokg8oVoESIyxqZmA83lW7hBAehS1A7dIg40GuqBAETFRg6USg1-1wtAErSD82dOJOi52URP6Di_7ASFsKeqblUDh3HAN6eFQwuA4Rrpk32ne__aPUOKY8HunbCCT5q5CcfwquCxg_lO5-rsS8woYHie-rZroWdAe0g&key=AIzaSyBp_fb7LJGpzvEvwEVVSy9-f3uqqftNWts"
+          ]
+        },
+        {
+          "name": "Escapology Escape Rooms Waterloo",
+          "address": "341 Marsland Dr, Waterloo, ON N2J 3Z2, Canada",
+          "lat": 43.4828039,
+          "lon": -80.5193054,
+          "rating": 4.9,
+          "user_ratings_total": 1635,
+          "price_level": null,
+          "types": [
+            "point_of_interest",
+            "establishment"
+          ],
+          "photo_urls": [
+            "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AciIO2cNTe4kW4yazjY9IgMV96OCk1UxEWgQFKJdGQCNWP6mInLp4h57ivbw7y7xO0livMwx-qcL1ypg-MdsuQZ_Ku8K-Cno7sgAMTbz4ewG-QVvVRbYSeX26EUZj32nG84gmyCmIl3Tjl9zKuqtnFY0iUgkzZKv-QiRuDcWfkfIFQhwZ3dszQ_eTDYT0H60_JIJSTya5pju4E_p9ULf8gXc-vc1vdlADMTPwKnP0coqHUb2nZiEUckQqwUMyAZRFkStR5o3OxtKNHIuniR83uzCca2hanWzCWO6Qmlk95bP4GIwb9AB9aU&key=AIzaSyBp_fb7LJGpzvEvwEVVSy9-f3uqqftNWts",
+            "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AciIO2evkYMkYxAE5Hov7jQfo3guUqnxcYb6WVC0mZ898gizN9G9386Xw6dAPcrKTl4N9d4IJsDneRSrDZxuYELfeOK11HXbCtJFmTSXUb4S4--n2Wb3ZPzlpOc0ICsqjCgh0CJf5XTS4x2fIu6TBdINOdlTckoOKHTf_0LgfNOGtQBQRj_FTvVQ1KrEehg3ggQWeDzJ65w-WYaAyF3XvRFSYLqeS-OqNZ9XiBce3r7OQDhAxwqc5X9vCffk57ao829gUGDxq4lVw2wMuJLHUoupzFUHgQQ_8YGsRIlQcitXIMI_RQ&key=AIzaSyBp_fb7LJGpzvEvwEVVSy9-f3uqqftNWts",
+            "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AciIO2daqFYPRu2EvwiqrG8lclYp-DkYGZsQAgJL685f5hjYCMIGauPwoNokBX8cz4jTvJznS9FJtluSlSNwZ14RHqeiWUec0iEC22iXtVrOtspdjYfd5NRVbREV8s5v4dpmFswvdJS8bho40d1corPw1RRE-lwGDrwRIBE3i6XqYlwY9L84aPHVi1RHiLnr4NNU3lQjJV-ccxeCs3VPb1nv4ueT-xmSD_FJUELu5sK-93vtHTX_42Pbf3X2EQtEz-AtYYSa91gIbN7n1ts-9i5ILIymFLCndZpxB6bZYBKcqsquxkDltBMNbWo4MLPnNC3Ru-HxXwVsmYYis5yPGqCtUYsBE6Cxy3lkwjuHNtZ7mR4I8LHMv11-ymAHoQi-pJYbZhF2zWTE_ZxsGDB7gkXLvhSrEkQiVeroAN2nMN15bVwHSA&key=AIzaSyBp_fb7LJGpzvEvwEVVSy9-f3uqqftNWts",
+            "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AciIO2e48hs6yLbKcWtm4HNBDLqfKvy4Ra-34dlGufb7BT2jObVo0IxVhZZ__8cOnge4TLOjVKlGjX8yAYbQvC8q6BLXvhs7_9kDavwACChndvaFlVnPu2J6rHRPzQDTIY_R5AKOoN8Ri_jwdZJOmw5gTtPQPykybiZIqYpMqCYGMfrWGYICea-FNCTYPz-G1YeVScTrj3_AlFT62SvKR1_zDku0y2UOhUSiQiBwWgKXKo0723TMr16pc-7Jn19w7e5gPzu3kt0dQ2pEdIyF9tA6WesoTn0Mcn0a4ns38Fo7Wsk_YpqHli17kWBfEM9-HTHgCGU1bpuzCLgbcEcMA9Q3r86xG6Apx8ZcKruAqrerzI3evPrTlFeoKmgLK_6Swe5H8a0z5dmlRXw_qiTRl5u3-bgl1vrAf7-84tCvo6fCfFJs6JUCkprvJ-PQ4as22g&key=AIzaSyBp_fb7LJGpzvEvwEVVSy9-f3uqqftNWts",
+            "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AciIO2fATNBGQFW-xuqJqwSjVtK1PmAZnr83P2XzQ5Phh21b5bLTx7jKnrIJZGS0hPqNesiiGcFT3SOBsVDZQD7XJy85lZqjrHqBWwZ5iHq1KQbI3fJYjJVsximorR3lZ3JUJcTCOkKiISLYHRt29XHoYZ6ARVVZpY0TDFzFu_SIvcl8JUW9oh3iabfF9Zoiyd7_P-YD2Saimd6YZucWJgQHwMWM6FjwEIK0nADrxh1VUk1IbVSD69gRa5sw6aYRId-D9vZbUk7T9op8gPdp0GD-VSaREyHX2B5QAOQKeg5y3uEW_g&key=AIzaSyBp_fb7LJGpzvEvwEVVSy9-f3uqqftNWts",
+            "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AciIO2dfWA89Ti5emumxaPtP5dYg9ub7t5PXSektocQCZ5YPqCf2mMt8MHPqsQt7ibvPjouhnw8mha1KlsWFVdpGhpllPQj1kRMb_IgoNyehu7z14TWX7tDq0LUEZmU88Ymh96T7u_KUUJJlSd9kEU3a7nI17A3im8hqyZ_j2_TRatB4bUWGJ7v0T0SRIXyFwgJneGFn6dKIdBgiYxy0g8i8Lwt9LtypFLYJU9mxN9nkuH3jHqpxJZNqbt4lMBR2hkI8LedJpXPeSWqnhias714D-vNU9UmuXi8ez_YOxnE1xcuqNMz280_cNZaqC1aeH0EW3gasHpeLw35JQygHB75SA1r1ByCC9pAAOXj7WvdtWHdOHnGrj-S5-LvWUq1e9OrdKLkRC5t9YcGVlRn3YKzcJj6LVxGhFEn6gwI9B0ZMeqW565glCuW1scyvySSBCLJw&key=AIzaSyBp_fb7LJGpzvEvwEVVSy9-f3uqqftNWts"
+          ]
+        },
+        {
+          "name": "Huron Natural Area",
+          "address": "801 Trillium Dr, Kitchener, ON N2R 1K4, Canada",
+          "lat": 43.3981265,
+          "lon": -80.48235989999999,
+          "rating": 4.8,
+          "user_ratings_total": 3214,
+          "price_level": null,
+          "types": [
+            "park",
+            "tourist_attraction",
+            "point_of_interest",
+            "establishment"
+          ],
+          "photo_urls": [
+            "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AciIO2cN5a7T9kXXQT-sTKwfeaDI5CnLoXlg9jy1diNiw95DsSLUumdTQ-dPZRTBpEG0ZKHvOS8aVuZ4j0rRXyxd1yGSiH8aVfHd3SjEHzWLLH-tJo9z_ySNaHQky7q9tetvN6viGS9vfvrRhxY_bqDjv8O0NMKEpNMsEnkLhRcbgeoGF009bt3sO9hSz3rwYmy48Qd_BHFOyyTiJFQNsO7Co1AD4TYQuOu1E6nH0IiTT8ZqMF9h5qHYmwBFioEXzD6huyec6LIQy2--kuBssqmLMeQgqk7PkoFQFoHgJACaAPstyjwyv4X4gNDdsx9_PN-ws8WIEujVqchsVM4sfMFvgLEjRr9LnPnS19p74Y0XR4jXFs25qf4luT1hN4r8H3f5imzi_tmYB8MLjf9PC4-mpLIiT963GLNaakJlGvCSGw9PX4801XgTAD7kkO1F0ghHVltkS3qbwqGJMIPcjK7t-jQjY7YTIvM8DgGvW_br-jdjmEyJNQDg8faxIgPHuyvC4m0gp8fAUeCfM-UwiUtSL6F1p-bYwYnUn-vVYKD3n0SHeYR8KuWd9cybVTYHTfstsLSBFkN048IGRw&key=AIzaSyBp_fb7LJGpzvEvwEVVSy9-f3uqqftNWts",
+            "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AciIO2eNAYCYK8XCEY06ZMslJhlIelJFUpDk2Zkxe92LpZ02iX2yEt_3OIIqSq9u3Cv0kN2aLCkhMQl2EKho34MC4UFVqLnYG_kwNLHhH0F2gnSVjpsIEJW4r1HD1uawvxYx4asd2NMFYdQStmi82h9L2f7cqeP6OYSgU8PGU1dfSstcBSi1iwCHKoZWc8K07IK6FW3wvydwhDhth9AfEqOZwJTFuG5PeOJB79fZAqgXrFcVVbW8X8tUN7NzugjzPI4kD-UfjWpVZvuvHCkx7PghwYiRea2XCAuwoIslqx794557fBQzSty01hU74JKdcOoHYfENBxf4dX9oIrnqy54el85cef1-z-G5jx8Hu3thPBn0-wfSOjayrjBlu3tuxy2sz4vtNg7euG91yYmtqx3aUwkLnxg4-sW1W075UaLiIOGqaw&key=AIzaSyBp_fb7LJGpzvEvwEVVSy9-f3uqqftNWts",
+            "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AciIO2frrPA3vVygA0zD8ifTO59cYE_r3fjXWdamD25hhUcff9AtNeqRYh-gYCWqLb8Ee91OWZgsnNUK6oSHNNePnWh6rklSNWcw2foWfLQh4SlaIM4001qIdNCaDRVi2DAYRO5x2vb42EVwGyi6huyNRrzdijBGjKFtGiFTmXU82Ridc5WlxNCmc6cVThw_ojVgFUO1BcNXyQV2nfi6dnn-7B1oH2fJyjAHdzpNz-UaM55gt5Mb7HOfe91eP5nYOAfpLGi7bKK3OXhJpf37x7p1f_4eLQp299_ONiX8h3v7GNL2L_irFCvR5nCbhh1rc0Ef2ypnlW_MZe_4IxEJ-sajMG-cP8ha07Bvl-1irvB-_SpVl3oF_GtRiahHhcb2_KU40GtLhumTgMN7xkn2weqTfIUETU68UfPhSEUUUqYrnkgsi_XxCrAFTB2KEMGOjcRq&key=AIzaSyBp_fb7LJGpzvEvwEVVSy9-f3uqqftNWts",
+            "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AciIO2dFD28ICXqT_dt9Eli1CM3EoGn0et2E4TJ52Jwn0QIn2SQNmJO6PPXcJIRryCUC-68CoW0GjxRHogtdvpf9e9ZG3OJeeLre5hIz18uLCguscoGy2wzOSU5A8VP10ifos-1eZkGwtRaxQJr3FuTxudGqfxJfeyfE6eVsQmbTWoAFBHtaobtVpRHP3nGxxWg5Afi8kM_da-d3-aJujQlnqm4LbqHYRIM5OFnk_HX-zL91_IxKtW955byXJQRcmFnvUHXOt1Os9fdSBMc-gsaJKZXkGVicI-6NP6xW13S2FtWIjvNii_qSv5fh43-VDLaFJO0h3HDJQSvLnQIhWgtJd2kp6FujvxtiGFjPKNTpqlqUv-1RqBFrpm22-HJyfskmQy_ADGd4mHosnGSrib2N92Vq2M1FzT0pgbYFvheIwpNh7Hk&key=AIzaSyBp_fb7LJGpzvEvwEVVSy9-f3uqqftNWts",
+            "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AciIO2eOYNw8uaLRj-58r2qYbSzPC9nk-WxGt55iDo73A2lXJM1DFJUzLyBpG8lwSGC2wS3o5g783hmd--chPfak9V86-YTZ0TDq21AvzmKq2zSmzU5uAIaWOkJ4b-Q4ysg6x45JOvm4kj7PCrvn3eiqu2GCQwEeheJJ7mxtg_lWMUSjCZNhisCEgbI_dQD_TIgoQ1Lk9EUFnrVf2GEYPWeIT1mX9iZ5oVRbGW_T5aZH342bSVABwsTLutArOFKbb3wO0_ZunmWed-X5KGBaAPxau_RfKV3oGduCfC5dWs1C4k6e5nZz-YvN9Ys1-tp2FnFik4hIlhLKBGZsQsTB0mqM71XgTmVy-XkGpfk-3cwzEcxbLaYOZlpm3khOvNplezOX8AgxC21wb2vmSj0H5yTFNMAirmfPJIt1OdBAaXO56iA&key=AIzaSyBp_fb7LJGpzvEvwEVVSy9-f3uqqftNWts",
+            "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AciIO2fEqLWN9Z6HOd71NJr6LCvp1R30vj3HZUATU9WtiCzpd1v-h9iVl42tCVJFXJtlJwrkMyO3kXYBqoPBdTut-AZn65C1fed71uOPtr3y8U2GqubAwpk-UNSUTfnz4wA7guBzHrxh1TFz_zi5MhXgFdGE_aELMaCF-dpFyZL5emlZIrVKnRg7DjK2fhfykoBYVPcfxbvyuxyd0FLg1pKxO01KhhgW-IGCaL6h7KcLu0i321HTVvx3p8Do0Kf37zU0y5VsOtX5wwX893zRK8x8hBKNoCyxE-T-OP7nZI33EFb6oQKdLAmllAqlDpFCESDtAtnbnc-UaX2n4AGiVemFPjES3tXYiMiytjo1IGWgvDtGD4hLf47aITGVZxE1Ki7ux_li2gj_2qw1c2rGvYskban99WNB0gqMURLzqHwXVGc&key=AIzaSyBp_fb7LJGpzvEvwEVVSy9-f3uqqftNWts"
+          ]
+        }
+      ],
+      "restaurants": [
+        {
+          "name": "Aqua Lounge & Restaurant",
+          "address": "105 King St E #1, Kitchener, ON N2G 2K8, Canada",
+          "lat": 43.4489024,
+          "lon": -80.4874419,
+          "rating": 4.8,
+          "user_ratings_total": 176,
+          "price_level": null,
+          "types": [
+            "restaurant",
+            "point_of_interest",
+            "food",
+            "establishment"
+          ],
+          "photo_urls": [
+            "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AciIO2e_ipS5kfbAOaFTPIK2cI2NhaW264qef0wRUV7y09-Srnjc7Gr2pEqhXBJ22IcoWuz6DT_1Z3b41c7tv3Fi9Dm7vskEcfgE91mWtI1wSkk92cS4NvE-oGYzacLVEjJNYOrKWb6WTleBu6N1nrorXV4jF6C0gkGRNFDdnHnzngtrDwWKARRhPsAAiZX87nxSEwnA8ryEtLYhSp0Dreh4wshcnowTmJxuj5iQLtRimOI0jPHnXDGF2PsD-WK0P5Kq9PburN3Tku2O5gYBq7eZbra-mjvGHawD2Z8jxcm_bIZt_tmLC34&key=AIzaSyBp_fb7LJGpzvEvwEVVSy9-f3uqqftNWts",
+            "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AciIO2ez0IWDZgSVTyyJOUacWrfLcDKH9Vh_1uQpbdjrgeZKGhHmU4plA6-ifsG_oYLTEyXUnA8fxD3sUrzi20KJFWNg4B64OVg62k97SzqA9DHSZNIXMQdly9hDK1s3CsiUSYVE34HqdG8QLboRBQ05dqrGY3g3xUcme_HbWsr-i57u4Ols8XVCdm1DkGQlhuEFwkO1zmbug_wKchjY3HQGROBn0s5K0oweYuW1SGLepMwUDPpQJ1zDCWBJ6X4WxVKm5ud1Ta7fe8v2tfky50lV7igXCp55Oyh3f6_E_Sg6gukLLg&key=AIzaSyBp_fb7LJGpzvEvwEVVSy9-f3uqqftNWts",
+            "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AciIO2f0q4nHdzWqlgPYHc5ENedkB7mzJq_WOSbfUmCG2hjBkTH0tkhxEYDE0488CA6LLfaYeeQHj-n6UwrBB67IaF0s8FSx0Fvv8c-K70KJ6ug0vruIqRwSofxfbE7Yc_vm5UL4G3SvCU09P6aJpMIJj5iiZXoU_B5KK89wEPESRmQ5kUxgDFG7nuWmrOEPWN2mxLXvInBeUscDAykT42nHHJUorrw71wT0Q2n3TD8M7bkPev1xT7_poeFDj1J2Q8jl41ctG_xX2WWOWJLk8BlZX78wQHVDBrSyaU-yVOQsFbhYkg&key=AIzaSyBp_fb7LJGpzvEvwEVVSy9-f3uqqftNWts",
+            "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AciIO2eZZfRvzezVn1ZJeaJfoIJErPFoi2UsZ6z4Ew1MvGZ04c06WIJ-xz-iQ9LB2t0_WgC5UIg2Z-rNo7seFweRm702cYNUz8WM1wahscGX1JqkjFk7UjSzcyG5vcPLRwPC9KifFkZqdSM6_6Cwnr7g6_TcF2dZzRLucFsDJ43H0H8CDy0QhlxTGmlQDxE4Phs2yp37jp2VssbYqBzTQTXAi4a9dGud9XAg-SWyAsgrmrskehja-4AfgmEY8o-DBGRHS2hxRszqY0Q9adeR568IlSsweqMHZmo6GMIZq-WREBiBKw&key=AIzaSyBp_fb7LJGpzvEvwEVVSy9-f3uqqftNWts",
+            "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AciIO2fHFliu59nsHC9H-mQXSikbn_iR0nkQlXhFDiPySLamuN2da61ukq5lM_QAgpaKW5zrt1BwxOF3v_kISWfvMn05IQfJEcAJ1-mbIGDqrRnNgvfzv2HqsSRaOCLBRm1C1WQDOBVvehxSQcmrsNN_3wk4Ajje4FsFn3m_3SZIRtxWso0QWxqc4DWCbYmKDjiHmQq9kmDj03RPVuDZ0FBz1nnaaWq7s88myoG-e8UXUKSm14mRmCBYORvBnvsnQ_fCN2_DWT3W6Np0NcwHQJ16ZX0-LYD60UxQUMMSbnHKzY_a2w&key=AIzaSyBp_fb7LJGpzvEvwEVVSy9-f3uqqftNWts",
+            "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AciIO2fqbZYwB2XYcbN_VlrxjmtauFBbeWfJvgK2qJFv_42itGfsXZCSPaXFrvuTf9jlra-CeSKV6Phj7W7B9jdhbPCNxxi4i_flck28UddUslEc7vb7yTEOzlaQd7mfLivwS-YZ-THPs3cvwygTKkuH53NLSj7axpBAhkhZIVIEfoHYkm7Ng46VJO0G7ASh9yK_YdS80QRy-8OQJcsRrm8NR7kui45KW-JIM8MD6_GO2J111qpP2m-4HvsyzuDurb5mukryEFaaGXJ91bsUPM7ENDr6otOWsc3Jmgq3Kj2DiJUjzg&key=AIzaSyBp_fb7LJGpzvEvwEVVSy9-f3uqqftNWts"
+          ]
+        },
+        {
+          "name": "Katsuya - Waterloo",
+          "address": "23 King St N, Waterloo, ON N2J 2W6, Canada",
+          "lat": 43.4657206,
+          "lon": -80.52280979999999,
+          "rating": 4.8,
+          "user_ratings_total": 66,
+          "price_level": null,
+          "types": [
+            "restaurant",
+            "point_of_interest",
+            "food",
+            "establishment"
+          ],
+          "photo_urls": [
+            "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AciIO2cKqRt1CD76ZgOe-t8ThyDu_C2aQ8c9M4vG89eTKsgm0myrjtjmrNawWfIhqP6YFK6g33kzhGk4_rGBGh_y0BorHOOuryAviGWS-eXPIvFqZgzdpJqr3XdOIzqSjg3ChiINoduxPuM--pbIpqcQ1YG-kqsm_XvR4q1HNTjzUkIbM_MkzngKaxvT2gYVTZH1yNrq3sIMxhzXaTlatGyshKolaeJOYva0PePrWyj9JqRqJk8R1cv78AG2VSUD-QT-30DpqraDy4vCVCF1wn3Pj6ylfsCD6t8xVnTJX7X50mJxgcDlJ2mXDK4aNUbowk5j6jPvBHLiYEe-NQZmzZw6gEu_YzLrX1zRgf4sNutEwisjX77kEhA7QEnY6vm24V8-jCg5CcXm8_jS7UgVlU0KntCQ3mJq__2IaN3ecjBMEK8neP0uFkRphSb1jSD4WEQ_4XEPGPsFzFZYOBvvCWlpUMF9gWvNHcU7G2WgurtyeZpEgfctC3U1MU_K65dGwJlWT3Kh5yuftgbMOSfIGNhoaYEJF1aI6xo6svM89nPbiiIIr_506a353bes38JF-mG-UgTuxNXDpslkt_SMVGKaR-aBRppEzQ&key=AIzaSyBp_fb7LJGpzvEvwEVVSy9-f3uqqftNWts",
+            "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AciIO2fR73Xgu6Sf8kTeXdUr34KJEnwdZw-OXZ4q3gqi0l_T-fMjvH05cjg-CLflWtBQG1lVAxqn6vhXRPzxSRCEptaF42JPf9oYrHV-EtBZToF5ezix3mc7WWdpEPjuiSrfbgMo3Ar-Ekrw_GR8jRoCVjJ4kM2nCo6rsHsCj2oKveyYKzN0XW6WhW67A6XFP6VZEoo1IBNed2HY4Tv25xUm4iyb1J9CphpzM_DuzT0381j7kT6qTJnCiCwz0ZgXdFOweX2q2sJaeedt8vxINbUu6057q2ThsytyG96M-UOWASQyVw&key=AIzaSyBp_fb7LJGpzvEvwEVVSy9-f3uqqftNWts",
+            "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AciIO2cDMit1Tf_eShXUdnylEoGkuMDpZv_7X9i929MxDzM8ia0ba_bB_kaSb34KAQMeG7omimCbtVf9n3vt0Z6rR0lOqoNpoQu7J-Zw1qljJilvbLicV-u6d5j-_TDs2fx80-35MULixQDBD_tp9elrPNg3XXBNA4kLEDN0jKztf6nhkkk_sPMxmdJWclujlzXImLMY-4ojO3lhgv2BfmcEcDUqQRSsXeLxhSF0g5oE6DsoS2nxgyjCNGscXAcpb_6-2gx8_poENRUJVdkH9O_WvXVBtnl12c_DkvtEx74a8eCXOjwF-tsMfZvVNd5Yh9H4qbegOkS6hn2FAk9z9Yc5k7VtDHzfmJtOD7LFO6jK-rJTqtzgyuCP2X2b4n2LxGT9kGNk3Tp4YGqmicSAHpGbNb5OvrBLMbvtk6POtN7lTDo20Zr1yfYnH30jYYequ6-J&key=AIzaSyBp_fb7LJGpzvEvwEVVSy9-f3uqqftNWts",
+            "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AciIO2e5ETFP5g23v5SiMhGmstnRZzJ1Sy3NlzQF2GIX5_7FowI70xcw-ZPmWTDtxfTRoYOburEUpN2k4XuIbyj11UofGArGl4l8u5v2UlYNirNWKnyhhrr0ozbV0aEL3sLkpHpvX1SP6zCvO8LP9qBWhqnIwWQkmQD1-z0TgmlPIQAF_RcC2f4eNHRGW74I7n6IV3mlsbB3BWm2Aq0O3hckVH0PD0NahM6Qlm67AZp6GvXdMszl8oWoZ-QDEuxPp6Y-eKwyTWe566beko7AHVVIS4TDqi7JMz6VBZKHDxZo3EBdCQ&key=AIzaSyBp_fb7LJGpzvEvwEVVSy9-f3uqqftNWts",
+            "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AciIO2fzuQgV3azmDiXteVcYzoWwnglabJ--AjsnEqG-d2guX6HII5QHl2ivyMt7tEI7Jf7frD_XFKyNjJFzUlGJdIqThaYYw7c3eZa_SDlYMW00t7BzekA3-hUc4kh3pF90UbUloMBMObSlxIVomSgKDWNjnZpbrqxxH4sqlpaAiYxsgJF7ijBZmL7GaaE090oaZe495kPgcj7DSPj7niKXFOiUu7CnkLZ18Ac23J3IxrQhu2NU5KbOe8uhfKy0ZqQQduONSPMHnRKiubESOrd3TgruN6s8j8GZ2Yd6PHYa4CWRLiXAP4sW7f1B-YehkmVUy2RRIw-d4GerySfyo6IEW6HqKX-JViUjIboIUZ-ZnXUdymVJmpB-_Qr0BzK_lomtEXwLMfewb6cA4LvLxMOHIWjmiz7Amf8neH311qsMVx0FDl5UT0nPQRMjRvHW14CI&key=AIzaSyBp_fb7LJGpzvEvwEVVSy9-f3uqqftNWts",
+            "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AciIO2c1z0E4GfYq7tO1OguhbH6htnW671APaWvBmEXp2gpb7aHTgCeCWozAGhaelttHpJSDrdNjwhmP-FUfobmSwtbIM7L2xzG1U3FA-eKAleeQVkeOEw5JdnNlsi8VqFgIN8um-iwiISHUFAGuHUt9w7DLTr0Z73r994of-7AMag5eU0X9ip9LaDsFuLrkYeMbQBCgCj469-5BLWLaqZRwpE4ALxUwuOXIpQq_WZxV0kvLJykkHcJGsiZBETd5pMwL_q8QhagOLrtL_O41ZEHga61bGg5fW8Ki-CYcln_VP3eTFGZuoFj90HWYYUPmH1QcFkzTivoVNMnYonajD83S6mfQv0Hx2FSvyk7ozI8RGfcor38oROtP_NvZvjLvRVDy9UbcPOKBgWby0bhl9hAWuLLFRD86cBRK7eU5Q3_v4V7nZ4EwvTQ5UhemQN5yj3Au&key=AIzaSyBp_fb7LJGpzvEvwEVVSy9-f3uqqftNWts"
+          ]
+        }
+      ]
+    },
+    {
+      "day": 2,
+      "attractions": [
+        {
+          "name": "Adventure Rooms Canada Escape Rooms KW",
+          "address": "Old Boehmer Box Factory, 283 Duke St W, Kitchener, ON N2H 3X7, Canada",
+          "lat": 43.4548301,
+          "lon": -80.4972143,
+          "rating": 4.8,
+          "user_ratings_total": 1607,
+          "price_level": null,
+          "types": [
+            "tourist_attraction",
+            "point_of_interest",
+            "establishment"
+          ],
+          "photo_urls": [
+            "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AciIO2dAR_SrmIfO6SbOvsQUgctjMlCkVH0k-qh_8FauH3cgkDowX4jqjRSGa2G2cDwFeWXCboVCRaJPKK8N0tJ2hKKAHEOx8-Epg4Bu21A5loW9qh0i6cRNgDCfcirw6NwASjcDQFQk2oYioDJrUcPhyI6lnCCtblezEOk57Gj4Fwt0XBljyT0nM48felU7eynBgiYzPG0Xof5m6Z4WkAuOzR2FZJGp3Vp96G09nbQ8zQKyCVaMKuHipNHQB36V6cXyoenhBOR27T1yG4hJJ7C2liFXEHpEDVKPu-VwtcYiVz6OqP4qlweXY4L8WSfPXW_WMhy0RwNFodR2S049ei6UohO99CDgPcO3GqRcgfAoeoZzCOwr5vQj31LJs2qDPmx8lLYSlzfhZIuW5X7ZDW03SeL2D_aRmHB_3whIF5bxhx0VoFMrsLQvVKS0AHfZISAdyzX6HtkhRoZWZq3fRvR-q8Pn85tv0oXnUMbazH0UD0EJrpeFwh8I0mk2DjMgHPodiL90Vg15l-P_raNHu1eOIvUZVHZ2ua_Ah02cTybzzZh3R_F2fSWSNj0UZHfYeyzn7zbLbb2A&key=AIzaSyBp_fb7LJGpzvEvwEVVSy9-f3uqqftNWts",
+            "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AciIO2c5-3CbD-JGha_Z0qsdxD4g-JqN7EwuAxbKklgtwslWslO-m-sZwEqMN8tC1pW8GSVo0H05DBWxS9ZJQVQfzdVqXKQAB8-2rX39MlwOHkzwWu6-IWgCMyEWqv2JMETeKwPbFTHt_BPg6aqfb0xnTKNr7Sz6J1OPpgpT_O7m_aaUljaND_InIobiWz2TL63Wk0zCT7dV9DGCOft5fuE-jdGJvkT3amv3PidgGYYtGLgCxTX2ZKzMVI9g9pTDo0exquMA7NakkteQatqm_YWL3UhspZteSBFxwMpZTiWUT555VySoH4VDZFCd0rBLdklyWcUG2tchudZJBHoMivDWl4rWzFO5IW7TdYEhm_jMiMTT_a8lM9UDy-MG6LrMuIqPyd3UKGw1gugb-VJsQSPasNVIY0N4xtbXhJjXufJlCBt0lJX1&key=AIzaSyBp_fb7LJGpzvEvwEVVSy9-f3uqqftNWts",
+            "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AciIO2d61_T5Cv2IYhjbHnXdfHaDi5yXCR0a50sel3Yf7QLbHSQMZSBfN_h4YynKJK2KdpQ4Mr40vjzByP4yokLUMjAqnXkQQmCpduX_szOxb1rOrP1GszICSNMvsnAFOsJTH4pwYzXL5bXIgruKkx92KZ_hyxutjhbSsLJKhObvgN05cZplMtThbRI9oHEEznjqM15aTHIAzB1DZEnqHmjfFAOGLPSPxCwQXApgm6i7ocO2PFz396mzMsBSSqE45Q2oHvVCSyrm8YFSuD6vFSF5WI6eFR4kyQmvqTJ6lgiEMi6M7Qqc4-iwhS4El8gngokNutXAd5DhLL9BDY73tm9GcsPVJ3tsHLr0B_WgX-ONUnAPAYQlebw9Xe9CfSaMHNdtS4m8_xKo7i-WtegRN7-nLeZ9dGxR-lTd8W0E7j_9R84zcQM&key=AIzaSyBp_fb7LJGpzvEvwEVVSy9-f3uqqftNWts",
+            "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AciIO2dOOR5GSmWn85CI3w9AnL-aECyAUobJIeqEjwbozSxgOM3v0Ts8eFG282arXGdGeC3khRnL8_J1pIHWuFX6WLh3hS-Gt3iFpfNa0cQA29NI_fUu62iV_5gxSvjDXE7zxcB2FeFVkfpGsbY3T2jGKlEyD4SWeWM-_VuEeP4oyyWfEMQjkFh_udowUxEFGD0K7XS8HsKrdkBlYFmrpaF9nx2dFAkCzyw_twxCHqv8A78dR8Ko2LPX3SjrY8FfVTx_Kiy-n-ckzw83DZtf4fwzcwhvWPOUiq6CD8P5Pbzdo3eCpQ&key=AIzaSyBp_fb7LJGpzvEvwEVVSy9-f3uqqftNWts",
+            "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AciIO2eBuy2x9aeYxnsuuDt2MQkyrs_s6WUYtlHevu01YKm38xd1cbxNzIAhf9NyWVfiIJzjU0lYa-ff6I3raTr-3wqhfxv5oPyFs52cqEeX5StCYUpYHm36ljVYY3JXJpOoTMDu-bhCtYoLI-QHz02JLonqntRP8OLO3xEOeCuo0YsxsxFU3qXbOhFRdfD9lfKdGdMjptM3FUdii4ECC9kbCpk9GSwYcPP9FpXTluqDnUueTZmpxU3cf7_N5QDcRtPYeO3u4fmdFNOZC9fQqb0tKnSbgR6bTDojihlktwdByPHkZhIcvtgpfGP7WgglNd8GUq37RpUL8xSpv6nMwWFxJWhaL-Rg3phIrhmKjoin8ETZzlEQOPcBD5aqSRnazm4owxpw4qHL2ySGR8Bmm9v0_hLn81iPRNjY0T031ts3w3E&key=AIzaSyBp_fb7LJGpzvEvwEVVSy9-f3uqqftNWts",
+            "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AciIO2c2TbDlF95Ducq2XHksQhfZ4ZEnBq7E0-SrUiTs3bs9jocUwdH2miqrmnBDfqPHTnZOXPtQWQgLe2y0PG8tkyKAxndesCC4LKKW2LOKuoqoCr9FUk_7lF-Jmn0_FPHxooH0qbACBXJ7FCFfeSSIDxvjamGYO9x1Ck9YdkEeQ5AgOodekKqti4Q-8lVpnjc9Ob4oETWiGVUuzAMPWbWlt4dRvgQpaV8gmn8cfZCPGhAJ18C38elTAY_rIhXmc8Lneb3SeTMpX_7oJ-J-XryBnUtmTJLBMfEZ3jsLuWGvO9t7Bj0_KeWxNa0L7idvtr7SnDnWGtgUt3zuDUlIr8zHXT_Z9eNpSJhEHIB9-vual3NZDZ3dE5ldBW-SbayQiqnARdnMB4YjCc9EsJMdIARHEDsNQHXNQRnl0sqfeuMl3Nu0hA&key=AIzaSyBp_fb7LJGpzvEvwEVVSy9-f3uqqftNWts"
+          ]
+        },
+        {
+          "name": "Waterloo Park Central Promenade",
+          "address": "Laurel Trail, Waterloo, ON N2L 3B6, Canada",
+          "lat": 43.46737940000001,
+          "lon": -80.5319574,
+          "rating": 4.8,
+          "user_ratings_total": 16,
+          "price_level": null,
+          "types": [
+            "tourist_attraction",
+            "point_of_interest",
+            "establishment"
+          ],
+          "photo_urls": [
+            "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AciIO2ecvWOB2QiFDqx-V7bzSEvXxoyXvTNVJm7saYN9QfJkQG-hxJnfehJTv9QmC2VNhSxqL7BTZY_SA_sXHffeXyQNp7VLdKDWhOizQkpoY6GOv5eGsUQjgPT_ISlL3s-xK1ktNW-fgCMEekjhL_xnyLBNd3ijDe7bNR9Ply8sU0mtygKmLRQyMyPH4KBXrVY201W7lafs0XRg-ScIQdgEoB75A6IS1koznFW-bVexceOe77X3B__fUe2n-NOC4v8-I5IeikExSsitBU3qk4dQd0LDL22MoyS8aZltSBTzbsswjN5w19lX7eJLJOKt2D-kHbSRNNSxxRX_ddx-YCxitPj-Qs5NI7OmWzGyomhi2wgzbK5vt6uTy3cIuIU9Qk_iD2m3wNX3pFmuqDa2Ybem8JQXmr7bOhH91ZGXDRWzkxpIVBblmEbsC-WnF-sXyW-80_dzl7NQcOczbGsAskTkuvysFugdL8fIbx7r35k49xHO6Zvo2su24HUde14Sg4nJ5jmy36RJJlEVCT41DAvTbM2hDQCWoO9JSOEndfT2HucmHKxa_cLva8ltI88GUcu398ipNYBh&key=AIzaSyBp_fb7LJGpzvEvwEVVSy9-f3uqqftNWts",
+            "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AciIO2e8ONTxIekHpEeXEE1wGQhz9rOnXyxTc3viWth9uf-qNJXEIbLp9FQJJHHdEI9R4RcXELr6CpzhmotBt_cIIZvsDbPyk7QVnAYc_PzSmPduVKEaDRlJK7vcUHVIQYvp5euVv7gvReoA2OG7gfMIXrxjBzW59yRrdEscYNIJ5U1smDbRT0PADf8HI-TmxOS4mdLP3lXhLdUQzcdGHV00kcXRJGm1xk-ZKfHO-_lqNtdq3rvr1R0MhwnygtjhYmT8HLIEb9po0t89foAj6jkmhfcVrnbuA9Gs7H-sJYqccxLnHysYiJQ3dsmGiulhOvfoKDbPnUou5eE4TMMCsF9IqH7RRes_7gOTW0JJTUA-C_M6ifUL6eBtz0ias1eUdQMMf4AZmmjqi6aTjKXiQiGFi_8lnKXMOI4ShikJeKcOQVcsECNY&key=AIzaSyBp_fb7LJGpzvEvwEVVSy9-f3uqqftNWts",
+            "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AciIO2d2Tj1zQkSwNiSq6yvLsopu4n6wH_4k4SpZoxjlScY336GL9AX9ELH7D5Gwc2m594z7fNQJKlDlgEhaYmi7n4StsCf1vPyY0YULwSSU3MiMkImBJIpAufN16EmXqTwid1QtPIaxZ8SMiXfyyyekMbuTEt3djW4239i0SDTumpIhuEWjYEiTGZAV3ZK9MRWfIju676yGxRJH8E_-TgKmbexZObCaGoE8PmB-sRUeT1Fxy9Oza14d1R_-YQBa451ZY3d56TBNEnhH2_EpbBzQlEDn9bIoR_oOnzjAoOv3ZQsM9U0_OGWH7UQhYrKSxIJfqLB7wWutURYxbgDBkE2a73RvYEDZWLXLSKy_fuY2pxNDnVVN_UDwDRKdzgcPvzF4o-NmI-MmUdud-fcxB1-dJLBpaHRy7_O4Mkns5bjmP5K4lw&key=AIzaSyBp_fb7LJGpzvEvwEVVSy9-f3uqqftNWts",
+            "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AciIO2c4W4EUc455NCJ6t9BYbmwhEzYz5UWOdO4SmzTBVsEVgKLmjsMai17ZaAF-ePNO4r3yEHfYcgaMPF7rSMMw62PGEnqO4wgdEPaG6lqIEiaFqpUBzSp4AfnYrCKK-mF3ojvc5RoAWT-KPVj27plTF-9HIYJjas20AQtt5gNIHCnym5br0d_idA33_CCk9QEMKhVALpSOSpbZL2T_VyuuYpvIr-5KvYiu7rlTB21qTqC4P9dp7esPhx0x4-qUhvMZ8LY8J7Nn-kI-fyD6B0EZGIDmQiw2b1_AdyGrqqxNWKoWjI4sw8O17ECNYHcSCJQ5wd7Xp9gfSnCkzr38LRi9V3ycNPj5ziPl4JpwkGlJTmHN1xlBagX4jezygyBKBJbkhfzExuoD6Eh_T7a6McV4vzcuzGddoJilXbUJQKidOqacQg&key=AIzaSyBp_fb7LJGpzvEvwEVVSy9-f3uqqftNWts",
+            "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AciIO2d8PHDbP3SdV3G-FiRDRwITFlawd7hA5Xe2YpMd431IG3EhNZY8wnYiu3_39rH-aAWgPqtrUY8CpA7XKAuc5kymW4VK0CB-kGjDUFHWTfJPAxm3u0JPNW2rOWvWTm0DPLIDhcFxvKntlKpHbNlS9xMRYFNGzz1FbUOPSF8z6XH7nrtNT7VoKwHJHeMP6_3flzpKGtouzvoPp-xQkCtZ6z6P_YpkurmVZwHKm0DZXwa24v4vSCgavruFoximprxIi9FhOlzsbSYOI6WJWmPxvy6X7ayMuc0R1EJ0JsvxuSCf637sHDP2Vts18EwlsG53xJAzHMc8BnQUtfVhc3oPoSClU6lmq1ZzW1wzsePtcjah9PowFzheKPwTDOY9YvwYL_AL8SULLLAmT8MZP0FhO-N1QxyaT3n9MMSsbPNWgAE&key=AIzaSyBp_fb7LJGpzvEvwEVVSy9-f3uqqftNWts",
+            "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AciIO2egE_wiP0CjzPDBPqogE7JZN5_zTzv9GUE8XMFzLQdtdFxiRtVLWaCB4DfWftXI1Gs7wQunr99IKRYEy8sdjSJxDkT9IOnkymWl_yTPc4PLCLls5Y437RCKYpW_YmnF6a9usbhZllBzjV05TP7C0OoFDK-q5V7ZLv_pMhAywPnu2FqmMclOT3XJfSDASQ_wYhIlyYyUcgqDdSS8lT6mL4c8firWKHEW3pwPg1RpMW9KeDwi-tmWAti8Ei6_RMpF9TjcwlpxPaCfcsGLGTO3NARgKTwjJjTPat__qedagqDdWRHY9DgtY2RNWmtaZQ3dfoX5pkdF5ii7TQ-VliWinCCagrzdeK47EaOViSa0PRMxxT2eoHtqoE--VjbEsXSHX3tTX1RSNXTQv-1I8Y1PsBwSgszf1cUX_Yjx-KA9vkLQWsCq&key=AIzaSyBp_fb7LJGpzvEvwEVVSy9-f3uqqftNWts"
+          ]
+        },
+        {
+          "name": "Victoria Park",
+          "address": "32 Dill St, Kitchener, ON N2G 1L1, Canada",
+          "lat": 43.4457166,
+          "lon": -80.4986983,
+          "rating": 4.6,
+          "user_ratings_total": 7621,
+          "price_level": null,
+          "types": [
+            "park",
+            "tourist_attraction",
+            "point_of_interest",
+            "establishment"
+          ],
+          "photo_urls": [
+            "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AciIO2c2njw863ZOwf9uel-FW_fztue5n2i3f7ewNAD-u7qFlMu8lj358ry6YEPQJDsv3_pFnfA1LwXYGlFwIhoNxOmFl0AROEuj-CUWFuIqGatbqFuYY5JTx19TCt7x2YD3CHl-oRS83aLXj8NwskdCYg_aLtNHzKxAmo3PV_HTa6CJ-BC8g7ySuJrqW3wT6rW9wqPC4u8noFMRuw7CvjWX9c-smxEiwxUl6216zVa-qGxlnd5p0AR-D0RTH9BGYS_TIY8B-fIXXTlHvhHddKjstcsz_BXbK1u4NQF9qDnOoVelq3qyBZT7dlRGPgKKmF7YI1ieNS5fGOoUITjQj8zFdwbEeOroSLF8pmUiRnoJCIxCrXdJtM-iLtOVQIECPumY0DSU53z05iLyl-WZdak-WxuBhHLt6PRoaO3nqZL3IxqG-ZU1oMxJ7IoHqqwAwOoxrqaNcc-cCyfpq5Yfuf-wkwPWUvWMqpqxgubMiP0UXbSF-nSKb8MX1CTfshWele2yCsJY-g3HC0v6qj-9SF3WvsgOk6s3hZ_rnSFTcdAvS44YTkfE2K4D1R5zwBjUHUlHb6pf7NQM&key=AIzaSyBp_fb7LJGpzvEvwEVVSy9-f3uqqftNWts",
+            "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AciIO2eN4DpOjcybXnE_aljLPR_6nx62CKDwMVFN931tMvO4TnbskwS5VpnQ15Z-T4TZGcMdI8qYYW2KUj-Cz5nmduRy3J-xmPJgK7QHSBxbQmoHTOhf1DaVG0x07IgfzcvvQG3__eRJoBse3zZtq9o9CMft9PZa7ZhvPVvw4rR1d1sjYPVBLNCOhzPsR8cpA73tEcaihgZEB47VB_a6GkERAGW0r0G7kuSDrLyKiqaoUzm5JnGBxPFtlGxZz8Z_9pccrbmAU6BuTD4RBXRymsnGI9xcsbbYXBioaf2VJsk-TR6zmlWWQ2-jmdfQzg9DWNpOpZwkYtJ1737N6UCze-hvY3R-dXXfIV2JgyRs2_reaN3mE1N8CWp8GHSzMwxjGgAOSrpYIwLuATLwyO6Dd4L76ixuhxtna-YjSI-3FIriZXc&key=AIzaSyBp_fb7LJGpzvEvwEVVSy9-f3uqqftNWts",
+            "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AciIO2fpdA_B9HjJYrWw--hWOeR48u0NfZsoQginY4w-xatBP5gOuGmdmai1JkBnYFd3h90mF-Pd3vpYFNE217SkUDLV-vrIECM_EPUEcLGp-lcadOrwnhLNljKC4tXtRKdfokScGejcZW4b7TQapbZRCFC8RqyoMHEDDh6xF2nsBaRMe1J7lc4yb8ZNhFWlA9oYcqj_JW7X--3DXFtLA2O9Tn9F_aGhLtb0h_Z4NYda8Gsejg8L46XIPxWa83jpsjEwFc3XkBa6Tp8ETAZ_fVyvLD_QoVn79RWykx23vbWafqVyrjsGX-5Km8vJza0PKUq4WcMW2GwmlS4JJWyGnHRA0LJ-gJm6xSvOmwDouT_SiVs_yeW6fZAFKq7DIzLaZA71MphSbTeW7qcJptu5-6_ZT4YZj37Q-wNByWqQKT-rF30&key=AIzaSyBp_fb7LJGpzvEvwEVVSy9-f3uqqftNWts",
+            "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AciIO2eqdhUpSA2dvxzPwGFKjfx7j4RJdstwpREqiUZ7ni6D2PMvhW7RgCCCuhoB9zbrZ-HFcmX0ncYTfnbyO7kXWVIY5aICX3Qtnjh7esBqIIGz755KQf6rW0hk2ia5c1y0NvAlDwe06NcuVQQ1_tlkXiCZnjLGVVm1BCDURRGQbyg6pSLqeZttg70jH1n483z_17elgkjCS2p0dkCg28Ey3Ti3etNEIBMKBLT5cuZDyf_5Cwv1MX9CUY0rCf4NWZ0HHaPNP31T7d0wRtQ7FkH3GfiXNtK9a6s1kkLRPhalI956M3NZfhXersMqpCMg4ohk7M4ThanWCFZBHjyBsILGsM1KY1aXhThqkoim48FtnJV15wTUVf2xNKbIJb5pO52ZvMXR4ESQ0ErJO8YdGhTYrGdz-jEvp_PJ4KR3jrlZ_1vAwQ&key=AIzaSyBp_fb7LJGpzvEvwEVVSy9-f3uqqftNWts",
+            "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AciIO2fTS6DWr6jA2E2dzQbjVcMvtGvSobhZi1eP1ge6nGaOoKrMFeIAjbuFUd2rm0l3C4BVbTORFvAPpRJT2ioygjhVjtApO1PO3RZsmRUyjqzN9Tgxn9Ygt-qyTjXpXEZ7Izdotc8q6Ins-DB42o00SZdFZggmPeQ--icobvYTj9-yOMRJS9REPbyvUzmTi_M9hzZ5Z_FcMCTJzRDp4HCKzThVJGcU5O5kOyJSljS1K4TczKfSYuyFdU1iHaPz9K70V-QiHFqh8J5cfnKR3D6N4t--mjsL3beQ8j3bsuI4-AX9x5V-FiJZCHxJ7ZIaZscgzSXuycxEKBzN26de4p7XsBmVpn0t9hOXVJE4WWytwV6YYbAOMohdAL6RBg4ymb9EGmIBtYswn055K9EDl33Vutq9uFVJ5uuwfAOSWU3GuMVMDw&key=AIzaSyBp_fb7LJGpzvEvwEVVSy9-f3uqqftNWts",
+            "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AciIO2e_SrqUpSvpQ9DUm_TptZFXh-V3iw_3LgSInNXayHc8cnmQX-hXRrV-raEnu34BV2pVlDAFDfari67d2KMWtyb_CzIW4Q7dWVlcnZOVaon3398da5zkc1t1rGhmUo6GC5daH6EcqJwyOmCNpxDb2tbgyNyyqU0PxzDLjL9SXRkSrLNShyoG7iwhBoOD2Ewm7CrTTceyycCWIovwVPR_1FStPN7_6dPszIR2YojECgJi82ZAR9Fi0MnLr-eyx9pyCrjj0cFJWrtSAjHZhf5LuADmr6BxQ610eMU7bSAZ9ZW7glsdcXGjfiwemYmt-bEOk_gq9uMUc9Z-IvfYfeLx7oTj01zt5TDTwKhHRscy7kiH8kt2vFbx9QmkKY0SJXMJs694bzE_IRQRNg63FPd9MRewhj9zHYazHsnIXb84XBp6nCKl&key=AIzaSyBp_fb7LJGpzvEvwEVVSy9-f3uqqftNWts"
+          ]
+        },
+        {
+          "name": "Waterloo Park",
+          "address": "50 Young St W, Waterloo, ON N2L 2Z4, Canada",
+          "lat": 43.4675513,
+          "lon": -80.52717299999999,
+          "rating": 4.6,
+          "user_ratings_total": 6447,
+          "price_level": null,
+          "types": [
+            "tourist_attraction",
+            "park",
+            "point_of_interest",
+            "establishment"
+          ],
+          "photo_urls": [
+            "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AciIO2eFSG7gDTiUOZul8OQTHfQ9AIJsPntEcj9cQQOugXOq_ZMIOjbyiqTQOS5qEKJyBlVnhJJSgxF9s7NC-Jh01ZSdPHtD3juJ8K9ycsISFI0naggdRSCRsgcIcdIiZB7jJO9pBh4t_b7qF0O-PB5PK-_5WcGDGM3RbzSRkarrhKtNPWx5S91Ox0fb_V43f-yeyarU0IF0UX-q_PuuVNrM5uTDxWfxF1ewKz9rDQHz1kL0LAy16dbuXUggSd6NLWdmgkpG0K0TwtVjeiuAijVjXYcjAeSM95YQEKsM82ZtgCAwjcjOfhHXJk0Uuv2OEYvd5rn0Oe4fsyuJVU1GRqbEHlKq-3SwlrSabKTrl7nBfcPfGMRkLQkONLaC2bEaAi-2F3jTW1gZKe_3ne4uYVQ-p5-hQl3tpqqfSDOzAVzlvLs_2ZaNokn25M7KOR815pK6OMxQgWE5OuWRkR4Me9ZC-FCEk0H0CcF4aAPsd-4ftwCBCbSRGGPDahGM0Q9qnZuyjxyGDCzi2doO90PuJaNTJ0uXaFht_A_5xNGTV1YMwd4EUQjaOz0S-IdpS_fwR6QOnh5kJhhk9hx5Fw&key=AIzaSyBp_fb7LJGpzvEvwEVVSy9-f3uqqftNWts",
+            "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AciIO2fdSSGizw26-cF-SqG24OyiYeeOrd2YUjHg67RjOur_PGDIRBWPXG0pNTf097erCdvd5zD8Fx0isQpW9OtToXV1npltG95xmQx6FRrcEsszAYT_lYQJ58fcNjn4igxru_PDb8wcfF8RezCJD7DXOepI_BhawAYRAKh6ePZrYRQSBpJ6bLSUH0I3-OeH4CUv8ghjfeclwpA9z0bZnlC19HwqvLrtqmHP5rvyUwt1J5LwY9MtZPCgZTufW3YTrDe2iBPGZG_-Kbm9k63U00d5r7fOitiDj_nOaOPOI0frNsqr562TuhMejg-3lccaMtm7Iq8CT7AR9L2bi5iOOgKK1hpqkzsmld0N6wiuaf2cwIr_YgouvyGjfwGNci1dGIU344dmpQ66RdnW8xUEWXuwAHfVPEMDeQni4QbGJ4h_QKkMzA&key=AIzaSyBp_fb7LJGpzvEvwEVVSy9-f3uqqftNWts",
+            "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AciIO2c2P6H4NCjhwhQKqfxWyUWJsUyJj4w7ndZJhxFGlRfO2qTdGnYl_3kOGyMGNbLNg6TnHpMuJ59R_5d2b4S1Qgk_Uf0sBfhPEpoue8v-5FKxHPFEz16QxVRbOwsvmAG5b4H42p7uSTnn0jbuDRdoL9KC9oG0zLNBkApETjMTv-9WPDPNAN5nTtvsnP9eJxI2DKUURBg4CH2urQfiTmxVxq2609RWe_ud3r4uGxaQOh8K-eoSWewiPESlC6hxRWLBR0hTzjW_s7MKEwCJY_Oyo7xXt5khKhjgGa9idA3jJ_dZcYDS4cD4FK78WkiIGFWHxZGuxd9opx0wbG7Y-bTU3v96hxbzv-ekOAhjmD2losK1CKZmkvN8weG8lT5bmaEc5U9WSyOdZzfM_DFLfyX33Ax--tA5P8soDvjQL1QL57sLcA&key=AIzaSyBp_fb7LJGpzvEvwEVVSy9-f3uqqftNWts",
+            "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AciIO2c_SPJtpBFDKzp_i6TvZyJ0nfsrgd_Wy_AMOZSKtzPZfTqptaGCtJuO372omx9vzfxXvT2h3vQkFN843QDvjizho29RG5VVkpCdgx6dAp7HniHyr0WTQzQnJ79pqwexzWF37EnUKKc8UgYP5RlX5zITGPzi6KCnaU2XIO9NerpahTYS1xDKRQl-r6ik5diIQFZhlwJenCtZJR-rHOKzm1dhjlxFN-MYvLpo1yPQMiYlZ2edtneL_diTdn6w4Jj9-SASdmQkhpUW2DuNsBhbMfQFUX4hiIkJwaX9hIgCwmbgUniZxpPLJxcPXOljN7cXqP2buSj7c3nZphXHD2ouHsvwWteqIwGqq-beCT9i4xDfm0xrYFPrj00pPMT5_7Il5zryC00w1f0XlA9qD1yIVvFo28Q-RwJrNYyTomomB-eGFg&key=AIzaSyBp_fb7LJGpzvEvwEVVSy9-f3uqqftNWts",
+            "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AciIO2c4JDK36j9pq2mZTN30zk83uX-0f5CswC3SmdKrXYmVBc_uO435jmQ8QmVTZNeIaL2JesAaTS_F-4E0qQqLr711EzrMcH2gEflxxRExLApAh3HiegLLlHDj71YGqYA8WASBDquDDCIroyrdRoSEPdHvWnFiCJk1mzFXsH7TcDA_6W-BmLD3cpFRNnxMeO2uzHkOv75ZeGsX70_ne5Pxc3eUcri-6WSby4_qQ5f-2dTLWka5a7gq9P0aaHhls7LLNYWmkYG8SC7F18cWqG2ITBsxivhixBWsIug6zoN9tuPdRu2SVfLu9ZE-eUI7r2ZPNmoK7P-XtGGBxuLBbyY-8drqlfJXjP7BzOvNX14pd1uVGbVczOgp-9LLbx_R8RHXJoMdCc_hSE-sZ6cfrvIMouBjYnI_9gf-HiRbgytns96halKD&key=AIzaSyBp_fb7LJGpzvEvwEVVSy9-f3uqqftNWts",
+            "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AciIO2d0QpYSeFlHwTrun-tdEXXGvHrUhLrS7hRJ1TZtZ6IihN7vutMbMGHJVIulmEl2_wsFlRLBTezomPhaCPO23iOnaqLQCKfF4HlmacdZ-SokxNoukIcNEwWd3g_4BAtPnAofVUD6WDhUt8P1S7oVopFrJAuz_sEyNPYpJe5hJ7mciIC4OcxiM7At45CuPC4-i7UR0muAG0DHemAWqcAIaf99R38_fIXP9Ug2VoxVi9AxfPDPnFqhIN_NZXhiPjgOqsMnzpCjgaAxPGKzNN15Zot8iz9a2tksx1ol6-WYNAcCpcLMcAe31CBlWqpi_-mQ3QsY4HEWdvTg7rJrUVGxjq2MgZb5wQtaNZyP2ZK3EEQIJeJVIkigP431-wcrzonazpF6j16pTLvxru--uH7Z29nOmoCyzC1fxbHYm7pHgI7hch_g&key=AIzaSyBp_fb7LJGpzvEvwEVVSy9-f3uqqftNWts"
+          ]
+        }
+      ],
+      "restaurants": [
+        {
+          "name": "Browns Socialhouse Waterloo",
+          "address": "259 Northfield Dr E, Waterloo, ON N2K 0G5, Canada",
+          "lat": 43.5109673,
+          "lon": -80.52124649999999,
+          "rating": 4.7,
+          "user_ratings_total": 2266,
+          "price_level": 2,
+          "types": [
+            "restaurant",
+            "night_club",
+            "bar",
+            "point_of_interest",
+            "food",
+            "establishment"
+          ],
+          "photo_urls": [
+            "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AciIO2dAkHcz2vfLSTdZXv0X7urhoyGHlqLAthCCmXAlcY6lK8iSoJuy-zDseW8_7Udlq-ubxJSXAVBOha7DXQZcyGeQ55BtjUIWG25IatQw9eYVlL6_-xDXsJ4TcOhLvflU4DugYJLTXQvQXKsYfsS1UnirhgDQ7eiw3jS3KG5SJV47GZhySL9vHobFJ7-2Kp_ImNNSMy9jBh56WVg1ZB_teYRaYAXnGIFGtelWkn9YrZos2lVdY0vufJq0uCH3sSlSotVm78tFawQFF-yuupG3U4qRcqWHDJFznTHBSfACH6UkEuHdihSv8IRHXSm6jDLzkP5r-XRhgss56iZ3JTazks8kBWcX1qKpjfP76ffAD15Wgo57zyPvk-OQ6aGIHtYOkWVwHFK6TJ6HnKz09Ez8Z1sirTcKYgfl_zccIV8toFBE--ScwsU2LFNCKCcVPW7Ow8NmwVngpfm2DrSpFZr6wi6Xo4yv0Ag6KF03w8tZzSnANxQ_cZaE53slqMiVzj3C7SJEW8eZlkqAtKXV-Pw_TNnzuvreD2jp3SXNopvbQbpqz8xryDvi_RSgfTg5e7xlbfPc_hLq&key=AIzaSyBp_fb7LJGpzvEvwEVVSy9-f3uqqftNWts",
+            "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AciIO2eLZxW4MejRwHUgCP4IRzdK-_QwE6TFuOPGs7-5nsE37bPSRvOTOcN0jJAvS8slvQ36y17d-qIUbCqA4-FQxXvpOah3U6IEwilDFkEU4ELWAyOcCQpSP5EZvkQJJh8aJn4g1EBvlE86x2LQRGczsu3CG-5Ehf3uEvPb89d1Cz-dGo3ePU1p8TKzQys222q0_hJd2uNV-TwMDCj5xvb61prDP6RKtKlBrmBsLCbtkpQ7EI4eBWkiHOoKGsFNbBZYDpg2Q3jM7-U1e8xbPb8SZSLJ80QUKw9DUi1B89tKinhCSg&key=AIzaSyBp_fb7LJGpzvEvwEVVSy9-f3uqqftNWts",
+            "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AciIO2fcp194Q0uMlkeONwph3I-V6Alo92tWim_ZIPFBKV7u-hwDFZmyTNSRXrS_aH8m5LDgS2BxSNIGx6BK5wzzcIXU9XIdjUfUEcNkEjyonKDLNCHiizsDVozwrphkF4hZGbUWmZYzhKpLWqnRBlNpt-_sMb6xTQjiB6bY_neXO7mX93NBzujfdDKMA0lqej5kRo7Aj9yDibNc9R07fS2iIPRKXCrdxoxJr7Mbz0rmINghhSOi7NauL5QKFneAXeEcLQQPm_LUQHnQmwzvdr7jQr7FZSokbTTJrwFCykPaT8lOrw&key=AIzaSyBp_fb7LJGpzvEvwEVVSy9-f3uqqftNWts",
+            "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AciIO2fcgLZO22_8kdzql9IpbRoDp7kubME1RJyPJ97fOHgaeX3IIcnBOKCGElhuhZOoKrNc7ZaTcY_3jFfhZeGqgqTjXtPo5Hs2HemgPToxr8kPGpj-3EPnKnWuaxdI-8gaT65UEqg-Vca7byH3RYqxDoOs0-jg3zCY2-gIN5oEMfk729XUVfIU0LRytvXRLxeTAwfh31RcubNuGNnVYFBEHx1wfj4CXiuiMGkC2oNEhEqGQtK2w3RWUH6Z0eNSD6SV-bp70xEiaLiV-nR2qFYYnVeRSmYMAT2RxpZ8lge9-xgvaSULtW_WLheOdyRXwquMOOX1jM21b_zC8pTUNjSsnLBG5JXy3MYtUtq9c7IVwMoItXmprhvdn6iapxBwxD2s1LBwWFMSYCb0M1aCz9vKWuIiudnMfMx0oVV3moxVUAEFXYRmpXoGyfs-GX79k7Zi&key=AIzaSyBp_fb7LJGpzvEvwEVVSy9-f3uqqftNWts",
+            "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AciIO2c9rDoVcgHam3QQ9mHUu0dYO5AXzCZXR7YIX_3DIZ3jktVwHvm5lojEi4cQlNM8YUEXaH-pe8dkRlfWu13WV30zoAMTuXdlZmMmygnxxhsTO2NMBBtz6VPCxIe6m1waxLkRiq-5AA8vf7tZaTSyhRMJ3VvnfUJGNrhNbe6q1F18KBAhIW1H8yM9Eui29L2iAKNmxeqoNo_SVK_evs2lcxnmVEi6DKzVjPzVlM82UYH6h8LFy8lvCykC_UlTQ2MyWl3A3R92TbUo9phVcZE5nLL3-vsv63lE21yJ5bj4SgGAB0rGj0HFn5lxl9flEG_kpKo41QtZRDVjw5gtcl1tw4AohemUq9GxBQ3Xf4dEreo-LABJxcPigmD-G3evUGC_ryLjS0ufeX7T-pZ8gAFtjiIIHoifXWfGHQRK_uoGvZbX8kFcGXvBZITw5pkdiuEq&key=AIzaSyBp_fb7LJGpzvEvwEVVSy9-f3uqqftNWts",
+            "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AciIO2clN0pD4nXWooxS0_LLYq00mWwl2JKm3gIWP0xJmnHYdWr8Fv4w3eicqHpM1_k400vQKpVSBoVj0eQdxnNH0g9FN0VkadgbXpvulAFKigP-033VA8jFDwGrff8lnFOL_gRREiEyG44z2FXFpiLhLgRVk9m0q9LtE71m8TA9phLLVQsGWKp5hpjjWi3ahWTvrJ36Zvt9yLe6g8a6YQrWYOMq6GphnQPYAXCF1vHdrJkxk300-55cA7kII48Wx3aStY2l2dzcIwfaI2kNr3tc8h1hgm0h1SA7_vhJFNGx68cW2r3mcR6v25HJVHglz_k2Hnpl1jM-PZ_4KPnXmSlE-LFMO0oc1M932jNIa-yqTxpqqNvGhCQtncrilOEq5PMvd9uo4R4jeVR7iLcQecslQlR3c35He0Euu-a7exPV-LmNtQ&key=AIzaSyBp_fb7LJGpzvEvwEVVSy9-f3uqqftNWts"
+          ]
+        },
+        {
+          "name": "Trio Restaurant",
+          "address": "40 King St S, Waterloo, ON N2J 2W8, Canada",
+          "lat": 43.46440339999999,
+          "lon": -80.5219714,
+          "rating": 4.7,
+          "user_ratings_total": 649,
+          "price_level": 3,
+          "types": [
+            "restaurant",
+            "point_of_interest",
+            "food",
+            "establishment"
+          ],
+          "photo_urls": [
+            "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AciIO2ffXTzS5L_bmqRLAi7iP_OcAXCsiem1wvtI4_RIy-tVvcB1vHjOkvCrxKDwPV32W4Jp6dIO6VNAJ0jMfVU_XzcV4S5QVvKPD0NW4GsjC9onGMog8EHPlegtMcG2WA2NUnp3d3xRnDpoI_2INCEh08kK4jrVUpBZp-xEgbNu6GMHAIBLILIMn_gymhEektv5eW_VlT_Kz85JYRTrDV_MvYwQGAIqxKyczrIAnXJcyibLi8KgBc3JIlvF5qNwZTOL_K3uwrbIFX-x4EUhyZsIJwOJQB9mkd_OttcFwQ1LPjoy3krwRUicbrXmbgwgFjilDeTFHJM_pyHRJd6NV0wrj0sAOqg05eYgSsfPHcGvBzcnZGjkQ8zgH_knq3LUSXuoC-kfvtaVCNKEh_Pxq43HXsEH_HJ82_pan7MIkKpJ5-WLk_SU8FczLiyMEPyz8Rv7MT61-pTHuJ8YxUSkMUhwF89u-lN3AxE6TxJBq68gJXGmt7lC-AxhVUWDlN9YjPQbNZPpExLI7Pxh-x8j8xLYVw92WkbcP-CrNBcWBvr7YjyAAQqAd6Afc1dDkXS8I0y5nKJT4xmq4HoqRw&key=AIzaSyBp_fb7LJGpzvEvwEVVSy9-f3uqqftNWts",
+            "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AciIO2fESHrOK5i9mFmx-5ExmHIMpl47Sb5y1cVEBK3ImYTivSD68liq-aOmlg-BWdbse-RmUb-k69nLwJjPGf69YxeLi6CtEgOCjgc5uEmG_W28VaYr0DYRTmNh48RHg4Wt-DUyLd1TU00wwCr4pCzFgLrPHOZviZDFwV-6evNYlBW74TuJEOX1KB063PSQ2wRHN9waLXA6txQEjKBT0_mG8zOBT5lxJiahjO8i0ZW2-VTCS8hH2kH9saMaGjIYefEB4Ujb8W2D8Tlb6pZeC53N2Yor0RKWkj057729K6QtjdPnTw&key=AIzaSyBp_fb7LJGpzvEvwEVVSy9-f3uqqftNWts",
+            "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AciIO2eqF1de6k8mXYV0NO9GtSKYjQL24We-btq6x22vIRhee7IWCXtQ0BSzHEIfN-mI-1EaA3csnkJbhkTN6FOEYeLTqtNmD2Suw_gMZYsgEmYhnfC_PwGPvDgrLb9yBnOaqKJUEB7wiGnXyuhKIYqVL-A0H-NECz2U9lOfGhhAAo-U1p_g3wIy2VxLBRnByWeQwUV8VF1utjfP4Lnmtgp-pq3FQA2OxEnnKKCfPti_8HAXKgqw9G2FxfCUn-xuNPDDd2-c-sZ9BufMqmOQbAjgA7RgNn39uGoZ9lYdXwa5rdBkYg&key=AIzaSyBp_fb7LJGpzvEvwEVVSy9-f3uqqftNWts",
+            "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AciIO2cS-GNp2b5XjKv0SZ2LmJc6QHoaF3kbEU_InFdaywhmPdnck0QH5BJHJ8Jvif_NEHhtQKUzAQDA5zzVSgXGlvntQ4fC2ty1nFNqITbLhf21yaEBlhb4CfUUr1alMfDRfI5ifQzuXh8B8IGzSEtLNLpRwSTvf1WZbqY0Z_rLebJoSthq0PuZ0uEhjcrqyEE5v3vQeNNsao9VQqmCmhdR3g4xjYNIM0_PX0Q8BN7wg0iip_qXzsLlL13P6H_E_zmYynFr68p6P05maZD4GCHcIgdyH5sV20OTZ8BHc0-Je96Kgr98G8oWNRpkGkAnbiuTlWbcmwvLZH1IJKRA4qhTLsxR0C6S__XPIJ644VkMxISLqt6tkrdCPHZViaWJxb1_tvf2gMxpVhtre9zECv0WmgNLw6XptvVJikmU7yfds2aiPSF-rBmQeCKqrlTwcA&key=AIzaSyBp_fb7LJGpzvEvwEVVSy9-f3uqqftNWts",
+            "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AciIO2e_oNEOzlY-H35mK9VWENOL9QU0tshraOB9S_cuCPNPijX3w68KDbYS8X6z1KnXEJWqUBKe1_D6D2hw5a7_icpUK-IRZmtqbE-mRIYDJw_CvVKWIajSLxPoiHBGE_En2z6ngaiXWL2bVHF_-4slkWvQEWiiLqz4nLnsrPVVwx2hrQFhtKVBfVfl9DRZMtTE2U1te_o9yyY_8M5jq0epUU1G8nXB2aPLk6OBU_eKarSote_HEG56iEIqq8UEStb36T1JUN10C-Ai3tTC4jfqmmcA7YHd45H8Ou06P9GX4xwHmm6q3ErAXPOYQ1gqPDU6mq_ymU0WDQgQBYzRUFYFnTjLEXIttReUCnOG27QacpAawIxH8utho6yRtNZZR-qX7et4-CPPY1ZR9dGKim8vFzsZ5YE07NQc8TFdTMqYgGoLxQw6&key=AIzaSyBp_fb7LJGpzvEvwEVVSy9-f3uqqftNWts",
+            "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AciIO2epQOGFJ37gyCSLjkki_GnfXdU4A5HWNx6SEm7hib8KQrxSi0vfb3w6Cv322lZfowgIiDpj9-aWqXAvTMYp1ehXjm_SQvNZuncl3_9DHiXxfv62JuWwSRHCYZLbM1TyU7Kfz2M8BpFmIdtSzZLNlVjmI-nGGp7HcKiJiH_fiKvLLnVQ_K1Z8Rod4E547FocDGYLBFzlMiV8KnowahYHmHjyL5DGLPPLeQjEO3DhUlvljzdYHc7m5S5D9cBSlLXuD49q53I7RNpGF0trZjuL-5KrCfMyjCsJGu4YL1tZqspYbQYAC8N-f9qGOcxRk4BZDe4JEFp-4DN-91HqS2JM156tVHnU9WHLeaT6ZQjWTVmfic-RwICtS8dlDMOGcWyxZTfQGy98mAyBSaKEflKphMvjk07UXhMA-1z0pmXWkPRUYY82&key=AIzaSyBp_fb7LJGpzvEvwEVVSy9-f3uqqftNWts"
+          ]
+        }
+      ]
+    },
+    {
+      "day": 3,
+      "attractions": [
+        {
+          "name": "Earth Sciences Museum",
+          "address": "200 University Ave W, Waterloo, ON N2L 3G1, Canada",
+          "lat": 43.47149539999999,
+          "lon": -80.54211509999999,
+          "rating": 4.6,
+          "user_ratings_total": 483,
+          "price_level": null,
+          "types": [
+            "tourist_attraction",
+            "museum",
+            "point_of_interest",
+            "establishment"
+          ],
+          "photo_urls": [
+            "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AciIO2f8oTZzvObEAqNfz9kz5hiEkitWSmFFRWOBDwMHVh_tqcGJMPzjgmDmnpTZPmrbCMloMMBx0YAmN0FZSmc6zRMxsIUtlnil8m2BXp5xFONbuBeakqEOhyEPdvsn3TQCa9uaiEOeXSMpYtN5seFJ95SagUv8Zv8SivK-00lYCiMuda7SmMd1mJNrjIRgCNwA6RhZgLd6hEr0Wr2G8ypVFFZmf5MGLTHdof26ofKhxsa61qN5wCtmQICl1kh2Vjq7n1yb-I84_ERTw_RtoyRoOMcI7bh58mRPKHk-LVFYNv1LhCFxrSQohMccA-ypJDzD7iOXeMQWP9sqDCGXnHV1a42Zpb-LDvJ5582cYvgJtWrzKiszr0IQ8RWyZu04hCthfyvbvVuuIbCTOVQdlSMnw-O7Uzu6ucJXU-K3eWZW7Z-E2Ro-K_SDsV1w7r2UYEV4AKTZTR0PSj2KtjM7S_0BY4BnrbWbnAHs09ImRVQoZ_tHfe4BZXuf1fyqS9_W_dptMuVXhcbMMkfvBLVAO4hI_aBseij1NcMMGiS7GKtd2frty_Yj3yBelHkrfvo5uApiWoJ-oY7zZ_7Aaw&key=AIzaSyBp_fb7LJGpzvEvwEVVSy9-f3uqqftNWts",
+            "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AciIO2fpqFKpOCO4gOvYOyKtEt3V45hIi1XLuhxona7PWHdZ134o6-KAq86Xyq6MKN6efYH401SjJMjKxpXc5xE6ADX8fmSUMnqscUc4Irgm5iFv0N9bcBqRy3q9DRGWXt1lsEG5IFZnv0CCeDxZ7-PZMetIHIXuFb6LPk_Rr_14Lea3YJq1h1OSoAbAPzuu-UpOyENwBvR_JSVu1XMclbC4_jDqM3m-jWTs32G5uYy3CKmxMa9EK7dOyj1_CLZko4KAsmyflzZXZHA8LZ9X5F6_fm0X29f-K1i18Vr79DtgZen7udqx7qfZQkrtpxqqc0--_434n4OhO-BlaBgzDbN38UAKdDxdoyn8qZ5AcUYZrvIXDmDsz0ZwRtu-8nYmWK0kVThRCaCQVLmFD-zGunKe9s5UcQwkFMriTVpoBDh6M22fMQ&key=AIzaSyBp_fb7LJGpzvEvwEVVSy9-f3uqqftNWts",
+            "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AciIO2eWtNL8-11e-Sgijiycad12GVsm-tZyheIjp1au48Eex4TsRglp0_fFjt5ZT5i-7rWH9TIwtqEjjn-TgT-q3fMBFij4n_lKZAuQ3XlQpm-f3Kxnt4yHZ_qMjohBGD9tDWcaUclkQ8iFNgninkjJzqP9M6DKN8wTHnEVh-xBN5bQ5X9IToWRj665j0h85GRcu85ltnBZUrFTocviil0xwa0nrDAiNaV-8iIrasjutxQ-tol6LsqBwcauJuCATXFWbgAOg1Py7GvPzONwmKkG1jl5ddaqIDM0zXbf8Nv-0x_Ml_7tJHScWsJR1vgr6-8jWEuHygOfSutzYeJwt23c3Qhn6MSjiA5M1Z30zkOJ2OOGdE6FqcKhU1ghs42ktt3OoLC1epFCWxKHaAtdQYEaOfUtvtDrW5K6D8zoq0aRyN4&key=AIzaSyBp_fb7LJGpzvEvwEVVSy9-f3uqqftNWts",
+            "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AciIO2dYvdq4UsiijPwaZZV_4q6-q9FaZk4KOcm4PrB3XNLnHRZNdUmjqMBN6ciDUz_eazS-vBnutHKQ2DBZk8HVPvgk8QT5dl_Z008PXL2YzyXrDzuphr32mTjw40_2cJBTARcwJ5DuP7pu561xdo4n9NqJfTAbOR3zkJRyHpYbbhUaRaCWc3Rd__7tzLAr6zAZtMrHVcMLW8bAL9XBoMJegdC4YepR4vIkjYjIfreqNR3r-whG8grK2HUDxh3EGsEFtsRyu143Ih-zNfhAm9sEDLiqQ9vJzhhkguuFu337doMe_BufmyDsd6plPCaiM1gwJ0NfFLQ7_O1Y1A8c7go81RXkk4iNpfJYq33U3Xe1Zj0ITrY0saukfrJGZEdf4ECW2Swv3WqaMCudhXFMkFQKls6BMIzV2kc9XMfvBhgrPBdE2vo&key=AIzaSyBp_fb7LJGpzvEvwEVVSy9-f3uqqftNWts",
+            "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AciIO2fV7CkL5R7CEYqcTSN24_YBQg2C72I-ganSIcQkye2UU7ZjnYyTH39U2KtK-k_ErpAzaQs-GenBjF47CCYZMZ4NnLXHkd1UuaWWkcPNguTeNGyaMgveSC9h3JUG0ncorbkeG7X2hg7w3pNczE5GneHr7eTj-FPV1lW9wU9JYiWU-wkdX4Wb7hQuon8B1uz7b-ewXe8FLHdOvLQtQK6qpoW5j5HMTkH0z8-yLW3qEt7U8nlzroDAuVxbMAeYLV_iSrjaUI5nT23X3WfwpFESri3sPB5x8WjD_m2U-yplXMwgI_2eqYEpjE7Q8H1rBe5vp0AorAI2b9_M2KIS839qKgoy3M2BpLoxDfq1IvG1oSmlI7o1HaOVEpPJlo2jnGbBce6cB5Kz7Y3f-zQm6Zbtu-BcoMDGZu5cOPAtY-iHX-OjuJQH&key=AIzaSyBp_fb7LJGpzvEvwEVVSy9-f3uqqftNWts",
+            "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AciIO2eJOozAykv-W92X3Xa4xI2_HT-BmSD_pZ5hDWd5NnezM2FOU6xY99LzkZLnovBZHpt0Jay2Tk-ug4tORamLamYudW7oo_AhP-DPCW_BG4e-dxxCoZ1VScYL7sPLSHkujC-pisA8wBKP9cemUi2ecj7qlT5TOQ_OeDzHJOJ7fii2M1VmT8R7DdyJ_mSR5I_ityKMm4UZrZOmUnzC-99n0gFBdq1QhL5WPCXWW_UWy34rvYHN_-JarLMc5jYZ-Zv9lWrN6ijooWkeL8zwVC9wmBf3ADHEAd_wf5kDybG7wyITWo9Nz8rkGVlyoz3_r4wUKLA01SMjN8TDvcMrUyAP39gGI8f-r5kMxI04jugm1KfUMzZXFygprfm5UQGlZpoUR8BSIULF7Z-tz-2wv0HFbvc5thWnV2035RQOK_JXHfAGcETR&key=AIzaSyBp_fb7LJGpzvEvwEVVSy9-f3uqqftNWts"
+          ]
+        },
+        {
+          "name": "Lakeside Park",
+          "address": "206 Lakeside Dr, Kitchener, ON N2M 4C5, Canada",
+          "lat": 43.4333265,
+          "lon": -80.50036419999999,
+          "rating": 4.5,
+          "user_ratings_total": 558,
+          "price_level": null,
+          "types": [
+            "park",
+            "tourist_attraction",
+            "point_of_interest",
+            "establishment"
+          ],
+          "photo_urls": [
+            "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AciIO2c5OhGfGx1myBGRax_7P0Q74jmV5zE_eV2OfCnzIohZaJLSTsRoK95f9z8fWl19kuOlDH-6r6cjf1MxBYY2eRTE5AtmZGguHadjA0jb6_iKvXo4kAM3AmOj3PxLMAjqRYyKRF3NEf_w4vlvqmSlXFuLIMfNIu7EAMP-8ilSDvb2rp4x-epW9CIGHekaf4rsNJ2ltq9-nItZ7rpmWInPKy3DvUy4wW4-tnLOZ6t6iJoDrUrj_vXg8ms0vAYphKzSmrE0e48HVxSTXniqD-A8effnpf6VmpbIbxiByvVPbg5jG7RGpxFGo7OESlKGVbj-5EEcaNn669wJPvlXVRhvfIMt6WT2CZD0Xqizq0Y30IsgV8EEQEEm7gMxUwfdhv65lqsNY2wlNC4eUTTg1ss3C5BNM2smB2OobSJeA0R0Gmwqa8rmjHrHre1Q1UBDavgGBEleChMnuvSk41fw6caYAjueXD63ijhuLStDfo4oHvmV5SIvjeG-2_-_OvrE-dbd5F004EZnWp_wu1GYRZAiJWCHemcdrbY7mPxCs-LKtSesfKaW4t0C6jgh4aCGnFncH7kD5Q&key=AIzaSyBp_fb7LJGpzvEvwEVVSy9-f3uqqftNWts",
+            "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AciIO2fCSizfsOU5TCi_UgHau9c6jOqdFOgHn1F44xqFI0JqweUOulBKNtd_kx6xtIMHVC0Kw5q5weeOMt45UbRctEeAVRlRKXdaIvhG71t_lZPwODnDT3rEaP8T2g0XvXYfWQGGGUglrd46inZnLVwo9yTC8yAGUITUOWnJ8QbNmshSi6eNGQF6kTe-7rQBmpBF_xx0eulIZ88egzXCQeAFPW3WTGB5iZjYovNyPzopb4ZoVZ6s64qYbFFs3DzXAjlVPXvCogvJdm9Ip5YBEYDc7hvbnwMrI7s-vZtRtjNV63qfsJGvU4-Q7y8khGkD-2PPywj4XERKbM206nY51nkapLzn2PdOMh7zTHyPKbguE8M5CkcrIFan50B2n2y6JjJQU5wMTsAJFdzqaC57m95x70OYRXNqzd6WyycwD3By6IFRmg&key=AIzaSyBp_fb7LJGpzvEvwEVVSy9-f3uqqftNWts",
+            "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AciIO2dH_UsuRWTtq0dWcy_tUDxE9VwXXwlr82LhAVs70ih5kj2n75T7jQVa1PJVGpKGv-azArPnny_1bFb9BrzpJvm00Dkhnco6Bcse15KywI0h0R18JOOLvCcawF6NctN1DJAcnkZO4ciCN0lf8c1oJ3Cow8Ao7h90X3zKHWXsIOvFT1jb5kHNMux63zLniKZuN3DqNvR2w_KqauAYV85mN4AlqOYmUdAes6K8z1PUcAwJOqKinNMXkQbK3vxUwL2vGrQzOKokma16DQzQrHqo7ugU2AGQ7ayqR-GydLb-uOwO2Lg0lMxk9_R8US-M5BMgvErkL9x7YHYIWByDZYw1U_vULJIxkRpKPua6j6L_taOu5Iaw6nuFcdDR_Ba_G4opcJUprRM3atJcq-KEG4voCoHokNtFw9yd_-Fgd92MgzmbVA&key=AIzaSyBp_fb7LJGpzvEvwEVVSy9-f3uqqftNWts",
+            "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AciIO2cTa1uOIepWchHBTGnNRYkRgKEKdO479LjxW8MrotwTxyU-QmaAvZspQCtOBNNfT5YKB8NA6t-u-NAG1ynf79ILiG5hVvJPPeOvm08FmuNH7-tyv0xfdEwr3OhhHqytNwJecZQSNT73fj3sBK6gqYimtYCu6GWbvYwg7rrL9KLwfKjBoVUY0QkLM8VEDm_EyIaqVbRPjHhaXJYRYo4ygPmBehf6KkyEGMG-WPE4DwCicmptgDcbI_mMm8X88Jj12b2o0C83yICAJjUw5R_OKvmLFeh30vE-glX3_cMRGBanN1IZ9fMBLbbKHvr-HF1V8GV-nIBA_wLFwzWtOZvXlAE2xTTnDf6UosbQIjg74PW5msPm1kIC0z_j3Zj-fNN9kIQi-bvyHHtGv3sqmy86zpqnc8beIEEaSXLIgrBg-5TbiYpm&key=AIzaSyBp_fb7LJGpzvEvwEVVSy9-f3uqqftNWts",
+            "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AciIO2d_VxOr658Hcd0BZoBhPt09cbYzjX3KoObFSQnMdLSch9URrZqbccCFhAy54sVTVd2hEH0AeA4sugFgDVKeMqbTruvXa_hEAoAkcqZKzAiLCY2Q4EPSN1FdMG6RG1PrvjVGRvCafDmvmrnRr177i5PHmpb2qibHVHRVXMstm5v5XynhYtaQIEtRwr8T4eSBNYUL6UvPUoMfXrAnskoqDxX4O9pslwzImZp9Ij1uf5vannafa2hXDpxkbA0g2dyWFZBO2VL1aqudctX5w9_F7U7kTtl9llK1K2du79rqPuyyYInDc0IzN_HM1_FUnhJUqysz49bjkNkrcnmlURPjlaNajIDGYJguSqSgAchav8gCTWp6Uxr7fzebvyk7tYF2cqawq8_pJ7Z7ssHn6_2vcFW-XKSnLgxnMAG_Zqj4nKGE7b8B&key=AIzaSyBp_fb7LJGpzvEvwEVVSy9-f3uqqftNWts",
+            "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AciIO2egb1uVBsmxfmi6XTm0CX3FVVYOiXf1KmELn7o-zaN455VYk7fk2azjIFJanCt4ZmjBWPCzAMJsUaetyNhRimc_PesSLj_OmM2DHxSNyoMNR7sr4bsoPtoqpBXgWVjSHMfxO7nfTxITWjNGKjPqZ-MjXgEz9Wj_ZOlllMQTWWgF96t0AkHaRlqv-Ft6IAZ4mtcJ-4WNT0TYc1xHRtQwg97QDalTUwMMU4R_6l5QW5i04HOwNicXY2x0m2mxTaTaSdStvh6yR-Am0cok4lVzIGgkBH_FN6678L6POXEv1ppCW3c5Nf9nNJdJt6QPVKW7bX0e6Cft0mG9ynS7Xtews6OmSmulW1kJd-wQZ2g5kbaTaAf6uVSQ4b7-gZNEIAHMhFMGcwp7sSpNNSFYHmqcP7ZWbK93Dhrk0OLCCq9kC47ifQ&key=AIzaSyBp_fb7LJGpzvEvwEVVSy9-f3uqqftNWts"
+          ]
+        },
+        {
+          "name": "Waterloo Pioneer Memorial Tower Federal Heritage Building",
+          "address": "300 Lookout Ln, Kitchener, ON N2P 2X8, Canada",
+          "lat": 43.400152,
+          "lon": -80.41623299999999,
+          "rating": 4.5,
+          "user_ratings_total": 275,
+          "price_level": null,
+          "types": [
+            "tourist_attraction",
+            "point_of_interest",
+            "establishment"
+          ],
+          "photo_urls": [
+            "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AciIO2eKLtQxcFNHeA4irJXBNdoLdRJuGwpTg_MUw2rT6ITC_BWJAJX8HZmqp0nuWshNHEzRfqczUK6WrZQa_vCI-WQwZRixBAnW9rl8HYmHXFAsAmlsFr0A8NHPImIPyEL3fG-aV0tZxmNLJyF7rRzcSDYc2EPBBl3qtzhD3P58q_Z7UiZ9kRduBfISezd7koINwWJb8BEddFcyqm7Fa2nB1neOIkm_GtJkworCWtWd8xzW6xNtilz0F_WEbfNz6vfHoNvBoh-Uw_63-TZeekGg0-xnPijubh541M-ciUz90U6cRGYGnJBbAssc_aeODNIZjTHVLRc31svZZLm3o_9N0cccNbFQ0WnXsJ1x3kjTRyuVzyhGBlpu6YhMxZaQuqD0MXTX0xV3ZaOo0DE4Mnk2GkMdgDOQiDX-0m5mTWCXCcEieZ82YxsLuLjdIDQxq3F81W-JTbfiGUQpn3LBA93iaLP8atPxZaagEKcyTY0Tocyb8eJFAb8RwBH-EOtgLp_zBrJJg3mfP_4g1aqHu4eC5E-ATzlP0gROgGeTSDnkd_c0Os41N2h_55zYmLLi_ytEnzHIpeoD&key=AIzaSyBp_fb7LJGpzvEvwEVVSy9-f3uqqftNWts",
+            "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AciIO2evhMpJMe-cQB1G2cq8_kCovnOsirpqVN42JEHCY7wyex0MHxnwq8IVvaJU6M4K4TKWbcffcQjZb7PrAdVCyvOrWYabSCgPzFmKlXl-80VMkWEPfVNUICL5STvqHHDu2PQayG5ghjRSnVZsfUBeEC4F12mTa1cpr4bmN5m6uZRS7eDe_jgATNt7YD7kkFNKP-KSrCqiASHBeXGpL8_dARA66jZBgl8p7yf1Ft5M-Rnpq2_eO0sBu5ErQ7hxQMyW8tuHm421WXGp-wfizMouB4e8Ojyin1DRxwl_WugJR4ikdg&key=AIzaSyBp_fb7LJGpzvEvwEVVSy9-f3uqqftNWts",
+            "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AciIO2cO-t5D7rE5Zlh5vmNdj7_JQ9vtxXQs5znG-oNJxa0_AxEFe6PB4q8kxyo9g-FBsgDeGoRV2L1jGz4P1uPW3IiVJm_xFLINmhVnROFU4OlzR553qatlb5M-8jWVDG0Edk1IyvruJAjlF2pgtyx9EBqLIYlWORS2_va-_TAc6IBNG7CKXFaOTFnnO6pUrOvRIXeQvEqRoOOgnXR0yGztM5K2kW2cTUOlhGdrmWgnnFDxFEI1AlbONQHk0RWmDLCLmvb2B9_KRc8bHGczH1AgHuNEn7RVohVTpbjCUnyX0aUQBfnuxOydYV351fvlklhn8WgnhtBKD_ZD4876BVV7n2oGIMuJKFwsgDp9blQp2ol5XVksGOtRZXx1Dw9BXDnPt060Jr8PK-9DFWMH5Kae-E5yg8m7tCBZDiT3QEC7ZgMkTjjg&key=AIzaSyBp_fb7LJGpzvEvwEVVSy9-f3uqqftNWts",
+            "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AciIO2cXodY7eVbq_-UIrvwbUFEh1CPI1J1at2AEfBaF-69DgjLcU-FjGC6gi72kNwsr1UAV9pkzsbt5cxrp6Tls2C5Yc_k9Ldvq_tT1xM10xEBKdvTNd5aEG8tugM9hwywDTuQ48E119o9Y3WeWy_-_XXFQzPSrZTzwJTkD8JLjN_XC9tABz7NtmJ8M0eyZYTMA5UPiK2GiBXM-LV5IhRNP_3r64626KcIhwY1kJnwQqcA9C-Zet6ybZFYBlvzMJJcx2UJ-RPx-dJ9Q8fW5psQu-HpLOb9bGRPyqqzaQB0aO5BUGIAzVopNECgEVBSzxgmgf-yWN-5RgYbRlRk3Mg3xKQ-PY36ZbfSiJ85SXcO8BZLXejIcuwmgnIlrPy5jd420gUYXHMCDw7f9bPxn5ucm27e2fRKtvPoju8ljpUPAFpk&key=AIzaSyBp_fb7LJGpzvEvwEVVSy9-f3uqqftNWts",
+            "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AciIO2d0RQBtJY-NYr0sL7JyuYf-3FJfh8SD-Zbyl7ap9p5_COjRgmjoK38Enxqpw6ABFbB9IJY1X7UFaSCZzvVhwZ3FZvjKotwuXgbqF7Br2AXEmmAUVro-pwYavOI_jqyKnFXwP46Kb0p0m1nTStykoz38w48jo0CPPUtEHX0gGUnKFcR43YtArDw5w63zyiTeZRwTz24sEFbykZkyCWqeJW4PBnWPBD3O996tkp-upl6URNHRwFUis5aWqB-TfFFnpdymJ6sPtG27E7HOdgKPserMw11Evuy6heIDd8ZdzFG14oNXRC8ZvD-p7fRLqqaCSQrIrlV6f5IIIToVi8mKN0HSzMy453a2vLlyuKVoBHZFrLUNsM6XrWg3lsrKipuGZZQb-Q2fMNZdiqJQNxpqE4wM4D6bhmTg0QF-CBIxkL95eQ&key=AIzaSyBp_fb7LJGpzvEvwEVVSy9-f3uqqftNWts",
+            "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AciIO2dkMjUDKrRvCmX3ianLeJVe662sp9G9mJ9FD2SvgqZRlzRkc8tu9xypqQRr6JOZS4P_HOkSRcnug3J-cW5DFyhrwfekjWw7gd9ysOxcxmP321dYJwwGnwOiZTS5Sn4F_tW354Z_nuiEYXfZM5TApuXhepertvgWy56BCOb7YwHyBbnTktVyGONjQmGuIgEuc3P4cb8Ext-naGkk4F-6gbEsVwG6ZlL7bh5DOdXE2BCv2h4eosrGKjr0kCHEnLpQIAF4yH3Vd-4tIUauPjOdejicaVfaLsTz3R0BIwjMPQZHrTkIqOIYHzDJy7sz8qK82SdBKWNcP4UeHS04P6kxG5ZU5n2BSZ2t9xexBE5rAJLdXE99RgnOjfaMyRmlW2eVxkoxcoJFGRG5Y3MvEGdjBuQ6Iw7E8pu6DfUiOV0vL5Zg9L-Z&key=AIzaSyBp_fb7LJGpzvEvwEVVSy9-f3uqqftNWts"
+          ]
+        },
+        {
+          "name": "Laurel Creek Conservation Area",
+          "address": "625 Westmount Rd N, Waterloo, ON N2J 2Z4, Canada",
+          "lat": 43.4904715,
+          "lon": -80.5705126,
+          "rating": 4.4,
+          "user_ratings_total": 1459,
+          "price_level": null,
+          "types": [
+            "park",
+            "point_of_interest",
+            "establishment"
+          ],
+          "photo_urls": [
+            "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AciIO2e6MhdZYw6vFTgEe4qQ_js63NFusg1eVUojmLJjVoq4mQkev0pY1zNvIiNmU3dy8l5v8yIqvGAdXHzyBiq7ynoMXMUAbGUFvIIrNJcdPO_6tv4MWNFuf_vvBJ4jvDCeoURwVmMG6LERdIG4h9TKtEN7BUSdIjaN5Nyaxnebv1oAWKpmEHP9uSowbvnTtzGIJQlF_FopE3BVbrb8U0MrS1pRoLD6RFUUQ7ArjRlYK0Fl923LeeOIC4-_Dfx59WtmvA6Nyx7OE5LbFX6Puo--49wcFLlQWGvmr21AWSZcRbTZgZwD1Wmc_yLMypjm0EU2hEyzZl66r9bZfI2C2AmdOCZ_-SD2xNUKJXYhc7lREmy4TZu1KeY5WAVhCk886sLnamLFHqBu_sfHgAn4YE50ORViHZO1RxaQBfeZyYZIOO5n2KOuLT5tSqWGiou4zcDWgz__5CkxFwWBPuBNa3DGQ8Djo83TgO_gkFXU3pbLoyk2rM7GiWqX24IRtqg2LfMkjMn-qqzPBN2KMEgBhyr6n3_yXiVQUnRgDI1sPCKpP79MRZ2u7DKrFhwslzD_RKlrgqqK0Obp&key=AIzaSyBp_fb7LJGpzvEvwEVVSy9-f3uqqftNWts",
+            "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AciIO2c7NCjKCGxPVJD8Pspi75LlZoMvUgWO4tbuUa43zl-asI3A11xYhB5dciL4x22Ykh-ywICI0AHCRomPKSG5gbiHyzRmHwSSDaRvPNpNewM1ZBC6PL3Lg_L1Qggx_KKD2MmdFNtG4WcefynExZ28NAdy-TpAbIK-LlrLZZTkhi40_qFRh5QPBpg30SCAvEa31jkiihwlf0BAyu0NZ79rDYDqy8M0dj0B7h0KJ0UdpyZ3l3_OOPzGR5gTy83py5UD_ZzKbO_YTqKHmrLYKn7NPKYuxJ9bVg3e1IK5zEljaWVyKdGfJ3lPF9GFRhhBgL5DZ1n8xiB9rM5miLOT3afNmmFnHmPE-Mw4dZfwBNfu1u6I_G_-FHB9wHWUcXwnmYzZxeLO3H5JTsztgtghRFTgFIxWJAyRXmeZvcbjUrbRITdG6A&key=AIzaSyBp_fb7LJGpzvEvwEVVSy9-f3uqqftNWts",
+            "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AciIO2dMfn2bz-JddB7CIE2z_tBBBJfoZQTbezuwu84PSov0MVaW6Z-2D6reuVz9xcX8wTVuorc8RbrnWnl5WXjPk-xdiXG7TAJgdfsYJJUySs_y396mQGrF1KADKGVC1sjzpKQtbpUmB1y7g91caGK2naWb4NXj0PK25rMFCWTB9572zpufsVcnRef7vtqjtUqTA802JAX4vGYM5Pt4xx4-CS9Vpd_WOW_Hg7mM9u67mMM83lHb1SF2Er58abU3lyCM1F54olRUgrAisQP_CV0TgmhVjAHYlP06QEDBQtZO5DVCcVIGd3ikUv1Ss7k_H7w7gx7od-doyJpV6p4DL7iiYi7WtF70wzyNxPlThwhcryQpPAPY8qd2TcZNCRkd1MG6TCukSvaFMePImZZbCcfXvqYf5xrAdl-uzl-wH5sOT_pezmsD&key=AIzaSyBp_fb7LJGpzvEvwEVVSy9-f3uqqftNWts",
+            "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AciIO2cL4kJSfP9Px0ITYybMIXmqOkmSNBBekYoYSiftcmkF0agZ2Q54V2eTfU53Z4EN4JG9SmLNNe1OBV-sxb3tVCAo2G2rviNK4jXjXn2wT5gjxukkw7OgZ-wN0Ya0PVbaF6h6bCKfY0qD_eTolz6_ngE3noJS0hou5bPOFoUiGNlwZU7zSu2G77Lg6TZR0vgPVI2OZ-CtIlDfqlVwZtGE2IPgUOMwVm9PgQawbhnrfaVzmtlkdLQY24KqmrS_F6I4xmIuUR_qxzZZa0DQIHy0JzNT8cjl9Mnz-M8rvFLIWw-IGK5-lNnwm6-MCf53RiW_gD141NOFirJIRitn-dLatMf4fzVGYW9PYeJ3i0F9-hlxO4Epux_hU29PHNDpcOCDSej2pPFA0tUAAqUBKc_7d4v_M3cRHsOyD1SdsbwXMiPRAA&key=AIzaSyBp_fb7LJGpzvEvwEVVSy9-f3uqqftNWts",
+            "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AciIO2f-07y089ncfeFVUksJyKXxo-yL3QIlbpvtpoFsYRXGrRDd0V6PjtiKdnrqvu_P-Fa7PKtr4ar5IVqR2goiwDNgXVa9M73ikDFCSWj7izsB1xeVAHvge5s8vEzubAADnzwrdd7Lk0r6HhUOlgVt4uHs9t7IqoFh6G3CNBpGK7fidaUZ0qCKvtCX_c9auJHeIpuIrDI9jry5Scb7Zi1xbATnoCB2NimXcBWRZtyRvtWbGVbRKSPHLCDzZOvmiLxZIs06ZwjYL0U7i5VUaUtpge44TlWN_R2uYIMuaot90hdPR8jANuEjFQwCcamYS9v7ZrxYp7aMaTZySSdp68CBdjwZWsDF-oWt4hK6PkMiMflVhqnW8pZ3yHI_pFsPxd3_8QC3WOjzV4jWvkBcezpX_ROY6Rkl864yygnuTfotxhHNgw&key=AIzaSyBp_fb7LJGpzvEvwEVVSy9-f3uqqftNWts",
+            "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AciIO2f6XnM13ybcqHWRc8raHHXjl3Diijg5XitXIfX1Ly0focQmwU2NMGdtmh6bw89Qj9iAbaQXHd62vq3A0YhpcuCU-WAl18r4hx7_LQe3bzJnZ4ypl5OffmZMFKDm938WLZ7ybsjdj15jBIaP9fmjw0PxVcAe9Gb4aQwzi5lMgSjoCtfLSQ56leZtaCSGNyPbH-8GnnlPdiY_cpa0HAZ03ewvCSU6DnpWHzUOlw0GX-lP96vZ2hqVJ8rbotoR22mOu9TQMM-oEVxOu6V7wUnv9Nvk2aDduoHpFEOxwJ_Tm9KlEoIiEcV3oNK3rxdVEDINAkWPoe-CkBDEfO2MTn6gt0U5q2kXTkv0m5oaiQE1XBd_KFgmt2C_SkWn7bBwfzlmG-8XoiPd3WP23l0P9Kbd9mOA-p0ZRILPmfEKQFuc-7YHGPg&key=AIzaSyBp_fb7LJGpzvEvwEVVSy9-f3uqqftNWts"
+          ]
+        }
+      ],
+      "restaurants": [
+        {
+          "name": "The Lancaster Smokehouse",
+          "address": "574 Lancaster St W, Kitchener, ON N2K 1M3, Canada",
+          "lat": 43.4796453,
+          "lon": -80.4842956,
+          "rating": 4.6,
+          "user_ratings_total": 6380,
+          "price_level": 2,
+          "types": [
+            "restaurant",
+            "point_of_interest",
+            "food",
+            "establishment"
+          ],
+          "photo_urls": [
+            "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AciIO2cq947faGVGSwZwiyANTokJSRqkL_tsnn8pgFh4Lh67xvqhPuGPkRDIZNyLX_Ilzt-IYx6BOelQsUo2VicJMNywRj9KKr616gzs0k9KAooeKM-7FB-WeeMHFByE9CXvVvzeYVYZail2tDU70rptK1IX9UcJ5Q4Tz92p6bk34t3Wco99_61_zyRm1ZZ8Jw9BWj1h9yEKpErV9JG0bIZ_lf0e0-Pb-p2D_gUxdzwAOeo-mqAG-20k-ZDq-cXHkk5RZvQ6hSfoBdOSjNmfJubyfhMCUk_uU0_6F5gs1BxPYIGc4j8nF7vw0if-HGn_fo8iV0D_nn5YW9tfc65l6Tv4Mrk-8jLEu4y9kS6zsAw_PZg-axDQC6V3wqbUaeT-74mKqykVHOI6JjC0Cs8LVnNvCEWbeUNlpAzmlIHKM_li7VaLrC74OX2BTQXCESEuxCxBZUfiQO72KJhfKJj7Q7AQf3nRNB7DrhIRQZ3BmHuLdoaHt4Na0qS9WXk5yvetNsYitHkRJhHT_MvfPIGIRiUsZQDR-itc65sMH90C06B-Gm1mCg0_r0PO67Yu5f3rAvSiolQ4n21J&key=AIzaSyBp_fb7LJGpzvEvwEVVSy9-f3uqqftNWts",
+            "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AciIO2crvvH1oIdejTMI1mU50FvJgFmiF81JW8xNgdzjrGEeWTYt9DIsWqSz1Ise2L-QXfjbtBfjzqDPIveTMfoCoVZjZxajYma1XtXeN9qgfBZET0RjYXdfnShA33r4ntfF5z8KPhqne6wgwqxx8XrmVgsU5VcH47mUIAcjOfEqSA9lPkYkrjk6V0hAd5rpgICb0lFDr7GIPMtRiw2RNzSrudO1GdW4ZgRern-Eg0nmxEN8a_l7ijR9urVwNYDousRKDtJlY0FEahVceUhX6bbgVySOaAH10kkOl6uwoRs3wSmtBWhP7eXb1cC8sH1svSnwLweoDJnFnIekQsQUo4PMqmYfNZdIrIKgkdTs0O_9oWXTur5c1HBtUYW-Dlv4JgqamEVh4Ad91xpXpxzMeb7sUOgl_i6P4huptXaVsEP1uddzEA&key=AIzaSyBp_fb7LJGpzvEvwEVVSy9-f3uqqftNWts",
+            "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AciIO2eh7Z-2b2sqHjWODGH3Y6Yj3HvEmyAUjbjVD0qQngNas8kA7nA6AftAAM9Hst3hxLaFqf29zSh2GMlkxkwRa7Chdgd5BarZpc-kv_LFmCak1lLsxgXbRWbHAYGNRUbmvYq1FF8o-eVrwVnz0ZWHVYGWm59_7fTdrgdZbC6yEZ_lD8S4b5YA6Z6rndP-O92OsmVugwHjrk7AmB_PmaHaN9pW7nJmlZyQDl40Joq0eKX3QUePagyu7gwURUFXoiZV9CzWwZ-ZhPQ980c71rAu8CRYIsTXC4tkkX0a0s-XC-jvyw&key=AIzaSyBp_fb7LJGpzvEvwEVVSy9-f3uqqftNWts",
+            "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AciIO2cTMdv5ASJiV37ST0e4bRwsinYFTPKNXU-R-BIhuchgsuIkgJGVTrCUaTpT5yGzeN0OgqTW9PgYM1w6C0Z9OMMz-HfsJikfm7_GMHujTLKzSwrd8y1lTpTyKliqXysQd-oxTvfu-nCFna8j74dgaYubQ99jeJBmcwAaGwJCh8x_yHeWm1sSaExAD1Exer6KI3EidQRe9mK4PDn6maU4VtAgssqAl2Q-Kcf5hhPw6HhXFVEsICEUgsR2DxSj0lNsj8xrvV5N9E_MbjR1rXVF0tQFRzJI6u0wIXTqoYagJF-8Tw&key=AIzaSyBp_fb7LJGpzvEvwEVVSy9-f3uqqftNWts",
+            "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AciIO2fKC-xDGVTiaMho-tWC-1NGBvlfmOi1UbgODW3f7RwZ8X2DoK6V4WfeUQA2p_tSkiPZQM7-PpAhqe36fezuGYoRATKTYEM3-uXKq_fko-KKYCazBNRC44chuww-rTynrJpA9VWGrtfmBEurI216c7AxGtYBXAUUDJ-_Q4DbeS0icunGZZJu9LQez9SDEKdabpGVMTuPhdrCd8Kkg-E8WgXy8iA-R3697h_QwbA1BcDGjP3-EPN6WGv7oPhNndItlLyonI3cw5DxblQoHLF8Jd02KKrUziZtgcnfzza51UONiQ&key=AIzaSyBp_fb7LJGpzvEvwEVVSy9-f3uqqftNWts",
+            "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AciIO2cBrEilnx4ZfbdEiQW71vbapFyFzOWeGiwhup23OmmT-_ivLVfUYOBBWR1S0e8N3wpRmye5GGtts1R2a_Jd3YO0W7uJbW6bDcYmRt64Pxty1EnOnaH_ahZTlW7a4XHkxffq17doSThFKR6skmF8x3KjALbz2vQPRJlGvPk3fPlenXnYzY6j4Fw6pMHIjMcs74mfbM_3BjEfLSddFDFuVQfKt6ZmVte_9KVsTn_-_SMZmI9Qt7QnjvHNSv1I09QTijfgne4AYQcmJ6pxJnfsIjP_ED8_ZIfx0rLjspT0qY61D5NVNBWU8484XsoXm0_aKUzPQQ34-8V-cTkKlRx5WRC7TKRBvsJseVsp01LLyG1BdgKdSkJ951PvGKcHqLrSIqnh6UEdjNx3FE68KDQGJKag3arA95bjdPPogK4kyr0X8iV3X2xYewFFISEhbasO&key=AIzaSyBp_fb7LJGpzvEvwEVVSy9-f3uqqftNWts"
+          ]
+        },
+        {
+          "name": "Charcoal Steak House",
+          "address": "2980 King St E, Kitchener, ON N2A 1A9, Canada",
+          "lat": 43.4289108,
+          "lon": -80.4327824,
+          "rating": 4.6,
+          "user_ratings_total": 2952,
+          "price_level": 3,
+          "types": [
+            "restaurant",
+            "point_of_interest",
+            "food",
+            "establishment"
+          ],
+          "photo_urls": [
+            "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AciIO2eX_vmErQm7KlGlP7n9XwoCzw9P5_d6lbZfkCWP2kjvQf-G1MiXhLehLHcP49UAZoko4Hk9o4bXk3lmaLpj196XX0HuUNxa8ofGvvFi2LVDa5FAs-n8id7mmRJLSPsfbK3gSvo_9ukrtlmQGmlgjrpALRKaD9ObWW4zVrnyL3_PfvWII_hnDuSLZaEbBLnvjEmxGt2-5ziYSuGBvuAgRrIMNFC8gPkPzDR8emzmE1H8AVl-AMVmKdLQhaRsWHiPC0o9k2KH-SYv7ZJgL7qIUtpvGNZnynWevbjJ4EtVvMywhNQbmaLKDa-hX1ngpWZqWzEshUX2c7TOtSpU64Txt931UTO6axnlneWhLFq7tcRNHPjsFv3PyM-JRkOktPcFfhsVDc5MlQt7aa3ZPuVeTGxePDuMkx9TiAMsWUYAnIoSvfhilKrWqaJ8KIOjG-0_DA0NNGgJcyLNxiiNVKuwbCcvHCHx5Li2Far6i2MRt7yKrjlrgGenjY22Wmrxaa13LkdClF3AwQ22Eq4E5_EBiAo360tr2RC2P2beyxhxJwCXL5Zx_Tafuf_CbNQIWGWHPuJ6RErk&key=AIzaSyBp_fb7LJGpzvEvwEVVSy9-f3uqqftNWts",
+            "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AciIO2f1nLEuLFH2PCY4gFAt7_YQShSoyE4fEwrmYv7k1Pa7kNJXJ9mIDnqQGXX7NTvFtYtXr00Xd9sScG1Bg83dJV9muxzhpz1nMn-3bV966OV43CAnvDdDlYmHl_gR84RDI168v__M5EVE63RHmOTCwhH-ygtQLQdlzyZ8GKiXb0PPcwBPaaGmMipCmbSdSsCyElW5njiNiQF0k8jJkR7rr-o2fIFh7w90aXYKDvLu9UAvOB_dIWyvk-37g5apnVn30gCXHrR9egiL_pY3wuE3zmWEWhkiVKhYIQbkdcOpDFKStw&key=AIzaSyBp_fb7LJGpzvEvwEVVSy9-f3uqqftNWts",
+            "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AciIO2douUtSvlUrUeS21N2wWctZvZ73tZnSRXRvUtApjyxg0Y1SVz9yUU0ry2eP36uxxYokjoNvFzNCiWlvb9cNeVjE4tEwt-y1UxyzUlHSf76F-K3hi24H-bogO56yk_e0d1T1SpQwTf4x-uQeww0nPAR00C7NKlGouoopEl9L1a3Z2gfBvxp7CdhMbcsHHTg8JAApHkyirnRGIx47pmeTjobE1e0-2N4OKP9GVuRDoz2cZNwFTY9Wkmp11XkNcMpFe_C6aJhMkmH7EJOSCrav8VWzQ-2iYcM8_Z7rP5ZtCiAYAQ&key=AIzaSyBp_fb7LJGpzvEvwEVVSy9-f3uqqftNWts",
+            "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AciIO2eM6aJQm4j3jltxrrpFlQsJc8iLVeIC0YNjD9xRIIVU-nfb9oSoURjKNrThLzZ6Vktqlf2j5pgHx_Ln-eqSN9kZ00YBNzVYKjtnvfR3uimKynakkPssZ8bBFnNJiAt23NS0RlURxtZkD7IAvcw6aZuY_Mvmj2tJsa8WhFTYUCV4ncbaRxd2eWaYsfvOqjxMapjPyG_TVymNzqYvCMXXkaJJcjj0K3HcbJOjMuybqnOyC4sIpJL6SxqukmIRsPx_ODv5bJdKSLYlpVxJf-8gfGczIgEpT-V6y63-VU_lxeBl4JVLZQ0qKNL_P_nnF7hht8OpRLjSUiiJHjEzhJb_UjkFnvb_4DuCPd8bUWo4mDNtgymdJJitOWOJe-NflVgGwuAdBfrrGPOIbKuT1BUMsqtEgd39-umyeeI3mPcqo1AxMg&key=AIzaSyBp_fb7LJGpzvEvwEVVSy9-f3uqqftNWts",
+            "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AciIO2d0ZimT5E-0reZ_3tNJ94IRhu3MxNmFSr8WZuObG1JHrU_VqwkrPnYrIUMw8Hle_JrihmvGFycKUdqaerbeMRzYMSwwhqgYMSGSbztJ-TMuB14Q--5gOXtO7UnBh793_-22ayHje6VlXZuFn9W2XJG_ctt-5X0-0FJl8r-rt1q-YFf0KhVyd7SsnXQm_fKrKQdb9PV3DbPBFmHRJ_1taaZtnq2NSwgvllpmQkFjcf66I6x7B6xdVfgSt0xs3jxUSKPAUJfzuG0XSEGsgUPCwo0P3D48_Ybg96kxLc-SWzzgp0BMjFQu0jjZ2ZMOypoOLNMLSa8p12rcLRPMp1VxihVXZd-oBsfm28v0tbKi5WQCzdVZdKngukO210GlMCrohl6TiZS2dgHMW7qjpDwCtEL-vUW9H9wKNlPreW0ICeoILj-R10y80LlIIsvyGMrr&key=AIzaSyBp_fb7LJGpzvEvwEVVSy9-f3uqqftNWts",
+            "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AciIO2f3l2mt3zpC1tYMLeP4enNSVLbDRz5euhuAmElf0qNQxJJ0XU8hVQPfrJIPeEjP8celuQKpP3pwPyU4dsN10jp-mcawCSOfgjWABKgnc2tpkNNEqv99TS1AtkLvRmYmmcaXw91szb7buHOfiq5dupCG5dCFFNLj-nD_JXoWZQ9Xy__uTapTMyGH9A3zuPPTJX9ZG2AEsS1rqOXZf4uQ_dgg2yJ_UrIoxmZ-a6fZ-vazz6czzvEQrbyULlLpnMoFDFjkRhASJstbQX03TEbocAU98jZCmNhHfEd08PgvlDJvAVbM87ZEXzc33SLt7kjzCi4CRVvBe6Wq46ov8ypI91ufnJMdrzKLSKEhF5zl4xX47-QMA3dDZ_gEw5b3xn_JGAVh3bZm54jzCrW8qS54BKaG1M3R87Enb6-6EFAG3e8sYUs&key=AIzaSyBp_fb7LJGpzvEvwEVVSy9-f3uqqftNWts"
+          ]
+        }
+      ]
+    },
+    {
+      "day": 4,
+      "attractions": [
+        {
+          "name": "Waterloo Central Railway",
+          "address": "50 Isabella St, St. Jacobs, ON N0B 2N0, Canada",
+          "lat": 43.53796089999999,
+          "lon": -80.5570309,
+          "rating": 4.4,
+          "user_ratings_total": 628,
+          "price_level": null,
+          "types": [
+            "tourist_attraction",
+            "point_of_interest",
+            "establishment"
+          ],
+          "photo_urls": [
+            "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AciIO2e7e8Mupl8Z3FD70R0MR-GtOhZu_GvBZ2DfJAVsEIJ_hR_SA5PNlrAvXYnzKqSIyTvW5mTgLVMLaxtFbw-NiWLsVIqntJ20M6KMHgSJIse8ju2-8NHiDw_xYxgZmPra0gnoC7RWtCn--DJTjC2sjaxXMgOTBF5JDK_iqrEs0GVRSdT15hd72vknLXrGZsGTBGUvo3VFcJ5K6iG6SQ6gkkVsBHD4z_KtDc2yKBCe8monjcpFvtnlIZhNv2dkMh9LI1R1KOAyY3yW5XEtz4vb-6U_GFDxPa0li98OQxRtfGJrMibF9fI&key=AIzaSyBp_fb7LJGpzvEvwEVVSy9-f3uqqftNWts",
+            "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AciIO2d41kJJwv8V2TFI5Y-_F3UqaxuQlr7k2QPvlkhyuZAky22Zxr3Drw9c5yI4gvIe_icuJ2Mr3dqXldvYPO6Fb6TBd7lpkkjx2fcQmPKVKuDD3QQ1TTznkSJgQ8boSlZwtNV6I3WceUpV0OFMdgoJA2RuumfxpvXU1rw_b--Kxeyofh7aYivsxdT_5Eoh4yl3lDyGgIzYuv1LMy9x9IvrRbT6C5ZD2VXRtVuw-Cpy_fwTp8dsXZc9pbFAHU10N-QZnZRU19yfW6tyZz8Ut-wgPKpnbFF9xd4HJ0zKNSTaXflEMQ&key=AIzaSyBp_fb7LJGpzvEvwEVVSy9-f3uqqftNWts",
+            "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AciIO2djHivAv0QB0K7jQsdWDO16oBIjUXRyfUjVYvVJn4BfnQkL6yV2pTYFkb_0GX65WGrazEVoDH5X3ULazehPuDSoAz25dN5FWPITeSLO7ZjWD6OR5rQpUSbb-0GfA-_7o8kx36Mv-SXC94nuJJRm94eLCtpdJjN3JeZrY8HgVBAfxnTM1P63b7QQgLL3AbZOpbdQ9uvQupBVA1nHHQJyuYtjBsmHeFNNO6J2nBBKsYqZivtJiU-P1j48l-JOtSVKp3_RMQE4997ic4xPTdcIl8UHbkJ1IWx2KPclBNlJjh--vUesQjPyLQisGnH1d7O9cit6PzH46uJ8ln84m9NouYTJM6rr1oLj-R8QWs6SUJ066FsC4RMgVbp5zkN7Lg-tArqzjkuU324NzNpn-SKROckHyPFiQRv4HOv1-zOyhMeUTupq&key=AIzaSyBp_fb7LJGpzvEvwEVVSy9-f3uqqftNWts",
+            "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AciIO2f3oUfKxvImG4h_pLj9IN92DQSBCKdSfRgGGFANYOpkT13ty8RYWcpJHzK74H0wKUNU_j16noZVEGDdo_xH4O68Sdqbv7407EZPGquBYg9jNLlWeYC_MUXctVIJxyJD1csdVmegAR0eZ78CbE_yZ5PYntTfAMMRd6sFC7BCovbiozOy_-XdORB2pgs1xNkrm2aFRVWTDvzMSTrVWEC7AFFXPRSdGf3xYL62bNQQhL-F1W23JIGOmnTwvHgR7SX4Sz2NmWR-JaZcG46MpZveQ7FwjRNPHp8csdnD1C1UF4EGsg&key=AIzaSyBp_fb7LJGpzvEvwEVVSy9-f3uqqftNWts",
+            "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AciIO2eyOpccvHSkzgzIMooKabpMG5yzrAyuGZ7-NHzooZuHioNc3MCPCk_sclwej5CU4NJJjFvSHG7gEn3rSKmyHFrB7lpYHtK7gNnSWPe2Hg4aAeW3225BfzeZSNx8qpSrzPxEpymPpUKqVa6MPUuW49jVYnZvgHpwnt4TIcsyhAc3jGMc1vMrnMWHC0tGwmSV85rw9gwDctNwN8xtNCMPQ9AEL__mw1RVID7thMU6R7HL1577T3amWpmxug1sAIeXGPBHhjqv7hOYflYmqo_cmwunCP1VftiGW8iJ-_EzA2xwj_ac9VLPM9JRoAPAtGORLN7pKZmmK_vO_RD3uSANAWBk_wm0k8RWEn4tYFDLaPYJdRnrRqmVeLDGSZYPantKXrj7IVlFjnojkxxdQoZuHwv73yGfAN9csU_Ubdvt-n_otujrDVVQZ9Jt55LkDQ&key=AIzaSyBp_fb7LJGpzvEvwEVVSy9-f3uqqftNWts",
+            "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AciIO2dWn5vODTU2AZV-djFNjxMrvJZqPSP0MAeeDMw6wMpfyvyikgjkMb4ozoQ-_oavP5pcOeqtR9a6sdAz9dy_kbK0ugV8uty6qDNtyNXUECGlx0DhLT-6WhNWulRiloVyXXA-8GjbdQxsYkfy44BmslSg7qCpLq5O7TzeZ_G_b-bzRPIrsoVhZUGs0IadqbtOyA1amMj5PF0Nwwji5rGvB5oN1GI4v_B_vVRNYix0C2An3s-5ysLWrhkZp1TaxX8u635C-ljjzbtn59gq2n2r21WvkIE2qVt90ZHetkXT8VAQVSBfxEFkSQ22U5nZtxX7gk2yTGVFwLIAh9bYbTjBcqKMzVzG8iKguwe1LKtJQ2tlWKcXtSJpETN9JBMXY1LhveJkfWOsONAw02x4HNU9Yfd2Ch68tmmo0TbSuAhbdP9I0onzP4XFjH9kRm1i99ra&key=AIzaSyBp_fb7LJGpzvEvwEVVSy9-f3uqqftNWts"
+          ]
+        },
+        {
+          "name": "Conestogo River Horseback Adventures",
+          "address": "535 Northfield Dr E, Waterloo, ON N2J 4G8, Canada",
+          "lat": 43.5208615,
+          "lon": -80.5155963,
+          "rating": 4.4,
+          "user_ratings_total": 312,
+          "price_level": null,
+          "types": [
+            "tourist_attraction",
+            "travel_agency",
+            "point_of_interest",
+            "establishment"
+          ],
+          "photo_urls": [
+            "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AciIO2cbFzjpPXfuJI-o3lk4aWeNU7AM749fMdYrAtARnqT2kXQNuH8KwxPx6FzKP3IttH6jQYqTG3o192Q1-9ykYSt-hATJ7To7UWojyYMcj2gjybAJCFIbdPgB8KXa6GiU35SYz6y3ugFbvFbfHg2WPTT0bJI9SGk9XH8IQA8uhUb9N9-q99gwwXjCFkiyONPugDIh1jyBnpivsbMB0G_D9Ft3uEjMiLF4id4BvrTtL78_JEZZ4QEidq84O455Z1xx063RGQbusnEhAMK8cmY-81dwPKwUKFRS9aogfPmb-orr7OQzuDY&key=AIzaSyBp_fb7LJGpzvEvwEVVSy9-f3uqqftNWts",
+            "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AciIO2e0472pl1eDNrrEKkxZMGvcfz9bOHyBoAZhV5f4xfYjJgfgnS6T3gG4ml967tunUun-X4FUd-al1g1dsPfmt7JKEA19HMqmWrb7B-YYONd7lwVzRPVucJoWXa-5DC8tWUt7bRtGEQLzR9NnQjteqjs23SAqlQwfLtmALWNax_voStYB_iUXp526KvVrJ748Ya2c-WqXL5PrCVhZ12Q5TjaUckbVWuAyWM2uvPwUx0RC00kwjSnEF0PW1MCpFbIeEFg-TBUfTSLv8HQSLytnFBuDcO0bbiQ-yFx-ajDrq4LP4w&key=AIzaSyBp_fb7LJGpzvEvwEVVSy9-f3uqqftNWts",
+            "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AciIO2cmIFKnLxrnpt4igA3zNyPPxjerTCK34xYBLyJR6Joay5jcc9RxHidBUWQeYvfJKs4IHaZSB5ZKLbpaGuF-m3UXttTaoi5I--GU7FNj901JsDZXWy8bl-94foXqWTzphyt42JmV7ayMAQ-EsemPlL7Nyci16T_GfdA89qmy9qY2pAhlqO0KDgOPzVNJ-6ARIQCXCQufpjn5NvwNYW7mVr_PfeL26fuanru_99FHXPA4Z00Ym6NvHEuAHVDy5jxn8BbzzHUOsE-_s9cAtjB4B7x_yWpVllq9MSHpHhCbBdH-8CwYz1tzt7CwveRmlHHlFTiBHMgfYtHMHhDJuZV5lR_iO_-LJc-mlZTpE9bj7e73KR38O5JrF6FXfxSlMcPrFUrVHIFuQrOrTw9UJkWO_rlKmWilLS00osx3L05k23S-rg&key=AIzaSyBp_fb7LJGpzvEvwEVVSy9-f3uqqftNWts",
+            "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AciIO2cyvpLFtL9waa5HjQKItlAJTj_UdpGyPgv8_BibgGz0ng7XaI7c0c2ZXlHxev2kbXlmynZOe4vKGZ681O6i-dEp7jvFL1Jyfx0ZkSPtHaYPOoi7xavTG_UWs2U7FEGzp9nR2utHY16M7br1pvp47ApRlf8kBORO1uXCMerlXNLF2f1f4rwCaR9V4g83ihS6tvWi9DmxH5mP31hv8sPwHV_-JOJm60f1CdcbFt_gGir5TTZkoJP9jpo1-s-_i9XHRDHWrCWSn1jWHLwx5z4PEl5_bwNYKgmbvE3IueYsK7vdkBDPVcCMIKTpOUrcOwQMBwdlVE6oqNL6SI2L1vB246Bp5btsU_rFC4rxfTcZ61FLAGt7BwxSPkA8eiLQ3KkUaV0Typ3jBuqytRjTOxPvgLQygmzliLjQ3H9LhtqH1E4lGg&key=AIzaSyBp_fb7LJGpzvEvwEVVSy9-f3uqqftNWts",
+            "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AciIO2c6b-nZjyxBDlVUEcPEIw7N-1-eibCEkaylfA2rlHqxsXph8nzPQDnycytoLT8AY5jrvUic10JiNO6780KWhaQkdvAH6jtJUxxvbGkAml4r61b9dycqTEt04zwEanek_xDiCNLMujp9MANk6BPDV3qS3Lw7yFRPH37Rl8Yjef3xIibbv8MABl6Mbo6uwzmnIoGxIEHStnzo0TSeKCTPYAWrRF_yBJW3vgB7kEAzuCJ96VJ_8fmJyn5yyWdaj-KUR-Mkm4Ag9si5qVzB_aJG_eSbxB0aiLzBTOVmi3mheu9TCA&key=AIzaSyBp_fb7LJGpzvEvwEVVSy9-f3uqqftNWts",
+            "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AciIO2echuoiZeMgEE20VAxJfG3BCACh6UlOw7bYEC72Lh1dgAKIYoEN9lHNWtvy-ZT3qfGdzaCmaF3eg_qh5-DIqsA58JXqVFN7RI7R3LU-FM9r1GdxWMCX2KNZ5I7qm1sCUOTODA7QcVOfkeUpJU9aAajDT7eZOXGMjq5LmtuXrajOJOoADv3yXi5nI8JEVrhebOM65BDXk3YYP7JKvJsXpXNRqGmEI5kiYEZ6b0vdmusBZlJjSkRIuPFB9-MJXTwEN7dJrJ_Xya3BiWPyZAY4-LqZycCIqbNOaOywpd7FLJRgkw&key=AIzaSyBp_fb7LJGpzvEvwEVVSy9-f3uqqftNWts"
+          ]
+        },
+        {
+          "name": "Well in the Woods",
+          "address": "560 Wilmot Line, Waterloo, ON N2J 3Z4, Canada",
+          "lat": 43.4678777,
+          "lon": -80.60856299999999,
+          "rating": 4.4,
+          "user_ratings_total": 53,
+          "price_level": null,
+          "types": [
+            "tourist_attraction",
+            "point_of_interest",
+            "establishment"
+          ],
+          "photo_urls": [
+            "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AciIO2fT6o0Q4Hh0b-avZeFVstRi51MKfTqwx4xVM4xo-NvUFopg_45ehQl7l0wKHzqArz50ynX4Rr2db__2p7kg_gw0pCSnV3bzgaC2kH8AdV0Rt8VTs2ntiXHhAI-ut8BeykTcD3I7Y00aws7E-QeSi-p_nk8ru1kSKYsj84G4Az98y-yvSisKxr6uS7KM8ZaVzR9A6lHA2_bOQilstBx98YgNPd1WzrKnUqr1U23LZ9mQmJsGnl0L2q0ONljv61BLFEd3Pm5lYmM6lzKqsm9LZGcJpf8CSwKXXMDvl3ac6ZXcgrtCjyM&key=AIzaSyBp_fb7LJGpzvEvwEVVSy9-f3uqqftNWts",
+            "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AciIO2cHG-wtVKC2pJVBT-sUEo7_f0YBzlRu-GKNyFBorllfmlnD61JdGLLM5bwISXeAOI_nZS-5bDWOzh3L2255tJ7R5z_XQTWNJ1CH4zWHLKm0IeKBrVRa8YfDSKlwhboVDK38G5MqnBfXPo5ubutqZKdDLf3Fr9lTSjAGRdfMibyxkzAMoMJkM7T7aD4leYHoljmAU14jMHTsKvVxAGd88UXEmyv1uRSpViAYbZuwVfkgTlzuL-GP7j2W9-c2RquBJNjMGXZ0JpTGqDJUjNQNk2VcY8vow5hhVz-axJukMUiydA&key=AIzaSyBp_fb7LJGpzvEvwEVVSy9-f3uqqftNWts",
+            "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AciIO2fvzqIfW-U_G6xg11YoHYhi30h49AyEl2cs3OYfLVHrDObD4wX9RD2jJLMAbLnV71Bq-tSSkUB2X1WLg7GKpmF5F1VDQXUhDm8ktD150w5C_p21M6UuqVGFRu4mfErZ9knkg0MciBRxop5nE2xWlrbDL85qaKyMeC4MoUYfR899a9O7ZT6m3aQ2d_GrEGzgVRajdd8Pxv36-5k7irKsui5R8az0b5T3MGiaciQJesj2-wPN0CP9sA5NyX_503S3u4xegC0jugGhSkCB_pCkiJnWnwHNvHWAyf_bTMusY38IRJyfC9HY3m_l4p0gLgTOaMlsWyWl_pTcc0ATvjmwquVDnPj86MdZu1Duk8VCSvhhduSsSChPMYsuDbtlF8ZrubiGuumdeX87udhLFMqtKA_RfFC-U9VDaapbA0aTuNz1Gw&key=AIzaSyBp_fb7LJGpzvEvwEVVSy9-f3uqqftNWts",
+            "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AciIO2crKRblRi3W9uOJKmrUQbN-D5dQIRRiZYdylOIhtdJFJnPV4NjsU8nyYyrJK_hf5dE5OuDsOaOm_QF6N-5O3wziTKaemF9i5JEFVtgSUsYNph4XwKdVY4H2woUTdLeR0I6Lk-a5xrKcnoe-_3NvS5MK7-ylTozQW-d4kS_P52Mfgdd6rxv-Bg9T-gmeLPxXeSEO0fitI2WCpoX5xpdnEBpcecqq8Kt-b279tYQxW989KXhCcm4WxDi634BwpLBzsi5oEDQdOcQBkqvpW_t914XWEMURRtY2sjMLXkd9A4KgzT_GvBWXG8DdZyHDk7wurnbbiDbX2pvaXzzNcwbT5XJeabCvOsnz5sUorVD8iN7zbxfJuqYZZMiVUhgoBzfWsoz4VtL9if4TLi2sKs-tynbEA8kp3ADodULFu3bev75rnXU&key=AIzaSyBp_fb7LJGpzvEvwEVVSy9-f3uqqftNWts",
+            "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AciIO2e1sxnVdIAbrgVp3EEC5vMJdD_ZrhzcEpEdr846AVPlfapVVUxebYJ1AOSHvEGGYwvRreLuBooshQNNrlfdK160-YCdmxUVoaCs7YfTStY2K8qZHgmp49g9m5mzXvFA8MwUbU2ToCONoPYnkvihoJQbhxUbkRtY-_3dJYiymTA7MByvbBX9M8ZsLzvN0UN9uAaDgU_kWc9ZXwDMBm27BwREQLgR6Gk3lsRz4KbnH4n58hXurzK4xmpQ_eax-UEoLhzIGZDhoHPvWkEhAJ1lLI0rYANrXhNhiB7x_ciwHyPL4__YxI_tV1CN2GIRF_sp73ok23dsOZLzarWcVFTe2pNdseB_bq3VaIZb39HgE9S_7h_M6UP5XoIrMlVSYnzbrbE2R_QqiLJWoD2-cT7BDsiUwsM9AFUDSIbJa1UpyrEKkl7H&key=AIzaSyBp_fb7LJGpzvEvwEVVSy9-f3uqqftNWts",
+            "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AciIO2chw0DV3Z4798lYrjgBB8rVS_cv6uw5EN3aGXFlVgK5DV7mlq8ezhC2qKDgy3CMWbU2qoG0anEPg0vEWrbpe4OCOWc-AlUGWy8Ecj2muGk9JoClXYu3K8mPiaY1X2M5xBfYWH7TTkWbmHVMcNP0gmw9FlGysqTypXQY4Oa1-hM_UFtCZF4AAJUGO18yBEh0Lenfut1eA-vUsD-N9l-BPRh9QIX1og0MiwZdGZ7oAWAncOZUaHGJbzukmQJ1o05A5NoszAVO2GVmU6eGyuua9Mvth7w34iozXXWDtaJh3R3H0g&key=AIzaSyBp_fb7LJGpzvEvwEVVSy9-f3uqqftNWts"
+          ]
+        },
+        {
+          "name": "Brubacher House",
+          "address": "Frank Tompa Dr, Waterloo, ON N2L 3G1, Canada",
+          "lat": 43.4753782,
+          "lon": -80.55221759999999,
+          "rating": 4.4,
+          "user_ratings_total": 36,
+          "price_level": null,
+          "types": [
+            "museum",
+            "tourist_attraction",
+            "point_of_interest",
+            "establishment"
+          ],
+          "photo_urls": [
+            "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AciIO2eojgNROS77RqLFN5Le2OqNISRmL7ZQp0g5wD44wd_G_GdSBimAz_yjVDWvQk_5py_AyrtSa4l1PgqlqIdlTxVBjONgmuIW6eC3nDIbpOa2edX5dH22VSKWtFzyJRmcAAjj-0IAdiBFZdXwbmNDpOEMMvH067cevit9ofqTDCsyDtQ3VgTg5lUzmB4ajnE47w5jErtyF9aW8Fo1ZqnTtZCS6VNvDwTsba5DzVPl_cMBD9DUgIQehi-1kaChtGXPIqYw3yAGoZ8ecmDt01LfKNrhiWUFzpbp2YDrKnDuKi7H8N2gojWYPh5LAp53vW33dl38ianhhur4T4vwEUC1LCTjDGTSz_hjT2zGmsdfQ_KCEmX-5a9rU6t1MEvhKHVdB7-M119BRnHVtyLcibIM_Mzkyt3LNrS4MIjayb_sRDXRy6F5UeUGm-JIALdNlvwzT5K8o387vSaz2__7Sf9sAoRSrrWl0QzNlICOSyY4mmdKm-9jdUD89N5GsQfrRqC4PE8e22v40sGWBBDmJxH_U4eYPjK1kG3ipFZ0pkueCnjIXHEyLlOtiNan_8Vh7bve8w20M7qGEk7tgQ&key=AIzaSyBp_fb7LJGpzvEvwEVVSy9-f3uqqftNWts",
+            "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AciIO2cgZ2K5Os4pF6a56sKGs-F9mzVHh3LwmQP0-brAn9_Ne4xLy_YmSzSTD9QRcXK6bs0fy8xGkMxXO0GkGeBgggXP-UjpI3EcP2CyxBwbloJ3HOxdDm3vB94SF76ueb-bJBVNxYadlH1JnU9F749lXnLEkWO3Esb6nTKZZAdWX--GpYjMZThJKPCAJVqBHpPyG1GNgxJGKsNw4Qu07uyKwYCV1citCjCK8L7JTwCKjvpgAEUgVAYo9VpoNJ5iN0ux7TdWyfwygp_26_qwMqozupnUXQY9Ph5-LTfyWSSmDoV1mg&key=AIzaSyBp_fb7LJGpzvEvwEVVSy9-f3uqqftNWts",
+            "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AciIO2fYXfHbO-iCJCAyWodTmJxTClEYDZ6CDtg1k2SnTh8u6BY5YIEaJKdnO6E9fllcQ1M3IcAc4ZZJljVkRBtsW3N52to9IuPYyl9-DoKHMFJnP-NCt7Rn_47WsnK4OY3OU_fd6iQH9BbBSOU7gJlzvQDgr9w6vPeABwDZTaAF-6QVdbl7QxpU1v__NhMST8AS_vTdAbhx4s4UesjAmKZu5nRWYFumOemhX_YirostPxzqC5WPrDgeCllrOIsbagF0oTdR9jfgEfi7UWj0pk1MDvChyU8FPJE3r4vqaExq_qBcJIl6ibm6T79FZeJCULvUgGfk5Jorl9xyxe8GkBkBa9_xJCOLhI8SrAhG2uzHCdtSUmNDYy-8VrEkvSfkly9ZT1tdqxXkRA12vjRYD7Laei1jpFOzvgttrSIrV7syYveERhA&key=AIzaSyBp_fb7LJGpzvEvwEVVSy9-f3uqqftNWts",
+            "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AciIO2dQTdPcr3H5-uePp-NAPYty6SzOaEQY_O2VVBQn3-chw4mawE6Z2NcATts1nqxSoADYjQhebgno_jknpUuLVKWSTW97QxEbOFNZ4RGB3HyPk6fg8CoxNJ4-mtLnVH1w55SsausSkTXOQNMEQ908QI8ygtMRKiGyQrPFPXecqH_Q920KYrTiIW995smSHrGAEZU7whvh1QqUgseFNVmkID9ZgbjmcQFQjggrFNiDhl_Lk-gj-7A6ny9o5F37OJIjj8FXC1ntaCaX-mbZBwH9z4K0hanthWIfFU9UW5MdUj8QzGB2T6UkNm7c2nJJ0MvW6lNOZL0YProf9pgYB99zARhbvf4oHqQEcIBR16ZeHERPUcYOXCKFQIzIrr9vg2VgC5THB7xyAeYagUGL-ceEJr69RI6YMXM32jWsY1a1TF_XAQ&key=AIzaSyBp_fb7LJGpzvEvwEVVSy9-f3uqqftNWts",
+            "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AciIO2dqIrWmsqgHSV1m013o6KIkVaoPc_Vfl6H7ShaZrlOI2P3gRCAry5pCoQKO0vrj3EV7U4UMdMs_ne-BBVhQFzap8_MCzd6XTuHAqGhv2rdeck5XGfHIaC-tT2er_pOrMRZ5AtFII5rnjxPlj0CvE9HlmDjbhgZM6bPAUEqMTXNWPDpxmgX_l9QN3fofTy_f1pqpqwqiDxW-NzpvmVs-TRLVMxMrO-m9x2rlYTYdT_oIX3Npa7NmlWbwNEY3WiCuD0MgaPDVO2D_8PMilGJ5yrd6_Uo-u0J7A5zHqOIXQUCllxMs1O87Kcf4FATMAm430mIwywh8TQGVwh_2rJHOSTS4gdfMais7YxpsN8XvXV3mw4fG4bu1JY3fl1ksZgKUvmhAX6UdayG8l2gJ5Y1OkOuFa7NNyoN7x-D-YgDuh7w6vF42&key=AIzaSyBp_fb7LJGpzvEvwEVVSy9-f3uqqftNWts",
+            "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AciIO2e5w-UsMRsXdgKerqWqRFGXkh-GvWqTxUACY9S8z9NiwgzvGWoufQXe625ZCzUQeIU_dtcS7EPvKdjBgn9Gz_ooWdxcTG7EBHBDm8Ro9lFiYbmv_FKIv3HaTOgCVKRAAMrSKAnwZnyYzkOXgbKyBheexP-v59-12pQgMMA9HpXSjb1WA3Wg-N1_jf95MTLdBr6NF0umkDvWIYb_3kof52561h5A5qkaAHKbiMTvqQHwq6lGx1xpraovkk5paE2ScVq-ss72F5mDiKoogNv-jw_3Q8SIlnaW7j9eOjo4DBbcG04VMIxekX8hXZxUvptoqzDHcIds2OT2_PY94e_eDVZpwKxAvRaie03gDHAYzYaSlXHZmIUmqnmICc-X8ZJhwZRoK_5ozLBTA5bVnZASSNeXbhHwGD8rPZM8JgnR1JYokdcB&key=AIzaSyBp_fb7LJGpzvEvwEVVSy9-f3uqqftNWts"
+          ]
+        }
+      ],
+      "restaurants": [
+        {
+          "name": "AGHA Restaurant Waterloo",
+          "address": "50 Westmount Rd N D4-D5, Waterloo, ON N2L 6N9, Canada",
+          "lat": 43.4614015,
+          "lon": -80.5380363,
+          "rating": 4.6,
+          "user_ratings_total": 1608,
+          "price_level": null,
+          "types": [
+            "restaurant",
+            "point_of_interest",
+            "food",
+            "establishment"
+          ],
+          "photo_urls": [
+            "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AciIO2cuR8T8ZqbeRu7h7OI1FhapwVIR3AbAM-6pOwTQrwHwgXW5XW4Tr6ePNdLpQmG65JIClllZuJAegecb4nXbeBcu_sTx_K0jfOOKe9fxKgb07vnSHVuKX8rz3RyBsFn4Cbyjrluyo0O3OZl77H-4Oib5RyPHRGbN_VbQxv1Pk9FlLdy7yRmJrqYpKVwTetx6aimXtEpEpII96JpvdIa0WnfzpkgVVtU1K9Js3xfD92vohm7zLNeEmNM2vUhPaInxPw0Qs7cI3dEpO5halL1Q8vCz8CY3dBdmkP7t-Ri0XOCbTVT2cEiPcGfyiNkpMxsJo76REksNCBIJB40s6N9M0DCERgccrOZBzpiRrYATyS9kWuDhxEDszDoae9H69Y96ZeeyFmGBAOX1WEWMCMQ5YjuLxYGjyJxTBGvHI-3MZtb23fd8JqBHZo4pGoeXsM8jJPMQ4h5BNkwZAuBq45e0QqvpvErr6xyU3F3zbKnVstyxC1P_TnCy-cMv2v9MuKo_g6I23_g8rPggzulK3rQBFO3Uk2EQgTi_SoMt00vpWuANXmXPsKGEp9Vn2bhEnEZRsyoAUENi3w1HTfsqtww979Uqh2ox_Q&key=AIzaSyBp_fb7LJGpzvEvwEVVSy9-f3uqqftNWts",
+            "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AciIO2dKyHWYCKmNSVR6rqa69Vv_XZ_uac_nQETN7YxJkSlNM9qn_gccpim-Nn2Z-PHy87ysrOQ8aep2s5AOJ4uyTcFbvivqDsFsczfIbS2_h3hp2tQi4SwNtqyqcfkGKpuEyDpz_NrEA18urSL9Ht-Ay6iVO0wMXst30WhM0f-z0hGvwpmdbQbfibCqtDT-8ZNo19CadKQ-3tm5QEpBiq0SVDafV0qsKOt393VbYpXodxpvtlPC73GS8VgQpDpRMEcxoPj9IUgyiCmbv8Dm5PepZJE9notn_0USdeQww-xgaCsJcw&key=AIzaSyBp_fb7LJGpzvEvwEVVSy9-f3uqqftNWts",
+            "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AciIO2cghdORlnbIQu6SFqybgcMlHSXbop3OM52wYp__OKVI3J4gNpx6lxkQ6lIehKL6XASu97SxLdLCrlxjZerb_sSCwkhE6sx4IMmU95ohQ7SNRTNNzTW6D2zMihwrt75iX1mVJJocZo_x1b9i4euJRgxgfajGWydJT2Tyyi2u-H2SDLqtFNA_7aXslAT9fdnBScODxgnAs8StNuoDrDEuJI6vBa-DZFlZmcv90yRrAC3TFgll-FzEt18nN_5O3wpkJtlRMaE9h0ih0aXQERTLpgPDS4f75lMsC_HngpgoO8SpTQ&key=AIzaSyBp_fb7LJGpzvEvwEVVSy9-f3uqqftNWts",
+            "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AciIO2cY4Zw79yiqXjknl56uu4MSrMqqWD1DWUi6LgTZD-GKQ4RXJc3WcfeWJAEpbBmcrsfI7DIEPlGxqiE1OG4LCuqhKDr-4Jib2plEzb1gtfEFL4kEkxE6K22lHqgjU8Gdexy-rRcL9HsbZBpBve5CchKGMRHjCOdwClRmfNaXvXAWkhGb1PvFVvNg2p3XPY7gSat_1SFeMMtLaPCn0qOnXe7KkTlRN5tt4GJXxRDQhpTHNhOSaNx7-IvWtiI9yGhfrxiuh3ZCto4NOBumkD5_Sr6cGTkq9W1p-hhEUB91Hnog4f__6xLbbtGMnlt70AN0LpiI01plRAC8eM2ZSbjh-Jm7yA9EaJi7zWtFcRDmMJ0JqGitAdf_9DFwdBbFzPekRfNYk550xjr1MknqqZsH5Cce3u9pQBn4i2nJ7KvhhZZC66oYVqQTqw7eUg2bQw&key=AIzaSyBp_fb7LJGpzvEvwEVVSy9-f3uqqftNWts",
+            "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AciIO2cdWHfDs1EVS6pHuI8xHhA0Qga_yf3N-w2D72KJ7MNfuAXLMogw6N9j6OJLVOnyJqdrArYPvpNmVLUTTIwG6BNSlWBIPOxClFNH_oHlz39RKs6TyGZSmuecBT2iH8l07gUJ1roFLClFDG4JZzncjpA6HHX2EbEi7eYDQwzDLSnILbI4X8nz9RDcwBEpUI-nqdmFXQQ_5I4-P1_F1j6q2OcKKU5nwvohMZ7IWXauU9qrQuPVf-wrPc9QYALEvtYB2CzAmCkpGb9dB6FazV3ZJ4pzQi_fdRVNdtfdBzv0ohPP49B6-5zEt5sm9OX3n5-vULYiNoWTWCuh1fMtU67eqJXdVsJjAQ4GP9sDfg_pxKZiUhg9jLjkHo4tOCb1gjSkkdmQMLL4eeJX5AI8A83zLF2j9MAJ5oIV11FrcF9afD-Coktm&key=AIzaSyBp_fb7LJGpzvEvwEVVSy9-f3uqqftNWts",
+            "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AciIO2caC1C6k8VLHz60nXrhFs1sxni2tbULQYNQqrxu9M7rh8BnsQmAjP-4UVsG5HcculJMidK6qe3ioMh7R9YMK5_8zoVhYu2yMTrDpWGqRXPwvWd5r0ZuzXda3KtC3zGe4efphg7-2y1p2kmNO1STgZHsG17ycvmtrGun-KwHXWOmztKH6KpIHnqxBSlI-9dD1UQY4WKXLMb6aW0ICw7Hd45DZcWAGOfgAw7FoK99FtXLu9jBjc20Dtw_QMM2uh_DYhLbSvhiMLC6TgP-aZDOBJ6-d2aKGdrhUJgnEtuBjRZ0PyiFbaUdgjxD4bmmEZhuX5tyMCXmK_RwEDvkyp0stobVOXrYkzmEv-z5oW2R9jFmrGb4D6lKm-wShlOIBpMtrtSujAkO97QHbZ94l6VKV3MQwGtun58uqVkTba29SqcCsEcVSbTHvmVPvI2u8VXy&key=AIzaSyBp_fb7LJGpzvEvwEVVSy9-f3uqqftNWts"
+          ]
+        },
+        {
+          "name": "PUBLIC Kitchen & Bar",
+          "address": "300 Victoria St N, Kitchener, ON N2H 6R7, Canada",
+          "lat": 43.45856149999999,
+          "lon": -80.4840739,
+          "rating": 4.6,
+          "user_ratings_total": 846,
+          "price_level": 3,
+          "types": [
+            "restaurant",
+            "bar",
+            "point_of_interest",
+            "food",
+            "establishment"
+          ],
+          "photo_urls": [
+            "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AciIO2eEbw3CkU6sZ424cU66INeswCp0SPB8GU--tEdlMu7GLCv_8WY19p7IVJ4RnpkZiCUBCAmeD20CeDYwj5t-JDXcOqM4-cadWoo5x1mVXg8c42ONBkoOXkIRXpAQ3Cbi8tpgrHTgzBFG-0nMEYuaNX1ZC8yuEGbvbSlYDnRaPQ0yFYcOsI8o5swP_ZdYj_NSZ6H6fP-nh_daYbF5g7Mx-kqsNk0PBzK0SJpps3SmyIqOH13alMlrcOL5oTW1VLXc0J4fOLsu6cvibgP22DzvgA5hto7JD0ZvmbdlIdeOwJo1grHC4sTH6j46ItGCii5Jz4errTjvgfKXlRI9KftU1iPf3OCexc9BW2FD0jieId2KU5MHpVFwZ-kgye010eFJCvFgmrMCplfJAOfCDek0HYLaV7Tbd6mxn7Fxe0lbf3e4wCbX7epBQlcWpQk-rlTPX8E8I25S9WsH9fLTNpM7pJ8jw4W-fPwgPuW2mz6ro5CwaOmvYDKpFGS912PyzbWBazwqvDCa8R-F5G2yBsQKum0NjvgKu3cFuhzpLWfthtEO1042Z8rGMfQHYFxke_m3I3zdueqi&key=AIzaSyBp_fb7LJGpzvEvwEVVSy9-f3uqqftNWts",
+            "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AciIO2fsLFVq5S4TcVj7QMdSpDBKME8gIniJSGQbV-VhCv1GAGoQQ7yF7jgBF1kx8aCPgp-nWRP-O9RjWr03ZLDMqdWC8svUDg3CQX-ZOt7Om2AEjN9f_HJF5_b2M-nTded53aF3sOWJkTAu4i3PvsHIuW3Fk4zJm489X7FJdChrQWv5GbBcSuJLEYZWgc1MoQlfOfvI77fMZtm28NZ-lH5cOt_lAxWwZvn7xysdeOOCD1hwi1-Jzg6kfP54LU-_96Z41ksY1wo0uAyx8A6hWBlkG7S8mNBQFsNU4YHxuNKVqymubeXn5DzhKibV5IZ3MDH6E9jwBWAlQUH3YLYsIw7hlkwuQXnHj2wNwoKMtJE9hAsp1snF68UuwAAxtFOzZdAQFzWCnAFlIQ7kY4X2c72o_Tx8j5A87D10RdzVAsLZ-siaRQ&key=AIzaSyBp_fb7LJGpzvEvwEVVSy9-f3uqqftNWts",
+            "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AciIO2cY9a__2CA60-OG3_GiyDe9SHOQxgLI1pHvq3sh8Mq93C6_SwS7-ZWIW86jQNHoeW1NG86YSpv2ggR6XXf-_ire_L4uqNmm40Bs_aIgoTZgBmWYop9o0lmjzFEQ6N4p4vJ-7htBdrUZrls1-ckpJPBhIRMBhE2dqb6xPpE39ETNPW7L96AAZtLZcIbn1anAeuO0BhGfO9BPOr_oNJIy-s4VpAL3UA4YLVl6S4XkG7ZcmPg0LgRntITlBIzNeIM0oiNNXzIq_XuSMyh8yYqzjrbgTz7IQtDZQNTuMuB0VnqzWzzUU2tiLMO41kFl3ycj0xOczKiD4mFKne0gI8DWCnbWSrs0dhKfOYqbHEW1pjVhHQlGIo5sMgcbywN6mRW55jnf_sJeLKQzzSwtRptJ105y7urE1a50bxVXTj47aveCcA&key=AIzaSyBp_fb7LJGpzvEvwEVVSy9-f3uqqftNWts",
+            "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AciIO2dqbdXx9vet-47IE--9m34w3Oe4W_uOEYkIAkQI9RT3xVG5r5AfP0bzknlzoSp00snLYS69ou6oez8rDrquCyG15G4eyTbOn8Jerk1cV-WURgsBsMdFbSBpKTzVtHu1kqk27hTw08vjNLM95RAC3qF_AgYDooWHkwRlkfLlfVyuTxXjeKSTRYSYfSR6T-_-mntF_2MK5_j2_WWu4tim1vUDz9COPGS8KeC-gXCvQ4zrBI5IJm36ayvmDJm6CZxYpiApQG86lJ-gxAOGRNWIKVqSG0an4EyQldsAloZF3s25fpdtdr2q44FCLPgLIwqAj4Xh9qOpIz-goorSTVUBEYbzblybiPGBa9UdacZKNW5m4o3jJy-ivx2q45PCMUw0_sCrS-Kdr8B6J6ie8Ji0zG1ac_p8HwvSf7lUzUZGrFY7DV8&key=AIzaSyBp_fb7LJGpzvEvwEVVSy9-f3uqqftNWts",
+            "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AciIO2egCccqlzYy0a9P_8y0eIfT-GoPr5JmExx06sfnZcg0aJYv-9L2JB6CTeFLzWiX1Dfs8VwE4sA0QBB0u2-x8mMiDu3zFhTqiC4g8EvcWQWvgOoZ3k3rgtsoxSCi1yIPPBfetyvgK_49woEkdgXpV8cRGaaXViE1L0PTGiOJxw8rrd7AQ25whdSiWuoeHLrkSMXH5cojlH4VjRcKpc2LLtAgppCowowKTTVH_da-sS6ui5HbzyXn0AGX6cgc4SRi_i84v8lJReQrv_Agoznmz-Ypll-Gmr8dAO4T8lttigYfx3pfRFFwL83Ic4vl-pyfhpijAq33Ca78UFHaKOIyz48siqC5LXJyO780PndgTiRaIryJhenKSj8s_jRI-7PgiLzj6RdqgaIRjQk5sNlYCnK1MDpXr5NUwqyKYYHu9WnARLki&key=AIzaSyBp_fb7LJGpzvEvwEVVSy9-f3uqqftNWts",
+            "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AciIO2e2RDEC-F2HkInqE9XN-m4rv3YibGLfI0IPVuDLvKvPSghCXpmGcaAq1SmHMlRnDs887DiOCcfeI3Cvlkv7kaZIaDEsR4QmWVDDhxUXeBVHb1AvPlXK2649KcwK_roE70irHffYXj23D_6VYwbwzvgi3BUYuFq3v4Y4bJOXa-1p5ZnqnLlUTPxMY9lhFjTa9L5Lhsbjc2-sg2p-edvi4oPjbuG-qoxdv7SsWr_GW6kCiyQFx0WzhuCSJL0MVweAS9wur_SIjfKp08buQTFlJVZ-JvD67xKjhaxn14pUxBtggf0EZ6QZcUU_jsrH-PEnwN8qczQDqu73-jcEQXcU4kq9rGn-ybgEX_dDD_kZYMqyOOWlkQW9rtvYIYTKRr64BTul6L6mYruL1uO0-OqjE9mDc7Mtb7L8ldLPfS3kBvKM2A&key=AIzaSyBp_fb7LJGpzvEvwEVVSy9-f3uqqftNWts"
+          ]
+        }
+      ]
+    },
+    {
+      "day": 5,
+      "attractions": [
+        {
+          "name": "Chicopee Tube Park",
+          "address": "1600 River Rd E, Kitchener, ON N2A 4K8, Canada",
+          "lat": 43.4295571,
+          "lon": -80.4215619,
+          "rating": 4.3,
+          "user_ratings_total": 1731,
+          "price_level": null,
+          "types": [
+            "tourist_attraction",
+            "point_of_interest",
+            "establishment"
+          ],
+          "photo_urls": [
+            "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AciIO2ceNQF4YvHW9VzH69UuE17aJ7npJVWlHNimzaQU6IZlmdiqJtZaw9IxVRGssV5TJFShqOHhg4ZThbuKrf26yuaDERzGPOVJOU5OGB5nGtxMMs1qm7ngBc3i3Wg81GaGaHNX6Ry4z_dF_KFFE7AVstvn24SepoPvHUaRP5Fn-MK9DRbFNAZm6fyp5pPqadDB0lB8UGblMbTQMZQZdGAcLrreO62zp49wOB99ABNGAUoeI-HL8kn5L3lOsBUtHtv2G-6oRzDmyIsO4oLUsh9E21QiBTTFoPIpyDPaRD-CeuwQO31rRUylcU6x__3xP6KoDzljExiY6geC4Fq86qCrZ33532VXG9OD5QFTqelsbOaFoDwTUfxMgaDVIe7N8mwOgPvwKTNz4ofBeACujI9rI7tADExD-sjcl3jAXdGDN2fEGA7gq7YT80BiqcZ-ArdNRKYYaoL_MgjiuyYTY3s0EeQP5DyIN1WoTbxi_lG4ZvQSWc2StKc0RfGX1yCdvvPPPRYWb6KrUh1MU1Bp9IsiX2Yoa1VjqeHmDQi4-pLbcJgc3bCET99ReElR1YaLevUrlnsMZbg2hJxg3Q&key=AIzaSyBp_fb7LJGpzvEvwEVVSy9-f3uqqftNWts",
+            "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AciIO2cfkQdLjVs-h8yH6Iz5PNWlJpy2Etwq--qcE_oqgcH7jcQohS-SyS0uviy6jdZdodZenurM4ib2KYgMj3JZJcRCeHZPWpjysxr6JOO1Dkz_Pxq3XP5JtR9SI8mfrO5_3l7zVdPVtQo1_lZgiEzwcb4aLeC4E47bOof-HXUaWhoHvgh4BiUJpKb-e_NGQo24IIonRYDBtRwAND-jVyk2NFdf1Okq7bryb2uXGE-tYCXuG89MM5REP1fNbdGQbhDXJ1lvrOfUHvfrBqI0xwylKuO5aYp8DgiixuWLklSm50D1iGPU3GGVBJxdXv2FHgVuI6T6QIzDfPAWBjJCB8M8jMYQqPe0qP2fPA4xb_RegQSLntQlVLNDkTxcA9iQGOJv0RwJjd8XBlqpBFWGKN-V7BSra1WCthaXfrbXucxmMG8&key=AIzaSyBp_fb7LJGpzvEvwEVVSy9-f3uqqftNWts",
+            "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AciIO2dVI51JQ9sTWzONy35TSjutQJAdossvTjHV2lwotxRnw0c9Ukw3vhuPlGxeNybWRyQG8ehkDIb8vmYQnQxEcMZfNOhW9cHSkGYPejBRGozDr-OTQWRfn9X4QQw78VEJoGRJ9YKx9-Tf9DmFRQd4Aj73HvQ-3pURajEg-4qUYn4_9Q7tcdZ4OQooeAtR_Fgdmy10k1Ezxr2lCRXB9cOf8iqt5X9Q2LvrDqZweEFfAEmjqt-PqrldoJsG6sq1QHE3WP4LeqSeXxSWV6rs-dIusLVotOxWlIzLriv9WTyWKdfLjuPENSMtg1sZaJrCpv3O46x6BdLjvOY8jHc82rh_YFc-_Z3emjzOtFu8GpckRGGvJ3XPNmi1R7zRmHxQzPDlR00td_UGCN7GOacOGKToTdK0ZkdzBpC0CyducX6sHfAwVjY&key=AIzaSyBp_fb7LJGpzvEvwEVVSy9-f3uqqftNWts",
+            "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AciIO2dK0kqsdhhsDKnGO6ZAN-xY2EhAVMdBN2GGkDeHLAHUjDc8fWM6u1x_ZeEBOzqMQ93Yln-9sjw8kvnm107vjCWPnAST66dzoYWbgYJo2CDF3zJMQN3-85hmOaC7VFqaeHhWAG02es0fMH1t67YnigCK3P-8zZDvebv47sIOpwoo2fV_rHlAW0Y_ozsz9DaBREvKn42uOk7iI63TmMI6b6U2GTEXbFNBbKs9TzjfMrX8gXqZ0DSwDTF4G8i-_Wfr5knWFUpd4BeYOHNdc7bYnkpZ3F_g6Zs3yJa5YnDIR4jLLYAuTfK0Lyz4JM_aerkzjp8wpnpUaYqOrHZ1nsKD_NvK7EpiLLPy10a0X5lBCXJVIka9xc2BswH-TG0EP_dnZT_W37uCa1e0jypw8u0V-X3aLkqx8TpjjxPr1zIF_7B9og&key=AIzaSyBp_fb7LJGpzvEvwEVVSy9-f3uqqftNWts",
+            "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AciIO2cmUh8ctDAcSUbEHArU-n3k4lyZZGHV8nxufHDyX6evHe89HmoN2ZkQ5_ZtE9G2wsH1nj339pZQvOhKmRm3ncNcvrlCPiezrpLK8z2DtXg8OCGvl5BF5IjARxUJqOU0KTnkBIY56qPswJCQIvEjlT68JgO5OrtDigf7S8N4KWL0tkZaiNF5A3YPVzsCILJjPeFb-R69XCfO4umT2ztVEuPhDiwREsr4eb-2R7vnnvo7NEijIZxCpuPzHaLeXnmJe4eUlHOzxgkNdYK7BoxA6S6Q_ncnwMdEHeNcCiwbU1vMLQKipUJIrZhIirtSaa9jcIQ19mRx7XqmdNpgI03onzqRIlqwDyigyHLguv909HDXdQn4SqAje4Lglt2EfeY4HR8MPUmBsZ3pVJ0bvI7VWxl0yv-IcYajTqravXNwVvdM_600&key=AIzaSyBp_fb7LJGpzvEvwEVVSy9-f3uqqftNWts",
+            "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AciIO2d3g7U9GbMpCjhogKTVIlHOjiEn6spX3cw4g3RH5xmXKI4Wgbxyri8V7P0moeNGzwjGJrBu_u5yp3Izdgr0H65IY1_28HAWDQkRZ7WphoSkIcUd3CBsD7F258YOa-oAKawDsPhmxxQxjJyNR-IM8OtiwV7wlvgnJYcPcGqjB8r32aqwwNkjXpPjBTX9LFikpd5hbaP3bvuiTAqYiRObrKfPwjerT_0BOJgB1KQN8rmKxzIUGfjh_ylU7EjBJoYRH1ajHHWraV4M9mTZMbjV78TNHO_kz8rBJx38Yml3gVhNt7rE6M4PdBsYASTkFrfClyahxSwjbLYAA9jmQizg6qICBNkgmdXjGN581Z3IkckhFC4OSiv4ZUV-xw9nWhjBhJU-tR5fWpGNUxJbqVhZJPiV5U4Vcyx0rSgKZ_7QNb6CKWOU&key=AIzaSyBp_fb7LJGpzvEvwEVVSy9-f3uqqftNWts"
+          ]
+        },
+        {
+          "name": "City of Waterloo Museum",
+          "address": "550 King St North, Conestoga Mall, Waterloo, ON N2L 5W6, Canada",
+          "lat": 43.496841,
+          "lon": -80.526899,
+          "rating": 4.2,
+          "user_ratings_total": 57,
+          "price_level": null,
+          "types": [
+            "museum",
+            "tourist_attraction",
+            "point_of_interest",
+            "establishment"
+          ],
+          "photo_urls": [
+            "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AciIO2fwg42LGanq7TRuOhsfDy0BzIC1tStTgj_C2nbXKvfvPer51XLjix_o7C18WfCf9fZPN_w7I_GwQvcyw8Xd6qPXcW7QYPzN5t7Z9Pf9DwM0LQYMIBWYlxzBI_EQ4EJ8PH18N_6uwBcWrklHmr5Tg83XNO0Jo6sXBkm-lqv0Hv_8xHWnnOIe7LarDXunZCSrylNPJc0RaDvAyrvpJQ5vcLpAf-edn5TcGH8TaCqP5F46MNmOkt5Xo8r7DIWAAr3CSt51uX0hSikvzqOS6jiNzXwHsC8HBujew4nQUQNuhiZ4fp6Zm_A&key=AIzaSyBp_fb7LJGpzvEvwEVVSy9-f3uqqftNWts",
+            "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AciIO2ceCRrMDGDnqWjmbxojXN-_5yu4t-ZEXMuIyN-PXdWccuiemO0O1Ab6iaOUJXmOHDb2x_lI6jIwGdHHK2JI_o0_P3MlZMUDGpDJoIy0rO_yxhoJntGWQeExrnnfzPJAyrZ_6HTlb0kOqLBxJWQJh-LpkaREbx9yy6o6CcZsqFEwSEoAT7eexw69Bs45yynjURJ4x7kqu4u-xtMrtX2gUSBrEp2KVS8gUT7lr1IbIOxdqdHR-rVAsun0TuCJoRz1UQDdWNAQNUUFNl4kfmetsOUCOD5H0c2m6wV2F_d6XFU9IQ&key=AIzaSyBp_fb7LJGpzvEvwEVVSy9-f3uqqftNWts",
+            "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AciIO2cCaMibqQQzh6sPowxxs0jBClGytP1RftOoD_fnBIRLqsLkCP-_uIp1FRLDBEgZsG0U10hBa96wRJ8pPsw1tRCNyrGlU2eLVnWzo7IqdE_fkrLghI-oZyroGnkAbarb_9B2IarOxU-8kt2ZhGY7-30-Q7pO_Jdnfpn05JSKTrwluE_-j4nx2c4bz5PO7cqQBSabz4WBaU5Qkzx4wet3yajNkrDk11M3IRKUNR2V7UgiSNyH2tzj1m0bSn4xzthctWGLN0_DnOnMcLIN1t_Bld63jYc9cADwkZ93FaDfrn5xjGWuKLqolngc72f4p1FBI31ydhtHd7U8zOMYpsR77HLL75XDlxi_Mv1xfu4dqnzFXhR9sYBFSt_8O4NchFkLE-66U3LPUDc_k8055H_3bjl9RFZFV5V4DiPqk5WQx-cxbw&key=AIzaSyBp_fb7LJGpzvEvwEVVSy9-f3uqqftNWts",
+            "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AciIO2cRgROEj0C4pOV2SxfbwDFv_xk1Out8K-FQ6ypCuEExNG6s82lnOVWtJWGXjveC6HopMSONduiFjpT1JotzPlfQFleZFYD3iCcZ7PVEfxXugAumVXfWjs7vkJJl65TQ05sTjePYybRpbiuXVA-cMAqv9FsKT4QDWly3l8yHBXWDG-I5M0woTfpZLLB1FwGXuGi85K47ns6ELMRsu4tTY7wEUTbPMWqf3pkKy-lpmW5DgHUhVbQZgbHcDfU0d0FppsxuSs01y1RqFGRurNU8YfX9U2iWRIZwldei_Ilv5LcrJQ&key=AIzaSyBp_fb7LJGpzvEvwEVVSy9-f3uqqftNWts",
+            "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AciIO2ezd8z6dtGwvD6PIK5xc6Y_4R0UAtU3X-Bcej9_wBFbfyWOzpBrsNYaaqWfsEPPwp5i_JXccyEKdJ_bGl4nV-qktlXabwA8AA6w4MbdZatsbe7XEm_w9WxgCyE4esFAhu3d06YAV3IH_flxdTEWVrQ6BwArIxMZuvMMQp9K1Wv417mNPVODAVTFQIQM8XOL0_eqcPKI9kF8X2sLZL_TYzQ2qomSCgCjnvcLAlrdRtTWnqPO9UG17NmbciMMIyz1W845I1J9koozJeRNVAa0Iafgy2aOpw3Ej1jdwwAnM5Pj1uh_RS4EyU9VWgESXjFQAtillMUoizTvkvmCPsf70qqf7Jd7JT2ICcoONWxTozKuzM3NzshFY2mWJtH4YuQpxb7uImcmrmF1egyVuVVlubiiZda8TUGXphmX-S3MLTjLow&key=AIzaSyBp_fb7LJGpzvEvwEVVSy9-f3uqqftNWts",
+            "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AciIO2cBN_78WzzqTJdDmQTxrRZlyjSFkzM-9I2VHik4DNaIM2iO_QifGlu5_mSITi9nVJrybNBvb0XnykaB0p_W63jy7hitqmORWWLM2tA5X-kB2YXUnH1NZmL4mW0eCXfuhaXhGQGkHjJOGtmB_9QIW82hhuS5Hf2kEdAuoRBKhQk6mEZag5CNMbJXOs0W-sNNkgUsttTbtoVJmgX2PLVSw7ZsfpyjIg5vBFq03iiSOB1WSimQTddAtg7-nu9eKAojIJ4AArPivT2jsw7kIgVP6NhsRcmNLz-jpBDrAS0PQmngBS0ZNOvS-41riZuXtUw6YTmTVmcRxN-9Sh7eLO6OykKcS3967UZpRD3RTEh2etkWHj89xuxgJHWWnTD__LhlDv-UMEGxMccnDQUOX7xSpbfBAv7QnfsdMQXwtfY-lfO3Aw&key=AIzaSyBp_fb7LJGpzvEvwEVVSy9-f3uqqftNWts"
+          ]
+        }
+      ],
+      "restaurants": [
+        {
+          "name": "Jane Bond",
+          "address": "5 Princess St W, Waterloo, ON N2L 2X7, Canada",
+          "lat": 43.46670719999999,
+          "lon": -80.5233495,
+          "rating": 4.6,
+          "user_ratings_total": 843,
+          "price_level": 2,
+          "types": [
+            "bar",
+            "restaurant",
+            "point_of_interest",
+            "food",
+            "establishment"
+          ],
+          "photo_urls": [
+            "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AciIO2c2UERRDPjHjvN8pI_LOpVodKY2rF4aM9IWfbuHHaUpVaFku4SS6-VKil2jiw2UouoCry_vFb7Qt6IYa2d4g5ooVp6pgqdIUWCxgzGX1RXnhgQA-tOxIMwGgA-0BOkIZWv1pJfxUbYFXUwQ-krhVZC68ivEhl2gIveaa_V2YP5PHysu7td7YqhSIDhHORfKejD2O4XtLVNPbs_OElFd9Plr7EvrH1Pr_eyLU9m7zZCCL9AM9qcwbqlc5HexUw2sKbFKwx4pHbq6Q9cWbPDfaSKrYj86xYXhjDyDrTPnHC4fF8Ubh-w&key=AIzaSyBp_fb7LJGpzvEvwEVVSy9-f3uqqftNWts",
+            "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AciIO2e-1W0XOkG31EQRNQGOHl7y0bMEt_Cnc9iYEtz3LCcaa--Mf1OnVHF-OfHk0FPtE5tf_8xvwBXveqaSZI6MSGBgNLx2s6x7V6bkYxN7I9tKzawrb5oqvGzhN7atb3xdNM210P2XJjmfJYJa4IS6se4SaDHB6y8ioueAJJwnSC92v0tIKG4YvovCC6As2KQsAF4T5ZIohKvA8TPMhIVlcEMbwffWWv0ZNRUD6W-ROXJ47MCLebaUScApumqQOSDySxb_Z8Ss42zXqrTZ-9eDWhTb_anHVqmI1d4btsZ-2yfFrg&key=AIzaSyBp_fb7LJGpzvEvwEVVSy9-f3uqqftNWts",
+            "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AciIO2dRbFKUVrZ5GkSqG0PDYcM1EO7tIv0LXLt8Xx__abY7e62RZ7rE7rda_hUMurkRLQqV842OpK_T-jE2GqH445p9QA3kg-qGgumUjlI3oo86L23PAS-iyreKSEg-Zn0fynt9OR0VFBkIz5hk6nwbMLWNJbkPlvvosL9oggPIyXLPJD3y3eDgjwPrDhuDOTKyJ4oL4bvTRnYXddzWNJdv5vz35dok-yVJbu4Wa_DJ1pQ-SLyDrtZWEa9c-2rLYeA_ZiwrxBWJc2C_9DDJwxn4d0B_aXFfAqfYlvZ-P5UOJHsgSw&key=AIzaSyBp_fb7LJGpzvEvwEVVSy9-f3uqqftNWts",
+            "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AciIO2c5yzLuK8LWAjf7g1vE-ME3cp6Nbn12-RU0GvI7MidP_POtTFqNQLpgH8YnuUSe7ZRA9B3HLQ5Z8-3SBNr6pSZih034Cjh8wz3zFlYJkUrmlOqTCJiZTLHm1mWLnM9DCAvwzLUEgdMb-QlvWA6tISJR4_PnhlH5EYOyjlZ2PEqlsYWAoVKjzgVoP8727RnMpNYPFqvtItKb44euXih92Xtjuu388oDMkQMyaW24RK1MbhyZbOVAoP4LbsNirR-d2ZYJKUUPmFEPgf37VBKDVU1aWecdsvDINKA6VrKYu_CLoor-uV1BS08QjmcXiPpZm8frCZLIUjz-BZ13CW9zAgttkl60HXLp1xBLdVTfSIcXrmkY2EFJRDzeMJIh8NFkCQxzRMyAekI7EqyKklB_QOaXb9yyq0aYxG5CGRkOlMr40S56&key=AIzaSyBp_fb7LJGpzvEvwEVVSy9-f3uqqftNWts",
+            "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AciIO2e6cmEK8BXf660shklzWo-9qofINv0VA7wHXZ4aeVjS-EQ8Mwq5zdVizz6LlQWGd-qomtN5Ur0-g5LCTVfVvCoNgyv-aXZVemSIzeiVWNZpsBUnMpYynXRqUrz2Vq2R6Osp0cOa7sD2jJ-c6wlmrHN3yIcUc1AA-Gl_CIOn87dIJlPlzBs__W-r85Up0JHasdRfI_YM5GOGQeCHNf8e82MGhZ7tUeFp2-4HWCa_Jyh-nsrL5iCx3Rqrk8H66lZ-WGWC1w3KbIECA4_pl-wgK8a2pznA3kkAAL7GJEQjgF3mv7U2xa-DXE6dwqGImgKDZv7gElTy8ZIoHC4GVEG3NT-Y7fKe8qlS9QSVnV0MtKwqsXV3kfsjdEHeCPKfXKyhqmsceH0Hi9TaV4KWD6roNNmVeeTYZxNXG4OMeUzOm0FUmQ&key=AIzaSyBp_fb7LJGpzvEvwEVVSy9-f3uqqftNWts",
+            "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AciIO2dl9WI4jd3qe_9OCRIo7SC6kDwmkLLZq0KZIcctD_APVxzPqAmxdBZIKJIQvfyymY3lnrR4HDMP4Kra-XTU0xnhL4XYVX8r964p1BWl0Ia9fTWw2WxMbY2Z7m55yN-jJY0W5b0GbmkOop3vWqPBDg8M5hvJDO2983x9Abf0MuubCR9op0WPZfnk-G6y82EU04Bl-o0TdcctFM7HvIwqtlOcWnQADUZVh3pUQek61l0hkKs1V3EfsowojLulwx_BFsq1h5UBvvzRthbhoav6ntEFQ2hzO8oh1G51xBCqkBa23oZdYlm2_ADzIinrQxKuXHTrn16y2W1b2UORIPpnwfkIC7_7YpdWPsvAavveEFB8A_jIYZeZnON_OdmMVWdnMizcTpesG4iAWLAZDS0K5ODrgNIUiRj8fSFwDdziIw94ksqoSDBHKdX8e4hLfIfq&key=AIzaSyBp_fb7LJGpzvEvwEVVSy9-f3uqqftNWts"
+          ]
+        },
+        {
+          "name": "Wildcraft Grill + Long Bar",
+          "address": "425 King St N, Waterloo, ON N2J 2Z5, Canada",
+          "lat": 43.486748,
+          "lon": -80.5276035,
+          "rating": 4.5,
+          "user_ratings_total": 3375,
+          "price_level": 3,
+          "types": [
+            "bar",
+            "restaurant",
+            "point_of_interest",
+            "food",
+            "establishment"
+          ],
+          "photo_urls": [
+            "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AciIO2cy5zQpSIS23w6zADTQfPARQ3_TLMQJ8qTjiaSKfNWblLgjDjcEFnhUA7b9vsdInvIi4GOZmloP9mgEMd-Dry39xsTiKWsOeAz2atKWUc4C1kMoWyYPfZ9QQthMWr6RnpGK0D7GmCLUroM-8i_FWFI7o-nwQrB9ywRKCrmLL_uB06d8Tx8-f0m8hBB7u29Qjz43DSSHBmthTtqW7B_0F81qrVoSqjo3aDyWR7aL5ptX-_-HWWST4_03L44c0lKwhaLWjnoTF4p71ieZHhdI_xY9XkKK1-SRxkiMzalUh23H9O4WuYw&key=AIzaSyBp_fb7LJGpzvEvwEVVSy9-f3uqqftNWts",
+            "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AciIO2crw0hMGZmz85dN6MWgrLoj866DvBzOFhy43iuT4LhiD8W-3NTEmrgnAFFaA1XjBx0M3E8mrkhNbA7vdSSYcRv7amnZ_DvQe_Ax35bSUyJfVv43hGdilOthxIEj2OB01mjV9UwparaizfIvz87SghGHsumocIzj4HKOPWpZUy4oVfL2vqfQyQAHfGXSlYFD4zg-LESFwGu-bCA1QbzQNZ7A005eUWj7j9QB8phzjYkYl4F8oU5iP2Ss6SBY8Kr187qNBQlkAM01PJ27aNg9T1Jc7qUgvC0j7kUoeLqIv4Yw7A&key=AIzaSyBp_fb7LJGpzvEvwEVVSy9-f3uqqftNWts",
+            "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AciIO2c3fmL-YVugc6kPB02fzKoSizK48V6UM-1IRpftA5MaJGM444L_hkXGzogSAhrI9G5MZXESmMtV8Z9mrep2cUa8Ai4-nFCQKI1UvM7snDainsHEkOp-JzbVYwoIaMNv_c0FigLDovr83Yy_LbjFGhIr4PIFRdmCL7jRFe_aOI6CTJce6msctT9h55GGrjH24JMFnXzfOw7I4HM-EWXF3A-E2mWIPZH0Rwktxm8qvhBmPHFZJjzuHydrbvDbjF5Fdggm2aeDdMZducTpiPsZEPSwljJTWthbOOtmZUVq7Pp2AQ&key=AIzaSyBp_fb7LJGpzvEvwEVVSy9-f3uqqftNWts",
+            "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AciIO2dtJAxCa1fPzTc4amk_4Y0pCNsfSn5CYoIU2jUHOnAPoQiVBzFeFHPuk3nWLQKPZ2jzTPzW0xZoLIwqLx1FKAt-jBe9DBIvNzTnoKHfYI8btgWBM9GJBLQF3CdOHC9w0Wz2ymdTH5lJPk1Yn3XzdPn8MyJmTe5uwWOkQCD4fc4blYWPngKXY0eWDeWtYYan27yLjynGgNbkKPe-RaiGYsORtmCl_RicXLHTpaOFaPwlr_L23inLdq7TbkPxMmLvYm2VvrTyYLjQmggt2tddbeslJB3On0jjYEk6_dqbLZFKiRxrxcBLSLk10t_1wrUqp6aDla-Cm_9CSYGt552hDiztfNIsOKcrPFSq1zK3Urv0ZD2XxKbXRf2TTl7VUeCoXEptMW-UsWuxtlLgE4_W2ICGofcTkfBFt33jsEesIKYPkMVgKmsPXENQovLgtlHd&key=AIzaSyBp_fb7LJGpzvEvwEVVSy9-f3uqqftNWts",
+            "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AciIO2fsGrsP5EWeed3zDBirwS76BVgwEa5nO7NDGx8hJDYhdAXnraKcLuRz6TYCvBbVsyLzxkVJqa6zxc7LuJC7J1d_5SRah26mu76HTpo4KxPb9iDVt_eSul-rAkC_lchdiOGFlTPGXzhlizCuPxLSjgDd7PsMwqBJ5gXOoM1xsOr6WUwqv0-mQE3FNsRs182I8qtgzoXPlTjHTJZ3IRPahP7MJE3ncNwQxbrSzo8kf3kpx-0-PWCRfRMC01NLQMfbrohYeDB5Oy769XNu2YQwDx7ucF7WISigunqX-52z-hSv8ALsh2TrxFhlC5TtYJsozo-bRdKwOIATE4kSRcRu-ijAdLu4e_rUYIAnNHqdHMJQbZc3sKUOblkQiSFvjORhooYYXePtgKe8lDqwhjO2mnTYMj-8vVdc5kLe35EYBrtKclP_9FiFimi_0_u80ItW&key=AIzaSyBp_fb7LJGpzvEvwEVVSy9-f3uqqftNWts",
+            "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AciIO2cbVXQMszJq6SWrN1-kXtQoj3Jtz7i1sH_LozpKgvpWw1QKfnyS1lxtf0YcIxvoeO9m2wjgkQkA8h03WRyhDe-vq3PlP2Tb7QOOfe8ikPNACDvtEh21WkA_1Y43eiLW3yf5bo3RENsGqwBLjGbArgb5euFdUTXH1nKyg5T8pXpwem2_XXHYDUXD2qGFfFdZJQsTQyL81SvE95gOipca-hhoW5p8rupATOUfGuaeaL30j8y_fxmA05TDhsSsEdaBribcHItrWTcX7eaBA-zehGb0Q0jSeMhtSxj_cv7ig6EuAXUMdC_cAZDluO-5IA5rOqTtq2OZQTEuYZgHOptJZkSzlVWA2bbK3av77HVi0j8uVNsmCcmg2-020hEkOtX-q9J9tRR6gnBW7eT4P-SxJfdxor_lCjugrzKJNlFiARIhSfCDw2eKyaucRwiglV3R&key=AIzaSyBp_fb7LJGpzvEvwEVVSy9-f3uqqftNWts"
+          ]
+        }
+      ]
+    }
+  ]
+}

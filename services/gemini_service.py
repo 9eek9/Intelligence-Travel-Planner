@@ -14,9 +14,15 @@ BUDGET_DESC = {
     4: "luxury options including Michelin-starred restaurants, exclusive experiences, and luxury transport"
 }
 
-def generate_itinerary_text(destination: str, days: int, budget: int, kid_friendly: bool, plan_struct: list):
-    model = genai.GenerativeModel(MODEL)
 
+def generate_itinerary_text(destination: str,
+                            days: int,
+                            budget: int,
+                            kid_friendly: bool,
+                            plan_struct: list,
+                            travel_type: str = None,
+                            activity_theme: str = None):
+    model = genai.GenerativeModel(MODEL)
     budget_text = BUDGET_DESC.get(budget, "moderately priced options")
 
     prompt = f"""
@@ -25,10 +31,12 @@ You are a professional travel planner. Create a {days}-day itinerary for {destin
 Constraints:
 - Budget level: {budget} → {budget_text}.
 - Kid friendly: {kid_friendly}.
+- Travel type: {travel_type or 'unspecified'}.
+- Activity theme: {activity_theme or 'general interest'}.
 - Organize each day into Morning / Afternoon / Evening.
-- Mention prices in a way that reflects the budget level (e.g., say "affordable", "luxury", "free entry").
+- Mention prices appropriately (affordable, luxury, free entry).
 - Include one restaurant recommendation per day.
-- Keep the descriptions natural, concise, and engaging.
+- Keep descriptions natural, concise, and engaging.
 - Use ONLY the provided JSON data — do not invent extra places.
 
 POI Data (JSON):
