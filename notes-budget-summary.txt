@@ -1,13 +1,5 @@
 After implementing and testing the four APIs (Amadeus, Expedia, Duffel, and ExchangeRate.host), the next step is to combine them into a unified travel budget optimization workflow. Below is a step-by-step guide based on integration practices and project planning used in professional travel applications.​
 
-##
-AMADEUS_API_KEY=VwpTFo0cu7doVSbrBWbWVaY19rNidkUd
-AMADEUS_API_SECRET=qTKh45GtLmiwkekz
-EXCHANGERATE_API_KEY=13a859cdeb3dc0b645d9f087
-GEMINI_API_KEY=AIzaSyBNnSE8YJUrY3S5d4qF7sMisg1v05O9Sq4
-GOOGLE_PLACES_API_KEY=AIzaSyBp_fb7LJGpzvEvwEVVSy9-f3uqqftNWts
-GEMINI_MODEL=gemini-2.5-flash
-###
 
 Step 1 — Define Workflow and Data Flow
 ------------------------------------
