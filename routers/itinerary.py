@@ -2,6 +2,7 @@ from fastapi import APIRouter, HTTPException
 from models.schemas import ItineraryRequest, ItineraryResponse
 from services.places_service import fetch_pois_for_destination
 from services.gemini_service import generate_itinerary_text, BUDGET_DESC
+from services.sentiment_service import get_sentiment_insights  # sentiment
 
 router = APIRouter()
 
@@ -37,6 +38,17 @@ def generate(req: ItineraryRequest):
         for d in range(req.days):
             day_atts = attractions[d*per_day:(d+1)*per_day]
             day_rests = restaurants[d*2:(d+1)*2]
+
+            # Add sentiment analysis for each place (BEGIN)
+            for place in day_atts + day_rests:
+                pid = place.get("place_id")
+                if pid:
+                    try:
+                        place["sentiment"] = get_sentiment_insights(pid, place_name=place.get("name"))
+                    except Exception:
+                        place["sentiment"] = {"summary": "Sentiment unavailable."}
+            # Add sentiment analysis for each place (END)
+
             itinerary_struct.append({"day": d+1, "attractions": day_atts, "restaurants": day_rests})
 
         text = generate_itinerary_text(

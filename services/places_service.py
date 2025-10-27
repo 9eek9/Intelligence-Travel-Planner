@@ -71,6 +71,7 @@ def _normalize(results, enrich_photos: bool = True):
             time.sleep(0.2)
 
         out.append({
+            "place_id": r.get("place_id"),  
             "name": r.get("name"),
             "address": r.get("formatted_address"),
             "lat": r.get("geometry", {}).get("location", {}).get("lat"),
@@ -81,6 +82,7 @@ def _normalize(results, enrich_photos: bool = True):
             "types": r.get("types", []),
             "photo_urls": photo_urls
         })
+
     return out
 
 
