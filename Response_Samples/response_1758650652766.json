@@ -1,0 +1,683 @@
+{
+  "destination": "Waterloo",
+  "days": 10,
+  "budget": 4,
+  "budget_label": "Luxury",
+  "budget_description": "luxury options including Michelin-starred restaurants, exclusive experiences, and luxury transport",
+  "kid_friendly": false,
+  "itinerary_text": "## 10-Day Luxury Waterloo Itinerary:\n\nThis itinerary focuses on a sophisticated exploration of Waterloo, prioritizing high-end experiences and dining.  Please note that the provided data lacks price levels for many establishments, so I've made assumptions based on the limited information and the \"luxury\" budget constraint.  Restaurant selections are based on availability from the provided data;  I highly recommend confirming availability and making reservations well in advance.\n\n**Day 1: Exploring Waterloo's Cultural Gems**\n\n* **Morning:** Begin your Waterloo adventure with a private tour of the Oktoberfest Carillon (price: likely a luxury private tour fee).  Afterwards, enjoy a relaxing stroll through the picturesque Waterloo Park Central Promenade (free entry).\n* **Afternoon:** Immerse yourself in history at the Schneider Haus National Historic Site (price: likely a moderate entry fee, potentially upgraded with a private guided tour for a luxury experience).\n* **Evening:**  Enjoy a fine-dining experience at Gladiator Burger Waterloo (price: assumed luxury, based on popularity and high rating; confirm pricing).\n\n\n**Day 2: Museums and Artistic Exploration**\n\n* **Morning:** Explore the expansive Waterloo Park (free entry), followed by a visit to the Ken Seiling Waterloo Region Museum (price:  likely a moderate entry fee; upgrade to a private guided tour for luxury).\n* **Afternoon:** Indulge your artistic side at the Canadian Clay and Glass Gallery (price:  likely a moderate entry fee).  Conclude with a visit to the Earth Sciences Museum (price: likely a moderate entry fee).\n* **Evening:** Savor a delicious meal at St. George Restaurant (price: assumed luxury due to limited information; confirm pricing).\n\n\n**Day 3: Nature, Art, and Upscale Dining**\n\n* **Morning:**  Enjoy a scenic hike or bike ride along The Waterloo GeoTime Trail (free entry). Afterwards, relax at Lakeside Park (free entry).\n* **Afternoon:** Visit the Waterloo Pioneer Memorial Tower Federal Heritage Building (price: likely a moderate entry fee).  Conclude the afternoon at the Kitchener-Waterloo Art Gallery (price: likely a moderate entry fee).\n* **Evening:**  Treat yourself to an exquisite dinner at Trio Restaurant (price: assumed luxury, based on price level 3; confirm pricing).\n\n\n**Day 4: History, Nature, and Refined Cuisine**\n\n* **Morning:** Explore the engaging exhibits at THEMUSEUM (price: likely a moderate entry fee).  Spend the afternoon at the serene Laurel Creek Conservation Area (free entry).\n* **Afternoon:** Take a scenic journey on the Waterloo Central Railway (price: likely a moderate to luxury fare depending on the type of carriage).\n* **Evening:** Enjoy a luxurious steak dinner at Charcoal Steak House (price: assumed luxury, based on price level 3; confirm pricing).\n\n\n**Day 5: Historical Sites and Culinary Delights**\n\n* **Morning:** Discover the unique Well in the Woods (free entry), followed by a visit to the historical Brubacher House (price: likely a moderate entry fee).\n* **Afternoon:** Explore the City of Waterloo Museum (price: likely a moderate entry fee). Conclude at The Most Inspiring Wall In Waterloo (free entry).\n* **Evening:** Enjoy dinner at AGHA Restaurant Waterloo (price: assumed mid-range to luxury based on the limited information; confirm pricing).\n\n\n**Day 6 - Day 10:**  These days are designed for relaxation, further exploration, and indulging in the luxury dining scene of Waterloo.  Each day will include:\n\n* **Morning/Afternoon:**  Relax at your luxury hotel or explore additional areas of personal interest, shopping, or spas.\n* **Evening:** Enjoy a curated luxury dining experience at one of the following restaurants (prices assumed luxury/high-end based on data where available; confirm pricing & make reservations well in advance):\n\n    * **Day 6:** Wildcraft Grill + Long Bar or Solé Uptown\n    * **Day 7:** Champa Kitchen or Beertown Public House Waterloo\n    * **Day 8:** The Bauer Kitchen or Borealis Grille & Bar (Kitchener)\n    * **Day 9:** The White Rabbit or Bodega Rose\n    * **Day 10:** LaLa Social House or Proof Kitchen + Lounge\n\n\n**Note:** This itinerary assumes you're staying at a luxury hotel in Waterloo.  Transportation between locations will require luxurious transport (private car service, etc.) which is not included in the pricing above but should be factored into your budget.  Remember to book accommodations and make restaurant reservations in advance, especially for luxury options.\n",
+  "plan_struct": [
+    {
+      "day": 1,
+      "attractions": [
+        {
+          "name": "Oktoberfest Carillon",
+          "address": "Waterloo, ON N2L 1X5, Canada",
+          "lat": 43.4614871,
+          "lon": -80.5214482,
+          "rating": 4.9,
+          "user_ratings_total": 8,
+          "price_level": null,
+          "types": [
+            "tourist_attraction",
+            "point_of_interest",
+            "establishment"
+          ]
+        },
+        {
+          "name": "Waterloo Park Central Promenade",
+          "address": "Laurel Trail, Waterloo, ON N2L 3B6, Canada",
+          "lat": 43.46737940000001,
+          "lon": -80.5319574,
+          "rating": 4.8,
+          "user_ratings_total": 16,
+          "price_level": null,
+          "types": [
+            "tourist_attraction",
+            "point_of_interest",
+            "establishment"
+          ]
+        },
+        {
+          "name": "Schneider Haus National Historic Site",
+          "address": "466 Queen St S, Kitchener, ON N2G 1W7, Canada",
+          "lat": 43.445148,
+          "lon": -80.4951524,
+          "rating": 4.7,
+          "user_ratings_total": 236,
+          "price_level": null,
+          "types": [
+            "museum",
+            "tourist_attraction",
+            "art_gallery",
+            "point_of_interest",
+            "establishment"
+          ]
+        },
+        {
+          "name": "Victoria Park",
+          "address": "32 Dill St, Kitchener, ON N2G 1L1, Canada",
+          "lat": 43.4457166,
+          "lon": -80.4986983,
+          "rating": 4.6,
+          "user_ratings_total": 7627,
+          "price_level": null,
+          "types": [
+            "park",
+            "tourist_attraction",
+            "point_of_interest",
+            "establishment"
+          ]
+        }
+      ],
+      "restaurants": [
+        {
+          "name": "Gladiator Burger Waterloo",
+          "address": "222 Albert St, Waterloo, ON N2L 3C8, Canada",
+          "lat": 43.4740114,
+          "lon": -80.53161209999999,
+          "rating": 4.9,
+          "user_ratings_total": 4464,
+          "price_level": null,
+          "types": [
+            "restaurant",
+            "food",
+            "point_of_interest",
+            "establishment"
+          ]
+        },
+        {
+          "name": "LooBapBap",
+          "address": "280 Lester St Unit 104, Waterloo, ON N2L 0G2, Canada",
+          "lat": 43.4752578,
+          "lon": -80.5355438,
+          "rating": 4.8,
+          "user_ratings_total": 302,
+          "price_level": null,
+          "types": [
+            "restaurant",
+            "food",
+            "point_of_interest",
+            "establishment"
+          ]
+        }
+      ]
+    },
+    {
+      "day": 2,
+      "attractions": [
+        {
+          "name": "Waterloo Park",
+          "address": "50 Young St W, Waterloo, ON N2L 2Z4, Canada",
+          "lat": 43.4675513,
+          "lon": -80.52717299999999,
+          "rating": 4.6,
+          "user_ratings_total": 6400,
+          "price_level": null,
+          "types": [
+            "tourist_attraction",
+            "park",
+            "point_of_interest",
+            "establishment"
+          ]
+        },
+        {
+          "name": "Ken Seiling Waterloo Region Museum",
+          "address": "10 Huron Rd, Kitchener, ON N2P 2R7, Canada",
+          "lat": 43.4006227,
+          "lon": -80.4382558,
+          "rating": 4.6,
+          "user_ratings_total": 930,
+          "price_level": null,
+          "types": [
+            "museum",
+            "tourist_attraction",
+            "point_of_interest",
+            "establishment"
+          ]
+        },
+        {
+          "name": "Canadian Clay and Glass Gallery",
+          "address": "25 Caroline St N, Waterloo, ON N2L 2Y5, Canada",
+          "lat": 43.4649381,
+          "lon": -80.5262637,
+          "rating": 4.6,
+          "user_ratings_total": 527,
+          "price_level": null,
+          "types": [
+            "art_gallery",
+            "tourist_attraction",
+            "museum",
+            "point_of_interest",
+            "store",
+            "establishment"
+          ]
+        },
+        {
+          "name": "Earth Sciences Museum",
+          "address": "200 University Ave W, Waterloo, ON N2L 3G1, Canada",
+          "lat": 43.47149539999999,
+          "lon": -80.54211509999999,
+          "rating": 4.6,
+          "user_ratings_total": 474,
+          "price_level": null,
+          "types": [
+            "tourist_attraction",
+            "museum",
+            "point_of_interest",
+            "establishment"
+          ]
+        }
+      ],
+      "restaurants": [
+        {
+          "name": "St. George Restaurant",
+          "address": "665 King St N, Waterloo, ON N2V 1B4, Canada",
+          "lat": 43.50886370000001,
+          "lon": -80.5430628,
+          "rating": 4.8,
+          "user_ratings_total": 152,
+          "price_level": null,
+          "types": [
+            "restaurant",
+            "food",
+            "point_of_interest",
+            "establishment"
+          ]
+        },
+        {
+          "name": "Browns Socialhouse Waterloo",
+          "address": "259 Northfield Dr E, Waterloo, ON N2K 0G5, Canada",
+          "lat": 43.5109673,
+          "lon": -80.52124649999999,
+          "rating": 4.7,
+          "user_ratings_total": 2227,
+          "price_level": 2,
+          "types": [
+            "restaurant",
+            "night_club",
+            "bar",
+            "food",
+            "point_of_interest",
+            "establishment"
+          ]
+        }
+      ]
+    },
+    {
+      "day": 3,
+      "attractions": [
+        {
+          "name": "The Waterloo GeoTime Trail",
+          "address": "594 Sundew Dr, Waterloo, ON N2V 0B9, Canada",
+          "lat": 43.4595947,
+          "lon": -80.596887,
+          "rating": 4.6,
+          "user_ratings_total": 247,
+          "price_level": null,
+          "types": [
+            "park",
+            "point_of_interest",
+            "establishment"
+          ]
+        },
+        {
+          "name": "Lakeside Park",
+          "address": "206 Lakeside Dr, Kitchener, ON N2M 4C5, Canada",
+          "lat": 43.4333265,
+          "lon": -80.50036419999999,
+          "rating": 4.5,
+          "user_ratings_total": 558,
+          "price_level": null,
+          "types": [
+            "park",
+            "tourist_attraction",
+            "point_of_interest",
+            "establishment"
+          ]
+        },
+        {
+          "name": "Waterloo Pioneer Memorial Tower Federal Heritage Building",
+          "address": "300 Lookout Ln, Kitchener, ON N2P 2X8, Canada",
+          "lat": 43.400152,
+          "lon": -80.41623299999999,
+          "rating": 4.5,
+          "user_ratings_total": 275,
+          "price_level": null,
+          "types": [
+            "tourist_attraction",
+            "point_of_interest",
+            "establishment"
+          ]
+        },
+        {
+          "name": "Kitchener-Waterloo Art Gallery",
+          "address": "101 Queen St N, Kitchener, ON N2H 6P7, Canada",
+          "lat": 43.4546062,
+          "lon": -80.4844754,
+          "rating": 4.5,
+          "user_ratings_total": 216,
+          "price_level": null,
+          "types": [
+            "art_gallery",
+            "tourist_attraction",
+            "point_of_interest",
+            "establishment"
+          ]
+        }
+      ],
+      "restaurants": [
+        {
+          "name": "Trio Restaurant",
+          "address": "40 King St S, Waterloo, ON N2J 2W8, Canada",
+          "lat": 43.4644007,
+          "lon": -80.52197079999999,
+          "rating": 4.7,
+          "user_ratings_total": 649,
+          "price_level": 3,
+          "types": [
+            "restaurant",
+            "food",
+            "point_of_interest",
+            "establishment"
+          ]
+        },
+        {
+          "name": "The Lancaster Smokehouse",
+          "address": "574 Lancaster St W, Kitchener, ON N2K 1M3, Canada",
+          "lat": 43.4796453,
+          "lon": -80.4842956,
+          "rating": 4.6,
+          "user_ratings_total": 6343,
+          "price_level": 2,
+          "types": [
+            "restaurant",
+            "food",
+            "point_of_interest",
+            "establishment"
+          ]
+        }
+      ]
+    },
+    {
+      "day": 4,
+      "attractions": [
+        {
+          "name": "THEMUSEUM",
+          "address": "10 King St W, Kitchener, ON N2G 1A3, Canada",
+          "lat": 43.4500672,
+          "lon": -80.4893888,
+          "rating": 4.4,
+          "user_ratings_total": 1738,
+          "price_level": null,
+          "types": [
+            "museum",
+            "tourist_attraction",
+            "point_of_interest",
+            "establishment"
+          ]
+        },
+        {
+          "name": "Laurel Creek Conservation Area",
+          "address": "625 Westmount Rd N, Waterloo, ON N2J 2Z4, Canada",
+          "lat": 43.4904715,
+          "lon": -80.5705126,
+          "rating": 4.4,
+          "user_ratings_total": 1460,
+          "price_level": null,
+          "types": [
+            "park",
+            "point_of_interest",
+            "establishment"
+          ]
+        },
+        {
+          "name": "Waterloo Central Railway",
+          "address": "50 Isabella St, St. Jacobs, ON N0B 2N0, Canada",
+          "lat": 43.53796089999999,
+          "lon": -80.5570309,
+          "rating": 4.4,
+          "user_ratings_total": 627,
+          "price_level": null,
+          "types": [
+            "tourist_attraction",
+            "point_of_interest",
+            "establishment"
+          ]
+        },
+        {
+          "name": "Hillside Park",
+          "address": "352 Marsland Dr, Waterloo, ON N2J 3Z1, Canada",
+          "lat": 43.4840696,
+          "lon": -80.5177976,
+          "rating": 4.4,
+          "user_ratings_total": 197,
+          "price_level": null,
+          "types": [
+            "park",
+            "tourist_attraction",
+            "point_of_interest",
+            "establishment"
+          ]
+        }
+      ],
+      "restaurants": [
+        {
+          "name": "Charcoal Steak House",
+          "address": "2980 King St E, Kitchener, ON N2A 1A9, Canada",
+          "lat": 43.4289108,
+          "lon": -80.4327824,
+          "rating": 4.6,
+          "user_ratings_total": 2934,
+          "price_level": 3,
+          "types": [
+            "restaurant",
+            "food",
+            "point_of_interest",
+            "establishment"
+          ]
+        },
+        {
+          "name": "271West Restaurant",
+          "address": "60 Charles St W, Kitchener, ON N2G 1B1, Canada",
+          "lat": 43.4503892,
+          "lon": -80.4930675,
+          "rating": 4.6,
+          "user_ratings_total": 1582,
+          "price_level": 2,
+          "types": [
+            "restaurant",
+            "food",
+            "point_of_interest",
+            "establishment"
+          ]
+        }
+      ]
+    },
+    {
+      "day": 5,
+      "attractions": [
+        {
+          "name": "Well in the Woods",
+          "address": "514 Wilmot Line, Waterloo, ON N2J 3Z4, Canada",
+          "lat": 43.4818246,
+          "lon": -80.61579549999999,
+          "rating": 4.4,
+          "user_ratings_total": 53,
+          "price_level": null,
+          "types": [
+            "tourist_attraction",
+            "point_of_interest",
+            "establishment"
+          ]
+        },
+        {
+          "name": "Brubacher House",
+          "address": "Frank Tompa Dr, Waterloo, ON N2L 3G1, Canada",
+          "lat": 43.4753782,
+          "lon": -80.55221759999999,
+          "rating": 4.4,
+          "user_ratings_total": 36,
+          "price_level": null,
+          "types": [
+            "museum",
+            "tourist_attraction",
+            "point_of_interest",
+            "establishment"
+          ]
+        },
+        {
+          "name": "City of Waterloo Museum",
+          "address": "550 King St North, Conestoga Mall, Waterloo, ON N2L 5W6, Canada",
+          "lat": 43.496841,
+          "lon": -80.526899,
+          "rating": 4.2,
+          "user_ratings_total": 56,
+          "price_level": null,
+          "types": [
+            "museum",
+            "tourist_attraction",
+            "point_of_interest",
+            "establishment"
+          ]
+        },
+        {
+          "name": "The Most Inspiring Wall In Waterloo",
+          "address": "251 Albert St, Waterloo, ON N2L 0H7, Canada",
+          "lat": 43.4748836,
+          "lon": -80.53299609999999,
+          "rating": 4,
+          "user_ratings_total": 22,
+          "price_level": null,
+          "types": [
+            "place_of_worship",
+            "point_of_interest",
+            "establishment"
+          ]
+        }
+      ],
+      "restaurants": [
+        {
+          "name": "AGHA Restaurant Waterloo",
+          "address": "50 Westmount Rd N D4-D5, Waterloo, ON N2L 6N9, Canada",
+          "lat": 43.4614015,
+          "lon": -80.5380363,
+          "rating": 4.6,
+          "user_ratings_total": 1575,
+          "price_level": null,
+          "types": [
+            "restaurant",
+            "food",
+            "point_of_interest",
+            "establishment"
+          ]
+        },
+        {
+          "name": "Jack's Family Restaurant",
+          "address": "20 Benjamin Rd, Waterloo, ON N2V 2J9, Canada",
+          "lat": 43.5084331,
+          "lon": -80.5558056,
+          "rating": 4.5,
+          "user_ratings_total": 4443,
+          "price_level": 2,
+          "types": [
+            "restaurant",
+            "food",
+            "point_of_interest",
+            "establishment"
+          ]
+        }
+      ]
+    },
+    {
+      "day": 6,
+      "attractions": [],
+      "restaurants": [
+        {
+          "name": "Wildcraft Grill + Long Bar",
+          "address": "425 King St N, Waterloo, ON N2J 2Z5, Canada",
+          "lat": 43.486748,
+          "lon": -80.5276035,
+          "rating": 4.5,
+          "user_ratings_total": 3339,
+          "price_level": 3,
+          "types": [
+            "bar",
+            "restaurant",
+            "food",
+            "point_of_interest",
+            "establishment"
+          ]
+        },
+        {
+          "name": "Solé Uptown",
+          "address": "83 Erb St. W Building Two, Waterloo, ON N2L 6L9, Canada",
+          "lat": 43.4631608,
+          "lon": -80.5267172,
+          "rating": 4.5,
+          "user_ratings_total": 1485,
+          "price_level": 3,
+          "types": [
+            "restaurant",
+            "food",
+            "point_of_interest",
+            "establishment"
+          ]
+        }
+      ]
+    },
+    {
+      "day": 7,
+      "attractions": [],
+      "restaurants": [
+        {
+          "name": "Champa Kitchen",
+          "address": "21 King St N, Waterloo, ON N2J 2W6, Canada",
+          "lat": 43.4656801,
+          "lon": -80.5226799,
+          "rating": 4.5,
+          "user_ratings_total": 624,
+          "price_level": 2,
+          "types": [
+            "restaurant",
+            "food",
+            "point_of_interest",
+            "establishment"
+          ]
+        },
+        {
+          "name": "Beertown Public House Waterloo",
+          "address": "Square, 75 King St S Unit 37, Waterloo, ON N2J 1N9, Canada",
+          "lat": 43.4639678,
+          "lon": -80.5227484,
+          "rating": 4.4,
+          "user_ratings_total": 3697,
+          "price_level": 2,
+          "types": [
+            "restaurant",
+            "bar",
+            "food",
+            "point_of_interest",
+            "establishment"
+          ]
+        }
+      ]
+    },
+    {
+      "day": 8,
+      "attractions": [],
+      "restaurants": [
+        {
+          "name": "The Bauer Kitchen",
+          "address": "187 King St S #102, Waterloo, ON N2L 0A5, Canada",
+          "lat": 43.4598078,
+          "lon": -80.519053,
+          "rating": 4.4,
+          "user_ratings_total": 3081,
+          "price_level": 3,
+          "types": [
+            "restaurant",
+            "bar",
+            "food",
+            "point_of_interest",
+            "establishment"
+          ]
+        },
+        {
+          "name": "Borealis Grille & Bar (Kitchener)",
+          "address": "4336 King St E, Kitchener, ON N2P 3W6, Canada",
+          "lat": 43.4081935,
+          "lon": -80.396802,
+          "rating": 4.4,
+          "user_ratings_total": 2329,
+          "price_level": 2,
+          "types": [
+            "restaurant",
+            "night_club",
+            "bar",
+            "food",
+            "point_of_interest",
+            "establishment"
+          ]
+        }
+      ]
+    },
+    {
+      "day": 9,
+      "attractions": [],
+      "restaurants": [
+        {
+          "name": "The White Rabbit",
+          "address": "47 King St N, Waterloo, ON N2J 2W9, Canada",
+          "lat": 43.4664531,
+          "lon": -80.5228867,
+          "rating": 4.4,
+          "user_ratings_total": 1145,
+          "price_level": 2,
+          "types": [
+            "restaurant",
+            "food",
+            "point_of_interest",
+            "establishment"
+          ]
+        },
+        {
+          "name": "Bodega Rose",
+          "address": "17 Erb St E, Waterloo, ON N2J 1L4, Canada",
+          "lat": 43.465119,
+          "lon": -80.52138529999999,
+          "rating": 4.4,
+          "user_ratings_total": 335,
+          "price_level": null,
+          "types": [
+            "bakery",
+            "cafe",
+            "bar",
+            "store",
+            "restaurant",
+            "food",
+            "point_of_interest",
+            "establishment"
+          ]
+        }
+      ]
+    },
+    {
+      "day": 10,
+      "attractions": [],
+      "restaurants": [
+        {
+          "name": "LaLa Social House",
+          "address": "181 King St S, Waterloo, ON N2J 0E7, Canada",
+          "lat": 43.4605542,
+          "lon": -80.5199499,
+          "rating": 4.3,
+          "user_ratings_total": 123,
+          "price_level": null,
+          "types": [
+            "restaurant",
+            "food",
+            "point_of_interest",
+            "establishment"
+          ]
+        },
+        {
+          "name": "Proof Kitchen + Lounge",
+          "address": "110 Erb St. W, Waterloo, ON N2L 1T5, Canada",
+          "lat": 43.4632431,
+          "lon": -80.5284248,
+          "rating": 4.2,
+          "user_ratings_total": 1746,
+          "price_level": 2,
+          "types": [
+            "restaurant",
+            "bar",
+            "food",
+            "point_of_interest",
+            "establishment"
+          ]
+        }
+      ]
+    }
+  ]
+}

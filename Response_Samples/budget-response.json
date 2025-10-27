@@ -1,0 +1,19 @@
+
+{
+  "itinerary_id": "Toronto_3_2_true",
+  "currency": "CAD",
+  "quotes": [
+    {
+      "total": 1180.00,
+      "breakdown": {
+        "activities": 40.00,
+        "meals": 150.00,
+        "hotel": 360.00,
+        "flight": 760.00,
+        "transit": 40.00,
+        "contingency": 20.00
+      },
+      "status": "within budget"
+    }
+  ]
+}
