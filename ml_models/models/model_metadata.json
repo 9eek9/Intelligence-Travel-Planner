@@ -1,0 +1,57 @@
+{
+    "trained_at": "2025-10-27T17:22:14.055730",
+    "feature_names": [
+        "duration",
+        "total_budget",
+        "travelers",
+        "budget_per_day",
+        "budget_per_person",
+        "cost_index",
+        "destination_encoded",
+        "region_encoded",
+        "season_encoded",
+        "purpose_encoded",
+        "accommodation_type_encoded"
+    ],
+    "metrics": {
+        "accommodation": {
+            "mae": 0.015807823077066893,
+            "rmse": 0.02133213218620436,
+            "r2": 0.9437736201470937,
+            "mae_percentage": 1.5807823077066894
+        },
+        "transportation": {
+            "mae": 0.010669638335719447,
+            "rmse": 0.014747702297368768,
+            "r2": 0.9246643778422179,
+            "mae_percentage": 1.0669638335719447
+        },
+        "food": {
+            "mae": 0.013373637672422051,
+            "rmse": 0.017492564528896436,
+            "r2": 0.8883089845371757,
+            "mae_percentage": 1.3373637672422052
+        },
+        "activities": {
+            "mae": 0.007019983414824926,
+            "rmse": 0.011172009756409172,
+            "r2": 0.9804625286933621,
+            "mae_percentage": 0.7019983414824926
+        },
+        "miscellaneous": {
+            "mae": 0.002432717455710846,
+            "rmse": 0.003904274811148252,
+            "r2": 0.7975917624001994,
+            "mae_percentage": 0.24327174557108458
+        },
+        "overall": {
+            "mae": 0.009860759991148832,
+            "rmse": 0.014957282936799625,
+            "r2": 0.9069602547240099
+        }
+    },
+    "model_type": "RandomForestRegressor",
+    "model_version": "1.0",
+    "n_estimators": 200,
+    "max_depth": 15
+}

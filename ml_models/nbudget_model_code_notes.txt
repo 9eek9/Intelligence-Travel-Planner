@@ -1,0 +1,170 @@
+Files to Create and Their Purpose
+1️⃣ GENERATE SYNTHETIC DATA
+File: synthetic_data_generator.py
+----------------------------------
+Purpose: Creates fake but realistic training data since you have no real users yet
+
+What it does:
+
+Generates 10,000 sample trips with different:
+Destinations (Paris, Tokyo, etc.)
+Budgets ($500 - $10,000)
+Trip durations (3-15 days)
+Travel purposes (leisure, business, etc.)
+Calculates realistic budget splits based on travel industry standards
+Saves to CSV file
+Why you need it: ML models need data to learn from. Since you have no users, this creates realistic training data.
+
+File: ml_models/__init__.py
+-------------------------------
+Purpose: Makes ml_models folder a Python package
+
+What it does:
+
+Empty file (or minimal imports)
+Allows Python to import from this folder
+Code:
+
+
+# This file makes ml_models a Python package
+2️⃣ TRAIN THE ML MODEL
+File: model_trainer.py
+------------------------
+Purpose: Trains the ML model using the synthetic data
+
+What it does:
+
+Reads the synthetic data CSV
+Prepares features (converts text to numbers)
+Trains a Random Forest model
+Tests accuracy
+Saves trained model to disk
+Why you need it: This creates the "brain" that will predict budget allocations.
+
+3️⃣ MAKE PREDICTIONS
+File: budget_predictor.py
+----------------------------
+Purpose: Uses the trained model to make predictions
+
+What it does:
+
+Loads saved model from disk
+Takes user input (destination, budget, etc.)
+Returns predicted budget split
+Why you need it: This is what your API will call to get ML predictions.
+
+COLLECT REAL USER DATA
+-----------------------
+File: models/budget_feedback.py
+Purpose: Database table to store user predictions and actual spending
+
+What it does:
+
+Stores what you predicted
+Stores what user actually spent
+Collects user feedback (ratings)
+Why you need it: As users travel, you collect real data to improve your model later.
+
+File: services/data_collection_service.py
+-------------------------------------------
+Purpose: Functions to save and retrieve user feedback data
+
+What it does:
+
+Saves predictions when made
+Updates with actual spending after trip
+Exports data for retraining
+Collects user ratings
+Why you need it: Manages the process of collecting real-world data.
+
+File: services/data_collection_service.py
+------------------------------------------
+Purpose: Functions to save and retrieve user feedback data
+
+What it does:
+
+Saves predictions when made
+Updates with actual spending after trip
+Exports data for retraining
+Collects user ratings
+Why you need it: Manages the process of collecting real-world data.
+
+
+
+MAIN BUSINESS LOGIC (HYBRID APPROACH)
+-------------------------
+File: services/budget_service.py
+-----------------------------
+Purpose: Main service that decides: Use ML or use rules?
+
+What it does:
+
+Checks if ML model exists
+If YES: Use ML prediction
+If NO: Use rule-based calculation
+Always returns a result (never fails)
+Why you need it: This is the "smart" layer that makes your system work from day 1, even without ML.
+
+
+6️⃣ API ENDPOINTS
+File: routes/budget_routes.py
+-------------------------------
+Purpose: API endpoints for frontend to call
+
+What it does:
+
+/optimize - Get budget suggestions
+/feedback/{id}/actual-spending - Submit actual spending
+/feedback/{id}/rating - Submit user rating
+Why you need it: How your React frontend talks to the ML system.
+
+
+COMMAND SCRIPTS
+File: scripts/generate_data.py
+---------------------------------------
+Purpose: Command to generate synthetic data
+
+What it does:
+
+Runs the data generator
+Saves 10,000 samples to CSV
+Why you need it: You run this ONCE to create training data.
+
+How to run:
+python scripts/generate_data.py
+
+File: scripts/train_model.py
+-------------------------------
+Purpose: Command to train the ML model
+
+What it does:
+
+Loads synthetic data
+Trains model
+Saves trained model to disk
+Why you need it: You run this to train your model with the generated data.
+
+How to run:python scripts/train_model.py
+
+
+
+USER REQUEST
+    ↓
+routes/budget_routes.py (API endpoint)
+    ↓
+services/budget_service.py (decides: ML or rules?)
+    ↓
+    ├─→ ml_models/budget_predictor.py (ML prediction)
+    │       ↓
+    │   ml_models/models/budget_model.pkl (trained model)
+    │
+    └─→ _rule_based_allocation() (fallback rules)
+    ↓
+services/data_collection_service.py (saves prediction)
+    ↓
+models/budget_feedback.py (database)
+
+
+
+
+

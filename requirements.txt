@@ -6,3 +6,13 @@ pandas
 scikit-learn
 python-dotenv
 google-generativeai
+
+#budget
+requests
+pandas
+httpx
+fastapi
+uvicorn
+ortools       # if you add real optimization later
+sqlalchemy
+

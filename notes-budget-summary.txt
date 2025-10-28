@@ -1,0 +1,143 @@
+After implementing and testing the four APIs (Amadeus, Expedia, Duffel, and ExchangeRate.host), the next step is to combine them into a unified travel budget optimization workflow. Below is a step-by-step guide based on integration practices and project planning used in professional travel applications.​
+
+
+Step 1 — Define Workflow and Data Flow
+------------------------------------
+Create a data pipeline where each API operates in sequence:
+
+Flight price data → Amadeus or Duffel
+https://developers.amadeus.com/
+https://developers.amadeus.com/self-service/category/flights/api-doc/flight-offers-price
+https://developers.amadeus.com/self-service/category/flights/api-doc/flight-offers-search/api-reference
+api 
+key VwpTFo0cu7doVSbrBWbWVaY19rNidkUd
+secret qTKh45GtLmiwkekz
+
+
+Hotel data → Expedia Rapid API
+
+FX conversion → ExchangeRate.host (normalize all prices to one currency, e.g., CAD)
+https://app.exchangerate-api.com/dashboard/confirmed
+Your API Key: 13a859cdeb3dc0b645d9f087
+
+Aggregator logic → Combine total cost for each flight-hotel combo
+
+Optimizer → Run algorithm to find best combo within budget (e.g., ≤ CAD 1200)
+
+This ensures modularity — each API service only handles its domain, and you can test them separately before combining.
+
+Step 2 — Connect and Test Each API Individually
+-----------------------------------------------
+Before combining:
+
+Use sandbox mode or test keys from Amadeus, Duffel, and Expedia to fetch realistic but non-live data.
+
+Start by calling endpoints like:
+
+Amadeus → /v2/shopping/flight-offers
+
+Expedia → /lodging/availability
+
+ExchangeRate.host → /convert?from=USD&to=CAD
+
+Store results (JSON) in local files or temporary DB tables for debugging.​
+
+Check that all results contain price, currency, and availability fields — these will be essential for the optimizer.
+
+Step 3 — Normalize and Combine Data
+--------------------------------------
+Implement a preprocessing script (e.g., in Python or Node.js):
+
+Convert all prices to a single base currency using ExchangeRate.host.
+
+Extract relevant fields (e.g., flight → airline, route, total cost; hotel → name, rating, price).
+
+Build a data model like:
+
+json
+{
+  "flight": { "carrier": "Thai Airways", "price": 760 },
+  "hotel": { "name": "Riverside Stay", "price": 360 },
+  "transit": 40,
+  "buffer": 20,
+  "currency": "CAD"
+}
+This structured format will then be fed to the optimizer.
+
+Step 4 — Run Budget Optimization Logic
+--------------------------------------
+Use a simple linear or knapsack optimizer:
+
+For each combination of flight × hotel, compute:
+
+Total Cost
+=
+Flight
++
+Hotel
++
+Extras
+Total Cost=Flight+Hotel+Extras
+Filter all results ≤ budget.
+
+Sort ascending by total cost.
+
+Example output JSON:
+
+json
+{
+  "combos": [
+    {"label": "Combo A", "total": 1185, "status": "under-budget"},
+    {"label": "Combo B", "total": 1180, "status": "under-budget"}
+  ],
+  "winner": "Combo B"
+}
+This approach matches real-world travel budget tools used in multi-supplier systems.​
+
+Step 5 — Add Real-Time Validation
+---------------------------------
+Once the optimizer decides a “winner,” rerun price verification APIs:
+
+Use Amadeus Flight Offers Price Revalidation API (/v2/shopping/flight-offers/pricing).
+
+For Expedia, call the Rate Checks endpoint before booking.
+
+Re-fetch ExchangeRate.host to ensure up-to-date conversion.
+
+This step guarantees accuracy and prevents outdated pricing at checkout.​
+
+Step 6 — Present and Log Results
+--------------------------------
+Implement a dashboard or output endpoint:
+
+/budget/quotes (like your example) returning combo summaries in JSON.
+
+Store query history and totals in a database.
+
+Optionally, visualize a price vs. budget graph or bar chart of top 3 combos.
+
+Step 7 — (Optional) Extend Functionality
+-----------------------------------------
+After building the MVP:
+
+Add meal/attraction costs from local tourism APIs or static datasets.
+
+Cache frequent API calls using Redis or PostgreSQL to reduce API usage.
+
+Schedule nightly updates to refresh flight and lodging prices.
+
+These scalability techniques are common in professional API deployments.​
+
+In summary:
+
+Test each API independently.
+
+Normalize flight, hotel, and FX data.
+
+Combine to calculate total trip cost.
+
+Optimize within budget automatically.
+
+Validate and return human-readable results.
+
+This process produces a fully functional travel budget optimizer pipeline, mirroring commercial tools but viable for a capstone project setup.
