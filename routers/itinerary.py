@@ -2,7 +2,6 @@ from fastapi import APIRouter, HTTPException
 from models.schemas import ItineraryRequest, ItineraryResponse
 from services.places_service import fetch_pois_for_destination
 from services.gemini_service import generate_itinerary_text, BUDGET_DESC
-from services.sentiment_service import get_sentiment_insights  # sentiment
 
 router = APIRouter()
 
@@ -14,9 +13,14 @@ BUDGET_LABELS = {
     4: "Luxury"
 }
 
+
 @router.post("/generate", response_model=ItineraryResponse)
 def generate(req: ItineraryRequest):
+    """
+    Generate itinerary using Google Places (with photos) and Gemini LLM.
+    """
     try:
+        # --- Step 1. Fetch POIs (Places of Interest) ---
         pois = fetch_pois_for_destination(
             destination=req.destination,
             max_results_per_type=20,
@@ -26,6 +30,7 @@ def generate(req: ItineraryRequest):
             activity_theme=req.activity_theme
         )
 
+        # --- Step 2. Sort places by rating & popularity ---
         attractions = sorted(
             pois["attractions"], key=lambda x: (x.get("rating", 0), x.get("user_ratings_total", 0)), reverse=True
         )
@@ -33,24 +38,24 @@ def generate(req: ItineraryRequest):
             pois["restaurants"], key=lambda x: (x.get("rating", 0), x.get("user_ratings_total", 0)), reverse=True
         )
 
+        # --- Step 3. Build itinerary structure (without sentiment) ---
         per_day = 4
         itinerary_struct = []
         for d in range(req.days):
-            day_atts = attractions[d*per_day:(d+1)*per_day]
-            day_rests = restaurants[d*2:(d+1)*2]
+            day_atts = attractions[d * per_day:(d + 1) * per_day]
+            day_rests = restaurants[d * 2:(d + 1) * 2]
 
-            # Add sentiment analysis for each place (BEGIN)
+            # Keep place_id for later sentiment fetch in frontend or /sentiment/{id}
             for place in day_atts + day_rests:
-                pid = place.get("place_id")
-                if pid:
-                    try:
-                        place["sentiment"] = get_sentiment_insights(pid, place_name=place.get("name"))
-                    except Exception:
-                        place["sentiment"] = {"summary": "Sentiment unavailable."}
-            # Add sentiment analysis for each place (END)
+                place.pop("sentiment", None)  # remove any previous sentiment field
 
-            itinerary_struct.append({"day": d+1, "attractions": day_atts, "restaurants": day_rests})
+            itinerary_struct.append({
+                "day": d + 1,
+                "attractions": day_atts,
+                "restaurants": day_rests
+            })
 
+        # --- Step 4. Generate natural language itinerary using Gemini ---
         text = generate_itinerary_text(
             destination=req.destination,
             days=req.days,
@@ -61,6 +66,7 @@ def generate(req: ItineraryRequest):
             activity_theme=req.activity_theme
         )
 
+        # --- Step 5. Return structured response ---
         return {
             "destination": req.destination,
             "days": req.days,
