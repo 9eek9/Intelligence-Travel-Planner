@@ -1,0 +1,23 @@
+data: {"type": "info", "message": "\ud83d\ude80 Starting optimization..."}
+
+data: {"type": "progress", "step": "flights", "message": "\u2708\ufe0f  Fetching flights from YYZ to BKK..."}
+
+data: {"type": "success", "message": "\u2705 Found 157 flight options"}
+
+data: {"type": "progress", "step": "hotels", "message": "\ud83c\udfe8 Fetching hotels in BKK..."}
+
+data: {"type": "success", "message": "\u2705 Found 0 hotel options"}
+
+data: {"type": "progress", "step": "currency", "message": "\ud83d\udcb1 Converting prices to CAD..."}
+
+data: {"type": "success", "message": "\u2705 All prices already in CAD"}
+
+data: {"type": "progress", "step": "costs", "message": "\ud83e\uddee Calculating additional costs..."}
+
+data: {"type": "success", "message": "\u2705 Activities: $200.00, Meals: $300.00, Transit: $50.00"}
+
+data: {"type": "progress", "step": "optimize", "message": "\ud83c\udfaf Optimizing packages (Budget: $3000.00 CAD)..."}
+
+data: {"type": "success", "message": "\u2705 Generated 3 package(s)"}
+
+data: {"type": "complete", "packages": [{"flight": {"id": "1", "price": 1518.12, "currency": "CAD"}, "hotel": null, "transit": {"total": 50.0}, "activities": 200.0, "meals": 300.0, "currency": "CAD", "total": 2068.12, "fxSnapshot": {"base": "CAD", "ts": "2025-11-03T15:26:37.658874"}, "status": "within-budget", "budgetRemaining": 931.88}, {"flight": {"id": "2", "price": 1518.12, "currency": "CAD"}, "hotel": null, "transit": {"total": 50.0}, "activities": 200.0, "meals": 300.0, "currency": "CAD", "total": 2068.12, "fxSnapshot": {"base": "CAD", "ts": "2025-11-03T15:26:37.658874"}, "status": "within-budget", "budgetRemaining": 931.88}, {"flight": {"id": "3", "price": 1518.12, "currency": "CAD"}, "hotel": null, "transit": {"total": 50.0}, "activities": 200.0, "meals": 300.0, "currency": "CAD", "total": 2068.12, "fxSnapshot": {"base": "CAD", "ts": "2025-11-03T15:26:37.658874"}, "status": "within-budget", "budgetRemaining": 931.88}], "total_packages": 3, "message": "\ud83c\udf89 Optimization complete! Found 3 packages"}

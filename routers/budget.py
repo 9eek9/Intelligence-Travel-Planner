@@ -84,43 +84,127 @@ async def health_check():
         "version": "1.0.0"
     }
 
-@router.post("/optimize-trip", response_model=TripOptimizationResponse, summary="Get Multiple Packages")
+@router.post("/optimize-trip", summary="Get Multiple Packages")
 async def optimize_trip(request: TripOptimizationRequest):
     """
     Optimize travel packages within budget
     
     Returns up to 3 optimized travel packages sorted by price.
     Includes flights, hotels, transit, activities, and meals.
+    Also includes progress logs showing what data was retrieved.
     """
     try:
-        results = budget_service.optimize_trip(
-            origin=request.origin,
-            destination=request.destination,
-            city_code=request.city_code,
-            depart_date=request.depart_date,
-            return_date=request.return_date,
-            budget=request.budget,
-            currency=request.currency,
-            transit_cost=request.transit_cost,
-            activities_cost=request.activities_cost,
-            meals_cost=request.meals_cost,
-            daily_activities=request.daily_activities,
-            daily_meals=request.daily_meals
+        progress_logs = []
+        
+        # Fetch flights
+        progress_logs.append(f"✈️  Fetching flights from {request.origin} to {request.destination}...")
+        flight_data = get_flight_offers(
+            request.origin, 
+            request.destination, 
+            request.depart_date, 
+            request.return_date, 
+            budget_service.amadeus_key, 
+            budget_service.amadeus_secret
+        )
+        flights = flight_data.get("data", [])
+        progress_logs.append(f"✅ Found {len(flights)} flight options")
+        
+        # Fetch hotels
+        progress_logs.append(f"🏨 Fetching hotels in {request.city_code}...")
+        hotel_data = get_hotel_offers(
+            request.city_code, 
+            request.depart_date, 
+            request.return_date, 
+            budget_service.amadeus_key, 
+            budget_service.amadeus_secret,
+            currency=request.currency
+        )
+        hotels = hotel_data.get("data", [])
+        progress_logs.append(f"✅ Found {len(hotels)} hotel options")
+        
+        # Convert currency
+        progress_logs.append(f"💱 Converting prices to {request.currency}...")
+        converted_count = 0
+        for hotel in hotels:
+            if "offers" in hotel and len(hotel["offers"]) > 0:
+                offer = hotel["offers"][0]
+                price_currency = offer["price"].get("currency", request.currency)
+                
+                if price_currency != request.currency:
+                    original_price = float(offer["price"]["total"])
+                    converted_price = convert_currency(original_price, price_currency, request.currency)
+                    offer["price"]["total"] = str(converted_price)
+                    offer["price"]["currency"] = request.currency
+                    offer["price"]["original_amount"] = original_price
+                    offer["price"]["original_currency"] = price_currency
+                    converted_count += 1
+        
+        if converted_count == 0:
+            progress_logs.append(f"✅ All prices already in {request.currency}")
+        else:
+            progress_logs.append(f"✅ Converted {converted_count} hotel prices")
+        
+        # Calculate costs
+        progress_logs.append("🧮 Calculating additional costs...")
+        if request.activities_cost is None or request.meals_cost is None:
+            calculated_costs = calculate_activity_meal_costs(
+                request.depart_date, 
+                request.return_date, 
+                request.daily_activities, 
+                request.daily_meals
+            )
+            activities_cost = request.activities_cost or calculated_costs["activities"]
+            meals_cost = request.meals_cost or calculated_costs["meals"]
+        else:
+            activities_cost = request.activities_cost
+            meals_cost = request.meals_cost
+        
+        transit = {"total": request.transit_cost or 50.0}
+        activity_meal = {"activities": activities_cost, "meals": meals_cost}
+        
+        transit_total = transit["total"]
+        progress_logs.append(f"✅ Activities: ${activities_cost:.2f}, Meals: ${meals_cost:.2f}, Transit: ${transit_total:.2f}")
+        
+        # Optimize
+        progress_logs.append(f"🎯 Optimizing packages (Budget: ${request.budget:.2f} {request.currency})...")
+        fx_snapshot = {
+            "base": request.currency,
+            "ts": datetime.now().isoformat(),
+            "rates": {}
+        }
+        
+        optimized = compose_and_optimize(
+            flights,
+            hotels,
+            transit,
+            activity_meal,
+            fx_snapshot,
+            request.budget,
+            request.currency
         )
         
-        return TripOptimizationResponse(
-            success=True,
-            packages=results,
-            total_packages=len(results),
-            message=f"Found {len(results)} optimized packages"
-        )
+        progress_logs.append(f"✅ Generated {len(optimized)} package(s)")
+        progress_logs.append(f"🎉 Optimization complete!")
+        
+        return {
+            "success": True,
+            "packages": optimized,
+            "total_packages": len(optimized),
+            "message": f"Found {len(optimized)} optimized packages",
+            "progress": progress_logs,
+            "stats": {
+                "flights_found": len(flights),
+                "hotels_found": len(hotels),
+                "packages_within_budget": sum(1 for p in optimized if p["status"] == "within-budget")
+            }
+        }
         
     except ValueError as e:
         raise HTTPException(status_code=400, detail=str(e))
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"Internal server error: {str(e)}")
 
-@router.post("/optimize-trip/best", response_model=SinglePackageResponse, summary="Get Best Package Only")
+@router.post("/optimize-trip/best", summary="Get Best Package Only")
 async def get_best_trip_package(request: TripOptimizationRequest):
     """
     Get the single best optimized travel package within budget
@@ -129,34 +213,94 @@ async def get_best_trip_package(request: TripOptimizationRequest):
     If no packages are within budget, returns the cheapest available option.
     """
     try:
-        results = budget_service.optimize_trip(
-            origin=request.origin,
-            destination=request.destination,
-            city_code=request.city_code,
-            depart_date=request.depart_date,
-            return_date=request.return_date,
-            budget=request.budget,
-            currency=request.currency,
-            transit_cost=request.transit_cost,
-            activities_cost=request.activities_cost,
-            meals_cost=request.meals_cost,
-            daily_activities=request.daily_activities,
-            daily_meals=request.daily_meals
+        # Fetch flights
+        flight_data = get_flight_offers(
+            request.origin, 
+            request.destination, 
+            request.depart_date, 
+            request.return_date, 
+            budget_service.amadeus_key, 
+            budget_service.amadeus_secret
+        )
+        flights = flight_data.get("data", [])
+        
+        # Fetch hotels
+        hotel_data = get_hotel_offers(
+            request.city_code, 
+            request.depart_date, 
+            request.return_date, 
+            budget_service.amadeus_key, 
+            budget_service.amadeus_secret,
+            currency=request.currency
+        )
+        hotels = hotel_data.get("data", [])
+        
+        # Convert currency
+        for hotel in hotels:
+            if "offers" in hotel and len(hotel["offers"]) > 0:
+                offer = hotel["offers"][0]
+                price_currency = offer["price"].get("currency", request.currency)
+                
+                if price_currency != request.currency:
+                    original_price = float(offer["price"]["total"])
+                    converted_price = convert_currency(original_price, price_currency, request.currency)
+                    offer["price"]["total"] = str(converted_price)
+                    offer["price"]["currency"] = request.currency
+                    offer["price"]["original_amount"] = original_price
+                    offer["price"]["original_currency"] = price_currency
+        
+        # Calculate costs
+        if request.activities_cost is None or request.meals_cost is None:
+            calculated_costs = calculate_activity_meal_costs(
+                request.depart_date, 
+                request.return_date, 
+                request.daily_activities, 
+                request.daily_meals
+            )
+            activities_cost = request.activities_cost or calculated_costs["activities"]
+            meals_cost = request.meals_cost or calculated_costs["meals"]
+        else:
+            activities_cost = request.activities_cost
+            meals_cost = request.meals_cost
+        
+        transit = {"total": request.transit_cost or 50.0}
+        activity_meal = {"activities": activities_cost, "meals": meals_cost}
+        
+        # Optimize
+        fx_snapshot = {
+            "base": request.currency,
+            "ts": datetime.now().isoformat(),
+            "rates": {}
+        }
+        
+        optimized = compose_and_optimize(
+            flights,
+            hotels,
+            transit,
+            activity_meal,
+            fx_snapshot,
+            request.budget,
+            request.currency,
+            max_results=1  # Only get the best one
         )
         
-        if not results:
+        if not optimized:
             raise HTTPException(status_code=404, detail="No packages found")
         
         # Return only the first (best) package
-        best_package = results[0]
+        best_package = optimized[0]
         
         status_msg = "within budget" if best_package["status"] == "within-budget" else "over budget (cheapest available)"
         
-        return SinglePackageResponse(
-            success=True,
-            package=best_package,
-            message=f"Found best package ({status_msg})"
-        )
+        return {
+            "success": True,
+            "package": best_package,
+            "message": f"Found best package ({status_msg})",
+            "stats": {
+                "flights_found": len(flights),
+                "hotels_found": len(hotels)
+            }
+        }
         
     except ValueError as e:
         raise HTTPException(status_code=400, detail=str(e))
@@ -196,9 +340,10 @@ async def optimize_trip_stream(request: TripOptimizationRequest):
             yield f"data: {json.dumps({'type': 'success', 'message': f'✅ Found {len(flights)} flight options'})}\n\n"
             await asyncio.sleep(0.1)
             
-            if not flights:
-                yield f"data: {json.dumps({'type': 'error', 'message': '❌ No flights found'})}\n\n"
-                return
+            # Don't raise error - continue even if no flights
+            # if not flights:
+            #     yield f"data: {json.dumps({'type': 'error', 'message': '❌ No flights found'})}\n\n"
+            #     return
             
             # Fetch hotels
             yield f"data: {json.dumps({'type': 'progress', 'step': 'hotels', 'message': f'🏨 Fetching hotels in {request.city_code}...'})}\n\n"
@@ -217,9 +362,10 @@ async def optimize_trip_stream(request: TripOptimizationRequest):
             yield f"data: {json.dumps({'type': 'success', 'message': f'✅ Found {len(hotels)} hotel options'})}\n\n"
             await asyncio.sleep(0.1)
             
-            if not hotels:
-                yield f"data: {json.dumps({'type': 'error', 'message': '❌ No hotels found'})}\n\n"
-                return
+            # Don't raise error - continue even if no hotels
+            # if not hotels:
+            #     yield f"data: {json.dumps({'type': 'error', 'message': '❌ No hotels found'})}\n\n"
+            #     return
             
             # Convert currency
             yield f"data: {json.dumps({'type': 'progress', 'step': 'currency', 'message': f'💱 Converting prices to {request.currency}...'})}\n\n"

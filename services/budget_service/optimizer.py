@@ -47,16 +47,102 @@ def _compose_candidates(
     Returns:
         List of candidate packages with total costs
     """
-    if not flights:
-        raise ValueError("No flights provided")
-    if not hotels:
-        raise ValueError("No hotels provided")
+    # Validate we have at least flights or hotels
+    if not flights and not hotels:
+        raise ValueError("No flights or hotels available - cannot create packages")
     
     # Default activity_meal to 0 if not provided
     if activity_meal is None:
         activity_meal = {"activities": 0, "meals": 0}
     
     combos = []
+    
+    # Case 1: Only hotels available (no flights)
+    if not flights and hotels:
+        print(f"\n⚠️  No flights available - creating hotel-only packages")
+        top_hotels = hotels[:max_hotels]
+        for h in top_hotels:
+            try:
+                if "offers" not in h or len(h["offers"]) == 0:
+                    continue
+                
+                offer = h["offers"][0]
+                hotel_price = float(offer["price"]["total"])
+                hotel_currency = offer["price"].get("currency", currency)
+                hotel_name = h.get("hotel", {}).get("name", "Unknown Hotel")
+                hotel_id = h.get("hotel", {}).get("hotelId", "unknown")
+                
+                transit_cost = float(transit.get("total", 0))
+                activities_cost = float(activity_meal.get("activities", 0))
+                meals_cost = float(activity_meal.get("meals", 0))
+                
+                total = hotel_price + transit_cost + activities_cost + meals_cost
+                
+                combos.append({
+                    "flight": None,
+                    "hotel": {
+                        "id": hotel_id,
+                        "name": hotel_name,
+                        "total": hotel_price,
+                        "currency": hotel_currency,
+                        "offer_id": offer.get("id", "unknown")
+                    },
+                    "transit": transit,
+                    "activities": activities_cost,
+                    "meals": meals_cost,
+                    "currency": currency,
+                    "total": round(total, 2)
+                })
+                
+                print(f"✅ Hotel-only package: ${total:.2f}")
+            except (KeyError, ValueError, TypeError) as e:
+                print(f"⚠️  Skipping hotel - {str(e)}")
+                continue
+        
+        if combos:
+            return combos
+        else:
+            raise ValueError("No valid hotel packages could be created")
+    
+    # Case 2: Only flights available (no hotels)
+    if flights and not hotels:
+        print(f"\n⚠️  No hotels available - creating flight-only packages")
+        top_flights = flights[:max_flights * 2]  # Get more flights when no hotels
+        for f in top_flights:
+            try:
+                flight_price = float(f["price"]["total"])
+                flight_currency = f["price"].get("currency", currency)
+                transit_cost = float(transit.get("total", 0))
+                activities_cost = float(activity_meal.get("activities", 0))
+                meals_cost = float(activity_meal.get("meals", 0))
+                
+                total = flight_price + transit_cost + activities_cost + meals_cost
+                
+                combos.append({
+                    "flight": {
+                        "id": f.get("id", "unknown"),
+                        "price": flight_price,
+                        "currency": flight_currency
+                    },
+                    "hotel": None,
+                    "transit": transit,
+                    "activities": activities_cost,
+                    "meals": meals_cost,
+                    "currency": currency,
+                    "total": round(total, 2)
+                })
+                
+                print(f"✅ Flight-only package: ${total:.2f}")
+            except (KeyError, ValueError, TypeError) as e:
+                print(f"⚠️  Skipping flight - {str(e)}")
+                continue
+        
+        if combos:
+            return combos
+        else:
+            raise ValueError("No valid flight packages could be created")
+    
+    # Case 3: Both flights and hotels available
     top_flights = flights[:max_flights]
     top_hotels = hotels[:max_hotels]
 
@@ -137,8 +223,8 @@ def compose_and_optimize(
     Compose and optimize travel packages within budget
     
     Args:
-        flights: List of flight offers
-        hotels: List of hotel offers
+        flights: List of flight offers (can be empty)
+        hotels: List of hotel offers (can be empty)
         transit: Transit cost dictionary (e.g., {"total": 50})
         activity_meal: Activity and meal cost dictionary (optional)
         fx_snapshot: Exchange rate snapshot
@@ -152,7 +238,7 @@ def compose_and_optimize(
     if budget <= 0:
         raise ValueError("Budget must be positive")
     
-    # Compose candidates
+    # Compose candidates (handles empty flights or hotels gracefully)
     candidates = _compose_candidates(flights, hotels, transit, activity_meal, currency)
     
     # Greedy: choose those within budget, sort by total ascending

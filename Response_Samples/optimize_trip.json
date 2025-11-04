@@ -1,0 +1,88 @@
+{
+  "success": true,
+  "packages": [
+    {
+      "flight": {
+        "id": "1",
+        "price": 1518.12,
+        "currency": "CAD"
+      },
+      "hotel": null,
+      "transit": {
+        "total": 50
+      },
+      "activities": 200,
+      "meals": 300,
+      "currency": "CAD",
+      "total": 2068.12,
+      "fxSnapshot": {
+        "base": "CAD",
+        "ts": "2025-11-03T14:57:03.155501"
+      },
+      "status": "within-budget",
+      "budgetRemaining": 931.88
+    },
+    {
+      "flight": {
+        "id": "2",
+        "price": 1518.12,
+        "currency": "CAD"
+      },
+      "hotel": null,
+      "transit": {
+        "total": 50
+      },
+      "activities": 200,
+      "meals": 300,
+      "currency": "CAD",
+      "total": 2068.12,
+      "fxSnapshot": {
+        "base": "CAD",
+        "ts": "2025-11-03T14:57:03.155501"
+      },
+      "status": "within-budget",
+      "budgetRemaining": 931.88
+    },
+    {
+      "flight": {
+        "id": "3",
+        "price": 1518.12,
+        "currency": "CAD"
+      },
+      "hotel": null,
+      "transit": {
+        "total": 50
+      },
+      "activities": 200,
+      "meals": 300,
+      "currency": "CAD",
+      "total": 2068.12,
+      "fxSnapshot": {
+        "base": "CAD",
+        "ts": "2025-11-03T14:57:03.155501"
+      },
+      "status": "within-budget",
+      "budgetRemaining": 931.88
+    }
+  ],
+  "total_packages": 3,
+  "message": "Found 3 optimized packages",
+  "progress": [
+    "✈️  Fetching flights from YYZ to BKK...",
+    "✅ Found 160 flight options",
+    "🏨 Fetching hotels in BKK...",
+    "✅ Found 0 hotel options",
+    "💱 Converting prices to CAD...",
+    "✅ All prices already in CAD",
+    "🧮 Calculating additional costs...",
+    "✅ Activities: $200.00, Meals: $300.00, Transit: $50.00",
+    "🎯 Optimizing packages (Budget: $3000.00 CAD)...",
+    "✅ Generated 3 package(s)",
+    "🎉 Optimization complete!"
+  ],
+  "stats": {
+    "flights_found": 160,
+    "hotels_found": 0,
+    "packages_within_budget": 3
+  }
+}

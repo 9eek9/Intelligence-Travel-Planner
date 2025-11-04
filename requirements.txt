@@ -2,14 +2,26 @@ fastapi
 uvicorn[standard]
 pydantic
 requests
-pandas
-scikit-learn
 python-dotenv
 google-generativeai
 transformers
+amadeus
 
-#budget
+# Add pandas and numpy
+pandas
+numpy
+scikit-learn
+joblib
+
+# Add tf-keras for transformers compatibility
+tf-keras
+
+# Budget service
 httpx
-ortools       # if you add real optimization later
+ortools
 sqlalchemy
+
+# ML and utilities
+python-multipart
+googlemaps
 
