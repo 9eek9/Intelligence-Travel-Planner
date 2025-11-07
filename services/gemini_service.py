@@ -1,6 +1,7 @@
 import os, json
 from dotenv import load_dotenv
 import google.generativeai as genai
+from typing import Optional
 
 load_dotenv()
 genai.configure(api_key=os.getenv("GEMINI_API_KEY"))
@@ -45,3 +46,60 @@ POI Data (JSON):
 
     response = model.generate_content(prompt)
     return response.text
+
+
+# === Chatbot + Language Buddy (BEGIN) === #
+_GEMINI_INITIALIZED = False
+_MODEL = None
+
+def _init():
+    global _GEMINI_INITIALIZED, _MODEL
+    if _GEMINI_INITIALIZED:
+        return
+    api_key = os.getenv("GEMINI_API_KEY")
+    # use same model as itinerary
+    model_name = os.getenv("GEMINI_MODEL", "gemini-2.5-flash")
+    genai.configure(api_key=api_key)
+    _MODEL = genai.GenerativeModel(model_name)
+    _GEMINI_INITIALIZED = True
+
+def generate_text(prompt: str, system: Optional[str] = None) -> str:
+    """Simple text generation wrapper for MVP."""
+    _init()
+    if system:
+        full = f"{system}\n\nUser: {prompt}"
+    else:
+        full = prompt
+    resp = _MODEL.generate_content(full)
+    return getattr(resp, "text", "").strip()
+
+def chat_translate(text: str, target_lang: str = "en", tone: str = "polite") -> str:
+    system = (
+        "You are Language Buddy for Smart Travel. Keep outputs concise and natural."
+        " Preserve meaning. Use the requested tone."
+    )
+    prompt = f"Translate to {target_lang} with {tone} tone:\n{text}"
+    return generate_text(prompt, system=system)
+
+def chat_correct(text: str, lang: str = "en") -> str:
+    system = (
+        "You are a gentle language corrector. Fix grammar and wording while keeping meaning."
+        " After the corrected sentence, give 1-2 short bullet explanations."
+    )
+    prompt = f"Correct this {lang} sentence:\n{text}\nReturn: corrected sentence then 1-2 bullets."
+    return generate_text(prompt, system=system)
+
+def chat_explain(text: str, lang: str = "en") -> str:
+    system = "You are a concise language tutor. Explain briefly with one or two examples."
+    prompt = f"Explain the grammar/wording issues in this {lang} text and how to improve:\n{text}"
+    return generate_text(prompt, system=system)
+
+def chat_travel_answer(message: str) -> str:
+    system = (
+        "You are Smart Travel's Chat Assistant. Be concise, friendly, budget-aware."
+        " If suggesting places, keep lists short (3-5). Avoid inventing exact prices."
+    )
+    return generate_text(message, system=system)
+
+
+# === Chatbot + Language Buddy (END) === #

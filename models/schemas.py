@@ -1,5 +1,5 @@
 from pydantic import BaseModel, Field
-from typing import List, Dict, Any, Optional
+from typing import List, Dict, Any, Optional, Literal
 
 # Request body model
 class ItineraryRequest(BaseModel):
@@ -50,3 +50,23 @@ class ItineraryResponse(BaseModel):
             }
         ]
     )
+
+# === Chatbot + Language Buddy (BEGIN) === #
+class ChatbotRequest(BaseModel):
+    message: str = Field(..., description="User message for travel Q&A")
+
+class ChatbotResponse(BaseModel):
+    reply: str
+
+LanguageMode = Literal["translate", "correct", "explain"]
+
+class LanguageBuddyRequest(BaseModel):
+    message: str
+    mode: LanguageMode = "translate"
+    source_lang: Optional[str] = None   # e.g., "my", "en", "ja"
+    target_lang: str = "en"
+    tone: str = "polite"                # "polite" | "casual"
+
+class LanguageBuddyResponse(BaseModel):
+    reply: str
+# === Chatbot + Language Buddy (END) === #

@@ -15,6 +15,7 @@ joblib
 
 # Add tf-keras for transformers compatibility
 tf-keras
+torch
 
 # Budget service
 httpx

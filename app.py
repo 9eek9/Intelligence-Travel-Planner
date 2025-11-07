@@ -1,5 +1,5 @@
 from fastapi import FastAPI
-from routers import itinerary, sentiment, budget
+from routers import itinerary, sentiment, budget, chat
 from database.database import create_tables
 
 app = FastAPI(title="SmartTravelSystem API", version="1.0.0")
@@ -14,6 +14,7 @@ async def startup_event():
 app.include_router(itinerary.router, prefix="/itinerary", tags=["Itinerary"])
 app.include_router(sentiment.router, prefix="/sentiment", tags=["Sentiment"])
 app.include_router(budget.router, prefix="/budget", tags=["budget"])
+app.include_router(chat.router, prefix="/chat", tags=["Chat"])
 
 @app.get("/")
 def root():
