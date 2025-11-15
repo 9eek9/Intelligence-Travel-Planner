@@ -16,27 +16,40 @@ BUDGET_DESC = {
 }
 
 
-def generate_itinerary_text(destination: str,
-                            days: int,
-                            budget: int,
-                            kid_friendly: bool,
-                            plan_struct: list,
-                            travel_type: str = None,
-                            activity_theme: str = None):
+def generate_itinerary_text(
+    destination: str,
+    days: int,
+    budget: int,
+    plan_struct: list,
+    travel_type: str = None,
+    activity_theme: str = None,
+):
     model = genai.GenerativeModel(MODEL)
+
     budget_text = BUDGET_DESC.get(budget, "moderately priced options")
+
+    # Describe trip type for the prompt
+    if travel_type == "family":
+        trip_desc = "a family-friendly trip (prioritize safe, kid-friendly activities and restaurants)"
+    elif travel_type:
+        trip_desc = f"a {travel_type} trip"
+    else:
+        trip_desc = "a general trip"
+
+    theme_desc = activity_theme or "general interest"
 
     prompt = f"""
 You are a professional travel planner. Create a {days}-day itinerary for {destination}.
 
-Constraints:
-- Budget level: {budget} → {budget_text}.
-- Kid friendly: {kid_friendly}.
-- Travel type: {travel_type or 'unspecified'}.
-- Activity theme: {activity_theme or 'general interest'}.
+Trip context:
+- Trip type: {trip_desc}
+- Activity theme: {theme_desc}
+- Budget level: {budget} → {budget_text}
+
+Instructions:
 - Organize each day into Morning / Afternoon / Evening.
 - Mention prices appropriately (affordable, luxury, free entry).
-- Include one restaurant recommendation per day.
+- Include at least one restaurant recommendation per day.
 - Keep descriptions natural, concise, and engaging.
 - Use ONLY the provided JSON data — do not invent extra places.
 

@@ -46,32 +46,12 @@ def _get_place_photos(place_id: str, max_photos: int = 5):
         return []
 
 
-def _normalize(results, enrich_photos: bool = True):
-    """Normalize raw Places API results with optional multi-photo enrichment."""
+def _normalize(results, enrich_photos: bool = False):
+    """Normalize raw Places API results without fetching photos."""
     out = []
     for r in results:
-        # Default: use any photo provided by text search
-        photo_urls = []
-        photos = r.get("photos", [])
-        if photos:
-            ref = photos[0].get("photo_reference")
-            if ref:
-                photo_urls.append(
-                    f"{PHOTO_BASE_URL}?maxwidth=800&photo_reference={ref}&key={PLACES_KEY}"
-                )
-
-        # Optionally fetch more photos using Place Details
-        if enrich_photos and r.get("place_id"):
-            extra_photos = _get_place_photos(r["place_id"], max_photos=5)
-            # Avoid duplicates
-            for url in extra_photos:
-                if url not in photo_urls:
-                    photo_urls.append(url)
-            # Small delay to avoid hitting quota too quickly
-            time.sleep(0.2)
-
         out.append({
-            "place_id": r.get("place_id"),  
+            "place_id": r.get("place_id"),
             "name": r.get("name"),
             "address": r.get("formatted_address"),
             "lat": r.get("geometry", {}).get("location", {}).get("lat"),
@@ -80,22 +60,27 @@ def _normalize(results, enrich_photos: bool = True):
             "user_ratings_total": r.get("user_ratings_total"),
             "price_level": r.get("price_level"),
             "types": r.get("types", []),
-            "photo_urls": photo_urls
+            # Removed photo_urls completely
         })
-
     return out
 
 
 def fetch_pois_for_destination(destination: str,
                                max_results_per_type: int = 20,
-                               kid_friendly: bool = False,
                                budget: int = 4,
                                travel_type: str = None,
                                activity_theme: str = None):
     """
     Fetch POIs (Places of Interest) for a destination.
-    Includes filters (kid_friendly, budget, travel_type, activity_theme)
-    and multiple photo URLs per place (via Place Details API).
+
+    Filters:
+    - budget (0-4)
+    - travel_type (e.g. 'family', 'couple', 'solo', 'friends')
+    - activity_theme (e.g. 'nature', 'food', 'culture')
+
+    Note:
+    - 'Family-friendly' behavior is now derived from travel_type == "family"
+      instead of a separate kid_friendly flag.
     """
 
     # --- Build dynamic query for attractions ---
@@ -105,7 +90,7 @@ def fetch_pois_for_destination(destination: str,
     if activity_theme:
         query_parts.append(activity_theme)
 
-    # Add travel type
+    # Add travel type flavouring
     if travel_type:
         if travel_type == "couple":
             query_parts.append("romantic places")
@@ -124,15 +109,8 @@ def fetch_pois_for_destination(destination: str,
     restaurants_raw = _text_search(rest_query)
 
     # --- Normalize and enrich photo data ---
-    atts = _normalize(attractions_raw[:max_results_per_type], enrich_photos=True)
-    rests = _normalize(restaurants_raw[:max_results_per_type], enrich_photos=True)
-
-    # --- Kid-friendly filter ---
-    if kid_friendly:
-        atts = [
-            a for a in atts
-            if "park" in ",".join(a["types"]) or "museum" in ",".join(a["types"])
-        ]
+    atts = _normalize(attractions_raw[:max_results_per_type], enrich_photos=False)
+    rests = _normalize(restaurants_raw[:max_results_per_type], enrich_photos=False)
 
     # --- Budget filter (0–4) ---
     atts = [
@@ -150,4 +128,22 @@ def fetch_pois_for_destination(destination: str,
     atts = [a for a in atts if a.get("rating", 0) >= 3.5]
     rests = [r for r in rests if r.get("rating", 0) >= 3.5]
 
+    # --- Extra logic for family trips (soft filter, not too strict) ---
+    if travel_type == "family":
+        family_types = [
+            "park", "zoo", "aquarium", "museum",
+            "amusement_park", "tourist_attraction", "playground"
+        ]
+
+        def is_family_friendly(place):
+            types_str = ",".join(place.get("types", []))
+            return any(t in types_str for t in family_types)
+
+        family_atts = [a for a in atts if is_family_friendly(a)]
+        # If we found some family-friendly ones, prefer them;
+        # otherwise fall back to original list so the user still gets results.
+        if family_atts:
+            atts = family_atts
+
     return {"attractions": atts, "restaurants": rests}
+
