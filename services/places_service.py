@@ -46,10 +46,38 @@ def _get_place_photos(place_id: str, max_photos: int = 5):
         return []
 
 
+# def _normalize(results, enrich_photos: bool = False):
+#     """Normalize raw Places API results without fetching photos."""
+#     out = []
+#     for r in results:
+#         out.append({
+#             "place_id": r.get("place_id"),
+#             "name": r.get("name"),
+#             "address": r.get("formatted_address"),
+#             "lat": r.get("geometry", {}).get("location", {}).get("lat"),
+#             "lon": r.get("geometry", {}).get("location", {}).get("lng"),
+#             "rating": r.get("rating"),
+#             "user_ratings_total": r.get("user_ratings_total"),
+#             "price_level": r.get("price_level"),
+#             "types": r.get("types", []),
+#             # Removed photo_urls completely
+#         })
+#     return out
+
 def _normalize(results, enrich_photos: bool = False):
-    """Normalize raw Places API results without fetching photos."""
     out = []
     for r in results:
+
+        # Extract ONE photo from Text Search
+        photo_url = None
+        photos = r.get("photos", [])
+        if photos:
+            ref = photos[0].get("photo_reference")
+            if ref:
+                photo_url = (
+                    f"{PHOTO_BASE_URL}?maxwidth=800&photo_reference={ref}&key={PLACES_KEY}"
+                )
+
         out.append({
             "place_id": r.get("place_id"),
             "name": r.get("name"),
@@ -60,7 +88,7 @@ def _normalize(results, enrich_photos: bool = False):
             "user_ratings_total": r.get("user_ratings_total"),
             "price_level": r.get("price_level"),
             "types": r.get("types", []),
-            # Removed photo_urls completely
+            "photo_url": photo_url,     # ← include 1 photo directly
         })
     return out
 
