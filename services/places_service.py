@@ -64,11 +64,41 @@ def _get_place_photos(place_id: str, max_photos: int = 5):
 #         })
 #     return out
 
+# def _normalize(results, enrich_photos: bool = False):
+#     out = []
+#     for r in results:
+
+#         # Extract ONE photo from Text Search
+#         photo_url = None
+#         photos = r.get("photos", [])
+#         if photos:
+#             ref = photos[0].get("photo_reference")
+#             if ref:
+#                 photo_url = (
+#                     f"{PHOTO_BASE_URL}?maxwidth=800&photo_reference={ref}&key={PLACES_KEY}"
+#                 )
+
+#         out.append({
+#             "place_id": r.get("place_id"),
+#             "name": r.get("name"),
+#             "address": r.get("formatted_address"),
+#             "lat": r.get("geometry", {}).get("location", {}).get("lat"),
+#             "lon": r.get("geometry", {}).get("location", {}).get("lng"),
+#             "rating": r.get("rating"),
+#             "user_ratings_total": r.get("user_ratings_total"),
+#             "price_level": r.get("price_level"),
+#             "types": r.get("types", []),
+#             "photo_url": photo_url,     # ← include 1 photo directly
+#         })
+#     return out
+
 def _normalize(results, enrich_photos: bool = False):
     out = []
-    for r in results:
 
-        # Extract ONE photo from Text Search
+    for r in results:
+        place_id = r.get("place_id")
+
+        # ========= 1) Extract ONE text-search photo =========
         photo_url = None
         photos = r.get("photos", [])
         if photos:
@@ -78,8 +108,30 @@ def _normalize(results, enrich_photos: bool = False):
                     f"{PHOTO_BASE_URL}?maxwidth=800&photo_reference={ref}&key={PLACES_KEY}"
                 )
 
+        # ========= 2) Fetch website via Place Details API =========
+        website = None
+        try:
+            details_params = {
+                "place_id": place_id,
+                "fields": "website",
+                "key": PLACES_KEY,
+            }
+            details_resp = requests.get(DETAILS_URL, params=details_params, timeout=20)
+            details_resp.raise_for_status()
+            details_data = details_resp.json()
+            website = details_data.get("result", {}).get("website")
+        except Exception:
+            website = None  # fail safely
+
+        # ========= 3) Build booking_url =========
+        if website:
+            booking_url = website
+        else:
+            booking_url = f"https://www.google.com/maps/place/?q=place_id:{place_id}"
+
+        # ========= 4) Build final POI object =========
         out.append({
-            "place_id": r.get("place_id"),
+            "place_id": place_id,
             "name": r.get("name"),
             "address": r.get("formatted_address"),
             "lat": r.get("geometry", {}).get("location", {}).get("lat"),
@@ -88,9 +140,14 @@ def _normalize(results, enrich_photos: bool = False):
             "user_ratings_total": r.get("user_ratings_total"),
             "price_level": r.get("price_level"),
             "types": r.get("types", []),
-            "photo_url": photo_url,     # ← include 1 photo directly
+
+            "photo_url": photo_url,
+            "website": website,
+            "booking_url": booking_url,
         })
+
     return out
+
 
 
 def fetch_pois_for_destination(destination: str,
