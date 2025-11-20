@@ -124,10 +124,10 @@ def _normalize(results, enrich_photos: bool = False):
             website = None  # fail safely
 
         # ========= 3) Build booking_url =========
-        if website:
-            booking_url = website
-        else:
-            booking_url = f"https://www.google.com/maps/place/?q=place_id:{place_id}"
+        # if website:
+        #     booking_url = website
+        # else:
+        #     booking_url = f"https://www.google.com/maps/place/?q=place_id:{place_id}"
 
         # ========= 4) Build final POI object =========
         out.append({
@@ -143,7 +143,7 @@ def _normalize(results, enrich_photos: bool = False):
 
             "photo_url": photo_url,
             "website": website,
-            "booking_url": booking_url,
+            #"booking_url": booking_url,
         })
 
     return out
