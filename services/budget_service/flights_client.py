@@ -4,7 +4,7 @@ def get_amadeus_token(api_key, api_secret):
     """
     Generate access token from Amadeus API
     """
-    token_url = "https://test.api.amadeus.com/v1/security/oauth2/token"
+    token_url = "https://api.amadeus.com/v1/security/oauth2/token"
     
     data = {
         "grant_type": "client_credentials",
@@ -18,14 +18,14 @@ def get_amadeus_token(api_key, api_secret):
     token_data = response.json()
     return token_data["access_token"]
 
-def get_flight_offers(origin, destination, depart_date, return_date, api_key, api_secret):
+def get_flight_offers(origin, destination, depart_date, return_date, api_key, api_secret, target_currency="CAD"):
     # Get access token
     access_token = get_amadeus_token(api_key, api_secret)
-    
-    url = "https://test.api.amadeus.com/v2/shopping/flight-offers"
+
+    url = "https://api.amadeus.com/v2/shopping/flight-offers"
     headers = {"Authorization": f"Bearer {access_token}"}
     payload = {
-        "currencyCode": "CAD",
+        "currencyCode": target_currency,  # Use dynamic target currency
         "originDestinations": [
             {"id": "1", "originLocationCode": origin, "destinationLocationCode": destination, "departureDateTimeRange": {"date": depart_date}},
             {"id": "2", "originLocationCode": destination, "destinationLocationCode": origin, "departureDateTimeRange": {"date": return_date}}

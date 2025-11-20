@@ -5,8 +5,9 @@ from datetime import datetime
 
 from flights_client import get_flight_offers
 from hotels_client import get_hotel_offers
-from fx_client import convert_currency
-from optimizer import compose_and_optimize, calculate_activity_meal_costs
+from activities_client import fetch_activities_by_city_name
+# from fx_client import convert_currency
+from optimizer import compose_and_optimize, calculate_meal_costs
 
 load_dotenv()
 
@@ -32,8 +33,6 @@ class BudgetOptimizerService:
         transit_cost: Optional[float] = None,
         activities_cost: Optional[float] = None,
         meals_cost: Optional[float] = None,
-        daily_activities: float = 50.0,
-        daily_meals: float = 75.0
     ) -> List[Dict[str, Any]]:
         """
         Get optimized travel packages within budget
@@ -52,61 +51,72 @@ class BudgetOptimizerService:
             self.amadeus_key, 
             self.amadeus_secret
         )
-        
         flights = flight_data.get("data", [])
         print(f"✅ Found {len(flights)} flight options")
-        
-        if not flights:
-            raise ValueError("No flights found")
-        
+
+        # # Convert flight prices to the desired currency
+        # print(f"\n💱 Converting flight prices to {currency}...")
+        # for flight in flights:
+        #     price = flight.get("price", {})
+        #     if price.get("currency") != currency:
+        #         original_price = float(price.get("total", 0))
+        #         original_currency = price.get("currency")
+        #         converted_price = convert_currency(original_price, original_currency, currency)
+        #         flight["price"]["convertedTotal"] = converted_price
+        #         flight["price"]["convertedCurrency"] = currency
+        #         print(f"   Flight {flight['id']}: {original_price:.2f} {original_currency} → {converted_price:.2f} {currency}")
+
         # 2. Get hotel offers
-        print(f"\n🔍 Fetching hotels in {city_code}...")
+        print(f"\n🔍 Fetching hotels in {destination}...")
         hotel_data = get_hotel_offers(
-            city_code, 
+            destination, 
             depart_date, 
             return_date, 
             self.amadeus_key, 
             self.amadeus_secret,
-            currency=currency
+            currency="EUR"  # Always fetch in EUR
         )
-        
         hotels = hotel_data.get("data", [])
         print(f"✅ Found {len(hotels)} hotel options")
-        
-        if not hotels:
-            raise ValueError("No hotels found")
-        
-        # 3. Convert hotel prices if needed
-        print(f"\n💱 Converting hotel prices to {currency}...")
-        for hotel in hotels:
-            if "offers" in hotel and len(hotel["offers"]) > 0:
-                offer = hotel["offers"][0]
-                price_currency = offer["price"].get("currency", currency)
-                
-                if price_currency != currency:
-                    original_price = float(offer["price"]["total"])
-                    converted_price = convert_currency(original_price, price_currency, currency)
-                    print(f"   {hotel['hotel']['name']}: {original_price:.2f} {price_currency} → {converted_price:.2f} {currency}")
-                    offer["price"]["total"] = str(converted_price)
-                    offer["price"]["currency"] = currency
-                    offer["price"]["original_amount"] = original_price
-                    offer["price"]["original_currency"] = price_currency
-        
+
+        # # # Convert hotel prices to the desired currency
+        # # print(f"\n💱 Converting hotel prices to {currency}...")
+        # for hotel in hotels:
+        #     if "offers" in hotel and len(hotel["offers"]) > 0:
+        #         offer = hotel["offers"][0]
+        #         price_currency = offer["price"].get("currency", "EUR")
+        #         original_price = float(offer["price"]["total"])
+        #         if price_currency != currency:
+        #             converted_price = convert_currency(original_price, price_currency, currency)
+        #             offer["price"]["convertedTotal"] = converted_price
+        #             offer["price"]["convertedCurrency"] = currency
+        #             print(f"   {hotel['hotel']['name']}: {original_price:.2f} {price_currency} → {converted_price:.2f} {currency}")
+
+        # 3. Fetch activities
+        print(f"\n🔍 Fetching activities in {destination}...")
+        activity_data = fetch_activities_by_city_name(
+            destination, 
+            depart_date, 
+            return_date, 
+            self.amadeus_key, 
+            self.amadeus_secret
+        )
+
+        # Remove redundant activity price conversion logic
+        # The activities_client already handles currency conversion
+
         # 4. Calculate costs
-        if activities_cost is None or meals_cost is None:
-            calculated_costs = calculate_activity_meal_costs(
+        if meals_cost is None:
+            calculated_costs = calculate_meal_costs(
                 depart_date, 
                 return_date, 
-                daily_activities, 
-                daily_meals
+                daily_meals=75.0
             )
-            activities_cost = activities_cost or calculated_costs["activities"]
             meals_cost = meals_cost or calculated_costs["meals"]
-            print(f"\n💰 Calculated costs - Activities: ${activities_cost:.2f}, Meals: ${meals_cost:.2f}")
+            print(f"\n💰 Calculated costs - Meals: ${meals_cost:.2f}")
         
         transit = {"total": transit_cost or 50.0}
-        activity_meal = {
-            "activities": activities_cost,
+        meal = {
             "meals": meals_cost
         }
         
@@ -123,7 +133,7 @@ class BudgetOptimizerService:
             flights,
             hotels,
             transit,
-            activity_meal,
+            meal,
             fx_snapshot,
             budget,
             currency
@@ -138,11 +148,10 @@ def main():
         service = BudgetOptimizerService()
         
         results = service.optimize_trip(
-            origin="YYZ",
-            destination="BKK",
-            city_code="BKK",
-            depart_date="2025-12-01",
-            return_date="2025-12-05",
+            origin="Toronto",
+            destination="Bangkok",
+            depart_date="2025-12-25",
+            return_date="2025-12-30",
             budget=3000,
             currency="CAD"
         )
