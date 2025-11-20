@@ -133,6 +133,7 @@ class BudgetOptimizerService:
             flights,
             hotels,
             transit,
+            activity_data,
             meal,
             fx_snapshot,
             budget,

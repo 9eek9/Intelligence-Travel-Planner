@@ -74,7 +74,7 @@ def _compose_candidates(
 
                 offer = h["offers"][0]
                 hotel_price = float(offer["price"]["total"])  # Ensure hotel_price is a float
-                hotel_currency = offer["price"].get("currency", currency)
+                hotel_currency = offer["price"].get("currency", currency)  # Use default currency if missing
                 hotel_name = h.get("hotel", {}).get("name", "Unknown Hotel")
                 hotel_id = h.get("hotel", {}).get("hotelId", "unknown")
                 room_description = offer.get("room", {}).get("description", {}).get("text", "No description available")
@@ -87,21 +87,36 @@ def _compose_candidates(
                 transit_cost = float(transit.get("total", 0))  # Ensure transit_cost is a float
                 meals_cost = float(meal.get("meals", 0))  # Ensure meals_cost is a float
 
-                # Calculate remaining budget for activities
+                # Process activities: convert prices and filter within the remaining budget
                 remaining_budget = budget - (hotel_price + transit_cost + meals_cost)
-
                 affordable_activities = []
                 current_activities_total = 0
-                # Filter activities within the remaining budget
+
                 for activity in sorted_activities:
+                    activity_currency = activity["price"].get("currencyCode", currency)  # Use default currency if missing
+                    print(f"🔍 Processing activity: {activity.get('name', 'Unknown')} - Currency: {activity_currency}")  # Log currency code
+
+                    # Convert activity price to the target currency if needed
+                    if activity_currency != currency:
+                        activity["price"]["amount"] = convert_currency(
+                            float(activity["price"]["amount"]),
+                            activity_currency,
+                            currency
+                        )
+                        activity["price"]["currencyCode"] = currency
+                        activity["price"]["amount"] = round(activity["price"]["amount"], 2)
+
+                    # Filter activities within the remaining budget
                     activity_price = float(activity["price"]["amount"])  # Ensure price is a float
                     if activity_price <= remaining_budget:
                         affordable_activities.append(activity)
                         current_activities_total += activity_price
+                        remaining_budget -= activity_price  # Update remaining budget
                     else:
                         break  # Stop adding activities once the budget is exceeded
 
-                total_activity_cost = sum(float(activity["price"]["amount"]) for activity in affordable_activities)
+                # Calculate total activity cost
+                total_activity_cost = current_activities_total
 
                 total = hotel_price + transit_cost + total_activity_cost + meals_cost
 
@@ -146,21 +161,36 @@ def _compose_candidates(
                 transit_cost = float(transit.get("total", 0))
                 meals_cost = float(meal.get("meals", 0))
 
-                # Calculate remaining budget for activities
+                # Process activities: convert prices and filter within the remaining budget
                 remaining_budget = budget - (flight_price + transit_cost + meals_cost)
-
                 affordable_activities = []
                 current_activities_total = 0
-                # Filter activities within the remaining budget
+
                 for activity in sorted_activities:
+                    activity_currency = activity["price"].get("currencyCode", currency)  # Use default currency if missing
+                    print(f"🔍 Processing activity: {activity.get('name', 'Unknown')} - Currency: {activity_currency}")  # Log currency code
+
+                    # Convert activity price to the target currency if needed
+                    if activity_currency != currency:
+                        activity["price"]["amount"] = convert_currency(
+                            float(activity["price"]["amount"]),
+                            activity_currency,
+                            currency
+                        )
+                        activity["price"]["currencyCode"] = currency
+                        activity["price"]["amount"] = round(activity["price"]["amount"], 2)
+
+                    # Filter activities within the remaining budget
                     activity_price = float(activity["price"]["amount"])  # Ensure price is a float
                     if activity_price <= remaining_budget:
                         affordable_activities.append(activity)
                         current_activities_total += activity_price
+                        remaining_budget -= activity_price  # Update remaining budget
                     else:
                         break  # Stop adding activities once the budget is exceeded
 
-                total_activity_cost = sum(float(activity["price"]["amount"]) for activity in affordable_activities)
+                # Calculate total activity cost
+                total_activity_cost = current_activities_total
 
                 total = flight_price + transit_cost + total_activity_cost + meals_cost
 
@@ -185,7 +215,7 @@ def _compose_candidates(
             except (KeyError, ValueError, TypeError) as e:
                 print(f"⚠️  Skipping flight - {str(e)}")
                 continue
-        
+
         if combos:
             return combos
         else:
@@ -212,7 +242,7 @@ def _compose_candidates(
                     # Get first offer
                     offer = h["offers"][0]
                     hotel_price = float(offer["price"]["total"])  # Ensure hotel_price is a float
-                    hotel_currency = offer["price"].get("currency")
+                    hotel_currency = offer["price"].get("currency", currency)  # Use default currency if missing
                     hotel_name = h.get("hotel", {}).get("name", "Unknown Hotel")
                     hotel_id = h.get("hotel", {}).get("hotelId", "unknown")
                     room_description = offer.get("room", {}).get("description", {}).get("text", "No description available")
@@ -225,21 +255,37 @@ def _compose_candidates(
                     transit_cost = float(transit.get("total", 0))
                     meals_cost = float(meal.get("meals", 0))
 
-                    # Calculate remaining budget for activities
+                    # Process activities: convert prices and filter within the remaining budget
                     remaining_budget = budget - (flight_price + hotel_price + transit_cost + meals_cost)
-
                     affordable_activities = []
                     current_activities_total = 0
-                    # Filter activities within the remaining budget
+
                     for activity in sorted_activities:
-                        if float(activity["price"]["amount"]) <= remaining_budget:
+                        activity_currency = activity["price"].get("currencyCode", currency)  # Use default currency if missing
+
+                        # Convert activity price to the target currency if needed
+                        if activity_currency != currency:
+                            activity["price"]["amount"] = convert_currency(
+                                float(activity["price"]["amount"]),
+                                activity_currency,
+                                currency
+                            )
+                            activity["price"]["currencyCode"] = currency
+                            activity["price"]["amount"] = round(activity["price"]["amount"], 2)
+
+                        # Filter activities within the remaining budget
+                        activity_price = float(activity["price"]["amount"])  # Ensure price is a float
+                        if activity_price <= remaining_budget:
                             affordable_activities.append(activity)
-                            current_activities_total += float(activity["price"]["amount"])
+                            current_activities_total += activity_price
+                            remaining_budget -= activity_price  # Update remaining budget
                         else:
                             break  # Stop adding activities once the budget is exceeded
 
-                    total_activity_cost = sum(float(activity["price"]["amount"]) for activity in affordable_activities)
+                    # Calculate total activity cost
+                    total_activity_cost = current_activities_total
 
+                    # Calculate the total cost for this combination
                     total = flight_price + hotel_price + transit_cost + total_activity_cost + meals_cost
 
                     combos.append({
@@ -266,7 +312,7 @@ def _compose_candidates(
                         "total": round(total, 2)
                     })
 
-                    # Update the print statement to include all components of the total cost
+                    # Add debug log for total calculation
                     print(f"✅ Combo: Flight ${flight_price:.2f} {flight_currency} + Hotel ${hotel_price:.2f} {hotel_currency} + Transit ${transit_cost:.2f} + Activities ${total_activity_cost:.2f} + Meals ${meals_cost:.2f} = ${total:.2f}")
 
                 except (KeyError, ValueError, TypeError) as e:
