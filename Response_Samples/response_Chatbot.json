@@ -1,3 +1,42 @@
-{
-  "reply": "Hello! A 3-day family trip to Tokyo sounds wonderful. Here's a concise, family-friendly plan:\n\n**Day 1: Culture & Lively Streets**\n*   **Morning:** Explore **Meiji Jingu Shrine** (peaceful nature walk).\n*   **Afternoon:** Experience the vibrant energy of **Harajuku** (Takeshita Street for fun shops, Yoyogi Park nearby).\n*   **Evening:** Witness the iconic **Shibuya Crossing** and visit the Hachiko statue. Enjoy dinner in the area.\n\n**Day 2: History & Views**\n*   **Morning:** Discover **Asakusa** – visit Senso-ji Temple and browse Nakamise-dori market for snacks and souvenirs.\n*   **Afternoon:** Head to **Ueno Park**. You could visit Ueno Zoo or one of the family-friendly museums (e.g., National Museum of Nature and Science).\n*   **Evening:** See the city lights from **Tokyo Skytree** (consider viewing from below or exploring Tokyo Solamachi for dinner to save on observation deck tickets).\n\n**Day 3: Future & Fun**\n*   **Morning:** Enjoy **Shinjuku Gyoen National Garden** (a beautiful, calm oasis). *Alternatively, if you book well in advance, consider the Ghibli Museum for a unique experience!*\n*   **Afternoon:** Explore **Odaiba** – fun for kids with attractions like Miraikan (science museum), the beach park, and great views of Rainbow Bridge.\n*   **Evening:** Relaxed dinner in Odaiba or return to a central location.\n\n**Budget Tip:** Utilize Tokyo's excellent public transport (trains/subways). Many parks and temples are free to enter!\n\nHave a fantastic family adventure!"
+Scenario 1 (First Message - no history): {
+  "history": [],
+  "message": "Hi! I am planning to visit Toronto."
+}
+
+
+Scenario 2 (Second Message - continued Scenario 1): {
+  "history": [
+    {
+      "role": "user",
+      "text": "Hi! I am planning to visit Toronto."
+    },
+    {
+      "role": "assistant",
+      "text": "Fantastic choice! Toronto is a vibrant, multicultural city with something for everyone. To give you the best recommendations, I'll start with a general overview and then you can tell me what you're most interested in.\n\nHere's a starting guide to planning your Toronto trip:\n\n### **1. Best Time to Visit**\n* **Summer (June - August):** Warmest weather, lots of festivals (Pride, Caribana), parks are bustling, perfect for Toronto Islands. It's peak tourist season, so expect crowds and higher prices.\n* **Fall (September - October):** My personal favorite! Crisp air, beautiful fall foliage (especially in parks), pleasant temperatures, fewer crowds... (your full long response continues here)"
+    }
+  ],
+  "message": "We will visit next month. What are the best things to do with kids?"
+}
+
+
+Scenario 3 (Third Message - continued Scenario 2): {
+  "message": "They are 5 and 9 years old.",
+  "history": [
+    {
+      "role": "user",
+      "text": "Hi, I want to plan a trip to Toronto soon. Can you help?"
+    },
+    {
+      "role": "assistant",
+      "text": "Fantastic choice! Toronto is a vibrant... (full long introduction)... when you are planning to visit and who you are traveling with?"
+    },
+    {
+      "role": "user",
+      "text": "I will visit next month with my two kids."
+    },
+    {
+      "role": "assistant",
+      "text": "Thats great! Visiting Toronto in June is a fantastic time for families... Could you tell me the ages of your kids? ... (family attractions list)"
+    }
+  ]
 }
