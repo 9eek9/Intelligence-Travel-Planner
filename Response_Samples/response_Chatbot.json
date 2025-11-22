@@ -1,10 +1,10 @@
-Scenario 1 (First Message - no history): {
+//Scenario 1 (First Message - no history): 
+{
   "history": [],
   "message": "Hi! I am planning to visit Toronto."
 }
-
-
-Scenario 2 (Second Message - continued Scenario 1): {
+//Scenario 2 (Second Message - continued Scenario 1): 
+{
   "history": [
     {
       "role": "user",
@@ -17,9 +17,8 @@ Scenario 2 (Second Message - continued Scenario 1): {
   ],
   "message": "We will visit next month. What are the best things to do with kids?"
 }
-
-
-Scenario 3 (Third Message - continued Scenario 2): {
+//Scenario 3 (Third Message - continued Scenario 2): 
+{
   "message": "They are 5 and 9 years old.",
   "history": [
     {
