@@ -12,17 +12,19 @@ import os
 import asyncio
 import json
 from datetime import datetime
+import requests
 
 # Add budget_service to path
 budget_service_path = os.path.join(os.path.dirname(__file__), '..', 'services', 'budget_service')
 sys.path.insert(0, budget_service_path)
 
 # Import services
-from budget_optimizer_service import BudgetOptimizerService
-from flights_client import get_flight_offers
-from hotels_client import get_hotel_offers
-from fx_client import convert_currency
-from optimizer import compose_and_optimize, calculate_activity_meal_costs
+from services.budget_service.budget_optimizer_service import BudgetOptimizerService
+from services.budget_service.flights_client import get_flight_offers
+from services.budget_service.hotels_client import get_hotel_offers
+from services.budget_service.fx_client import convert_currency
+from services.budget_service.optimizer import compose_and_optimize, calculate_meal_costs
+from services.budget_service.activities_client import fetch_activities_by_city_name
 
 router = APIRouter()
 
@@ -35,8 +37,7 @@ budget_service = BudgetOptimizerService()
 
 class TripOptimizationRequest(BaseModel):
     origin: str
-    destination: str
-    city_code: str
+    destination: str  # Change this to accept the city name
     depart_date: str
     return_date: str
     budget: float
@@ -50,11 +51,10 @@ class TripOptimizationRequest(BaseModel):
     class Config:
         json_schema_extra = {
             "example": {
-                "origin": "YYZ",
-                "destination": "BKK",
-                "city_code": "BKK",
-                "depart_date": "2025-12-01",
-                "return_date": "2025-12-05",
+                "origin": "Toronto",
+                "destination": "Bangkok",  # Pass city name instead of city code
+                "depart_date": "2025-12-25",
+                "return_date": "2025-12-30",
                 "budget": 3000,
                 "currency": "CAD"
             }
@@ -84,87 +84,143 @@ async def health_check():
         "version": "1.0.0"
     }
 
+def get_city_code_from_amadeus(city_name: str, amadeus_key: str, amadeus_secret: str) -> str:
+    """
+    Fetch city name from Amadeus API using the city code (IATA code).
+    """
+    try:
+        # Amadeus API endpoint for Airport & City Search
+        url = "https://api.amadeus.com/v1/reference-data/locations/cities"
+        headers = {
+            "Authorization": f"Bearer {get_amadeus_access_token(amadeus_key, amadeus_secret)}"
+        }
+        params = {
+            "include": "AIRPORTS",
+            "keyword": city_name,
+            "max": 1
+        }
+        response = requests.get(url, headers=headers, params=params)
+        response.raise_for_status()
+        data = response.json()
+
+        # Extract city code from the response
+        if data and "data" in data and len(data["data"]) > 0:
+            return data["data"][0]["iataCode"]
+    except Exception as e:
+        raise RuntimeError(f"Failed to retreive the city code   : {e}")
+
+def get_amadeus_access_token(amadeus_key: str, amadeus_secret: str) -> str:
+    """
+    Fetch an access token from Amadeus API.
+    """
+    try:
+        url = "https://api.amadeus.com/v1/security/oauth2/token"
+        payload = {
+            "grant_type": "client_credentials",
+            "client_id": amadeus_key,
+            "client_secret": amadeus_secret
+        }
+        response = requests.post(url, data=payload)
+        response.raise_for_status()
+        return response.json().get("access_token")
+    except Exception as e:
+        raise RuntimeError(f"Failed to fetch Amadeus access token: {e}")
+
 @router.post("/optimize-trip", summary="Get Multiple Packages")
 async def optimize_trip(request: TripOptimizationRequest):
     """
-    Optimize travel packages within budget
-    
-    Returns up to 3 optimized travel packages sorted by price.
-    Includes flights, hotels, transit, activities, and meals.
-    Also includes progress logs showing what data was retrieved.
+    Optimize travel packages within budget.
     """
     try:
         progress_logs = []
-        
+
+        # Resolve city code dynamically using Amadeus API
+        progress_logs.append(f"🌍 Resolving city code for origin: {request.origin}...")
+        origin_city_code = get_city_code_from_amadeus(
+            city_name=request.origin,
+            amadeus_key=budget_service.amadeus_key,
+            amadeus_secret=budget_service.amadeus_secret
+        )
+        progress_logs.append(f"✅ Resolved city code: {origin_city_code}")
+
+        progress_logs.append(f"🌍 Resolving city code for destination: {request.destination}...")
+        destination_city_code = get_city_code_from_amadeus(
+            city_name=request.destination,
+            amadeus_key=budget_service.amadeus_key,
+            amadeus_secret=budget_service.amadeus_secret
+        )
+        progress_logs.append(f"✅ Resolved city code: {destination_city_code}")
+
         # Fetch flights
-        progress_logs.append(f"✈️  Fetching flights from {request.origin} to {request.destination}...")
+        progress_logs.append(f"✈️  Fetching flights from {request.origin} to {destination_city_code}...")
         flight_data = get_flight_offers(
-            request.origin, 
-            request.destination, 
-            request.depart_date, 
-            request.return_date, 
-            budget_service.amadeus_key, 
+            origin_city_code,
+            destination_city_code,
+            request.depart_date,
+            request.return_date,
+            budget_service.amadeus_key,
             budget_service.amadeus_secret
         )
         flights = flight_data.get("data", [])
         progress_logs.append(f"✅ Found {len(flights)} flight options")
-        
-        # Fetch hotels
-        progress_logs.append(f"🏨 Fetching hotels in {request.city_code}...")
+
+        # Fetch hotel offers
+        progress_logs.append(f"🏨 Fetching offers for hotels in {destination_city_code}...")
         hotel_data = get_hotel_offers(
-            request.city_code, 
-            request.depart_date, 
-            request.return_date, 
-            budget_service.amadeus_key, 
-            budget_service.amadeus_secret,
+            city_code=destination_city_code,
+            check_in_date=request.depart_date,
+            check_out_date=request.return_date,
+            amadeus_key=budget_service.amadeus_key,
+            amadeus_secret=budget_service.amadeus_secret,
             currency=request.currency
         )
         hotels = hotel_data.get("data", [])
-        progress_logs.append(f"✅ Found {len(hotels)} hotel options")
-        
-        # Convert currency
-        progress_logs.append(f"💱 Converting prices to {request.currency}...")
-        converted_count = 0
-        for hotel in hotels:
-            if "offers" in hotel and len(hotel["offers"]) > 0:
-                offer = hotel["offers"][0]
-                price_currency = offer["price"].get("currency", request.currency)
-                
-                if price_currency != request.currency:
-                    original_price = float(offer["price"]["total"])
-                    converted_price = convert_currency(original_price, price_currency, request.currency)
-                    offer["price"]["total"] = str(converted_price)
-                    offer["price"]["currency"] = request.currency
-                    offer["price"]["original_amount"] = original_price
-                    offer["price"]["original_currency"] = price_currency
-                    converted_count += 1
-        
-        if converted_count == 0:
-            progress_logs.append(f"✅ All prices already in {request.currency}")
-        else:
-            progress_logs.append(f"✅ Converted {converted_count} hotel prices")
-        
+        progress_logs.append(f"✅ Found {len(hotels)} hotel offers")
+
+        # Fetch activities
+        progress_logs.append(f"🎭 Fetching activities in {request.destination}...")
+        activities = fetch_activities_by_city_name(
+            city_name=request.destination,
+            start_date=request.depart_date,
+            end_date=request.return_date,
+            amadeus_key=budget_service.amadeus_key,
+            amadeus_secret=budget_service.amadeus_secret,
+            target_currency=request.currency
+        )
+        # Ensure total_activity_cost is initialized even if activities are empty or malformed
+        total_activity_cost = sum(
+            float(
+                convert_currency(
+                    float(activity["price"]["amount"]),  # Ensure amount is a float
+                    activity["price"]["currencyCode"],
+                    request.currency
+                )
+            ) if activity["price"]["currencyCode"] != request.currency else float(activity["price"]["amount"])
+            for activity in activities
+            if "price" in activity and "amount" in activity["price"] and "currencyCode" in activity["price"]
+        ) if activities else 0.0
+
+        progress_logs.append(f"✅ Found {len(activities)} activities with total cost: {total_activity_cost:.2f} {request.currency}")
+
         # Calculate costs
         progress_logs.append("🧮 Calculating additional costs...")
-        if request.activities_cost is None or request.meals_cost is None:
-            calculated_costs = calculate_activity_meal_costs(
-                request.depart_date, 
-                request.return_date, 
-                request.daily_activities, 
+        activities_cost = total_activity_cost  # Ensure activities_cost is always initialized
+        if request.meals_cost is None:
+            calculated_costs = calculate_meal_costs(
+                request.depart_date,
+                request.return_date,
                 request.daily_meals
-            )
-            activities_cost = request.activities_cost or calculated_costs["activities"]
+            ) # Use real activity cost
             meals_cost = request.meals_cost or calculated_costs["meals"]
         else:
-            activities_cost = request.activities_cost
             meals_cost = request.meals_cost
-        
+
         transit = {"total": request.transit_cost or 50.0}
-        activity_meal = {"activities": activities_cost, "meals": meals_cost}
-        
+        meal = {"meals": meals_cost}
+
         transit_total = transit["total"]
-        progress_logs.append(f"✅ Activities: ${activities_cost:.2f}, Meals: ${meals_cost:.2f}, Transit: ${transit_total:.2f}")
-        
+        progress_logs.append(f"✅ Meals: ${meals_cost:.2f}, Transit: ${transit_total:.2f}")
+
         # Optimize
         progress_logs.append(f"🎯 Optimizing packages (Budget: ${request.budget:.2f} {request.currency})...")
         fx_snapshot = {
@@ -172,20 +228,45 @@ async def optimize_trip(request: TripOptimizationRequest):
             "ts": datetime.now().isoformat(),
             "rates": {}
         }
-        
+
         optimized = compose_and_optimize(
             flights,
             hotels,
             transit,
-            activity_meal,
+            activities,  # Pass activities to the function
+            meal,
             fx_snapshot,
             request.budget,
             request.currency
         )
-        
+
         progress_logs.append(f"✅ Generated {len(optimized)} package(s)")
         progress_logs.append(f"🎉 Optimization complete!")
-        
+
+        # Include detailed activities in the response
+        for package in optimized:
+            package["activities"] = {
+                "total": activities_cost,
+                "details": [
+                    {
+                        "name": activity["name"],
+                        "price": round(
+                            convert_currency(
+                                float(activity["price"]["amount"]),  # Ensure amount is a float
+                                activity["price"]["currencyCode"],
+                                request.currency
+                            ),
+                            2
+                        ) if activity["price"]["currencyCode"] != request.currency else float(activity["price"]["amount"]),
+                        "currencyCode": request.currency,  # Use the target currency
+                        "duration": activity.get("minimumDuration"),
+                        "bookinglink": activity.get("bookingLink")
+                    }
+                    for activity in activities
+                    if "price" in activity and "amount" in activity["price"] and "currencyCode" in activity["price"]
+                ]
+            }
+
         return {
             "success": True,
             "packages": optimized,
@@ -198,272 +279,12 @@ async def optimize_trip(request: TripOptimizationRequest):
                 "packages_within_budget": sum(1 for p in optimized if p["status"] == "within-budget")
             }
         }
-        
+
     except ValueError as e:
         raise HTTPException(status_code=400, detail=str(e))
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"Internal server error: {str(e)}")
 
-@router.post("/optimize-trip/best", summary="Get Best Package Only")
-async def get_best_trip_package(request: TripOptimizationRequest):
-    """
-    Get the single best optimized travel package within budget
-    
-    Returns only the cheapest package that fits within your budget.
-    If no packages are within budget, returns the cheapest available option.
-    """
-    try:
-        # Fetch flights
-        flight_data = get_flight_offers(
-            request.origin, 
-            request.destination, 
-            request.depart_date, 
-            request.return_date, 
-            budget_service.amadeus_key, 
-            budget_service.amadeus_secret
-        )
-        flights = flight_data.get("data", [])
-        
-        # Fetch hotels
-        hotel_data = get_hotel_offers(
-            request.city_code, 
-            request.depart_date, 
-            request.return_date, 
-            budget_service.amadeus_key, 
-            budget_service.amadeus_secret,
-            currency=request.currency
-        )
-        hotels = hotel_data.get("data", [])
-        
-        # Convert currency
-        for hotel in hotels:
-            if "offers" in hotel and len(hotel["offers"]) > 0:
-                offer = hotel["offers"][0]
-                price_currency = offer["price"].get("currency", request.currency)
-                
-                if price_currency != request.currency:
-                    original_price = float(offer["price"]["total"])
-                    converted_price = convert_currency(original_price, price_currency, request.currency)
-                    offer["price"]["total"] = str(converted_price)
-                    offer["price"]["currency"] = request.currency
-                    offer["price"]["original_amount"] = original_price
-                    offer["price"]["original_currency"] = price_currency
-        
-        # Calculate costs
-        if request.activities_cost is None or request.meals_cost is None:
-            calculated_costs = calculate_activity_meal_costs(
-                request.depart_date, 
-                request.return_date, 
-                request.daily_activities, 
-                request.daily_meals
-            )
-            activities_cost = request.activities_cost or calculated_costs["activities"]
-            meals_cost = request.meals_cost or calculated_costs["meals"]
-        else:
-            activities_cost = request.activities_cost
-            meals_cost = request.meals_cost
-        
-        transit = {"total": request.transit_cost or 50.0}
-        activity_meal = {"activities": activities_cost, "meals": meals_cost}
-        
-        # Optimize
-        fx_snapshot = {
-            "base": request.currency,
-            "ts": datetime.now().isoformat(),
-            "rates": {}
-        }
-        
-        optimized = compose_and_optimize(
-            flights,
-            hotels,
-            transit,
-            activity_meal,
-            fx_snapshot,
-            request.budget,
-            request.currency,
-            max_results=1  # Only get the best one
-        )
-        
-        if not optimized:
-            raise HTTPException(status_code=404, detail="No packages found")
-        
-        # Return only the first (best) package
-        best_package = optimized[0]
-        
-        status_msg = "within budget" if best_package["status"] == "within-budget" else "over budget (cheapest available)"
-        
-        return {
-            "success": True,
-            "package": best_package,
-            "message": f"Found best package ({status_msg})",
-            "stats": {
-                "flights_found": len(flights),
-                "hotels_found": len(hotels)
-            }
-        }
-        
-    except ValueError as e:
-        raise HTTPException(status_code=400, detail=str(e))
-    except Exception as e:
-        raise HTTPException(status_code=500, detail=f"Internal server error: {str(e)}")
-
-@router.post("/optimize-trip/stream", summary="Stream Optimization Progress")
-async def optimize_trip_stream(request: TripOptimizationRequest):
-    """
-    Optimize travel packages with real-time progress streaming
-    
-    Streams progress updates as Server-Sent Events (SSE).
-    Frontend can display live progress to users.
-    """
-    
-    async def event_generator():
-        """Generate Server-Sent Events with progress updates"""
-        try:
-            # Send initial message
-            yield f"data: {json.dumps({'type': 'info', 'message': '🚀 Starting optimization...'})}\n\n"
-            await asyncio.sleep(0.1)
-            
-            # Fetch flights
-            yield f"data: {json.dumps({'type': 'progress', 'step': 'flights', 'message': f'✈️  Fetching flights from {request.origin} to {request.destination}...'})}\n\n"
-            await asyncio.sleep(0.1)
-            
-            flight_data = get_flight_offers(
-                request.origin, 
-                request.destination, 
-                request.depart_date, 
-                request.return_date, 
-                budget_service.amadeus_key, 
-                budget_service.amadeus_secret
-            )
-            flights = flight_data.get("data", [])
-            
-            yield f"data: {json.dumps({'type': 'success', 'message': f'✅ Found {len(flights)} flight options'})}\n\n"
-            await asyncio.sleep(0.1)
-            
-            # Don't raise error - continue even if no flights
-            # if not flights:
-            #     yield f"data: {json.dumps({'type': 'error', 'message': '❌ No flights found'})}\n\n"
-            #     return
-            
-            # Fetch hotels
-            yield f"data: {json.dumps({'type': 'progress', 'step': 'hotels', 'message': f'🏨 Fetching hotels in {request.city_code}...'})}\n\n"
-            await asyncio.sleep(0.1)
-            
-            hotel_data = get_hotel_offers(
-                request.city_code, 
-                request.depart_date, 
-                request.return_date, 
-                budget_service.amadeus_key, 
-                budget_service.amadeus_secret,
-                currency=request.currency
-            )
-            hotels = hotel_data.get("data", [])
-            
-            yield f"data: {json.dumps({'type': 'success', 'message': f'✅ Found {len(hotels)} hotel options'})}\n\n"
-            await asyncio.sleep(0.1)
-            
-            # Don't raise error - continue even if no hotels
-            # if not hotels:
-            #     yield f"data: {json.dumps({'type': 'error', 'message': '❌ No hotels found'})}\n\n"
-            #     return
-            
-            # Convert currency
-            yield f"data: {json.dumps({'type': 'progress', 'step': 'currency', 'message': f'💱 Converting prices to {request.currency}...'})}\n\n"
-            await asyncio.sleep(0.1)
-            
-            converted_count = 0
-            for hotel in hotels:
-                if "offers" in hotel and len(hotel["offers"]) > 0:
-                    offer = hotel["offers"][0]
-                    price_currency = offer["price"].get("currency", request.currency)
-                    
-                    if price_currency != request.currency:
-                        original_price = float(offer["price"]["total"])
-                        converted_price = convert_currency(original_price, price_currency, request.currency)
-                        offer["price"]["total"] = str(converted_price)
-                        offer["price"]["currency"] = request.currency
-                        offer["price"]["original_amount"] = original_price
-                        offer["price"]["original_currency"] = price_currency
-                        converted_count += 1
-            
-            if converted_count == 0:
-                yield f"data: {json.dumps({'type': 'success', 'message': f'✅ All prices already in {request.currency}'})}\n\n"
-            else:
-                yield f"data: {json.dumps({'type': 'success', 'message': f'✅ Converted {converted_count} hotel prices'})}\n\n"
-            await asyncio.sleep(0.1)
-            
-            # Calculate costs
-            yield f"data: {json.dumps({'type': 'progress', 'step': 'costs', 'message': '🧮 Calculating additional costs...'})}\n\n"
-            await asyncio.sleep(0.1)
-            
-            if request.activities_cost is None or request.meals_cost is None:
-                calculated_costs = calculate_activity_meal_costs(
-                    request.depart_date, 
-                    request.return_date, 
-                    request.daily_activities, 
-                    request.daily_meals
-                )
-                activities_cost = request.activities_cost or calculated_costs["activities"]
-                meals_cost = request.meals_cost or calculated_costs["meals"]
-            else:
-                activities_cost = request.activities_cost
-                meals_cost = request.meals_cost
-            
-            transit = {"total": request.transit_cost or 50.0}
-            activity_meal = {"activities": activities_cost, "meals": meals_cost}
-            
-            transit_total = transit["total"]
-            message = f'✅ Activities: ${activities_cost:.2f}, Meals: ${meals_cost:.2f}, Transit: ${transit_total:.2f}'
-            yield f"data: {json.dumps({'type': 'success', 'message': message})}\n\n"
-            await asyncio.sleep(0.1)
-            
-            # Optimize
-            yield f"data: {json.dumps({'type': 'progress', 'step': 'optimize', 'message': f'🎯 Optimizing packages (Budget: ${request.budget:.2f} {request.currency})...'})}\n\n"
-            await asyncio.sleep(0.1)
-            
-            fx_snapshot = {
-                "base": request.currency,
-                "ts": datetime.now().isoformat(),
-                "rates": {}
-            }
-            
-            optimized = compose_and_optimize(
-                flights,
-                hotels,
-                transit,
-                activity_meal,
-                fx_snapshot,
-                request.budget,
-                request.currency
-            )
-            
-            yield f"data: {json.dumps({'type': 'success', 'message': f'✅ Generated {len(optimized)} package(s)'})}\n\n"
-            await asyncio.sleep(0.1)
-            
-            # Send final result
-            result_data = {
-                'type': 'complete',
-                'packages': optimized,
-                'total_packages': len(optimized),
-                'message': f'🎉 Optimization complete! Found {len(optimized)} packages'
-            }
-            yield f"data: {json.dumps(result_data)}\n\n"
-            
-        except Exception as e:
-            import traceback
-            error_detail = traceback.format_exc()
-            print(f"Stream error: {error_detail}")
-            yield f"data: {json.dumps({'type': 'error', 'message': f'❌ Error: {str(e)}'})}\n\n"
-    
-    return StreamingResponse(
-        event_generator(),
-        media_type="text/event-stream",
-        headers={
-            "Cache-Control": "no-cache",
-            "Connection": "keep-alive",
-            "X-Accel-Buffering": "no"
-        }
-    )
 
 @router.get("/convert-currency", summary="Convert Currency")
 async def convert_currency_endpoint(
@@ -488,158 +309,3 @@ async def convert_currency_endpoint(
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
 
-# ============================================================================
-# ML BUDGET PREDICTION ENDPOINT
-# ============================================================================
-
-class MLBudgetRequest(BaseModel):
-    destination: str = Field(..., description="Destination city code (e.g., 'BKK' for Bangkok)")
-    duration: int = Field(..., ge=1, description="Trip duration in days")
-    total_budget: float = Field(..., gt=0, description="Total trip budget")
-    travelers: int = Field(default=1, ge=1, description="Number of travelers")
-    region: Optional[str] = Field(None, description="Region (e.g., 'Asia', 'Europe')")
-    season: Optional[str] = Field("off_peak", description="Season: peak, off_peak, shoulder")
-    purpose: Optional[str] = Field("leisure", description="Purpose: leisure, business, family, adventure, romantic")
-    accommodation_type: Optional[str] = Field("hotel", description="Type: hotel, hostel, airbnb, resort, apartment")
-
-    class Config:
-        json_schema_extra = {
-            "example": {
-                "destination": "BKK",
-                "duration": 5,
-                "total_budget": 3000,
-                "travelers": 2,
-                "region": "Asia",
-                "season": "off_peak",
-                "purpose": "leisure",
-                "accommodation_type": "hotel"
-            }
-        }
-
-class MLBudgetResponse(BaseModel):
-    success: bool
-    breakdown: Dict[str, float]
-    total_budget: float
-    confidence: float
-    message: Optional[str] = None
-
-@router.post("/predict-budget", response_model=MLBudgetResponse, summary="ML Budget Prediction")
-async def predict_budget_allocation(request: MLBudgetRequest):
-    """
-    Use ML model to predict budget allocation across categories
-    
-    Returns recommended $ amounts for:
-    - Accommodation
-    - Transportation
-    - Food
-    - Activities
-    - Miscellaneous
-    
-    Based on destination, duration, travelers, and travel style.
-    
-    Note: Uses rule-based allocation if ML model fails (graceful degradation)
-    """
-    try:
-        # Import ML predictor (lazy load to avoid startup errors)
-        sys.path.insert(0, os.path.join(os.path.dirname(__file__), '..', 'ml_models'))
-        from budget_predictor import BudgetPredictor
-        import pandas as pd
-        
-        # City code to name mapping (if model trained on names)
-        city_code_to_name = {
-            'BKK': 'Bangkok',
-            'NYC': 'New York',
-            'LAX': 'Los Angeles',
-            'MIA': 'Miami',
-            'LAS': 'Las Vegas',
-            'LON': 'London',
-            'PAR': 'Paris',
-            'TYO': 'Tokyo',
-            'SYD': 'Sydney',
-            'DXB': 'Dubai',
-            'YYZ': 'Toronto',
-            'YVR': 'Vancouver',
-            'YUL': 'Montreal'
-        }
-        
-        predictor = BudgetPredictor()
-        
-        # Use city name if model was trained on names, otherwise use code
-        destination = city_code_to_name.get(request.destination, request.destination)
-        
-        # Create DataFrame with single row (ML model expects DataFrame)
-        input_df = pd.DataFrame([{
-            'destination': destination,  # Use mapped name
-            'duration': request.duration,
-            'total_budget': request.total_budget,
-            'travelers': request.travelers,
-            'region': request.region or 'Unknown',
-            'season': request.season,
-            'purpose': request.purpose,
-            'accommodation_type': request.accommodation_type
-        }])
-        
-        print(f"🔍 ML Prediction Input:\n{input_df}")
-        
-        # Call predict with DataFrame
-        result = predictor.predict(input_df)
-        
-        print(f"✅ ML Prediction Result: {result}")
-        
-        return MLBudgetResponse(
-            success=True,
-            breakdown=result['breakdown'],
-            total_budget=result['total_budget'],
-            confidence=result['confidence'],
-            message=f"ML budget prediction for {request.destination} ({request.duration} days)"
-        )
-        
-    except Exception as e:
-        import traceback
-        error_detail = traceback.format_exc()
-        print(f"⚠️  ML Prediction Failed, using rule-based allocation:\n{error_detail}")
-        
-        # Fallback: Rule-based budget allocation
-        # Use percentages based on typical travel patterns
-        total = request.total_budget
-        
-        # Allocation percentages (typical travel budget split)
-        allocations = {
-            'accommodation': 0.35,      # 35%
-            'transportation': 0.25,     # 25%
-            'food': 0.20,              # 20%
-            'activities': 0.15,        # 15%
-            'miscellaneous': 0.05      # 5%
-        }
-        
-        # Adjust based on accommodation type
-        if request.accommodation_type == 'hostel':
-            allocations['accommodation'] = 0.25
-            allocations['activities'] = 0.20
-        elif request.accommodation_type == 'resort':
-            allocations['accommodation'] = 0.45
-            allocations['activities'] = 0.10
-        
-        # Adjust based on season
-        if request.season == 'peak':
-            allocations['accommodation'] *= 1.2
-            allocations['transportation'] *= 1.1
-            # Normalize
-            total_pct = sum(allocations.values())
-            allocations = {k: v/total_pct for k, v in allocations.items()}
-        
-        # Calculate amounts
-        breakdown = {
-            category: round(total * percentage, 2)
-            for category, percentage in allocations.items()
-        }
-        
-        print(f"✅ Rule-based allocation: {breakdown}")
-        
-        return MLBudgetResponse(
-            success=True,
-            breakdown=breakdown,
-            total_budget=total,
-            confidence=0.65,  # Lower confidence for rule-based
-            message=f"Rule-based budget allocation for {request.destination} ({request.duration} days) - ML model unavailable"
-        )

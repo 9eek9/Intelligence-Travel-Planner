@@ -1,6 +1,48 @@
 import requests
 import os
 from typing import Dict, Any
+from amadeus import Client, ResponseError
+from fx_client import convert_currency
+
+# Initialize Amadeus client
+amadeus = Client(
+    client_id="YOUR_AMADEUS_API_KEY",
+    client_secret="YOUR_AMADEUS_API_SECRET"
+)
+
+def get_hotels_by_city(city_code: str):
+    """
+    Step 1: Get a list of hotels by city code.
+    """
+    try:
+        response = amadeus.shopping.hotel_offers.get(cityCode=city_code)
+        hotels = response.data  # List of hotels
+        return hotels
+    except ResponseError as error:
+        print(f"Error fetching hotels for city {city_code}: {error}")
+        return []
+
+def get_hotel_offers(hotel_id: str):
+    """
+    Step 2: Get hotel offers by hotel ID.
+    """
+    try:
+        response = amadeus.shopping.hotel_offers_by_hotel.get(hotelId=hotel_id)
+        return response.data  # List of offers for the hotel
+    except ResponseError as error:
+        print(f"Error fetching offers for hotel {hotel_id}: {error}")
+        return []
+
+def get_hotel_details(offer_id: str):
+    """
+    Step 3: Get detailed information about a hotel using the offer ID.
+    """
+    try:
+        response = amadeus.shopping.hotel_offer(offer_id).get()
+        return response.data  # Detailed hotel information
+    except ResponseError as error:
+        print(f"Error fetching hotel details for offer {offer_id}: {error}")
+        return {}
 
 def get_hotel_offers(
     city_code: str,
@@ -20,7 +62,7 @@ def get_hotel_offers(
     """
     
     # Get access token
-    token_url = "https://test.api.amadeus.com/v1/security/oauth2/token"
+    token_url = "https://api.amadeus.com/v1/security/oauth2/token"
     token_data = {
         "grant_type": "client_credentials",
         "client_id": amadeus_key,
@@ -38,7 +80,7 @@ def get_hotel_offers(
     
     # Step 1: Search for hotels by city
     print(f"🔍 Searching hotels in {city_code}...")
-    search_url = "https://test.api.amadeus.com/v1/reference-data/locations/hotels/by-city"
+    search_url = "https://api.amadeus.com/v1/reference-data/locations/hotels/by-city"
     search_params = {
         "cityCode": city_code,
         "radius": 50,
@@ -72,13 +114,12 @@ def get_hotel_offers(
     
     # Step 2: Get offers for those hotels
     print(f"🏨 Fetching offers for {len(hotel_ids)} hotels...")
-    offers_url = "https://test.api.amadeus.com/v3/shopping/hotel-offers"
+    offers_url = "https://api.amadeus.com/v3/shopping/hotel-offers"
     offers_params = {
         "hotelIds": ",".join(hotel_ids),
         "checkInDate": check_in_date,
         "checkOutDate": check_out_date,
         "adults": adults,
-        "currency": currency,
         "bestRateOnly": "true"  # Add this to get only best rates
     }
     
@@ -113,6 +154,12 @@ def get_hotel_offers(
         hotel_offers = offers_data.get("data", [])
         print(f"   ✅ Got {len(hotel_offers)} hotel offers")
         
+        # Check if hotel offers are empty
+        if not hotel_offers:
+            print(f"   ⚠️  No offers available for the selected hotels")
+            return {"data": []}
+        
+
         return offers_data
         
     except requests.exceptions.HTTPError as e:
@@ -133,31 +180,26 @@ def get_hotel_offers(
         print(f"   ⚠️  Failed to fetch hotel offers: {e}")
         return {"data": []}
 
+# def get_hotel_offers(hotel_id: str, target_currency: str):
+#     """
+#     Step 2: Get hotel offers by hotel ID and convert prices to target currency.
+#     """
+#     try:
+#         response = amadeus.shopping.hotel_offers_by_hotel.get(hotelId=hotel_id)
+#         offers = response.data  # List of offers for the hotel
 
-if __name__ == "__main__":
-    # Test the client
-    from dotenv import load_dotenv
-    load_dotenv()
-    
-    amadeus_key = os.getenv("AMADEUS_API_KEY")
-    amadeus_secret = os.getenv("AMADEUS_API_SECRET")
-    
-    print("Testing hotel search for LAS (Las Vegas)...")
-    result = get_hotel_offers(
-        city_code="LAS",
-        check_in_date="2025-12-01",
-        check_out_date="2025-12-05",
-        amadeus_key=amadeus_key,
-        amadeus_secret=amadeus_secret,
-        currency="CAD"
-    )
-    
-    print(f"\n✅ Result: {len(result.get('data', []))} hotels found")
-    
-    for hotel in result.get("data", [])[:3]:
-        hotel_name = hotel.get("hotel", {}).get("name", "Unknown")
-        if "offers" in hotel and len(hotel["offers"]) > 0:
-            price = hotel["offers"][0]["price"]["total"]
-            currency = hotel["offers"][0]["price"]["currency"]
-            print(f"   - {hotel_name}: ${price} {currency}")
+#         # Convert hotel offer prices to target currency
+#         for offer in offers:
+#             if "price" in offer:
+#                 original_price = float(offer["price"].get("total", 0))
+#                 original_currency = offer["price"].get("currency", "EUR")
+#                 if original_currency != target_currency:
+#                     converted_price = convert_currency(original_price, original_currency, target_currency)
+#                     offer["price"]["convertedTotal"] = converted_price
+#                     offer["price"]["convertedCurrency"] = target_currency
+
+#         return offers
+#     except ResponseError as error:
+#         print(f"Error fetching offers for hotel {hotel_id}: {error}")
+#         return []
 
