@@ -26,3 +26,7 @@ sqlalchemy
 python-multipart
 googlemaps
 
+psycopg2-binary
+
+# Seasonal Suggestions
+geopy

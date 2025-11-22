@@ -1,48 +1,59 @@
 """
-Database configuration and session management
+Database configuration and session management (PostgreSQL version)
 """
 
 from sqlalchemy import create_engine
-from sqlalchemy.ext.declarative import declarative_base
-from sqlalchemy.orm import sessionmaker
+from sqlalchemy.orm import sessionmaker, declarative_base
 
-# SQLite database URL (file-based, no setup required)
-# For production, replace with PostgreSQL: 'postgresql://user:password@localhost/dbname'
-SQLALCHEMY_DATABASE_URL = "sqlite:///./smart_travel.db"
+# -------------------------------------------------------------
+# PostgreSQL Connection (Local Development)
+# -------------------------------------------------------------
+DATABASE_URL = "postgresql://postgres:admin123@localhost:5433/SmartTravelDB"
 
-# Create engine
-# connect_args={"check_same_thread": False} is needed only for SQLite
+# -------------------------------------------------------------
+# Create engine (SQLAlchemy 2.0 config)
+# -------------------------------------------------------------
 engine = create_engine(
-    SQLALCHEMY_DATABASE_URL, 
-    connect_args={"check_same_thread": False}
+    DATABASE_URL,
+    echo=True,
+    future=True
 )
 
-# Create SessionLocal class
-SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
+# -------------------------------------------------------------
+# Session factory
+# -------------------------------------------------------------
+SessionLocal = sessionmaker(
+    autocommit=False,
+    autoflush=False,
+    bind=engine
+)
 
-# Create Base class for models
+# Base class for ORM models
 Base = declarative_base()
 
-# Dependency to get DB session
+
+# -------------------------------------------------------------
+# Dependency for FastAPI routes
+# -------------------------------------------------------------
 def get_db():
-    """
-    Dependency function to get database session
-    Usage in FastAPI endpoints:
-    
-    @app.get("/items/")
-    def read_items(db: Session = Depends(get_db)):
-        ...
-    """
     db = SessionLocal()
     try:
         yield db
     finally:
         db.close()
 
-# Function to create all tables
+
+# -------------------------------------------------------------
+# Create all tables on startup
+# -------------------------------------------------------------
 def create_tables():
     """
-    Create all tables in the database
-    Call this when starting the application
+    Imports all ORM model files so SQLAlchemy recognizes them,
+    then creates tables if they don't exist.
     """
+    import models.user
+    import models.itinerary
+    import models.sentiment_review
+
     Base.metadata.create_all(bind=engine)
+    print("✅ Tables created successfully")

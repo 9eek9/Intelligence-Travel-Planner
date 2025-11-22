@@ -3,11 +3,13 @@ from typing import List, Dict, Any, Optional, Literal
 
 # Request body model
 class ItineraryRequest(BaseModel):
+    user_id: Optional[str] = None    
     destination: str
     days: int
     budget: int  # 0–4
     travel_type: Optional[Literal["solo", "couple", "family", "friends"]] = None
     activity_theme: Optional[str] = None
+
 
 # One day of itinerary (nested inside response)
 class ItineraryDay(BaseModel):
@@ -31,9 +33,18 @@ class ItineraryResponse(BaseModel):
     plan_struct: List[Any]
 
 # === Chatbot + Language Buddy (BEGIN) === #
-class ChatbotRequest(BaseModel):
-    message: str = Field(..., description="User message for travel Q&A")
 
+# Each chat message in history
+class ChatHistoryMessage(BaseModel):
+    role: Literal["user", "assistant"]
+    text: str
+
+# Request body for multi-turn chatbot
+class ChatHistoryRequest(BaseModel):
+    history: List[ChatHistoryMessage] = []
+    message: str = Field(..., description="Latest user message")
+
+# Updated chatbot response (same as before)
 class ChatbotResponse(BaseModel):
     reply: str
 
@@ -42,10 +53,11 @@ LanguageMode = Literal["translate", "correct", "explain"]
 class LanguageBuddyRequest(BaseModel):
     message: str
     mode: LanguageMode = "translate"
-    source_lang: Optional[str] = None   # e.g., "my", "en", "ja"
+    source_lang: Optional[str] = None
     target_lang: str = "en"
-    tone: str = "polite"                # "polite" | "casual"
+    tone: str = "polite"
 
 class LanguageBuddyResponse(BaseModel):
     reply: str
+
 # === Chatbot + Language Buddy (END) === #

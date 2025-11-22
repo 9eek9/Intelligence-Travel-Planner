@@ -1,7 +1,8 @@
 # routers/chat.py
 from fastapi import APIRouter, HTTPException
+from pydantic import BaseModel
+from typing import List
 from models.schemas import (
-    ChatbotRequest, ChatbotResponse,
     LanguageBuddyRequest, LanguageBuddyResponse
 )
 from services.chat_service import handle_chatbot
@@ -9,14 +10,34 @@ from services.language_service import handle_language, list_supported_languages
 
 router = APIRouter()
 
-@router.post("/bot", response_model=ChatbotResponse)
-def chatbot(req: ChatbotRequest):
+
+# New schema for chat history
+class ChatMessage(BaseModel):
+    role: str     # "user" or "assistant"
+    text: str
+
+class ChatHistoryRequest(BaseModel):
+    history: List[ChatMessage] = []
+    message: str
+
+
+@router.post("/bot")
+async def chatbot(req: ChatHistoryRequest):
+    """
+    Multi-turn chatbot endpoint.
+    Frontend sends previous messages + latest message.
+    """
     try:
-        reply = handle_chatbot(req.message)
+        reply = await handle_chatbot(
+            history=[{"role": m.role, "text": m.text} for m in req.history],
+            new_message=req.message
+        )
         return {"reply": reply}
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
 
+
+# Language Buddy remains unchanged
 @router.post("/language", response_model=LanguageBuddyResponse)
 def language_buddy(req: LanguageBuddyRequest):
     try:
@@ -30,6 +51,7 @@ def language_buddy(req: LanguageBuddyRequest):
         return {"reply": reply}
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
+
 
 @router.get("/languages")
 def get_supported_languages():
