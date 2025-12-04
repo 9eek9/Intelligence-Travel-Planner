@@ -30,9 +30,8 @@ class BudgetOptimizerService:
         return_date: str,
         budget: float,
         currency: str = "CAD",
-        transit_cost: Optional[float] = None,
-        activities_cost: Optional[float] = None,
-        meals_cost: Optional[float] = None,
+        travel_style: str = "moderate",
+
     ) -> List[Dict[str, Any]]:
         """
         Get optimized travel packages within budget
@@ -104,21 +103,6 @@ class BudgetOptimizerService:
 
         # Remove redundant activity price conversion logic
         # The activities_client already handles currency conversion
-
-        # 4. Calculate costs
-        if meals_cost is None:
-            calculated_costs = calculate_meal_costs(
-                depart_date, 
-                return_date, 
-                daily_meals=75.0
-            )
-            meals_cost = meals_cost or calculated_costs["meals"]
-            print(f"\n💰 Calculated costs - Meals: ${meals_cost:.2f}")
-        
-        transit = {"total": transit_cost or 50.0}
-        meal = {
-            "meals": meals_cost
-        }
         
         # 5. Get FX snapshot
         fx_snapshot = {
@@ -132,12 +116,15 @@ class BudgetOptimizerService:
         optimized = compose_and_optimize(
             flights,
             hotels,
-            transit,
             activity_data,
-            meal,
             fx_snapshot,
             budget,
-            currency
+            currency,
+            destination,
+            depart_date=depart_date,
+            return_date=return_date,
+            travel_style=travel_style,
+
         )
         
         return optimized
@@ -151,10 +138,11 @@ def main():
         results = service.optimize_trip(
             origin="Toronto",
             destination="Bangkok",
-            depart_date="2025-12-25",
-            return_date="2025-12-30",
+            depart_date="2026-03-25",
+            return_date="2026-03-30",
             budget=3000,
-            currency="CAD"
+            currency="CAD",
+            travel_style="moderate" #"moderate/budget/luxury"
         )
         
         print("\n" + "="*60)

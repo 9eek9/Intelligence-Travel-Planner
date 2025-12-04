@@ -1,0 +1,117 @@
+//https://api.amadeus.com/v1/reference-data/locations/cities?max=10&include=AIRPORTS&keyword=BANGKOK
+{
+    "meta": {
+        "count": 3,
+        "links": {
+            "self": "https://api.amadeus.com/v1/reference-data/locations/cities?include=AIRPORTS&keyword=BANGKOK&max=10"
+        }
+    },
+    "data": [
+        {
+            "type": "location",
+            "subType": "city",
+            "name": "Bangkok",
+            "iataCode": "BKK",
+            "address": {
+                "countryCode": "TH",
+                "stateCode": "TH-ZZZ"
+            },
+            "geoCode": {
+                "latitude": 13.75398,
+                "longitude": 100.50144
+            },
+            "relationships": [
+                {
+                    "id": "BKK",
+                    "type": "Airport",
+                    "href": "#/included/airports/BKK"
+                },
+                {
+                    "id": "DMK",
+                    "type": "Airport",
+                    "href": "#/included/airports/DMK"
+                }
+            ]
+        },
+        {
+            "type": "location",
+            "subType": "city",
+            "name": "Bangkok Yai",
+            "address": {
+                "countryCode": "TH",
+                "stateCode": "TH-ZZZ"
+            },
+            "geoCode": {
+                "latitude": 13.72319,
+                "longitude": 100.476
+            },
+            "relationships": [
+                {
+                    "id": "BKK",
+                    "type": "Airport",
+                    "href": "#/included/airports/BKK"
+                },
+                {
+                    "id": "DMK",
+                    "type": "Airport",
+                    "href": "#/included/airports/DMK"
+                }
+            ]
+        },
+        {
+            "type": "location",
+            "subType": "city",
+            "name": "Bangkok Noi",
+            "address": {
+                "countryCode": "TH",
+                "stateCode": "TH-ZZZ"
+            },
+            "geoCode": {
+                "latitude": 13.76266,
+                "longitude": 100.47798
+            },
+            "relationships": [
+                {
+                    "id": "BKK",
+                    "type": "Airport",
+                    "href": "#/included/airports/BKK"
+                },
+                {
+                    "id": "DMK",
+                    "type": "Airport",
+                    "href": "#/included/airports/DMK"
+                }
+            ]
+        }
+    ],
+    "included": {
+        "airports": {
+            "BKK": {
+                "subType": "Airport",
+                "name": "Suvarnabhumi Int'l",
+                "iataCode": "BKK",
+                "address": {
+                    "countryCode": "TH",
+                    "stateCode": "TH-ZZZ"
+                },
+                "geoCode": {
+                    "latitude": 13.69152,
+                    "longitude": 100.75089
+                }
+            },
+            "DMK": {
+                "subType": "Airport",
+                "name": "Don Mueang Int'l",
+                "iataCode": "DMK",
+                "address": {
+                    "countryCode": "TH",
+                    "stateCode": "TH-ZZZ"
+                },
+                "geoCode": {
+                    "latitude": 13.91,
+                    "longitude": 100.6
+                }
+            }
+        }
+    }
+}

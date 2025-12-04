@@ -1,0 +1,1362 @@
+// https://api.amadeus.com/v2/shopping/flight-offers?originLocationCode=YYZ&destinationLocationCode=BKK&departureDate={{departureDate}}&returnDate={{returnDate}}&adults=2&max=5
+{
+    "meta": {
+        "count": 5,
+        "links": {
+            "self": "https://api.amadeus.com/v2/shopping/flight-offers?originLocationCode=YYZ&destinationLocationCode=BKK&departureDate=2025-12-03&returnDate=2025-12-17&adults=2&max=5"
+        }
+    },
+    "data": [
+        {
+            "type": "flight-offer",
+            "id": "1",
+            "source": "GDS",
+            "instantTicketingRequired": false,
+            "nonHomogeneous": false,
+            "oneWay": false,
+            "isUpsellOffer": false,
+            "lastTicketingDate": "2025-12-03",
+            "lastTicketingDateTime": "2025-12-03",
+            "numberOfBookableSeats": 9,
+            "itineraries": [
+                {
+                    "duration": "PT22H30M",
+                    "segments": [
+                        {
+                            "departure": {
+                                "iataCode": "YYZ",
+                                "terminal": "1",
+                                "at": "2025-12-03T00:15:00"
+                            },
+                            "arrival": {
+                                "iataCode": "TPE",
+                                "terminal": "2",
+                                "at": "2025-12-04T05:10:00"
+                            },
+                            "carrierCode": "BR",
+                            "number": "35",
+                            "aircraft": {
+                                "code": "77W"
+                            },
+                            "operating": {
+                                "carrierCode": "BR"
+                            },
+                            "duration": "PT15H55M",
+                            "id": "3",
+                            "numberOfStops": 0,
+                            "blacklistedInEU": false
+                        },
+                        {
+                            "departure": {
+                                "iataCode": "TPE",
+                                "terminal": "2",
+                                "at": "2025-12-04T07:40:00"
+                            },
+                            "arrival": {
+                                "iataCode": "BKK",
+                                "at": "2025-12-04T10:45:00"
+                            },
+                            "carrierCode": "BR",
+                            "number": "75",
+                            "aircraft": {
+                                "code": "77W"
+                            },
+                            "operating": {
+                                "carrierCode": "BR"
+                            },
+                            "duration": "PT4H5M",
+                            "id": "4",
+                            "numberOfStops": 0,
+                            "blacklistedInEU": false
+                        }
+                    ]
+                },
+                {
+                    "duration": "PT19H35M",
+                    "segments": [
+                        {
+                            "departure": {
+                                "iataCode": "BKK",
+                                "at": "2025-12-17T12:45:00"
+                            },
+                            "arrival": {
+                                "iataCode": "TPE",
+                                "terminal": "2",
+                                "at": "2025-12-17T17:15:00"
+                            },
+                            "carrierCode": "BR",
+                            "number": "212",
+                            "aircraft": {
+                                "code": "77W"
+                            },
+                            "operating": {
+                                "carrierCode": "BR"
+                            },
+                            "duration": "PT3H30M",
+                            "id": "9",
+                            "numberOfStops": 0,
+                            "blacklistedInEU": false
+                        },
+                        {
+                            "departure": {
+                                "iataCode": "TPE",
+                                "terminal": "2",
+                                "at": "2025-12-17T19:20:00"
+                            },
+                            "arrival": {
+                                "iataCode": "YYZ",
+                                "terminal": "1",
+                                "at": "2025-12-17T20:20:00"
+                            },
+                            "carrierCode": "BR",
+                            "number": "36",
+                            "aircraft": {
+                                "code": "77W"
+                            },
+                            "operating": {
+                                "carrierCode": "BR"
+                            },
+                            "duration": "PT14H",
+                            "id": "10",
+                            "numberOfStops": 0,
+                            "blacklistedInEU": false
+                        }
+                    ]
+                }
+            ],
+            "price": {
+                "currency": "EUR",
+                "total": "2273.32",
+                "base": "1710.00",
+                "fees": [
+                    {
+                        "amount": "0.00",
+                        "type": "SUPPLIER"
+                    },
+                    {
+                        "amount": "0.00",
+                        "type": "TICKETING"
+                    }
+                ],
+                "grandTotal": "2273.32"
+            },
+            "pricingOptions": {
+                "fareType": [
+                    "PUBLISHED"
+                ],
+                "includedCheckedBagsOnly": true
+            },
+            "validatingAirlineCodes": [
+                "BR"
+            ],
+            "travelerPricings": [
+                {
+                    "travelerId": "1",
+                    "fareOption": "STANDARD",
+                    "travelerType": "ADULT",
+                    "price": {
+                        "currency": "EUR",
+                        "total": "1136.66",
+                        "base": "855.00"
+                    },
+                    "fareDetailsBySegment": [
+                        {
+                            "segmentId": "3",
+                            "cabin": "ECONOMY",
+                            "fareBasis": "WKXN",
+                            "class": "W",
+                            "includedCheckedBags": {
+                                "quantity": 2
+                            },
+                            "includedCabinBags": {
+                                "quantity": 1
+                            }
+                        },
+                        {
+                            "segmentId": "4",
+                            "cabin": "ECONOMY",
+                            "fareBasis": "WKXN",
+                            "class": "W",
+                            "includedCheckedBags": {
+                                "quantity": 2
+                            },
+                            "includedCabinBags": {
+                                "quantity": 1
+                            }
+                        },
+                        {
+                            "segmentId": "9",
+                            "cabin": "ECONOMY",
+                            "fareBasis": "WKXN",
+                            "class": "W",
+                            "includedCheckedBags": {
+                                "quantity": 2
+                            },
+                            "includedCabinBags": {
+                                "quantity": 1
+                            }
+                        },
+                        {
+                            "segmentId": "10",
+                            "cabin": "ECONOMY",
+                            "fareBasis": "WKXN",
+                            "class": "W",
+                            "includedCheckedBags": {
+                                "quantity": 2
+                            },
+                            "includedCabinBags": {
+                                "quantity": 1
+                            }
+                        }
+                    ]
+                },
+                {
+                    "travelerId": "2",
+                    "fareOption": "STANDARD",
+                    "travelerType": "ADULT",
+                    "price": {
+                        "currency": "EUR",
+                        "total": "1136.66",
+                        "base": "855.00"
+                    },
+                    "fareDetailsBySegment": [
+                        {
+                            "segmentId": "3",
+                            "cabin": "ECONOMY",
+                            "fareBasis": "WKXN",
+                            "class": "W",
+                            "includedCheckedBags": {
+                                "quantity": 2
+                            },
+                            "includedCabinBags": {
+                                "quantity": 1
+                            }
+                        },
+                        {
+                            "segmentId": "4",
+                            "cabin": "ECONOMY",
+                            "fareBasis": "WKXN",
+                            "class": "W",
+                            "includedCheckedBags": {
+                                "quantity": 2
+                            },
+                            "includedCabinBags": {
+                                "quantity": 1
+                            }
+                        },
+                        {
+                            "segmentId": "9",
+                            "cabin": "ECONOMY",
+                            "fareBasis": "WKXN",
+                            "class": "W",
+                            "includedCheckedBags": {
+                                "quantity": 2
+                            },
+                            "includedCabinBags": {
+                                "quantity": 1
+                            }
+                        },
+                        {
+                            "segmentId": "10",
+                            "cabin": "ECONOMY",
+                            "fareBasis": "WKXN",
+                            "class": "W",
+                            "includedCheckedBags": {
+                                "quantity": 2
+                            },
+                            "includedCabinBags": {
+                                "quantity": 1
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "flight-offer",
+            "id": "2",
+            "source": "GDS",
+            "instantTicketingRequired": false,
+            "nonHomogeneous": false,
+            "oneWay": false,
+            "isUpsellOffer": false,
+            "lastTicketingDate": "2025-12-03",
+            "lastTicketingDateTime": "2025-12-03",
+            "numberOfBookableSeats": 9,
+            "itineraries": [
+                {
+                    "duration": "PT22H55M",
+                    "segments": [
+                        {
+                            "departure": {
+                                "iataCode": "YYZ",
+                                "terminal": "1",
+                                "at": "2025-12-03T00:15:00"
+                            },
+                            "arrival": {
+                                "iataCode": "TPE",
+                                "terminal": "2",
+                                "at": "2025-12-04T05:10:00"
+                            },
+                            "carrierCode": "BR",
+                            "number": "35",
+                            "aircraft": {
+                                "code": "77W"
+                            },
+                            "operating": {
+                                "carrierCode": "BR"
+                            },
+                            "duration": "PT15H55M",
+                            "id": "5",
+                            "numberOfStops": 0,
+                            "blacklistedInEU": false
+                        },
+                        {
+                            "departure": {
+                                "iataCode": "TPE",
+                                "terminal": "2",
+                                "at": "2025-12-04T08:05:00"
+                            },
+                            "arrival": {
+                                "iataCode": "BKK",
+                                "at": "2025-12-04T11:10:00"
+                            },
+                            "carrierCode": "BR",
+                            "number": "67",
+                            "aircraft": {
+                                "code": "77W"
+                            },
+                            "operating": {
+                                "carrierCode": "BR"
+                            },
+                            "duration": "PT4H5M",
+                            "id": "6",
+                            "numberOfStops": 0,
+                            "blacklistedInEU": false
+                        }
+                    ]
+                },
+                {
+                    "duration": "PT19H35M",
+                    "segments": [
+                        {
+                            "departure": {
+                                "iataCode": "BKK",
+                                "at": "2025-12-17T12:45:00"
+                            },
+                            "arrival": {
+                                "iataCode": "TPE",
+                                "terminal": "2",
+                                "at": "2025-12-17T17:15:00"
+                            },
+                            "carrierCode": "BR",
+                            "number": "212",
+                            "aircraft": {
+                                "code": "77W"
+                            },
+                            "operating": {
+                                "carrierCode": "BR"
+                            },
+                            "duration": "PT3H30M",
+                            "id": "9",
+                            "numberOfStops": 0,
+                            "blacklistedInEU": false
+                        },
+                        {
+                            "departure": {
+                                "iataCode": "TPE",
+                                "terminal": "2",
+                                "at": "2025-12-17T19:20:00"
+                            },
+                            "arrival": {
+                                "iataCode": "YYZ",
+                                "terminal": "1",
+                                "at": "2025-12-17T20:20:00"
+                            },
+                            "carrierCode": "BR",
+                            "number": "36",
+                            "aircraft": {
+                                "code": "77W"
+                            },
+                            "operating": {
+                                "carrierCode": "BR"
+                            },
+                            "duration": "PT14H",
+                            "id": "10",
+                            "numberOfStops": 0,
+                            "blacklistedInEU": false
+                        }
+                    ]
+                }
+            ],
+            "price": {
+                "currency": "EUR",
+                "total": "2273.32",
+                "base": "1710.00",
+                "fees": [
+                    {
+                        "amount": "0.00",
+                        "type": "SUPPLIER"
+                    },
+                    {
+                        "amount": "0.00",
+                        "type": "TICKETING"
+                    }
+                ],
+                "grandTotal": "2273.32"
+            },
+            "pricingOptions": {
+                "fareType": [
+                    "PUBLISHED"
+                ],
+                "includedCheckedBagsOnly": true
+            },
+            "validatingAirlineCodes": [
+                "BR"
+            ],
+            "travelerPricings": [
+                {
+                    "travelerId": "1",
+                    "fareOption": "STANDARD",
+                    "travelerType": "ADULT",
+                    "price": {
+                        "currency": "EUR",
+                        "total": "1136.66",
+                        "base": "855.00"
+                    },
+                    "fareDetailsBySegment": [
+                        {
+                            "segmentId": "5",
+                            "cabin": "ECONOMY",
+                            "fareBasis": "WKXN",
+                            "class": "W",
+                            "includedCheckedBags": {
+                                "quantity": 2
+                            },
+                            "includedCabinBags": {
+                                "quantity": 1
+                            }
+                        },
+                        {
+                            "segmentId": "6",
+                            "cabin": "ECONOMY",
+                            "fareBasis": "WKXN",
+                            "class": "W",
+                            "includedCheckedBags": {
+                                "quantity": 2
+                            },
+                            "includedCabinBags": {
+                                "quantity": 1
+                            }
+                        },
+                        {
+                            "segmentId": "9",
+                            "cabin": "ECONOMY",
+                            "fareBasis": "WKXN",
+                            "class": "W",
+                            "includedCheckedBags": {
+                                "quantity": 2
+                            },
+                            "includedCabinBags": {
+                                "quantity": 1
+                            }
+                        },
+                        {
+                            "segmentId": "10",
+                            "cabin": "ECONOMY",
+                            "fareBasis": "WKXN",
+                            "class": "W",
+                            "includedCheckedBags": {
+                                "quantity": 2
+                            },
+                            "includedCabinBags": {
+                                "quantity": 1
+                            }
+                        }
+                    ]
+                },
+                {
+                    "travelerId": "2",
+                    "fareOption": "STANDARD",
+                    "travelerType": "ADULT",
+                    "price": {
+                        "currency": "EUR",
+                        "total": "1136.66",
+                        "base": "855.00"
+                    },
+                    "fareDetailsBySegment": [
+                        {
+                            "segmentId": "5",
+                            "cabin": "ECONOMY",
+                            "fareBasis": "WKXN",
+                            "class": "W",
+                            "includedCheckedBags": {
+                                "quantity": 2
+                            },
+                            "includedCabinBags": {
+                                "quantity": 1
+                            }
+                        },
+                        {
+                            "segmentId": "6",
+                            "cabin": "ECONOMY",
+                            "fareBasis": "WKXN",
+                            "class": "W",
+                            "includedCheckedBags": {
+                                "quantity": 2
+                            },
+                            "includedCabinBags": {
+                                "quantity": 1
+                            }
+                        },
+                        {
+                            "segmentId": "9",
+                            "cabin": "ECONOMY",
+                            "fareBasis": "WKXN",
+                            "class": "W",
+                            "includedCheckedBags": {
+                                "quantity": 2
+                            },
+                            "includedCabinBags": {
+                                "quantity": 1
+                            }
+                        },
+                        {
+                            "segmentId": "10",
+                            "cabin": "ECONOMY",
+                            "fareBasis": "WKXN",
+                            "class": "W",
+                            "includedCheckedBags": {
+                                "quantity": 2
+                            },
+                            "includedCabinBags": {
+                                "quantity": 1
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "flight-offer",
+            "id": "3",
+            "source": "GDS",
+            "instantTicketingRequired": false,
+            "nonHomogeneous": false,
+            "oneWay": false,
+            "isUpsellOffer": false,
+            "lastTicketingDate": "2025-12-03",
+            "lastTicketingDateTime": "2025-12-03",
+            "numberOfBookableSeats": 9,
+            "itineraries": [
+                {
+                    "duration": "PT23H15M",
+                    "segments": [
+                        {
+                            "departure": {
+                                "iataCode": "YYZ",
+                                "terminal": "1",
+                                "at": "2025-12-03T00:15:00"
+                            },
+                            "arrival": {
+                                "iataCode": "TPE",
+                                "terminal": "2",
+                                "at": "2025-12-04T05:10:00"
+                            },
+                            "carrierCode": "BR",
+                            "number": "35",
+                            "aircraft": {
+                                "code": "77W"
+                            },
+                            "operating": {
+                                "carrierCode": "BR"
+                            },
+                            "duration": "PT15H55M",
+                            "id": "1",
+                            "numberOfStops": 0,
+                            "blacklistedInEU": false
+                        },
+                        {
+                            "departure": {
+                                "iataCode": "TPE",
+                                "terminal": "2",
+                                "at": "2025-12-04T08:25:00"
+                            },
+                            "arrival": {
+                                "iataCode": "BKK",
+                                "at": "2025-12-04T11:30:00"
+                            },
+                            "carrierCode": "BR",
+                            "number": "211",
+                            "aircraft": {
+                                "code": "77W"
+                            },
+                            "operating": {
+                                "carrierCode": "BR"
+                            },
+                            "duration": "PT4H5M",
+                            "id": "2",
+                            "numberOfStops": 0,
+                            "blacklistedInEU": false
+                        }
+                    ]
+                },
+                {
+                    "duration": "PT19H35M",
+                    "segments": [
+                        {
+                            "departure": {
+                                "iataCode": "BKK",
+                                "at": "2025-12-17T12:45:00"
+                            },
+                            "arrival": {
+                                "iataCode": "TPE",
+                                "terminal": "2",
+                                "at": "2025-12-17T17:15:00"
+                            },
+                            "carrierCode": "BR",
+                            "number": "212",
+                            "aircraft": {
+                                "code": "77W"
+                            },
+                            "operating": {
+                                "carrierCode": "BR"
+                            },
+                            "duration": "PT3H30M",
+                            "id": "9",
+                            "numberOfStops": 0,
+                            "blacklistedInEU": false
+                        },
+                        {
+                            "departure": {
+                                "iataCode": "TPE",
+                                "terminal": "2",
+                                "at": "2025-12-17T19:20:00"
+                            },
+                            "arrival": {
+                                "iataCode": "YYZ",
+                                "terminal": "1",
+                                "at": "2025-12-17T20:20:00"
+                            },
+                            "carrierCode": "BR",
+                            "number": "36",
+                            "aircraft": {
+                                "code": "77W"
+                            },
+                            "operating": {
+                                "carrierCode": "BR"
+                            },
+                            "duration": "PT14H",
+                            "id": "10",
+                            "numberOfStops": 0,
+                            "blacklistedInEU": false
+                        }
+                    ]
+                }
+            ],
+            "price": {
+                "currency": "EUR",
+                "total": "2273.32",
+                "base": "1710.00",
+                "fees": [
+                    {
+                        "amount": "0.00",
+                        "type": "SUPPLIER"
+                    },
+                    {
+                        "amount": "0.00",
+                        "type": "TICKETING"
+                    }
+                ],
+                "grandTotal": "2273.32"
+            },
+            "pricingOptions": {
+                "fareType": [
+                    "PUBLISHED"
+                ],
+                "includedCheckedBagsOnly": true
+            },
+            "validatingAirlineCodes": [
+                "BR"
+            ],
+            "travelerPricings": [
+                {
+                    "travelerId": "1",
+                    "fareOption": "STANDARD",
+                    "travelerType": "ADULT",
+                    "price": {
+                        "currency": "EUR",
+                        "total": "1136.66",
+                        "base": "855.00"
+                    },
+                    "fareDetailsBySegment": [
+                        {
+                            "segmentId": "1",
+                            "cabin": "ECONOMY",
+                            "fareBasis": "WKXN",
+                            "class": "W",
+                            "includedCheckedBags": {
+                                "quantity": 2
+                            },
+                            "includedCabinBags": {
+                                "quantity": 1
+                            }
+                        },
+                        {
+                            "segmentId": "2",
+                            "cabin": "ECONOMY",
+                            "fareBasis": "WKXN",
+                            "class": "W",
+                            "includedCheckedBags": {
+                                "quantity": 2
+                            },
+                            "includedCabinBags": {
+                                "quantity": 1
+                            }
+                        },
+                        {
+                            "segmentId": "9",
+                            "cabin": "ECONOMY",
+                            "fareBasis": "WKXN",
+                            "class": "W",
+                            "includedCheckedBags": {
+                                "quantity": 2
+                            },
+                            "includedCabinBags": {
+                                "quantity": 1
+                            }
+                        },
+                        {
+                            "segmentId": "10",
+                            "cabin": "ECONOMY",
+                            "fareBasis": "WKXN",
+                            "class": "W",
+                            "includedCheckedBags": {
+                                "quantity": 2
+                            },
+                            "includedCabinBags": {
+                                "quantity": 1
+                            }
+                        }
+                    ]
+                },
+                {
+                    "travelerId": "2",
+                    "fareOption": "STANDARD",
+                    "travelerType": "ADULT",
+                    "price": {
+                        "currency": "EUR",
+                        "total": "1136.66",
+                        "base": "855.00"
+                    },
+                    "fareDetailsBySegment": [
+                        {
+                            "segmentId": "1",
+                            "cabin": "ECONOMY",
+                            "fareBasis": "WKXN",
+                            "class": "W",
+                            "includedCheckedBags": {
+                                "quantity": 2
+                            },
+                            "includedCabinBags": {
+                                "quantity": 1
+                            }
+                        },
+                        {
+                            "segmentId": "2",
+                            "cabin": "ECONOMY",
+                            "fareBasis": "WKXN",
+                            "class": "W",
+                            "includedCheckedBags": {
+                                "quantity": 2
+                            },
+                            "includedCabinBags": {
+                                "quantity": 1
+                            }
+                        },
+                        {
+                            "segmentId": "9",
+                            "cabin": "ECONOMY",
+                            "fareBasis": "WKXN",
+                            "class": "W",
+                            "includedCheckedBags": {
+                                "quantity": 2
+                            },
+                            "includedCabinBags": {
+                                "quantity": 1
+                            }
+                        },
+                        {
+                            "segmentId": "10",
+                            "cabin": "ECONOMY",
+                            "fareBasis": "WKXN",
+                            "class": "W",
+                            "includedCheckedBags": {
+                                "quantity": 2
+                            },
+                            "includedCabinBags": {
+                                "quantity": 1
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "flight-offer",
+            "id": "4",
+            "source": "GDS",
+            "instantTicketingRequired": false,
+            "nonHomogeneous": false,
+            "oneWay": false,
+            "isUpsellOffer": false,
+            "lastTicketingDate": "2025-12-03",
+            "lastTicketingDateTime": "2025-12-03",
+            "numberOfBookableSeats": 9,
+            "itineraries": [
+                {
+                    "duration": "PT22H30M",
+                    "segments": [
+                        {
+                            "departure": {
+                                "iataCode": "YYZ",
+                                "terminal": "1",
+                                "at": "2025-12-03T00:15:00"
+                            },
+                            "arrival": {
+                                "iataCode": "TPE",
+                                "terminal": "2",
+                                "at": "2025-12-04T05:10:00"
+                            },
+                            "carrierCode": "BR",
+                            "number": "35",
+                            "aircraft": {
+                                "code": "77W"
+                            },
+                            "operating": {
+                                "carrierCode": "BR"
+                            },
+                            "duration": "PT15H55M",
+                            "id": "3",
+                            "numberOfStops": 0,
+                            "blacklistedInEU": false
+                        },
+                        {
+                            "departure": {
+                                "iataCode": "TPE",
+                                "terminal": "2",
+                                "at": "2025-12-04T07:40:00"
+                            },
+                            "arrival": {
+                                "iataCode": "BKK",
+                                "at": "2025-12-04T10:45:00"
+                            },
+                            "carrierCode": "BR",
+                            "number": "75",
+                            "aircraft": {
+                                "code": "77W"
+                            },
+                            "operating": {
+                                "carrierCode": "BR"
+                            },
+                            "duration": "PT4H5M",
+                            "id": "4",
+                            "numberOfStops": 0,
+                            "blacklistedInEU": false
+                        }
+                    ]
+                },
+                {
+                    "duration": "PT21H",
+                    "segments": [
+                        {
+                            "departure": {
+                                "iataCode": "BKK",
+                                "at": "2025-12-17T11:20:00"
+                            },
+                            "arrival": {
+                                "iataCode": "TPE",
+                                "terminal": "2",
+                                "at": "2025-12-17T16:00:00"
+                            },
+                            "carrierCode": "BR",
+                            "number": "62",
+                            "aircraft": {
+                                "code": "781"
+                            },
+                            "operating": {
+                                "carrierCode": "BR"
+                            },
+                            "duration": "PT3H40M",
+                            "id": "7",
+                            "numberOfStops": 0,
+                            "blacklistedInEU": false
+                        },
+                        {
+                            "departure": {
+                                "iataCode": "TPE",
+                                "terminal": "2",
+                                "at": "2025-12-17T19:20:00"
+                            },
+                            "arrival": {
+                                "iataCode": "YYZ",
+                                "terminal": "1",
+                                "at": "2025-12-17T20:20:00"
+                            },
+                            "carrierCode": "BR",
+                            "number": "36",
+                            "aircraft": {
+                                "code": "77W"
+                            },
+                            "operating": {
+                                "carrierCode": "BR"
+                            },
+                            "duration": "PT14H",
+                            "id": "8",
+                            "numberOfStops": 0,
+                            "blacklistedInEU": false
+                        }
+                    ]
+                }
+            ],
+            "price": {
+                "currency": "EUR",
+                "total": "2273.32",
+                "base": "1710.00",
+                "fees": [
+                    {
+                        "amount": "0.00",
+                        "type": "SUPPLIER"
+                    },
+                    {
+                        "amount": "0.00",
+                        "type": "TICKETING"
+                    }
+                ],
+                "grandTotal": "2273.32"
+            },
+            "pricingOptions": {
+                "fareType": [
+                    "PUBLISHED"
+                ],
+                "includedCheckedBagsOnly": true
+            },
+            "validatingAirlineCodes": [
+                "BR"
+            ],
+            "travelerPricings": [
+                {
+                    "travelerId": "1",
+                    "fareOption": "STANDARD",
+                    "travelerType": "ADULT",
+                    "price": {
+                        "currency": "EUR",
+                        "total": "1136.66",
+                        "base": "855.00"
+                    },
+                    "fareDetailsBySegment": [
+                        {
+                            "segmentId": "3",
+                            "cabin": "ECONOMY",
+                            "fareBasis": "WKXN",
+                            "class": "W",
+                            "includedCheckedBags": {
+                                "quantity": 2
+                            },
+                            "includedCabinBags": {
+                                "quantity": 1
+                            }
+                        },
+                        {
+                            "segmentId": "4",
+                            "cabin": "ECONOMY",
+                            "fareBasis": "WKXN",
+                            "class": "W",
+                            "includedCheckedBags": {
+                                "quantity": 2
+                            },
+                            "includedCabinBags": {
+                                "quantity": 1
+                            }
+                        },
+                        {
+                            "segmentId": "7",
+                            "cabin": "ECONOMY",
+                            "fareBasis": "WKXN",
+                            "class": "W",
+                            "includedCheckedBags": {
+                                "quantity": 2
+                            },
+                            "includedCabinBags": {
+                                "quantity": 1
+                            }
+                        },
+                        {
+                            "segmentId": "8",
+                            "cabin": "ECONOMY",
+                            "fareBasis": "WKXN",
+                            "class": "W",
+                            "includedCheckedBags": {
+                                "quantity": 2
+                            },
+                            "includedCabinBags": {
+                                "quantity": 1
+                            }
+                        }
+                    ]
+                },
+                {
+                    "travelerId": "2",
+                    "fareOption": "STANDARD",
+                    "travelerType": "ADULT",
+                    "price": {
+                        "currency": "EUR",
+                        "total": "1136.66",
+                        "base": "855.00"
+                    },
+                    "fareDetailsBySegment": [
+                        {
+                            "segmentId": "3",
+                            "cabin": "ECONOMY",
+                            "fareBasis": "WKXN",
+                            "class": "W",
+                            "includedCheckedBags": {
+                                "quantity": 2
+                            },
+                            "includedCabinBags": {
+                                "quantity": 1
+                            }
+                        },
+                        {
+                            "segmentId": "4",
+                            "cabin": "ECONOMY",
+                            "fareBasis": "WKXN",
+                            "class": "W",
+                            "includedCheckedBags": {
+                                "quantity": 2
+                            },
+                            "includedCabinBags": {
+                                "quantity": 1
+                            }
+                        },
+                        {
+                            "segmentId": "7",
+                            "cabin": "ECONOMY",
+                            "fareBasis": "WKXN",
+                            "class": "W",
+                            "includedCheckedBags": {
+                                "quantity": 2
+                            },
+                            "includedCabinBags": {
+                                "quantity": 1
+                            }
+                        },
+                        {
+                            "segmentId": "8",
+                            "cabin": "ECONOMY",
+                            "fareBasis": "WKXN",
+                            "class": "W",
+                            "includedCheckedBags": {
+                                "quantity": 2
+                            },
+                            "includedCabinBags": {
+                                "quantity": 1
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "flight-offer",
+            "id": "5",
+            "source": "GDS",
+            "instantTicketingRequired": false,
+            "nonHomogeneous": false,
+            "oneWay": false,
+            "isUpsellOffer": false,
+            "lastTicketingDate": "2025-12-03",
+            "lastTicketingDateTime": "2025-12-03",
+            "numberOfBookableSeats": 9,
+            "itineraries": [
+                {
+                    "duration": "PT22H55M",
+                    "segments": [
+                        {
+                            "departure": {
+                                "iataCode": "YYZ",
+                                "terminal": "1",
+                                "at": "2025-12-03T00:15:00"
+                            },
+                            "arrival": {
+                                "iataCode": "TPE",
+                                "terminal": "2",
+                                "at": "2025-12-04T05:10:00"
+                            },
+                            "carrierCode": "BR",
+                            "number": "35",
+                            "aircraft": {
+                                "code": "77W"
+                            },
+                            "operating": {
+                                "carrierCode": "BR"
+                            },
+                            "duration": "PT15H55M",
+                            "id": "5",
+                            "numberOfStops": 0,
+                            "blacklistedInEU": false
+                        },
+                        {
+                            "departure": {
+                                "iataCode": "TPE",
+                                "terminal": "2",
+                                "at": "2025-12-04T08:05:00"
+                            },
+                            "arrival": {
+                                "iataCode": "BKK",
+                                "at": "2025-12-04T11:10:00"
+                            },
+                            "carrierCode": "BR",
+                            "number": "67",
+                            "aircraft": {
+                                "code": "77W"
+                            },
+                            "operating": {
+                                "carrierCode": "BR"
+                            },
+                            "duration": "PT4H5M",
+                            "id": "6",
+                            "numberOfStops": 0,
+                            "blacklistedInEU": false
+                        }
+                    ]
+                },
+                {
+                    "duration": "PT21H",
+                    "segments": [
+                        {
+                            "departure": {
+                                "iataCode": "BKK",
+                                "at": "2025-12-17T11:20:00"
+                            },
+                            "arrival": {
+                                "iataCode": "TPE",
+                                "terminal": "2",
+                                "at": "2025-12-17T16:00:00"
+                            },
+                            "carrierCode": "BR",
+                            "number": "62",
+                            "aircraft": {
+                                "code": "781"
+                            },
+                            "operating": {
+                                "carrierCode": "BR"
+                            },
+                            "duration": "PT3H40M",
+                            "id": "7",
+                            "numberOfStops": 0,
+                            "blacklistedInEU": false
+                        },
+                        {
+                            "departure": {
+                                "iataCode": "TPE",
+                                "terminal": "2",
+                                "at": "2025-12-17T19:20:00"
+                            },
+                            "arrival": {
+                                "iataCode": "YYZ",
+                                "terminal": "1",
+                                "at": "2025-12-17T20:20:00"
+                            },
+                            "carrierCode": "BR",
+                            "number": "36",
+                            "aircraft": {
+                                "code": "77W"
+                            },
+                            "operating": {
+                                "carrierCode": "BR"
+                            },
+                            "duration": "PT14H",
+                            "id": "8",
+                            "numberOfStops": 0,
+                            "blacklistedInEU": false
+                        }
+                    ]
+                }
+            ],
+            "price": {
+                "currency": "EUR",
+                "total": "2273.32",
+                "base": "1710.00",
+                "fees": [
+                    {
+                        "amount": "0.00",
+                        "type": "SUPPLIER"
+                    },
+                    {
+                        "amount": "0.00",
+                        "type": "TICKETING"
+                    }
+                ],
+                "grandTotal": "2273.32"
+            },
+            "pricingOptions": {
+                "fareType": [
+                    "PUBLISHED"
+                ],
+                "includedCheckedBagsOnly": true
+            },
+            "validatingAirlineCodes": [
+                "BR"
+            ],
+            "travelerPricings": [
+                {
+                    "travelerId": "1",
+                    "fareOption": "STANDARD",
+                    "travelerType": "ADULT",
+                    "price": {
+                        "currency": "EUR",
+                        "total": "1136.66",
+                        "base": "855.00"
+                    },
+                    "fareDetailsBySegment": [
+                        {
+                            "segmentId": "5",
+                            "cabin": "ECONOMY",
+                            "fareBasis": "WKXN",
+                            "class": "W",
+                            "includedCheckedBags": {
+                                "quantity": 2
+                            },
+                            "includedCabinBags": {
+                                "quantity": 1
+                            }
+                        },
+                        {
+                            "segmentId": "6",
+                            "cabin": "ECONOMY",
+                            "fareBasis": "WKXN",
+                            "class": "W",
+                            "includedCheckedBags": {
+                                "quantity": 2
+                            },
+                            "includedCabinBags": {
+                                "quantity": 1
+                            }
+                        },
+                        {
+                            "segmentId": "7",
+                            "cabin": "ECONOMY",
+                            "fareBasis": "WKXN",
+                            "class": "W",
+                            "includedCheckedBags": {
+                                "quantity": 2
+                            },
+                            "includedCabinBags": {
+                                "quantity": 1
+                            }
+                        },
+                        {
+                            "segmentId": "8",
+                            "cabin": "ECONOMY",
+                            "fareBasis": "WKXN",
+                            "class": "W",
+                            "includedCheckedBags": {
+                                "quantity": 2
+                            },
+                            "includedCabinBags": {
+                                "quantity": 1
+                            }
+                        }
+                    ]
+                },
+                {
+                    "travelerId": "2",
+                    "fareOption": "STANDARD",
+                    "travelerType": "ADULT",
+                    "price": {
+                        "currency": "EUR",
+                        "total": "1136.66",
+                        "base": "855.00"
+                    },
+                    "fareDetailsBySegment": [
+                        {
+                            "segmentId": "5",
+                            "cabin": "ECONOMY",
+                            "fareBasis": "WKXN",
+                            "class": "W",
+                            "includedCheckedBags": {
+                                "quantity": 2
+                            },
+                            "includedCabinBags": {
+                                "quantity": 1
+                            }
+                        },
+                        {
+                            "segmentId": "6",
+                            "cabin": "ECONOMY",
+                            "fareBasis": "WKXN",
+                            "class": "W",
+                            "includedCheckedBags": {
+                                "quantity": 2
+                            },
+                            "includedCabinBags": {
+                                "quantity": 1
+                            }
+                        },
+                        {
+                            "segmentId": "7",
+                            "cabin": "ECONOMY",
+                            "fareBasis": "WKXN",
+                            "class": "W",
+                            "includedCheckedBags": {
+                                "quantity": 2
+                            },
+                            "includedCabinBags": {
+                                "quantity": 1
+                            }
+                        },
+                        {
+                            "segmentId": "8",
+                            "cabin": "ECONOMY",
+                            "fareBasis": "WKXN",
+                            "class": "W",
+                            "includedCheckedBags": {
+                                "quantity": 2
+                            },
+                            "includedCabinBags": {
+                                "quantity": 1
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "dictionaries": {
+        "locations": {
+            "BKK": {
+                "cityCode": "BKK",
+                "countryCode": "TH"
+            },
+            "TPE": {
+                "cityCode": "TPE",
+                "countryCode": "TW"
+            },
+            "YYZ": {
+                "cityCode": "YTO",
+                "countryCode": "CA"
+            }
+        },
+        "aircraft": {
+            "781": "BOEING 787-10",
+            "77W": "BOEING 777-300ER"
+        },
+        "currencies": {
+            "EUR": "EURO"
+        },
+        "carriers": {
+            "BR": "EVA AIR"
+        }
+    }
+}

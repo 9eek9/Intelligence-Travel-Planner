@@ -1,0 +1,472 @@
+#https://api.amadeus.com/v3/shopping/hotel-offers/{{hotelOfferId}}
+{
+    "data": {
+        "type": "hotel-offers",
+        "hotel": {
+            "type": "hotel",
+            "hotelId": "KCBKK926",
+            "chainCode": "KC",
+            "name": "KIMPTON MAA-LAI",
+            "cityCode": "BKK",
+            "address": {
+                "countryCode": "TH"
+            },
+            "amenities": [
+                "CRIBS_AVAILABLE"
+            ]
+        },
+        "available": true,
+        "offers": [
+            {
+                "id": "IWY1P5ARCM",
+                "checkInDate": "2025-11-19",
+                "checkOutDate": "2025-11-20",
+                "rateCode": "013",
+                "rateFamilyEstimated": {
+                    "code": "BAR",
+                    "type": "P"
+                },
+                "description": {
+                    "text": "BEST FLEXIBLE RATE\nBEST AVAILABLE RATE",
+                    "lang": "EN"
+                },
+                "boardType": "ROOM_ONLY",
+                "room": {
+                    "type": "*2B",
+                    "typeEstimated": {
+                        "category": "STANDARD_ROOM",
+                        "beds": 2,
+                        "bedType": "TWIN"
+                    },
+                    "description": {
+                        "text": "A sophisticated space with walk in closet featuring hardwood\nfurnishings and a cosy king or twin beds",
+                        "lang": "EN"
+                    }
+                },
+                "guests": {
+                    "adults": 2
+                },
+                "price": {
+                    "currency": "THB",
+                    "base": "12580.00",
+                    "total": "14806.66",
+                    "taxes": [
+                        {
+                            "code": "SERVICE_CHARGE",
+                            "description": "Total Excluded Fee",
+                            "amount": "1258.00",
+                            "currency": "THB",
+                            "included": false
+                        },
+                        {
+                            "code": "VALUE_ADDED_TAX",
+                            "description": "Total Excluded Tax",
+                            "amount": "968.66",
+                            "currency": "THB",
+                            "included": false
+                        },
+                        {
+                            "code": "SERVICE_CHARGE",
+                            "description": "10 PCT SERVICE CHARGE PER NIGHT\nSLEEPING ROOM SERVICE CHARGE\n10000.00 THB EARLY DEPARTURE FEE\n***EARLY DEPARTURE MAY RESULT IN A HIGHER RATE***\nEXCLUDES GRATUITY"
+                        }
+                    ],
+                    "variations": {
+                        "changes": [
+                            {
+                                "startDate": "2025-11-19",
+                                "endDate": "2025-11-20",
+                                "base": "12580.00"
+                            }
+                        ]
+                    }
+                },
+                "policies": {
+                    "cancellations": [
+                        {
+                            "numberOfNights": 1,
+                            "deadline": "2025-11-20T01:59:00+07:00",
+                            "description": {
+                                "text": "PENALTY AMOUNT 14806.66 CANCEL BY 2025-11-20T01:59:16\nONE NITE CANCEL OR NO SHOW PENALTY APPLIES"
+                            },
+                            "policyType": "CANCELLATION"
+                        }
+                    ],
+                    "guarantee": {
+                        "acceptedPayments": {
+                            "creditCards": [
+                                "AX",
+                                "CB",
+                                "DC",
+                                "DS",
+                                "JC",
+                                "CA",
+                                "VI"
+                            ],
+                            "methods": [
+                                "CREDIT_CARD"
+                            ],
+                            "creditCardPolicies": [
+                                {
+                                    "vendorCode": "AX",
+                                    "inputParameters": [
+                                        {
+                                            "label": "CVV",
+                                            "isOptional": "true"
+                                        },
+                                        {
+                                            "label": "cardHolderOneName",
+                                            "isOptional": "true"
+                                        },
+                                        {
+                                            "label": "addressOneLine",
+                                            "isOptional": "true"
+                                        },
+                                        {
+                                            "label": "postalCode",
+                                            "isOptional": "true"
+                                        },
+                                        {
+                                            "label": "cityName",
+                                            "isOptional": "true"
+                                        },
+                                        {
+                                            "label": "stateCode",
+                                            "isOptional": "true"
+                                        },
+                                        {
+                                            "label": "countryCode",
+                                            "isOptional": "true"
+                                        },
+                                        {
+                                            "label": "nationality",
+                                            "isOptional": "true"
+                                        },
+                                        {
+                                            "label": "phone",
+                                            "isOptional": "true"
+                                        },
+                                        {
+                                            "label": "email",
+                                            "isOptional": "true"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "vendorCode": "CB",
+                                    "inputParameters": [
+                                        {
+                                            "label": "CVV",
+                                            "isOptional": "true"
+                                        },
+                                        {
+                                            "label": "cardHolderOneName",
+                                            "isOptional": "true"
+                                        },
+                                        {
+                                            "label": "addressOneLine",
+                                            "isOptional": "true"
+                                        },
+                                        {
+                                            "label": "postalCode",
+                                            "isOptional": "true"
+                                        },
+                                        {
+                                            "label": "cityName",
+                                            "isOptional": "true"
+                                        },
+                                        {
+                                            "label": "stateCode",
+                                            "isOptional": "true"
+                                        },
+                                        {
+                                            "label": "countryCode",
+                                            "isOptional": "true"
+                                        },
+                                        {
+                                            "label": "nationality",
+                                            "isOptional": "true"
+                                        },
+                                        {
+                                            "label": "phone",
+                                            "isOptional": "true"
+                                        },
+                                        {
+                                            "label": "email",
+                                            "isOptional": "true"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "vendorCode": "DC",
+                                    "inputParameters": [
+                                        {
+                                            "label": "CVV",
+                                            "isOptional": "true"
+                                        },
+                                        {
+                                            "label": "cardHolderOneName",
+                                            "isOptional": "true"
+                                        },
+                                        {
+                                            "label": "addressOneLine",
+                                            "isOptional": "true"
+                                        },
+                                        {
+                                            "label": "postalCode",
+                                            "isOptional": "true"
+                                        },
+                                        {
+                                            "label": "cityName",
+                                            "isOptional": "true"
+                                        },
+                                        {
+                                            "label": "stateCode",
+                                            "isOptional": "true"
+                                        },
+                                        {
+                                            "label": "countryCode",
+                                            "isOptional": "true"
+                                        },
+                                        {
+                                            "label": "nationality",
+                                            "isOptional": "true"
+                                        },
+                                        {
+                                            "label": "phone",
+                                            "isOptional": "true"
+                                        },
+                                        {
+                                            "label": "email",
+                                            "isOptional": "true"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "vendorCode": "DS",
+                                    "inputParameters": [
+                                        {
+                                            "label": "CVV",
+                                            "isOptional": "true"
+                                        },
+                                        {
+                                            "label": "cardHolderOneName",
+                                            "isOptional": "true"
+                                        },
+                                        {
+                                            "label": "addressOneLine",
+                                            "isOptional": "true"
+                                        },
+                                        {
+                                            "label": "postalCode",
+                                            "isOptional": "true"
+                                        },
+                                        {
+                                            "label": "cityName",
+                                            "isOptional": "true"
+                                        },
+                                        {
+                                            "label": "stateCode",
+                                            "isOptional": "true"
+                                        },
+                                        {
+                                            "label": "countryCode",
+                                            "isOptional": "true"
+                                        },
+                                        {
+                                            "label": "nationality",
+                                            "isOptional": "true"
+                                        },
+                                        {
+                                            "label": "phone",
+                                            "isOptional": "true"
+                                        },
+                                        {
+                                            "label": "email",
+                                            "isOptional": "true"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "vendorCode": "JC",
+                                    "inputParameters": [
+                                        {
+                                            "label": "CVV",
+                                            "isOptional": "true"
+                                        },
+                                        {
+                                            "label": "cardHolderOneName",
+                                            "isOptional": "true"
+                                        },
+                                        {
+                                            "label": "addressOneLine",
+                                            "isOptional": "true"
+                                        },
+                                        {
+                                            "label": "postalCode",
+                                            "isOptional": "true"
+                                        },
+                                        {
+                                            "label": "cityName",
+                                            "isOptional": "true"
+                                        },
+                                        {
+                                            "label": "stateCode",
+                                            "isOptional": "true"
+                                        },
+                                        {
+                                            "label": "countryCode",
+                                            "isOptional": "true"
+                                        },
+                                        {
+                                            "label": "nationality",
+                                            "isOptional": "true"
+                                        },
+                                        {
+                                            "label": "phone",
+                                            "isOptional": "true"
+                                        },
+                                        {
+                                            "label": "email",
+                                            "isOptional": "true"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "vendorCode": "CA",
+                                    "inputParameters": [
+                                        {
+                                            "label": "CVV",
+                                            "isOptional": "true"
+                                        },
+                                        {
+                                            "label": "cardHolderOneName",
+                                            "isOptional": "true"
+                                        },
+                                        {
+                                            "label": "addressOneLine",
+                                            "isOptional": "true"
+                                        },
+                                        {
+                                            "label": "postalCode",
+                                            "isOptional": "true"
+                                        },
+                                        {
+                                            "label": "cityName",
+                                            "isOptional": "true"
+                                        },
+                                        {
+                                            "label": "stateCode",
+                                            "isOptional": "true"
+                                        },
+                                        {
+                                            "label": "countryCode",
+                                            "isOptional": "true"
+                                        },
+                                        {
+                                            "label": "nationality",
+                                            "isOptional": "true"
+                                        },
+                                        {
+                                            "label": "phone",
+                                            "isOptional": "true"
+                                        },
+                                        {
+                                            "label": "email",
+                                            "isOptional": "true"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "vendorCode": "VI",
+                                    "inputParameters": [
+                                        {
+                                            "label": "CVV",
+                                            "isOptional": "true"
+                                        },
+                                        {
+                                            "label": "cardHolderOneName",
+                                            "isOptional": "true"
+                                        },
+                                        {
+                                            "label": "addressOneLine",
+                                            "isOptional": "true"
+                                        },
+                                        {
+                                            "label": "postalCode",
+                                            "isOptional": "true"
+                                        },
+                                        {
+                                            "label": "cityName",
+                                            "isOptional": "true"
+                                        },
+                                        {
+                                            "label": "stateCode",
+                                            "isOptional": "true"
+                                        },
+                                        {
+                                            "label": "countryCode",
+                                            "isOptional": "true"
+                                        },
+                                        {
+                                            "label": "nationality",
+                                            "isOptional": "true"
+                                        },
+                                        {
+                                            "label": "phone",
+                                            "isOptional": "true"
+                                        },
+                                        {
+                                            "label": "email",
+                                            "isOptional": "true"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    },
+                    "paymentType": "guarantee",
+                    "checkInOut": {
+                        "checkIn": "15:00:00",
+                        "checkOut": "12:00:00"
+                    },
+                    "refundable": {
+                        "cancellationRefund": "REFUNDABLE_UP_TO_DEADLINE"
+                    },
+                    "additionalDetails": [
+                        {
+                            "description": [
+                                {
+                                    "text": "Guarantee Information:"
+                                },
+                                {
+                                    "text": "GUARANTEE REQUIRED"
+                                }
+                            ]
+                        }
+                    ],
+                    "lengthOfStay": {
+                        "minimumLengthOfStay": 1
+                    }
+                },
+                "roomInformation": {
+                    "description": "A sophisticated space with walk in closet featuring hardwood\nfurnishings and a cosy king or twin beds",
+                    "type": "*2B",
+                    "typeEstimated": {
+                        "bedType": "TWIN",
+                        "beds": 2,
+                        "category": "STANDARD_ROOM"
+                    },
+                    "name": {
+                        "text": "Two Twin Premium"
+                    },
+                    "maxPersonCapacity": {
+                        "total": 3
+                    }
+                }
+            }
+        ]
+    },
+    "meta": {
+        "lang": "en"
+    }
+}

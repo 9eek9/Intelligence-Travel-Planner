@@ -1,6 +1,7 @@
 from typing import List, Dict, Any, Optional
 from datetime import datetime
-from fx_client import convert_currency  # Import the convert_currency function
+from fx_client import convert_currency
+from llm_cost_calculator import calculate_costs_with_llm
 
 def calculate_meal_costs(checkin: str, checkout: str,daily_meals: float = 75.0) -> Dict[str, float]:
     """
@@ -26,10 +27,10 @@ def _compose_candidates(
     flights: List[Dict[str, Any]], 
     hotels: List[Dict[str, Any]], 
     transit: Dict[str, Any],
-    activities: List[Dict[str, Any]],  # Updated: activities from API
+    activities: List[Dict[str, Any]],
     meal: Optional[Dict[str, Any]], 
     currency: str,
-    budget: float,  # Pass budget to filter activities
+    budget: float,
     max_flights: int = 2,
     max_hotels: int = 2
 ) -> List[Dict[str, Any]]:
@@ -168,7 +169,7 @@ def _compose_candidates(
 
                 for activity in sorted_activities:
                     activity_currency = activity["price"].get("currencyCode", currency)  # Use default currency if missing
-                    print(f"🔍 Processing activity: {activity.get('name', 'Unknown')} - Currency: {activity_currency}")  # Log currency code
+                    print(f"🔍 Processing activity: {activity.get('name', 'Unknown')} - Currency: {activity_currency}" ) # Log currency code
 
                     # Convert activity price to the target currency if needed
                     if activity_currency != currency:
@@ -231,6 +232,49 @@ def _compose_candidates(
         try:
             flight_price = float(f["price"]["total"])
             flight_currency = f["price"].get("currency", currency)
+            
+            # Extract detailed flight information
+            carrier_code = f.get("validatingAirlineCodes", ["Unknown"])[0]
+            
+            flight_details = {
+                "id": f.get("id", "unknown"),
+                "price": flight_price,
+                "currency": flight_currency,
+                "airline_code": carrier_code,
+                "itineraries": []
+            }
+            
+            # Parse itineraries (outbound and return)
+            for itinerary in f.get("itineraries", []):
+                itinerary_info = {
+                    "duration": itinerary.get("duration", "N/A"),
+                    "segments": []
+                }
+                
+                for segment in itinerary.get("segments", []):
+                    aircraft_code = segment.get("aircraft", {}).get("code", "N/A")
+                    carrier = segment.get("carrierCode", "N/A")
+                    
+                    segment_info = {
+                        "departure": {
+                            "airport": segment["departure"].get("iataCode", "N/A"),
+                            "terminal": segment["departure"].get("terminal", ""),
+                            "time": segment["departure"].get("at", "N/A")
+                        },
+                        "arrival": {
+                            "airport": segment["arrival"].get("iataCode", "N/A"),
+                            "terminal": segment["arrival"].get("terminal", ""),
+                            "time": segment["arrival"].get("at", "N/A")
+                        },
+                        "carrier_code": carrier,
+                        "flight_number": f"{carrier}{segment.get('number', '')}",
+                        "aircraft_code": aircraft_code,
+                        "duration": segment.get("duration", "N/A"),
+                        "stops": segment.get("numberOfStops", 0)
+                    }
+                    itinerary_info["segments"].append(segment_info)
+                
+                flight_details["itineraries"].append(itinerary_info)
 
             for h in top_hotels:
                 try:
@@ -289,11 +333,7 @@ def _compose_candidates(
                     total = flight_price + hotel_price + transit_cost + total_activity_cost + meals_cost
 
                     combos.append({
-                        "flight": {
-                            "id": f.get("id", "unknown"),
-                            "price": flight_price,
-                            "currency": flight_currency
-                        },
+                        "flight": flight_details,  # Enhanced flight details
                         "hotel": {
                             "id": hotel_id,
                             "name": hotel_name,
@@ -332,39 +372,79 @@ def _compose_candidates(
 def compose_and_optimize(
     flights: List[Dict[str, Any]], 
     hotels: List[Dict[str, Any]], 
-    transit: Dict[str, Any],
-    activities: List[Dict[str, Any]],  # Activities fetched from API
-    meal: Dict[str, Any],  # Meal costs passed separately
+    activities: List[Dict[str, Any]],
     fx_snapshot: Dict[str, Any],
     budget: float, 
     currency: str,
+    destination: str,
+    depart_date: str,
+    return_date: str,
+    travel_style: str = "moderate",
     max_results: int = 3
 ) -> List[Dict[str, Any]]:
-    """
-    Compose and optimize travel packages within budget
-    
-    Args:
-        flights: List of flight offers (can be empty)
-        hotels: List of hotel offers (can be empty)
-        transit: Transit cost dictionary (e.g., {"total": 50})
-        activities: List of activities fetched from the API
-        meal: Meal cost dictionary (e.g., {"meals": 150.0})
-        fx_snapshot: Exchange rate snapshot
-        budget: Maximum budget
-        currency: Currency code
-        max_results: Maximum number of results to return (default: 3)
-    
-    Returns:
-        List of optimized travel packages sorted by total cost
-    """
+
     if budget <= 0:
         raise ValueError("Budget must be positive")
     
-    # Calculate total activity cost from the API data
-    total_activity_cost = sum(float(activity["price"]["amount"]) for activity in activities)
+    print(f"\n🧮 Calculating meal and transit costs...")
     
-    # Extract meal cost
-    total_meal_cost = float(meal.get("meals", 0))
+    # Calculate minimum REQUIRED costs (flights + hotels only)
+    # Activities are optional and will be added later based on remaining budget
+    
+    # Get minimum flight cost (no conversion needed - already in target currency)
+    min_flight_cost = min((float(f["price"]["total"]) for f in flights), default=0) if flights else 0
+    
+    # Get minimum hotel cost and convert to target currency
+    min_hotel_cost = 0
+    if hotels:
+        hotel_prices = []
+        for h in hotels:
+            if h.get("offers") and len(h["offers"]) > 0:
+                price = float(h["offers"][0]["price"]["total"])
+                hotel_currency = h["offers"][0]["price"].get("currency", currency)
+                if hotel_currency != currency:
+                    price = convert_currency(price, hotel_currency, currency)
+                hotel_prices.append(price)
+        min_hotel_cost = min(hotel_prices, default=0)
+    
+    # Reserve some budget for activities (e.g., 20% of total budget or a fixed amount)
+    activity_budget_reserve = min(budget * 0.2, 500)  # Reserve 20% or $500, whichever is smaller
+    
+    estimated_remaining = budget - min_flight_cost - min_hotel_cost - activity_budget_reserve
+    
+    print(f"💰 Budget Analysis:")
+    print(f"   Total Budget: ${budget:.2f} {currency}")
+    print(f"   Min Flight: ${min_flight_cost:.2f} {currency}")
+    print(f"   Min Hotel: ${min_hotel_cost:.2f} {currency}")
+    print(f"   Activity Reserve: ${activity_budget_reserve:.2f} {currency}")
+    print(f"   Estimated for meals/transit: ${max(estimated_remaining, 0):.2f} {currency}")
+    
+    # Calculate meal and transit costs using LLM
+    try:
+        print("🤖 Using AI to estimate meal and transit costs...")
+        llm_costs = calculate_costs_with_llm(
+            destination=destination,
+            depart_date=depart_date,
+            return_date=return_date,
+            total_budget=budget,
+            remaining_budget=max(estimated_remaining, 0),
+            currency=currency,
+            travel_style=travel_style
+        )
+        
+        meal = {"meals": llm_costs["total_meals"]}
+        transit = {"total": llm_costs["total_transit"]}
+        
+        print(f"AI calculated meals: ${meal['meals']:.2f}")
+        print(f"AI calculated transit: ${transit['total']:.2f}")
+        print(f"AI Reasoning: {llm_costs['reasoning']}")
+    except Exception as e:
+        print(f"LLM calculation failed: {str(e)}, using fallback values")
+        # Use manual calculation as fallback
+        meal = calculate_meal_costs(depart_date, return_date)
+        transit = {"total": 50.0}
+        print(f"Fallback meal calculation: ${meal['meals']:.2f}")
+        print(f"Fallback transit cost: ${transit['total']:.2f}")
     
     # Compose candidates (handles empty flights or hotels gracefully)
     candidates = _compose_candidates(flights, hotels, transit, activities, meal, currency, budget)
@@ -373,14 +453,14 @@ def compose_and_optimize(
     within = [c for c in candidates if c["total"] <= budget]
     within.sort(key=lambda x: x["total"])
     
-    print(f"\n📊 {len(within)} packages within budget of ${budget:.2f} {currency}")
+    print(f"\n{len(within)} packages within budget of ${budget:.2f} {currency}")
     
     # Get top results
     if within:
         top = within[:max_results]
     else:
         # If nothing within budget, return cheapest options
-        print(f"⚠️  No packages within budget, returning {max_results} cheapest options")
+        print(f"No packages within budget, returning {max_results} cheapest options")
         top = sorted(candidates, key=lambda x: x["total"])[:max_results]
 
     # Annotate with FX snapshot and status

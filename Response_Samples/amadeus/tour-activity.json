@@ -1,0 +1,245 @@
+//https://api.amadeus.com/v1/shopping/activities?latitude=13.72319&longitude=100.50144&radius=1
+{
+    "data": [
+        {
+            "type": "activity",
+            "id": "139627004",
+            "self": {
+                "href": "https://api.amadeus.com/v1/shopping/activities/139627004",
+                "methods": [
+                    "GET"
+                ]
+            },
+            "name": "Luxury white dinner cruise",
+            "description": "<div><p>The latest dinner cruise in Bangkok provides a contemporary and indulgent dining experience on the Chao Phraya River, ideal for those wishing to savour the city’s striking views from the waterway.This opulent White Dinner Cruise offers a magical dining journey along the Chao Phraya River in Bangkok. Guests can relish a lavish buffet featuring an assortment of Thai and international dishes while absorbing the mesmerising views of the city's illuminated skyline and historic landmarks, such as the Grand Palace and Wat Arun.The cruise also includes live entertainment, with traditional Thai music and dance performances adding to the charming ambiance. Whether you're planning a romantic evening or a distinctive night out, this White Dinner Cruise blends delectable cuisine with splendid scenery for a memorable experience on the water.</p></div>",
+            "geoCode": {
+                "latitude": 13.7264814,
+                "longitude": 100.509947
+            },
+            "price": {
+                "amount": "45.0",
+                "currencyCode": "EUR"
+            },
+            "pictures": [
+                "https://images.holibob.tech/eyJrZXkiOiJwcm9kdWN0SW1hZ2VzL2JjYWZhNjQzLTc5YmMtNGY4Yy05ZTgyLTAwZWMxZDIwM2U1ZiIsImVkaXRzIjp7InJlc2l6ZSI6eyJmaXQiOiJjb3ZlciIsIndpZHRoIjoxOTIwLCJoZWlnaHQiOjEwODB9fX0=",
+                "https://images.holibob.tech/eyJrZXkiOiJwcm9kdWN0SW1hZ2VzL2YyMjY2M2JmLWEwOTItNDMyYi05NzMxLTA5ZmZkNzU2ZGQ0OCIsImVkaXRzIjp7InJlc2l6ZSI6eyJmaXQiOiJjb3ZlciIsIndpZHRoIjoxOTIwLCJoZWlnaHQiOjEwODB9fX0=",
+                "https://images.holibob.tech/eyJrZXkiOiJwcm9kdWN0SW1hZ2VzLzQ2N2FiZWU1LWE1N2QtNGNhOC05OWI1LWU3N2IyNGNmM2Q2MiIsImVkaXRzIjp7InJlc2l6ZSI6eyJmaXQiOiJjb3ZlciIsIndpZHRoIjoxOTIwLCJoZWlnaHQiOjEwODB9fX0=",
+                "https://images.holibob.tech/eyJrZXkiOiJwcm9kdWN0SW1hZ2VzLzlmNmI1YmIzLTE0YWQtNDBlNS05OWQ1LTI3YmE5YjdlZWE0YyIsImVkaXRzIjp7InJlc2l6ZSI6eyJmaXQiOiJjb3ZlciIsIndpZHRoIjoxOTIwLCJoZWlnaHQiOjEwODB9fX0=",
+                "https://images.holibob.tech/eyJrZXkiOiJwcm9kdWN0SW1hZ2VzLzFmMTI5NzY2LTY0MzctNDMyMy05NDMzLWMxNzBkYTBhNWE1YyIsImVkaXRzIjp7InJlc2l6ZSI6eyJmaXQiOiJjb3ZlciIsIndpZHRoIjoxOTIwLCJoZWlnaHQiOjEwODB9fX0=",
+                "https://images.holibob.tech/eyJrZXkiOiJwcm9kdWN0SW1hZ2VzLzg3YjZlNjcyLWFiZTUtNGNjOC1hOGY3LTU2ZWY0ZTA3N2E3YiIsImVkaXRzIjp7InJlc2l6ZSI6eyJmaXQiOiJjb3ZlciIsIndpZHRoIjoxOTIwLCJoZWlnaHQiOjEwODB9fX0=",
+                "https://images.holibob.tech/eyJrZXkiOiJwcm9kdWN0SW1hZ2VzL2JkYzg2MDFjLTkxZTEtNGIwYS1hNTdjLTk5MzdlMTNhYmRlNSIsImVkaXRzIjp7InJlc2l6ZSI6eyJmaXQiOiJjb3ZlciIsIndpZHRoIjoxOTIwLCJoZWlnaHQiOjEwODB9fX0="
+            ],
+            "bookingLink": "https://amadeus.booking.holibob.tech/product/8a8376de-14c2-40cc-8465-fd7bdc59effd",
+            "minimumDuration": "2 hours"
+        },
+        {
+            "type": "activity",
+            "id": "139599091",
+            "self": {
+                "href": "https://api.amadeus.com/v1/shopping/activities/139599091",
+                "methods": [
+                    "GET"
+                ]
+            },
+            "name": "Bangkok: Opulence Dinner Cruise with Hotel Transfer",
+            "description": "<div><p>Board the luxury dinner cruise on the Chao Phraya River. Eat from a buffet of international dishes and desserts while viewing Bangkok’s landmarks like the Grand Palace and Wat Arun. \r</p><p>Have a welcome drink, with water, coffee, and tea available throughout the cruise. Listen to live music as you dine, and visit the rooftop deck for clear city views at night.\r</p><p>This package includes a private roundtrip hotel transfer for ease and comfort, which is ideal for a night out or a special occasion in Bangkok.</p></div>",
+            "geoCode": {
+                "latitude": 13.7264814,
+                "longitude": 100.509947
+            },
+            "price": {
+                "amount": "87.0",
+                "currencyCode": "EUR"
+            },
+            "pictures": [
+                "https://images.holibob.tech/eyJrZXkiOiJwcm9kdWN0SW1hZ2VzL2FiOTQ5NDZmLWQ4YzktNDM0NS04MzU3LTQyNjI5ZWM4OWZhYyIsImVkaXRzIjp7InJlc2l6ZSI6eyJmaXQiOiJjb3ZlciIsIndpZHRoIjoxOTIwLCJoZWlnaHQiOjEwODB9fX0=",
+                "https://images.holibob.tech/eyJrZXkiOiJwcm9kdWN0SW1hZ2VzL2M1NDNmYTNiLTY3OWYtNDBlYS05MWI1LWJmYjM3ZWVlOGI0MyIsImVkaXRzIjp7InJlc2l6ZSI6eyJmaXQiOiJjb3ZlciIsIndpZHRoIjoxOTIwLCJoZWlnaHQiOjEwODB9fX0=",
+                "https://images.holibob.tech/eyJrZXkiOiJwcm9kdWN0SW1hZ2VzLzA3Yzg0YTE0LTI1MjItNGQwYS1hOTEwLWFlZjA4NzIxYWM0NiIsImVkaXRzIjp7InJlc2l6ZSI6eyJmaXQiOiJjb3ZlciIsIndpZHRoIjoxOTIwLCJoZWlnaHQiOjEwODB9fX0=",
+                "https://images.holibob.tech/eyJrZXkiOiJwcm9kdWN0SW1hZ2VzL2ZjZmNkM2NiLTBhOTItNDczNS04ZjU2LTZjNmQ3NTM1ODE5MyIsImVkaXRzIjp7InJlc2l6ZSI6eyJmaXQiOiJjb3ZlciIsIndpZHRoIjoxOTIwLCJoZWlnaHQiOjEwODB9fX0=",
+                "https://images.holibob.tech/eyJrZXkiOiJwcm9kdWN0SW1hZ2VzLzQ4YWU4YzBmLWJlYmYtNGZlMS04MTEzLTc4MTgzOWY0MmIwNiIsImVkaXRzIjp7InJlc2l6ZSI6eyJmaXQiOiJjb3ZlciIsIndpZHRoIjoxOTIwLCJoZWlnaHQiOjEwODB9fX0=",
+                "https://images.holibob.tech/eyJrZXkiOiJwcm9kdWN0SW1hZ2VzLzFhYWZhNDY3LWRlZGItNDg2Ni05MTIwLTFkNTM5OGI0ZmE3YiIsImVkaXRzIjp7InJlc2l6ZSI6eyJmaXQiOiJjb3ZlciIsIndpZHRoIjoxOTIwLCJoZWlnaHQiOjEwODB9fX0=",
+                "https://images.holibob.tech/eyJrZXkiOiJwcm9kdWN0SW1hZ2VzL2Q4YjM5NTQwLTJmMWItNDk2MS1iNzZhLTIwM2NlZjhlNjVhOCIsImVkaXRzIjp7InJlc2l6ZSI6eyJmaXQiOiJjb3ZlciIsIndpZHRoIjoxOTIwLCJoZWlnaHQiOjEwODB9fX0=",
+                "https://images.holibob.tech/eyJrZXkiOiJwcm9kdWN0SW1hZ2VzLzY5MDU0M2FhLWRiZGYtNGViYi1iMDQ5LTViOTJlOTk2MzEzMCIsImVkaXRzIjp7InJlc2l6ZSI6eyJmaXQiOiJjb3ZlciIsIndpZHRoIjoxOTIwLCJoZWlnaHQiOjEwODB9fX0="
+            ],
+            "bookingLink": "https://amadeus.booking.holibob.tech/product/d76a2c4c-f35b-46e4-be45-c5b7d2133feb",
+            "minimumDuration": ""
+        },
+        {
+            "type": "activity",
+            "id": "139596637",
+            "self": {
+                "href": "https://api.amadeus.com/v1/shopping/activities/139596637",
+                "methods": [
+                    "GET"
+                ]
+            },
+            "name": "Bangkok: Opulence Dinner Cruise with Hotel Transfer",
+            "shortDescription": "Dine with live music and visit the rooftop deck for city views",
+            "description": "Board the luxury dinner cruise on the Chao Phraya River. Eat from a buffet of international dishes and desserts while viewing Bangkok’s landmarks like the Grand Palace and Wat Arun. \r\n\r\nHave a welcome drink, with water, coffee, and tea available throughout the cruise. Listen to live music as you dine, and visit the rooftop deck for clear city views at night.\r\n\r\nThis package includes a private roundtrip hotel transfer for ease and comfort, which is ideal for a night out or a special occasion in Bangkok.",
+            "geoCode": {
+                "latitude": 13.7264814,
+                "longitude": 100.509947
+            },
+            "price": {
+                "amount": "87.19",
+                "currencyCode": "EUR"
+            },
+            "pictures": [
+                "https://aws-tiqets-cdn.imgix.net/images/content/9af39c0856b84b5e819af03b20a83805.jpeg?auto=format%2Ccompress&fit=crop&h=1284&q=70&w=1284",
+                "https://aws-tiqets-cdn.imgix.net/images/content/39cc2bcd5e274164853ac1192caed026.jpeg?auto=format%2Ccompress&fit=crop&h=1284&q=70&w=1284",
+                "https://aws-tiqets-cdn.imgix.net/images/content/af8f47acacb04cccab5497cf86323f2c.jpeg?auto=format%2Ccompress&fit=crop&h=1284&q=70&w=1284",
+                "https://aws-tiqets-cdn.imgix.net/images/content/c4c10be926e144ec866240db099baf89.jpeg?auto=format%2Ccompress&fit=crop&h=1284&q=70&w=1284",
+                "https://aws-tiqets-cdn.imgix.net/images/content/358887fbf43642e58337172ba3187f21.jpeg?auto=format%2Ccompress&fit=crop&h=1284&q=70&w=1284",
+                "https://aws-tiqets-cdn.imgix.net/images/content/28e2d03b5eaa409ea9e831b4dd3875d2.jpeg?auto=format%2Ccompress&fit=crop&h=1284&q=70&w=1284",
+                "https://aws-tiqets-cdn.imgix.net/images/content/6481097cc88d4345ae84423a5f18d2c0.jpeg?auto=format%2Ccompress&fit=crop&h=1284&q=70&w=1284",
+                "https://aws-tiqets-cdn.imgix.net/images/content/53253fafaad64e3e9d57a16dd13af3ed.jpeg?auto=format%2Ccompress&fit=crop&h=1284&q=70&w=1284"
+            ],
+            "bookingLink": "https://www.tiqets.com/en/checkout/tickets-for-bangkok-luxury-dinner-cruise-with-hotel-transfer-p1108884/booking_details/?partner=amadeus",
+            "minimumDuration": ""
+        },
+        {
+            "type": "activity",
+            "id": "139635624",
+            "self": {
+                "href": "https://api.amadeus.com/v1/shopping/activities/139635624",
+                "methods": [
+                    "GET"
+                ]
+            },
+            "name": "Bangkok by Night: Temples, Markets & Street Food Tuk-Tuk Tour",
+            "description": "<div><p>Begin your private or small-group night tour of Bangkok by meeting your guide at a handy centrally located BTS station. From there, hop into a tuk-tuk, which is one of the quickest—and most exciting—ways of getting around the busy city.</p><p>During the 4-hour tour, your guide will take you to and past a variety of places that come alive at night, including the Pak Khlong Talat flower market, Chinatown, and the Grand Palace. You’ll also see many Bangkok landmarks lit up after dark. </p><p>Going with a guide ensures you stick to the safest areas while getting an intimate perspective of the city. Enjoy a tasty local dinner with non-alcoholic drinks and dessert. Your guide can help you choose dishes to suit your tastes.</p><p>After the tour, you can be dropped at your location of choice, within a limited area. Head back to your accommodation or continue the evening adventures independently.</p></div>",
+            "geoCode": {
+                "latitude": 13.7209693,
+                "longitude": 100.5020925
+            },
+            "price": {
+                "amount": "64.0",
+                "currencyCode": "EUR"
+            },
+            "pictures": [
+                "https://images.holibob.tech/eyJrZXkiOiJwcm9kdWN0SW1hZ2VzLzljYTBkZWI4LWI5Y2MtNGVmNy1hZmYxLWQ2NzU1OTdhMTI0OCIsImVkaXRzIjp7InJlc2l6ZSI6eyJmaXQiOiJjb3ZlciIsIndpZHRoIjoxOTIwLCJoZWlnaHQiOjEwODB9fX0=",
+                "https://images.holibob.tech/eyJrZXkiOiJwcm9kdWN0SW1hZ2VzLzQwNTExZTU2LTNkNDktNDJjYS04Y2VlLTc3MGRmODc1MjQyMCIsImVkaXRzIjp7InJlc2l6ZSI6eyJmaXQiOiJjb3ZlciIsIndpZHRoIjoxOTIwLCJoZWlnaHQiOjEwODB9fX0=",
+                "https://images.holibob.tech/eyJrZXkiOiJwcm9kdWN0SW1hZ2VzL2JhZTAxM2I0LTJkMTUtNGFiZi04MDllLWYyMDI3ZWJiMTdiYiIsImVkaXRzIjp7InJlc2l6ZSI6eyJmaXQiOiJjb3ZlciIsIndpZHRoIjoxOTIwLCJoZWlnaHQiOjEwODB9fX0=",
+                "https://images.holibob.tech/eyJrZXkiOiJwcm9kdWN0SW1hZ2VzL2ExMGNkNTJmLTYxYzUtNGE4My1iMjgwLTQyZWM4MzE4YWE3MiIsImVkaXRzIjp7InJlc2l6ZSI6eyJmaXQiOiJjb3ZlciIsIndpZHRoIjoxOTIwLCJoZWlnaHQiOjEwODB9fX0=",
+                "https://images.holibob.tech/eyJrZXkiOiJwcm9kdWN0SW1hZ2VzL2FjYWQyMjY3LWM2ZDEtNDI0MC04M2Y4LTQzZGNlNTg2MWZjYyIsImVkaXRzIjp7InJlc2l6ZSI6eyJmaXQiOiJjb3ZlciIsIndpZHRoIjoxOTIwLCJoZWlnaHQiOjEwODB9fX0=",
+                "https://images.holibob.tech/eyJrZXkiOiJwcm9kdWN0SW1hZ2VzLzVmNDQ2MmU1LTRiZTYtNDcwOS05ODFjLTYxYzlmYjc0OTM1OSIsImVkaXRzIjp7InJlc2l6ZSI6eyJmaXQiOiJjb3ZlciIsIndpZHRoIjoxOTIwLCJoZWlnaHQiOjEwODB9fX0=",
+                "https://images.holibob.tech/eyJrZXkiOiJwcm9kdWN0SW1hZ2VzLzQyM2FmMGYxLWQ3ZjItNGQ2NS04ZDBjLTkwNGNiNWZhZWUzNCIsImVkaXRzIjp7InJlc2l6ZSI6eyJmaXQiOiJjb3ZlciIsIndpZHRoIjoxOTIwLCJoZWlnaHQiOjEwODB9fX0=",
+                "https://images.holibob.tech/eyJrZXkiOiJwcm9kdWN0SW1hZ2VzLzg3Zjk3NmI2LTVjNTYtNDhiZi05YTg2LWZlNmJiODU4YmJkMCIsImVkaXRzIjp7InJlc2l6ZSI6eyJmaXQiOiJjb3ZlciIsIndpZHRoIjoxOTIwLCJoZWlnaHQiOjEwODB9fX0=",
+                "https://images.holibob.tech/eyJrZXkiOiJwcm9kdWN0SW1hZ2VzL2IwYmIyNWMzLWFhY2ItNGZkMi05NmYzLTQwZWRkNGQ4NzI1YiIsImVkaXRzIjp7InJlc2l6ZSI6eyJmaXQiOiJjb3ZlciIsIndpZHRoIjoxOTIwLCJoZWlnaHQiOjEwODB9fX0=",
+                "https://images.holibob.tech/eyJrZXkiOiJwcm9kdWN0SW1hZ2VzLzE2MTg5ZDczLTQ2YjItNDhkYS05Njc4LTg4MDNlMjU4OTkwYyIsImVkaXRzIjp7InJlc2l6ZSI6eyJmaXQiOiJjb3ZlciIsIndpZHRoIjoxOTIwLCJoZWlnaHQiOjEwODB9fX0=",
+                "https://images.holibob.tech/eyJrZXkiOiJwcm9kdWN0SW1hZ2VzL2I5MTMzZDMzLTE3NTAtNDBiZS04YTc1LTc0MmFmNTlkNmZlMiIsImVkaXRzIjp7InJlc2l6ZSI6eyJmaXQiOiJjb3ZlciIsIndpZHRoIjoxOTIwLCJoZWlnaHQiOjEwODB9fX0=",
+                "https://images.holibob.tech/eyJrZXkiOiJwcm9kdWN0SW1hZ2VzLzM5NDYyNWYzLWNkZGMtNGZjMi1hNmIwLWZjNDRlNzZhN2VlOSIsImVkaXRzIjp7InJlc2l6ZSI6eyJmaXQiOiJjb3ZlciIsIndpZHRoIjoxOTIwLCJoZWlnaHQiOjEwODB9fX0=",
+                "https://images.holibob.tech/eyJrZXkiOiJwcm9kdWN0SW1hZ2VzL2Q2ZjQ5OTUxLTUwYmQtNDM0My05ODA5LWY2Yzk0ZGE5Mjk4OSIsImVkaXRzIjp7InJlc2l6ZSI6eyJmaXQiOiJjb3ZlciIsIndpZHRoIjoxOTIwLCJoZWlnaHQiOjEwODB9fX0=",
+                "https://images.holibob.tech/eyJrZXkiOiJwcm9kdWN0SW1hZ2VzL2MwMWQ1ZmUwLWJlZGQtNDVmNC1iZWExLTFmMDA2Zjk5ZGExZiIsImVkaXRzIjp7InJlc2l6ZSI6eyJmaXQiOiJjb3ZlciIsIndpZHRoIjoxOTIwLCJoZWlnaHQiOjEwODB9fX0=",
+                "https://images.holibob.tech/eyJrZXkiOiJwcm9kdWN0SW1hZ2VzLzAxNzE2OWVlLTg5YTUtNGUwYy05YWRhLWU5MDY1ZDcwM2JlZiIsImVkaXRzIjp7InJlc2l6ZSI6eyJmaXQiOiJjb3ZlciIsIndpZHRoIjoxOTIwLCJoZWlnaHQiOjEwODB9fX0=",
+                "https://images.holibob.tech/eyJrZXkiOiJwcm9kdWN0SW1hZ2VzL2M3NDkzYTk2LWNlN2YtNDViOS05NzI4LWJiY2M3OGQxZTExZiIsImVkaXRzIjp7InJlc2l6ZSI6eyJmaXQiOiJjb3ZlciIsIndpZHRoIjoxOTIwLCJoZWlnaHQiOjEwODB9fX0=",
+                "https://images.holibob.tech/eyJrZXkiOiJwcm9kdWN0SW1hZ2VzLzE1ODZjNDlkLTE2NjYtNGEwMC1iNzFiLWNhMDk2MjUyYWE3NiIsImVkaXRzIjp7InJlc2l6ZSI6eyJmaXQiOiJjb3ZlciIsIndpZHRoIjoxOTIwLCJoZWlnaHQiOjEwODB9fX0=",
+                "https://images.holibob.tech/eyJrZXkiOiJwcm9kdWN0SW1hZ2VzLzBkMzcxOGI3LTI4NmMtNGUyNi1iN2MzLTFlM2NjY2ExMDFiYyIsImVkaXRzIjp7InJlc2l6ZSI6eyJmaXQiOiJjb3ZlciIsIndpZHRoIjoxOTIwLCJoZWlnaHQiOjEwODB9fX0=",
+                "https://images.holibob.tech/eyJrZXkiOiJwcm9kdWN0SW1hZ2VzL2YwM2VhNDgyLWYxYzYtNDkxMS05MThiLTU4NDE2NDNhNmFhMiIsImVkaXRzIjp7InJlc2l6ZSI6eyJmaXQiOiJjb3ZlciIsIndpZHRoIjoxOTIwLCJoZWlnaHQiOjEwODB9fX0=",
+                "https://images.holibob.tech/eyJrZXkiOiJwcm9kdWN0SW1hZ2VzLzZjOTFkZmJmLTgwNDItNDI3NS04MTA3LTdkZmRiOWIyOWExNSIsImVkaXRzIjp7InJlc2l6ZSI6eyJmaXQiOiJjb3ZlciIsIndpZHRoIjoxOTIwLCJoZWlnaHQiOjEwODB9fX0=",
+                "https://images.holibob.tech/eyJrZXkiOiJwcm9kdWN0SW1hZ2VzLzlkNjNlNzkwLTNmN2UtNGE3OC04Y2JjLTQ2MGNjNTAwNWJmMyIsImVkaXRzIjp7InJlc2l6ZSI6eyJmaXQiOiJjb3ZlciIsIndpZHRoIjoxOTIwLCJoZWlnaHQiOjEwODB9fX0="
+            ],
+            "bookingLink": "https://amadeus.booking.holibob.tech/product/9dd7864a-9f16-475b-b811-bee05a644871",
+            "minimumDuration": "4 hours"
+        },
+        {
+            "type": "activity",
+            "id": "139591405",
+            "self": {
+                "href": "https://api.amadeus.com/v1/shopping/activities/139591405",
+                "methods": [
+                    "GET"
+                ]
+            },
+            "name": "Erawan Waterfall and Death Railway Train Riding from Bangkok",
+            "description": "<div><p>This tour offers a comprehensive experience of Kanchanaburi's historical and natural wonders. Explore the stunning Erawan Falls, visit the historic Tham Krasae cave, and then embark on a scenic train ride on the iconic Death Railway to the River Kwai Bridge. This tour is a great way to experience the best of Kanchanaburi.</p></div>",
+            "geoCode": {
+                "latitude": 13.7207901,
+                "longitude": 100.4936188
+            },
+            "price": {
+                "amount": "66.0",
+                "currencyCode": "EUR"
+            },
+            "pictures": [
+                "https://images.holibob.tech/eyJrZXkiOiJwcm9kdWN0SW1hZ2VzLzVkMmJkMzlhLWVlMGEtNGQxYS1hMDY1LWY0NTk4NDEyY2QwZSIsImVkaXRzIjp7InJlc2l6ZSI6eyJmaXQiOiJjb3ZlciIsIndpZHRoIjoxOTIwLCJoZWlnaHQiOjEwODB9fX0=",
+                "https://images.holibob.tech/eyJrZXkiOiJwcm9kdWN0SW1hZ2VzLzUwNWZlMTE3LTM5ODEtNDViOS04YjhiLWUwMzVhYmIxY2Q2NSIsImVkaXRzIjp7InJlc2l6ZSI6eyJmaXQiOiJjb3ZlciIsIndpZHRoIjoxOTIwLCJoZWlnaHQiOjEwODB9fX0=",
+                "https://images.holibob.tech/eyJrZXkiOiJwcm9kdWN0SW1hZ2VzL2VjZWE2ZTc2LWE0YjMtNDY4Ni05ZGFiLTA3OGUyODY1OTJlYyIsImVkaXRzIjp7InJlc2l6ZSI6eyJmaXQiOiJjb3ZlciIsIndpZHRoIjoxOTIwLCJoZWlnaHQiOjEwODB9fX0=",
+                "https://images.holibob.tech/eyJrZXkiOiJwcm9kdWN0SW1hZ2VzL2I0OTg5MDZjLThmOWQtNDAxZS1iZTg3LWM2N2ZmYjJhODc0NyIsImVkaXRzIjp7InJlc2l6ZSI6eyJmaXQiOiJjb3ZlciIsIndpZHRoIjoxOTIwLCJoZWlnaHQiOjEwODB9fX0=",
+                "https://images.holibob.tech/eyJrZXkiOiJwcm9kdWN0SW1hZ2VzLzlmYTAxYmQ1LTM2ODctNGJkMC04YTBmLTNkZjdmY2ViNzM5OCIsImVkaXRzIjp7InJlc2l6ZSI6eyJmaXQiOiJjb3ZlciIsIndpZHRoIjoxOTIwLCJoZWlnaHQiOjEwODB9fX0=",
+                "https://images.holibob.tech/eyJrZXkiOiJwcm9kdWN0SW1hZ2VzL2RjZTgzZWU5LTAyZmYtNDEyYS04ZDgzLTA4NmRkODA5MjFkMCIsImVkaXRzIjp7InJlc2l6ZSI6eyJmaXQiOiJjb3ZlciIsIndpZHRoIjoxOTIwLCJoZWlnaHQiOjEwODB9fX0=",
+                "https://images.holibob.tech/eyJrZXkiOiJwcm9kdWN0SW1hZ2VzL2QyMjczOGZiLWJlNTctNGRlMS1iMzBjLTNkY2EzMjhlZmZmYiIsImVkaXRzIjp7InJlc2l6ZSI6eyJmaXQiOiJjb3ZlciIsIndpZHRoIjoxOTIwLCJoZWlnaHQiOjEwODB9fX0=",
+                "https://images.holibob.tech/eyJrZXkiOiJwcm9kdWN0SW1hZ2VzLzkyODM1ZDk1LTY4MWMtNDUxMi05YzZkLWNmNGEwNzIzNGNjNSIsImVkaXRzIjp7InJlc2l6ZSI6eyJmaXQiOiJjb3ZlciIsIndpZHRoIjoxOTIwLCJoZWlnaHQiOjEwODB9fX0=",
+                "https://images.holibob.tech/eyJrZXkiOiJwcm9kdWN0SW1hZ2VzLzExYjQ3ZjQ3LWFlYTAtNGYyMC1hNmI4LTVhOTJlOTQ5NGEwMSIsImVkaXRzIjp7InJlc2l6ZSI6eyJmaXQiOiJjb3ZlciIsIndpZHRoIjoxOTIwLCJoZWlnaHQiOjEwODB9fX0=",
+                "https://images.holibob.tech/eyJrZXkiOiJwcm9kdWN0SW1hZ2VzL2ZlMjQ2MDI1LTE2MWUtNGI4OS04M2M5LTcyODNhYWMxY2Y2MiIsImVkaXRzIjp7InJlc2l6ZSI6eyJmaXQiOiJjb3ZlciIsIndpZHRoIjoxOTIwLCJoZWlnaHQiOjEwODB9fX0="
+            ],
+            "bookingLink": "https://amadeus.booking.holibob.tech/product/2e74eb73-a075-4a1c-a28c-09584dc81369",
+            "minimumDuration": ""
+        },
+        {
+            "type": "activity",
+            "id": "139001773",
+            "self": {
+                "href": "https://api.amadeus.com/v1/shopping/activities/139001773",
+                "methods": [
+                    "GET"
+                ]
+            },
+            "name": "Bangkok by Night Tuk Tuk Adventure",
+            "shortDescription": "Markets, temples, local foods and fun Bangkok facts on a tuk tuk tour at night",
+            "description": "This top tour in a traditional tuk tuk takes you to the best of Bangkok at night with an English-speaking guide. Enjoy markets and temples, tuck into local Thai snacks, see the sights and learn some fun facts about the city as you go!",
+            "geoCode": {
+                "latitude": 13.720947,
+                "longitude": 100.502863
+            },
+            "price": {
+                "amount": "64.37",
+                "currencyCode": "EUR"
+            },
+            "pictures": [
+                "https://aws-tiqets-cdn.imgix.net/images/content/6ba67f7ce2d74b7a826b229bf9a21e1f.jpg?auto=format%2Ccompress&fit=crop&h=1284&q=70&w=1284",
+                "https://aws-tiqets-cdn.imgix.net/images/content/378983b7728a4512a3bbc76de70868f4.jpg?auto=format%2Ccompress&fit=crop&h=1284&q=70&w=1284",
+                "https://aws-tiqets-cdn.imgix.net/images/content/685a57af2783405fbae6f2dd75aa0481.jpg?auto=format%2Ccompress&fit=crop&h=1284&q=70&w=1284",
+                "https://aws-tiqets-cdn.imgix.net/images/content/afc0622d372844e9a573146d5d76ed52.jpg?auto=format%2Ccompress&fit=crop&h=1284&q=70&w=1284",
+                "https://aws-tiqets-cdn.imgix.net/images/content/ed4e154ec3a44e2981271d8f3dc66e9d.jpg?auto=format%2Ccompress&fit=crop&h=1284&q=70&w=1284"
+            ],
+            "bookingLink": "https://www.tiqets.com/en/checkout/tickets-for-bangkok-by-night-tuk-tuk-adventure-p976378/booking_details/?partner=amadeus",
+            "minimumDuration": ""
+        },
+        {
+            "type": "activity",
+            "id": "138999684",
+            "self": {
+                "href": "https://api.amadeus.com/v1/shopping/activities/138999684",
+                "methods": [
+                    "GET"
+                ]
+            },
+            "name": "Bangkok by Night Tuk Tuk Adventure",
+            "description": "<div><p>This top tour in a traditional tuk tuk takes you to the best of Bangkok at night with an English-speaking guide. Enjoy markets and temples, tuck into local Thai snacks, see the sights and learn some fun facts about the city as you go!</p></div>",
+            "geoCode": {
+                "latitude": 13.72085,
+                "longitude": 100.50272
+            },
+            "price": {
+                "amount": "64.0",
+                "currencyCode": "EUR"
+            },
+            "pictures": [
+                "https://images.holibob.tech/eyJrZXkiOiJwcm9kdWN0SW1hZ2VzLzQ1ZDExMDU5LWRiNzgtNGJjZS04Mzc0LWQwNGEwZjU0ZGM4OCIsImVkaXRzIjp7InJlc2l6ZSI6eyJmaXQiOiJjb3ZlciIsIndpZHRoIjoxOTIwLCJoZWlnaHQiOjEwODB9fX0=",
+                "https://images.holibob.tech/eyJrZXkiOiJwcm9kdWN0SW1hZ2VzL2VkOWFlMzUyLWMxOWYtNDJhYi1iMzEyLWMyMTQyMmViNzA3NCIsImVkaXRzIjp7InJlc2l6ZSI6eyJmaXQiOiJjb3ZlciIsIndpZHRoIjoxOTIwLCJoZWlnaHQiOjEwODB9fX0=",
+                "https://images.holibob.tech/eyJrZXkiOiJwcm9kdWN0SW1hZ2VzLzc3NWM5ZjBkLTVhMzktNGJlOS04ODE2LTNmNzAxNzVmNWVjNiIsImVkaXRzIjp7InJlc2l6ZSI6eyJmaXQiOiJjb3ZlciIsIndpZHRoIjoxOTIwLCJoZWlnaHQiOjEwODB9fX0=",
+                "https://images.holibob.tech/eyJrZXkiOiJwcm9kdWN0SW1hZ2VzLzE3MWMyNjNjLTY3YWItNDNiMi04NDFlLTc3NjI1YWM0MmIyNiIsImVkaXRzIjp7InJlc2l6ZSI6eyJmaXQiOiJjb3ZlciIsIndpZHRoIjoxOTIwLCJoZWlnaHQiOjEwODB9fX0=",
+                "https://images.holibob.tech/eyJrZXkiOiJwcm9kdWN0SW1hZ2VzLzFhODE1MTZhLWU1MTEtNGY4ZS05MGYzLTFlY2ViN2FmYmJhMSIsImVkaXRzIjp7InJlc2l6ZSI6eyJmaXQiOiJjb3ZlciIsIndpZHRoIjoxOTIwLCJoZWlnaHQiOjEwODB9fX0="
+            ],
+            "bookingLink": "https://amadeus.booking.holibob.tech/product/86630cb7-5cc5-4903-8e55-844145dd0001",
+            "minimumDuration": "4 hours"
+        }
+    ],
+    "meta": {
+        "count": 7,
+        "links": {
+            "self": "https://api.amadeus.com/v1/shopping/activities?latitude=13.72319&longitude=100.50144&radius=1"
+        }
+    }
+}

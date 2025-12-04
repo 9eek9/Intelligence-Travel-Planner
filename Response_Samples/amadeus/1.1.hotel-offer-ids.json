@@ -1,0 +1,159 @@
+// https://api.amadeus.com/v3/shopping/hotel-offers?hotelIds={{hotelIds}}&adults=2
+{
+    "data": [
+        {
+            "type": "hotel-offers",
+            "hotel": {
+                "type": "hotel",
+                "hotelId": "KCBKK926",
+                "chainCode": "KC",
+                "dupeId": "700923960",
+                "name": "Kimpton Maa-Lai by IHG",
+                "cityCode": "BKK",
+                "latitude": 13.73774,
+                "longitude": 100.54346
+            },
+            "available": true,
+            "offers": [
+                {
+                    "id": "IWY1P5ARCM",
+                    "checkInDate": "2025-11-19",
+                    "checkOutDate": "2025-11-20",
+                    "rateCode": "013",
+                    "rateFamilyEstimated": {
+                        "code": "BAR",
+                        "type": "P"
+                    },
+                    "boardType": "ROOM_ONLY",
+                    "room": {
+                        "type": "*2B",
+                        "typeEstimated": {
+                            "category": "PREMIUM_ROOM",
+                            "beds": 2,
+                            "bedType": "TWIN"
+                        },
+                        "description": {
+                            "text": "BEST FLEXIBLE RATE\nTwo Twin Premium A sophisticated space with\nwalk in closet featuring hardwood furnishings",
+                            "lang": "EN"
+                        }
+                    },
+                    "guests": {
+                        "adults": 2
+                    },
+                    "price": {
+                        "currency": "THB",
+                        "base": "12580.00",
+                        "total": "14806.66",
+                        "taxes": [
+                            {
+                                "code": "SERVICE_CHARGE",
+                                "amount": "1258.00",
+                                "currency": "THB",
+                                "included": false
+                            },
+                            {
+                                "code": "VALUE_ADDED_TAX",
+                                "amount": "968.66",
+                                "currency": "THB",
+                                "included": false
+                            }
+                        ],
+                        "variations": {
+                            "average": {
+                                "base": "12580.00"
+                            },
+                            "changes": [
+                                {
+                                    "startDate": "2025-11-19",
+                                    "endDate": "2025-11-20",
+                                    "base": "12580.00"
+                                }
+                            ]
+                        }
+                    },
+                    "policies": {
+                        "cancellations": [
+                            {
+                                "numberOfNights": 1,
+                                "deadline": "2025-11-20T01:50:00+07:00",
+                                "policyType": "CANCELLATION"
+                            }
+                        ],
+                        "guarantee": {
+                            "acceptedPayments": {
+                                "creditCards": [
+                                    "AX",
+                                    "CB",
+                                    "DC",
+                                    "DS",
+                                    "JC",
+                                    "CA",
+                                    "VI"
+                                ],
+                                "methods": [
+                                    "CREDIT_CARD"
+                                ],
+                                "creditCardPolicies": [
+                                    {
+                                        "vendorCode": "AX"
+                                    },
+                                    {
+                                        "vendorCode": "CB"
+                                    },
+                                    {
+                                        "vendorCode": "DC"
+                                    },
+                                    {
+                                        "vendorCode": "DS"
+                                    },
+                                    {
+                                        "vendorCode": "JC"
+                                    },
+                                    {
+                                        "vendorCode": "CA"
+                                    },
+                                    {
+                                        "vendorCode": "VI"
+                                    }
+                                ]
+                            }
+                        },
+                        "paymentType": "guarantee",
+                        "refundable": {
+                            "cancellationRefund": "REFUNDABLE_UP_TO_DEADLINE"
+                        }
+                    },
+                    "self": "https://api.amadeus.com/v3/shopping/hotel-offers/IWY1P5ARCM",
+                    "roomInformation": {
+                        "description": "BEST FLEXIBLE RATE\nTwo Twin Premium A sophisticated space with\nwalk in closet featuring hardwood furnishings",
+                        "type": "*2B",
+                        "typeEstimated": {
+                            "bedType": "TWIN",
+                            "beds": 2,
+                            "category": "PREMIUM_ROOM"
+                        }
+                    }
+                }
+            ],
+            "self": "https://api.amadeus.com/v3/shopping/hotel-offers?hotelIds=KCBKK926&adults=2"
+        }
+    ],
+    "warnings": [
+        {
+            "code": 175,
+            "title": "CHECK DATE RANGE",
+            "detail": "Provider Error - CHECK DATE RANGE",
+            "source": {
+                "parameter": "hotelIds=HYBKKIGB,LXBKK875"
+            }
+        },
+        {
+            "code": 704,
+            "title": "INVALID DATE RANGE",
+            "detail": "Provider Error - INVALID DATE RANGE",
+            "source": {
+                "parameter": "hotelIds=RZBKKRBZ,WIBKK446"
+            }
+        }
+    ]
+}

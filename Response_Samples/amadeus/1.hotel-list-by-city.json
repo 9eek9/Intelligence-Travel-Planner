@@ -1,0 +1,6014 @@
+#https://api.amadeus.com/v1/reference-data/locations/hotels/by-city?cityCode=BKK
+{
+    "data": [
+        {
+            "chainCode": "WI",
+            "iataCode": "BKK",
+            "dupeId": 700034864,
+            "name": "THE WESTIN GRANDE SUKHUMVIT BANGKOK",
+            "hotelId": "WIBKK446",
+            "geoCode": {
+                "latitude": 13.73805,
+                "longitude": 100.55951
+            },
+            "address": {
+                "countryCode": "TH",
+                "postalCode": "10110",
+                "cityName": "BANGKOK",
+                "lines": [
+                    "259 SUKHUMVIT ROAD"
+                ]
+            },
+            "masterChainCode": "EM",
+            "lastUpdate": "2025-11-18T13:06:24",
+            "retailing": {
+                "sponsorship": {
+                    "isSponsored": true
+                }
+            }
+        },
+        {
+            "chainCode": "LX",
+            "iataCode": "BKK",
+            "dupeId": 700013524,
+            "name": "THE SUKHOTHAI BANGKOK",
+            "hotelId": "LXBKK875",
+            "geoCode": {
+                "latitude": 13.72309,
+                "longitude": 100.54084
+            },
+            "address": {
+                "countryCode": "TH",
+                "postalCode": "10120",
+                "cityName": "BANGKOK",
+                "lines": [
+                    "13/3 SOUTH SATHORN ROAD"
+                ]
+            },
+            "lastUpdate": "2025-11-18T15:33:18",
+            "retailing": {
+                "sponsorship": {
+                    "isSponsored": true
+                }
+            }
+        },
+        {
+            "chainCode": "RZ",
+            "iataCode": "BKK",
+            "dupeId": 701259010,
+            "name": "THE RITZ-CARLTON BANGKOK   ",
+            "hotelId": "RZBKKRBZ",
+            "geoCode": {
+                "latitude": 13.7282,
+                "longitude": 100.54559
+            },
+            "address": {
+                "countryCode": "TH",
+                "postalCode": "10330",
+                "cityName": "BANGKOK",
+                "lines": [
+                    "189 WIRELESS ROAD"
+                ]
+            },
+            "masterChainCode": "EM",
+            "lastUpdate": "2025-11-19T12:23:21",
+            "retailing": {
+                "sponsorship": {
+                    "isSponsored": true
+                }
+            }
+        },
+        {
+            "chainCode": "HY",
+            "iataCode": "BKK",
+            "dupeId": 700007852,
+            "name": "GRAND HYATT ERAWAN BANGKOK",
+            "hotelId": "HYBKKIGB",
+            "geoCode": {
+                "latitude": 13.74352,
+                "longitude": 100.54049
+            },
+            "address": {
+                "countryCode": "TH",
+                "postalCode": "10330",
+                "cityName": "BANGKOK",
+                "lines": [
+                    "494 RAJDAMRI RD",
+                    "SALES & MARKETING"
+                ]
+            },
+            "masterChainCode": "LH",
+            "lastUpdate": "2025-09-11T01:08:30",
+            "retailing": {
+                "sponsorship": {
+                    "isSponsored": true
+                }
+            }
+        },
+        {
+            "chainCode": "KC",
+            "iataCode": "BKK",
+            "dupeId": 700923960,
+            "name": "KIMPTON MAA-LAI",
+            "hotelId": "KCBKK926",
+            "geoCode": {
+                "latitude": 13.73774,
+                "longitude": 100.54346
+            },
+            "address": {
+                "countryCode": "TH",
+                "postalCode": "10330",
+                "cityName": "BANGKOK",
+                "lines": [
+                    "78 SOI TONSON LUMPINI PATHUMWAN"
+                ]
+            },
+            "masterChainCode": "6C",
+            "lastUpdate": "2025-11-14T08:32:49",
+            "retailing": {
+                "sponsorship": {
+                    "isSponsored": true
+                }
+            }
+        },
+        {
+            "chainCode": "MD",
+            "iataCode": "BKK",
+            "dupeId": 700056444,
+            "name": "LE MERIDIEN BANGKOK",
+            "hotelId": "MDBKK946",
+            "geoCode": {
+                "latitude": 13.72987,
+                "longitude": 100.53062
+            },
+            "address": {
+                "countryCode": "TH",
+                "postalCode": "10500",
+                "cityName": "BANGKOK",
+                "lines": [
+                    "40 5 SURAWONG ROAD",
+                    "BANGRAK"
+                ]
+            },
+            "masterChainCode": "EM",
+            "lastUpdate": "2025-11-18T22:45:46",
+            "retailing": {
+                "sponsorship": {
+                    "isSponsored": true
+                }
+            }
+        },
+        {
+            "chainCode": "LW",
+            "iataCode": "BKK",
+            "dupeId": 700857179,
+            "name": "CAPELLA BANGKOK",
+            "hotelId": "LWBKK865",
+            "geoCode": {
+                "latitude": 13.71231,
+                "longitude": 100.51017
+            },
+            "address": {
+                "countryCode": "TH",
+                "postalCode": "10120",
+                "cityName": "BANGKOK",
+                "lines": [
+                    "300 2 CHAROENKRUNG RD",
+                    "YANNAWA"
+                ]
+            },
+            "lastUpdate": "2025-08-26T11:32:10",
+            "retailing": {
+                "sponsorship": {
+                    "isSponsored": true
+                }
+            }
+        },
+        {
+            "chainCode": "XR",
+            "iataCode": "BKK",
+            "dupeId": 700141971,
+            "name": "ST REGIS BANGKOK",
+            "hotelId": "XRBKK199",
+            "geoCode": {
+                "latitude": 13.74014,
+                "longitude": 100.54003
+            },
+            "address": {
+                "countryCode": "TH",
+                "postalCode": "10330",
+                "cityName": "BANGKOK",
+                "lines": [
+                    "159 RAJADAMRI ROAD"
+                ]
+            },
+            "masterChainCode": "EM",
+            "lastUpdate": "2025-11-19T12:41:02",
+            "retailing": {
+                "sponsorship": {
+                    "isSponsored": true
+                }
+            }
+        },
+        {
+            "chainCode": "RD",
+            "iataCode": "BKK",
+            "dupeId": 700141336,
+            "name": "RADISSON STE BANGKOK SUKHUMVIT",
+            "hotelId": "RDBKK161",
+            "geoCode": {
+                "latitude": 13.74289,
+                "longitude": 100.55767
+            },
+            "address": {
+                "countryCode": "TH",
+                "postalCode": "10110",
+                "cityName": "BANGKOK",
+                "lines": [
+                    "232 SUKHUMVIT SOI 13 SUKHUMVIT"
+                ]
+            },
+            "masterChainCode": "CW",
+            "lastUpdate": "2025-11-05T08:07:12",
+            "retailing": {
+                "sponsorship": {
+                    "isSponsored": true
+                }
+            }
+        },
+        {
+            "chainCode": "RT",
+            "iataCode": "BKK",
+            "dupeId": 700008155,
+            "name": "MOVENPICK BANGKOK BDMS",
+            "hotelId": "RTBKKMBW",
+            "geoCode": {
+                "latitude": 13.74772,
+                "longitude": 100.54732
+            },
+            "address": {
+                "countryCode": "TH",
+                "postalCode": "10330",
+                "cityName": "BANGKOK",
+                "lines": [
+                    "2 WIRELESS RD LUMPINI",
+                    "PATHUMWAN"
+                ]
+            },
+            "masterChainCode": "RT",
+            "lastUpdate": "2025-11-18T09:04:29",
+            "retailing": {
+                "sponsorship": {
+                    "isSponsored": true
+                }
+            }
+        },
+        {
+            "chainCode": "RT",
+            "iataCode": "BKK",
+            "dupeId": 700010385,
+            "name": "IBIS BANGKOK SUKHUMVIT 4",
+            "hotelId": "RTBKKNAN",
+            "geoCode": {
+                "latitude": 13.73793,
+                "longitude": 100.55334
+            },
+            "address": {
+                "countryCode": "TH",
+                "postalCode": "10110",
+                "cityName": "BANGKOK",
+                "lines": [
+                    "41 SUKHUMVIT ROAD SOI 4",
+                    "KLONGTOEY"
+                ]
+            },
+            "masterChainCode": "RT",
+            "lastUpdate": "2025-11-19T10:58:52"
+        },
+        {
+            "chainCode": "UI",
+            "iataCode": "BKK",
+            "dupeId": 700061426,
+            "name": "ROYAL PRESIDENT",
+            "hotelId": "UIBKK006",
+            "geoCode": {
+                "latitude": 13.74158,
+                "longitude": 100.55832
+            },
+            "address": {
+                "countryCode": "TH",
+                "postalCode": "10110",
+                "cityName": "BANGKOK",
+                "lines": [
+                    "43 SUKHUMVIT SOI 15"
+                ]
+            },
+            "lastUpdate": "2025-03-19T00:32:14"
+        },
+        {
+            "chainCode": "YZ",
+            "iataCode": "BKK",
+            "dupeId": 701144409,
+            "name": "STAYBRIDGE SUITES SUKHUMVIT",
+            "hotelId": "YZBKK193",
+            "geoCode": {
+                "latitude": 13.72494,
+                "longitude": 100.56811
+            },
+            "address": {
+                "countryCode": "TH",
+                "postalCode": "10110",
+                "cityName": "BANGKOK",
+                "lines": [
+                    "89/8  89/9 SUKHUMVIT 24 ALLEY",
+                    "KHLONG TAN, KHLONG TOEI"
+                ]
+            },
+            "masterChainCode": "6C",
+            "lastUpdate": "2025-11-18T11:41:28"
+        },
+        {
+            "chainCode": "KI",
+            "iataCode": "BKK",
+            "dupeId": 700194408,
+            "name": "SIAM KEMPINSKI HOTEL BANGKOK",
+            "hotelId": "KIBKKSIA",
+            "geoCode": {
+                "latitude": 13.74839,
+                "longitude": 100.53488
+            },
+            "address": {
+                "countryCode": "TH",
+                "postalCode": "10330",
+                "cityName": "BANGKOK",
+                "lines": [
+                    "991/9 RAMA 1 ROAD"
+                ]
+            },
+            "masterChainCode": "GL",
+            "lastUpdate": "2025-11-18T10:59:35"
+        },
+        {
+            "chainCode": "AZ",
+            "iataCode": "BKK",
+            "dupeId": 700564156,
+            "name": "OAKWOOD HOTEL & RESIDENCE SRI RACHA",
+            "hotelId": "AZBKKOAR",
+            "geoCode": {
+                "latitude": 13.16867,
+                "longitude": 100.92601
+            },
+            "address": {
+                "countryCode": "TH",
+                "postalCode": "20110",
+                "cityName": "CHONBURI",
+                "lines": [
+                    "TOWER A 222 2"
+                ]
+            },
+            "lastUpdate": "2023-08-01T10:52:31"
+        },
+        {
+            "chainCode": "CY",
+            "iataCode": "BKK",
+            "dupeId": 700292825,
+            "name": "COURTYARD MARRIOTT BANGKOK SUKHUMVIT 20",
+            "hotelId": "CYBKKCTC",
+            "geoCode": {
+                "latitude": 13.73292,
+                "longitude": 100.56386
+            },
+            "address": {
+                "countryCode": "TH",
+                "postalCode": "10110",
+                "cityName": "BANGKOK",
+                "lines": [
+                    "10, 10/3 SOI SUKHUMVIT 20",
+                    "SUKHUMVIT ROAD, KLONGTOEY"
+                ]
+            },
+            "masterChainCode": "EM",
+            "lastUpdate": "2025-11-16T06:15:22"
+        },
+        {
+            "chainCode": "RT",
+            "iataCode": "BKK",
+            "dupeId": 701245025,
+            "name": "NOVOTEL KOH SI CHANG",
+            "hotelId": "RTBKKNKS",
+            "geoCode": {
+                "latitude": 13.17521,
+                "longitude": 100.80703
+            },
+            "address": {
+                "countryCode": "TH",
+                "postalCode": "20120",
+                "cityName": "CHONBURI",
+                "lines": [
+                    "333 THA THEWAWONG",
+                    "KOH SI CHANG,"
+                ]
+            },
+            "masterChainCode": "RT",
+            "lastUpdate": "2025-11-14T14:16:53"
+        },
+        {
+            "chainCode": "AZ",
+            "iataCode": "BKK",
+            "dupeId": 701042607,
+            "name": "OAKWOOD SUITES BANGKOK",
+            "hotelId": "AZBKK837",
+            "geoCode": {
+                "latitude": 13.72857,
+                "longitude": 100.56859
+            },
+            "address": {
+                "countryCode": "TH",
+                "postalCode": "10110",
+                "cityName": "BANGKOK",
+                "lines": [
+                    "20 SOI SUKHUMVIT",
+                    "24 SUKHUMVIT ROAD. KHLONG TAN"
+                ]
+            },
+            "lastUpdate": "2025-08-28T06:04:06"
+        },
+        {
+            "chainCode": "WA",
+            "iataCode": "BKK",
+            "dupeId": 700211492,
+            "name": "WALDORF ASTORIA BANGKOK",
+            "hotelId": "WABKK456",
+            "geoCode": {
+                "latitude": 13.74243,
+                "longitude": 100.54029
+            },
+            "address": {
+                "countryCode": "TH",
+                "postalCode": "10330",
+                "cityName": "BANGKOK",
+                "lines": [
+                    "151 RATCHADAMRI ROAD",
+                    "LUMPINI"
+                ]
+            },
+            "masterChainCode": "EH",
+            "lastUpdate": "2025-11-13T11:11:26"
+        },
+        {
+            "chainCode": "WV",
+            "iataCode": "BKK",
+            "dupeId": 700141825,
+            "name": "U INCHANTREE KANCHANABRUI",
+            "hotelId": "WVBKK212",
+            "geoCode": {
+                "latitude": 14.04406,
+                "longitude": 99.50159
+            },
+            "address": {
+                "countryCode": "TH",
+                "postalCode": "71000",
+                "cityName": "KANACHANABURI",
+                "lines": [
+                    "443 MAE NAM KWAI ROAD",
+                    "THAMAKHAM"
+                ]
+            },
+            "masterChainCode": "TC",
+            "lastUpdate": "2025-10-10T17:44:50"
+        },
+        {
+            "chainCode": "YX",
+            "iataCode": "BKK",
+            "dupeId": 700250169,
+            "name": "AMARA BANGKOK",
+            "hotelId": "YXBKKAUQ",
+            "geoCode": {
+                "latitude": 13.73044,
+                "longitude": 100.53352
+            },
+            "address": {
+                "countryCode": "TH",
+                "postalCode": "10500",
+                "cityName": "BANGKOK",
+                "lines": [
+                    "180-1 SURAWONG ROAD",
+                    "SIPRAYA, BANGRAK"
+                ]
+            },
+            "lastUpdate": "2025-11-01T06:27:34"
+        },
+        {
+            "chainCode": "FI",
+            "iataCode": "BKK",
+            "dupeId": 700052974,
+            "name": "FRASER SUITES SUKHUMVIT",
+            "hotelId": "FIBKK597",
+            "geoCode": {
+                "latitude": 13.74549,
+                "longitude": 100.55665
+            },
+            "address": {
+                "countryCode": "TH",
+                "postalCode": "10110",
+                "cityName": "BANGKOK",
+                "lines": [
+                    "38 8 SUKHUMVIT SOI 11",
+                    "KLONG TOEY NUA"
+                ]
+            },
+            "lastUpdate": "2025-11-12T10:06:30"
+        },
+        {
+            "chainCode": "RT",
+            "iataCode": "BKK",
+            "dupeId": 700757300,
+            "name": "IBIS STYLES BANGKOK RATCHADA",
+            "hotelId": "RTBKKADA",
+            "geoCode": {
+                "latitude": 13.77728,
+                "longitude": 100.57382
+            },
+            "address": {
+                "countryCode": "TH",
+                "postalCode": "10310",
+                "cityName": "BANGKOK",
+                "lines": [
+                    "212 RATCHADAPHISEK ROAD",
+                    "HUAI KHWANG"
+                ]
+            },
+            "masterChainCode": "RT",
+            "lastUpdate": "2025-11-18T08:41:24"
+        },
+        {
+            "chainCode": "HI",
+            "iataCode": "BKK",
+            "dupeId": 700230890,
+            "name": "HOLIDAY INN EXP SUKHUMVIT 11",
+            "hotelId": "HIBKK41F",
+            "geoCode": {
+                "latitude": 13.74498,
+                "longitude": 100.55686
+            },
+            "address": {
+                "countryCode": "TH",
+                "postalCode": "10110",
+                "cityName": "BANGKOK",
+                "lines": [
+                    "30 SUKHUMVIT SOI 11",
+                    "KLONGTOEY NUA, WATTANA"
+                ]
+            },
+            "masterChainCode": "6C",
+            "lastUpdate": "2025-11-19T09:02:26"
+        },
+        {
+            "chainCode": "UR",
+            "iataCode": "BKK",
+            "dupeId": 701258275,
+            "name": "SIMPLESTAY CHATUCHAK SURSTAY COLLECTION",
+            "hotelId": "URBKK937",
+            "geoCode": {
+                "latitude": 13.79843,
+                "longitude": 100.54672
+            },
+            "address": {
+                "countryCode": "TH",
+                "postalCode": "10900",
+                "cityName": "BANGKOK",
+                "lines": [
+                    "18A KAMPHAENG PHET ROAD",
+                    "CHATUCHAK"
+                ]
+            },
+            "masterChainCode": "BW",
+            "lastUpdate": "2025-10-31T15:49:17"
+        },
+        {
+            "chainCode": "MC",
+            "iataCode": "BKK",
+            "dupeId": 700540138,
+            "name": "BANGKOK MARRIOTT SURAWONGSE",
+            "hotelId": "MCBKKWOM",
+            "geoCode": {
+                "latitude": 13.72733,
+                "longitude": 100.52237
+            },
+            "address": {
+                "countryCode": "TH",
+                "postalCode": "10500",
+                "cityName": "BANGKOK",
+                "lines": [
+                    "262 SURAWONG ROAD"
+                ]
+            },
+            "masterChainCode": "EM",
+            "lastUpdate": "2025-11-17T00:54:49"
+        },
+        {
+            "chainCode": "RT",
+            "iataCode": "BKK",
+            "dupeId": 700513940,
+            "name": "IBIS STYLES BANGKOK SUKHUMVIT",
+            "hotelId": "RTBKKSUB",
+            "geoCode": {
+                "latitude": 13.7125,
+                "longitude": 100.59448
+            },
+            "address": {
+                "countryCode": "TH",
+                "postalCode": "10110",
+                "cityName": "BANGKOK",
+                "lines": [
+                    "1122 SUKHUMVIT ROAD",
+                    "PHRA KHANONG KHLONG TOEI"
+                ]
+            },
+            "masterChainCode": "RT",
+            "lastUpdate": "2025-10-24T23:27:44"
+        },
+        {
+            "chainCode": "AK",
+            "iataCode": "BKK",
+            "dupeId": 700152794,
+            "name": "HOTEL MUSE BANGKOK AUTOGRAPH COLLECTION",
+            "hotelId": "AKBKKHMA",
+            "geoCode": {
+                "latitude": 13.7404,
+                "longitude": 100.54343
+            },
+            "address": {
+                "countryCode": "TH",
+                "postalCode": "10330",
+                "cityName": "BANGKOK",
+                "lines": [
+                    "55/555 LANGSUAN ROAD",
+                    "PLOENCHIT ROAD"
+                ]
+            },
+            "masterChainCode": "EM",
+            "lastUpdate": "2025-11-16T05:44:36"
+        },
+        {
+            "chainCode": "XW",
+            "iataCode": "BKK",
+            "dupeId": 700259109,
+            "name": "TAWA RAVADEE RESORT",
+            "hotelId": "XWBKK366",
+            "geoCode": {
+                "latitude": 13.91844,
+                "longitude": 101.56889
+            },
+            "address": {
+                "countryCode": "TH",
+                "postalCode": "25140",
+                "cityName": "SRIMAHAPHOTE",
+                "lines": [
+                    "77 MOO 7 THATOOM"
+                ]
+            },
+            "masterChainCode": "WW",
+            "lastUpdate": "2025-09-26T06:47:09"
+        },
+        {
+            "chainCode": "GD",
+            "iataCode": "BKK",
+            "dupeId": 700364985,
+            "name": "GRANDE CENTRE POINT SUKHUMVIT 55",
+            "hotelId": "GDBKKGPS",
+            "geoCode": {
+                "latitude": 13.73166,
+                "longitude": 100.58245
+            },
+            "address": {
+                "countryCode": "TH",
+                "postalCode": "10110",
+                "cityName": "BANGKOK",
+                "lines": [
+                    "300 SOI SUKHUMVIT 55",
+                    "A2 KLONGTON NUA W"
+                ]
+            },
+            "lastUpdate": "2025-05-01T15:19:18"
+        },
+        {
+            "chainCode": "HI",
+            "iataCode": "BKK",
+            "dupeId": 700224753,
+            "name": "HOLIDAY INN EXP SATHORN",
+            "hotelId": "HIBKKDCF",
+            "geoCode": {
+                "latitude": 13.72413,
+                "longitude": 100.53087
+            },
+            "address": {
+                "countryCode": "TH",
+                "postalCode": "10500",
+                "cityName": "BANGKOK",
+                "lines": [
+                    "51 SOI PIPAT"
+                ]
+            },
+            "masterChainCode": "6C",
+            "lastUpdate": "2025-09-01T22:13:44"
+        },
+        {
+            "chainCode": "SB",
+            "iataCode": "BKK",
+            "dupeId": 700079671,
+            "name": "SOFITEL BANGKOK SUKHUMVIT",
+            "hotelId": "SBBKKSKV",
+            "geoCode": {
+                "latitude": 13.73925,
+                "longitude": 100.5578
+            },
+            "address": {
+                "countryCode": "TH",
+                "postalCode": "10110",
+                "cityName": "BANGKOK",
+                "lines": [
+                    "189 SUKHUMVIT ROAD SOI 13-15",
+                    "KLONGTOEY WATTANA"
+                ]
+            },
+            "masterChainCode": "RT",
+            "lastUpdate": "2025-11-19T09:55:20"
+        },
+        {
+            "chainCode": "RT",
+            "iataCode": "BKK",
+            "dupeId": 700141647,
+            "name": "IBIS BANGKOK RIVERSIDE",
+            "hotelId": "RTBKKRIV",
+            "geoCode": {
+                "latitude": 13.71783,
+                "longitude": 100.50917
+            },
+            "address": {
+                "countryCode": "TH",
+                "postalCode": "10600",
+                "cityName": "BANGKOK",
+                "lines": [
+                    "27 CHAROENNAKORN RD SOI 17"
+                ]
+            },
+            "masterChainCode": "RT",
+            "lastUpdate": "2025-10-24T23:26:37"
+        },
+        {
+            "chainCode": "RA",
+            "iataCode": "BKK",
+            "dupeId": 700003622,
+            "name": "RAMADA BANGKOK MENAM RIVERSIDE",
+            "hotelId": "RABKKH04",
+            "geoCode": {
+                "latitude": 13.70739,
+                "longitude": 100.50605
+            },
+            "address": {
+                "countryCode": "TH",
+                "postalCode": "10120",
+                "cityName": "BANGKOK",
+                "lines": [
+                    "2074 CHAROENKRUNG ROAD",
+                    "YANNAWA"
+                ]
+            },
+            "masterChainCode": "WR",
+            "lastUpdate": "2025-06-18T16:19:44"
+        },
+        {
+            "chainCode": "YX",
+            "iataCode": "BKK",
+            "dupeId": 700002562,
+            "name": "AMARI BANGKOK",
+            "hotelId": "YXBKKAMA",
+            "geoCode": {
+                "latitude": 13.75143,
+                "longitude": 100.54047
+            },
+            "address": {
+                "countryCode": "TH",
+                "postalCode": "10400",
+                "cityName": "BANGKOK",
+                "lines": [
+                    "847 PETCHBURI ROAD",
+                    "RATCGATHEWI"
+                ]
+            },
+            "lastUpdate": "2025-11-18T07:44:32"
+        },
+        {
+            "chainCode": "RD",
+            "iataCode": "BKK",
+            "dupeId": 700057939,
+            "name": "RADISSON HOTEL CHATEAU DE BANGKOK",
+            "hotelId": "RDBKK30A",
+            "geoCode": {
+                "latitude": 13.7393,
+                "longitude": 100.54942
+            },
+            "address": {
+                "countryCode": "TH",
+                "postalCode": "10330",
+                "cityName": "BANGKOK",
+                "lines": [
+                    "29 SOI RUAMRUDEE 1, PLOENCHIT ROAD",
+                    "LUMPINI, PATUMWAN"
+                ]
+            },
+            "masterChainCode": "CW",
+            "lastUpdate": "2025-10-04T13:52:41"
+        },
+        {
+            "chainCode": "RT",
+            "iataCode": "BKK",
+            "dupeId": 700988814,
+            "name": "IBIS STYLES BANGKOK SILOM",
+            "hotelId": "RTBKKLOM",
+            "geoCode": {
+                "latitude": 13.72739,
+                "longitude": 100.53167
+            },
+            "address": {
+                "countryCode": "TH",
+                "postalCode": "10500",
+                "cityName": "BANGKOK",
+                "lines": [
+                    "289 SILOM ROAD SILOM",
+                    "BANGRAK DISTRICT"
+                ]
+            },
+            "masterChainCode": "RT",
+            "lastUpdate": "2025-11-19T13:20:36"
+        },
+        {
+            "chainCode": "RT",
+            "iataCode": "BKK",
+            "dupeId": 700291016,
+            "name": "NOVOTEL SUKHUMVIT 20",
+            "hotelId": "RTBKKTEL",
+            "geoCode": {
+                "latitude": 13.73153,
+                "longitude": 100.56403
+            },
+            "address": {
+                "countryCode": "TH",
+                "postalCode": "10110",
+                "cityName": "BANGKOK",
+                "lines": [
+                    "19 9 SUKHUMVIT 20",
+                    "KLONG TOEY  WATTANA"
+                ]
+            },
+            "masterChainCode": "RT",
+            "lastUpdate": "2025-10-24T23:27:31"
+        },
+        {
+            "chainCode": "XT",
+            "iataCode": "BKK",
+            "dupeId": 701265637,
+            "name": "NISHITETSU CROOM BANGKOK SILOM",
+            "hotelId": "XTBKKNCB",
+            "geoCode": {
+                "latitude": 13.7282,
+                "longitude": 100.533
+            },
+            "address": {
+                "countryCode": "TH",
+                "postalCode": "10500",
+                "cityName": "BANGKOK",
+                "lines": [
+                    "68/1 SILOM RD",
+                    "SURIYAWONG, BANGRAK"
+                ]
+            },
+            "lastUpdate": "2025-09-23T08:13:52"
+        },
+        {
+            "chainCode": "HO",
+            "iataCode": "BKK",
+            "dupeId": 700071976,
+            "name": "CENTRE POINT HOTEL CHIDLOM",
+            "hotelId": "HOBKKAPO",
+            "geoCode": {
+                "latitude": 13.73903,
+                "longitude": 100.54312
+            },
+            "address": {
+                "countryCode": "TH",
+                "postalCode": "10330",
+                "cityName": "BANGKOK",
+                "lines": [
+                    "NO.60 SOI 1 LANGSUAN ROAD",
+                    "LUMPINI"
+                ]
+            },
+            "lastUpdate": "2025-04-19T20:41:30"
+        },
+        {
+            "chainCode": "GD",
+            "iataCode": "BKK",
+            "dupeId": 700143227,
+            "name": "MAITRIA HOTEL SUKHUMVIT 18",
+            "hotelId": "GDBKK43P",
+            "geoCode": {
+                "latitude": 13.73288,
+                "longitude": 100.56259
+            },
+            "address": {
+                "countryCode": "TH",
+                "postalCode": "10110",
+                "cityName": "BANGKOK",
+                "lines": [
+                    "26 SUKHUMVIT SOI 18",
+                    "SUKHUMVIT ROAD, KLONGTOEY"
+                ]
+            },
+            "lastUpdate": "2025-08-05T10:26:27"
+        },
+        {
+            "chainCode": "RA",
+            "iataCode": "BKK",
+            "dupeId": 701137917,
+            "name": "RAMADA PLAZA RESIDENCE BY WYNDHAM",
+            "hotelId": "RABKK499",
+            "geoCode": {
+                "latitude": 13.70897,
+                "longitude": 100.59854
+            },
+            "address": {
+                "countryCode": "TH",
+                "postalCode": "10110",
+                "cityName": "BANGKOK",
+                "lines": [
+                    "1448 SOI SUKHUMVIT 48 SUKHUMVIT ROAD",
+                    "PHRA KHANONG SUB DISTRICT"
+                ]
+            },
+            "masterChainCode": "WR",
+            "lastUpdate": "2025-11-12T07:31:25"
+        },
+        {
+            "chainCode": "WV",
+            "iataCode": "BKK",
+            "dupeId": 700010984,
+            "name": "PATHUMWAN PRINCESS HOTEL BANGKOK",
+            "hotelId": "WVBKKPPH",
+            "geoCode": {
+                "latitude": 13.74344,
+                "longitude": 100.53006
+            },
+            "address": {
+                "countryCode": "TH",
+                "postalCode": "10330",
+                "cityName": "BANGKOK",
+                "lines": [
+                    "444 MBK CENTRE PHAYATHAI ROAD",
+                    "PATHUMWAN"
+                ]
+            },
+            "masterChainCode": "TC",
+            "lastUpdate": "2024-12-19T08:22:40"
+        },
+        {
+            "chainCode": "YX",
+            "iataCode": "BKK",
+            "dupeId": 700849105,
+            "name": "CENTARA SONRISA SRIRACHA",
+            "hotelId": "YXBKKSRS",
+            "geoCode": {
+                "latitude": 13.1595,
+                "longitude": 100.9144
+            },
+            "address": {
+                "countryCode": "TH",
+                "postalCode": "20110",
+                "cityName": "CHONBURI",
+                "lines": [
+                    "59 MOO 4 SURASAK"
+                ]
+            },
+            "lastUpdate": "2025-11-06T15:12:22"
+        },
+        {
+            "chainCode": "TS",
+            "iataCode": "BKK",
+            "dupeId": 700162994,
+            "name": "THE SIAM",
+            "hotelId": "TSBKKTSI",
+            "geoCode": {
+                "latitude": 13.78114,
+                "longitude": 100.50599
+            },
+            "address": {
+                "countryCode": "TH",
+                "postalCode": "10300",
+                "cityName": "BANGKOK",
+                "lines": [
+                    "3/2 THANON KHAO",
+                    "VACHIRAPAYABAL,DUSIT"
+                ]
+            },
+            "lastUpdate": "2025-10-16T08:25:09"
+        },
+        {
+            "chainCode": "AZ",
+            "iataCode": "BKK",
+            "dupeId": 701142795,
+            "name": "OAKWOOD SUITES TIWANON BANGKOK",
+            "hotelId": "AZBKK444",
+            "geoCode": {
+                "latitude": 13.83883,
+                "longitude": 100.51537
+            },
+            "address": {
+                "countryCode": "TH",
+                "postalCode": "11000",
+                "cityName": "NONTHABURI",
+                "lines": [
+                    "229 KRUNGTHEP-NONTHABURI ROAD",
+                    "BANG KHEN SUB-DISTRICT, MUEANG NONTHABURI"
+                ]
+            },
+            "lastUpdate": "2025-08-28T06:04:11"
+        },
+        {
+            "chainCode": "AZ",
+            "iataCode": "BKK",
+            "dupeId": 701139061,
+            "name": "ASCOTT EMBASSY SATHORN",
+            "hotelId": "AZBKKEMB",
+            "geoCode": {
+                "latitude": 13.72321,
+                "longitude": 100.53526
+            },
+            "address": {
+                "countryCode": "TH",
+                "postalCode": "10120",
+                "cityName": "THUNGMAHAMEK SATHORN",
+                "lines": [
+                    "NO 59 SOUTH SATHORN ROAD"
+                ]
+            },
+            "lastUpdate": "2025-11-14T17:52:11"
+        },
+        {
+            "chainCode": "FG",
+            "iataCode": "BKK",
+            "dupeId": 700188516,
+            "name": "SALA RATTANAKOSIN BANGKOK",
+            "hotelId": "FGBKKSRB",
+            "geoCode": {
+                "latitude": 13.74534,
+                "longitude": 100.49092
+            },
+            "address": {
+                "countryCode": "TH",
+                "postalCode": "10200",
+                "cityName": "BANGKOK",
+                "lines": [
+                    "39 MAHARAT ROAD RATTANAKOSIN ISLAND"
+                ]
+            },
+            "lastUpdate": "2024-07-05T08:23:41"
+        },
+        {
+            "chainCode": "WV",
+            "iataCode": "BKK",
+            "dupeId": 700434237,
+            "name": "THE PANTIP HOTEL LADPRAO BANGKOK",
+            "hotelId": "WVBKK855",
+            "geoCode": {
+                "latitude": 13.76817,
+                "longitude": 100.64644
+            },
+            "address": {
+                "countryCode": "TH",
+                "postalCode": "10240",
+                "cityName": "BANGKOK",
+                "lines": [
+                    "3191 LADPRAO SOI 127, KLONGCHAN, BANGKAP"
+                ]
+            },
+            "masterChainCode": "TC",
+            "lastUpdate": "2023-08-01T10:51:52"
+        },
+        {
+            "chainCode": "WV",
+            "iataCode": "BKK",
+            "dupeId": 700504084,
+            "name": "BABA BEACH CLUB HUAHIN HOTEL",
+            "hotelId": "WVBKKBBA",
+            "geoCode": {
+                "latitude": 12.75827,
+                "longitude": 99.97068
+            },
+            "address": {
+                "countryCode": "TH",
+                "postalCode": "76120",
+                "cityName": "CHA AM",
+                "lines": [
+                    "758, PHETKASEM ROAD",
+                    "TAMBON CHA AM"
+                ]
+            },
+            "masterChainCode": "TC",
+            "lastUpdate": "2023-08-01T10:51:59"
+        },
+        {
+            "chainCode": "HL",
+            "iataCode": "BKK",
+            "dupeId": 700189251,
+            "name": "HILTON SUKHUMVIT BANGKOK",
+            "hotelId": "HLBKK999",
+            "geoCode": {
+                "latitude": 13.72838,
+                "longitude": 100.5693
+            },
+            "address": {
+                "countryCode": "TH",
+                "postalCode": "10110",
+                "cityName": "BANGKOK",
+                "lines": [
+                    "11 SUKHUMVIT SOI 24",
+                    "KHLONG TON"
+                ]
+            },
+            "masterChainCode": "EH",
+            "lastUpdate": "2025-11-12T07:55:45"
+        },
+        {
+            "chainCode": "RA",
+            "iataCode": "BKK",
+            "dupeId": 701137909,
+            "name": "RAMADA BY WYNDHAM BANGKOK SUKHUMVIT 87",
+            "hotelId": "RABKK445",
+            "geoCode": {
+                "latitude": 13.70155,
+                "longitude": 100.60332
+            },
+            "address": {
+                "countryCode": "TH",
+                "postalCode": "10260",
+                "cityName": "BANGKOK",
+                "lines": [
+                    "9 SOI SUKHUMVIT 87, SUKHUMVIT ROAD",
+                    "BANGCHAK SUB DISTRICT, PHRA KHANONG DISTRICT"
+                ]
+            },
+            "masterChainCode": "WR",
+            "lastUpdate": "2025-11-06T07:33:21"
+        },
+        {
+            "chainCode": "AZ",
+            "iataCode": "BKK",
+            "dupeId": 701101641,
+            "name": "SOMERSET SUKHUMVIT 71 BANGKOK",
+            "hotelId": "AZBKKSSB",
+            "geoCode": {
+                "latitude": 13.73675,
+                "longitude": 100.59764
+            },
+            "address": {
+                "countryCode": "TH",
+                "postalCode": "10110",
+                "cityName": "BANGKOK",
+                "lines": [
+                    "1015 29 PRIDI BANOMYONG 45",
+                    "SUKHUMVIT 71 ROAD KHLONG TAN NUEA WATTANA"
+                ]
+            },
+            "lastUpdate": "2025-11-14T18:08:13"
+        },
+        {
+            "chainCode": "RT",
+            "iataCode": "BKK",
+            "dupeId": 700239547,
+            "name": "MOVENPICK HOTEL SUKHUMVIT 15 BANGKOK ",
+            "hotelId": "RTBKK676",
+            "geoCode": {
+                "latitude": 13.74242,
+                "longitude": 100.55854
+            },
+            "address": {
+                "countryCode": "TH",
+                "postalCode": "10110",
+                "cityName": "BANGKOK",
+                "lines": [
+                    "47 SUKHUMVIT ROAD",
+                    "SUKHUMVIT ROAD-KLONGTOEY"
+                ]
+            },
+            "masterChainCode": "RT",
+            "lastUpdate": "2025-11-19T13:30:48"
+        },
+        {
+            "chainCode": "RT",
+            "iataCode": "BKK",
+            "dupeId": 701062900,
+            "name": "NOVOTEL FUTURE PARK RANGSIT",
+            "hotelId": "RTBKKPAR",
+            "geoCode": {
+                "latitude": 13.99557,
+                "longitude": 100.61723
+            },
+            "address": {
+                "countryCode": "TH",
+                "postalCode": "12130",
+                "cityName": "PATHUM THANI",
+                "lines": [
+                    "PAHOLYOTHIN ROAD",
+                    "PRACHATHIPAT"
+                ]
+            },
+            "masterChainCode": "RT",
+            "lastUpdate": "2025-11-19T13:38:09"
+        },
+        {
+            "chainCode": "HY",
+            "iataCode": "BKK",
+            "dupeId": 536962735,
+            "name": "ANDAZ ONE BANGKOK",
+            "hotelId": "HYBKKAZB",
+            "geoCode": {
+                "latitude": 13.72755,
+                "longitude": 100.54546
+            },
+            "address": {
+                "countryCode": "TH",
+                "postalCode": "10330",
+                "cityName": "BANGKOK",
+                "lines": [
+                    "201 WIRELESS ROAD LUMPHINI PATUMWAN"
+                ]
+            },
+            "masterChainCode": "LH",
+            "lastUpdate": "2025-11-18T10:21:48"
+        },
+        {
+            "chainCode": "MC",
+            "iataCode": "BKK",
+            "dupeId": 700188684,
+            "name": "BANGKOK MARRIOTT SUKHUMVIT",
+            "hotelId": "MCBKKMSM",
+            "geoCode": {
+                "latitude": 13.72338,
+                "longitude": 100.58047
+            },
+            "address": {
+                "countryCode": "TH",
+                "postalCode": "10110",
+                "cityName": "BANGKOK",
+                "lines": [
+                    "2 SUKHUMVIT SOI 57",
+                    "KLONGTAN NUA, WATTANA"
+                ]
+            },
+            "masterChainCode": "EM",
+            "lastUpdate": "2025-11-18T15:06:51"
+        },
+        {
+            "chainCode": "HS",
+            "iataCode": "BKK",
+            "dupeId": 700025178,
+            "name": "TRINITY SILOM HOTEL",
+            "hotelId": "HSBKKAMB",
+            "geoCode": {
+                "latitude": 13.72444,
+                "longitude": 100.53088
+            },
+            "address": {
+                "countryCode": "TH",
+                "postalCode": "10500",
+                "cityName": "BANGKOK",
+                "lines": [
+                    "150 SILOM SOI 3 NARATIWAS SOI 3 OR SATHORN SOI 8 ,",
+                    "SILOM ROAD"
+                ]
+            },
+            "lastUpdate": "2023-08-01T09:49:50"
+        },
+        {
+            "chainCode": "SG",
+            "iataCode": "BKK",
+            "dupeId": 700002570,
+            "name": "SHANGRI LA BANGKOK",
+            "hotelId": "SGBKKSHA",
+            "geoCode": {
+                "latitude": 13.71947,
+                "longitude": 100.51363
+            },
+            "address": {
+                "countryCode": "TH",
+                "postalCode": "10500",
+                "cityName": "BANGKOK",
+                "lines": [
+                    "89 SOI WAT SUAN PLU",
+                    "NEW ROAD BANGRAK"
+                ]
+            },
+            "lastUpdate": "2025-08-20T23:13:27"
+        },
+        {
+            "chainCode": "UR",
+            "iataCode": "BKK",
+            "dupeId": 700759699,
+            "name": "SURESTAY ICONIC SUVARNABHUMI",
+            "hotelId": "URBKK936",
+            "geoCode": {
+                "latitude": 13.60062,
+                "longitude": 100.84392
+            },
+            "address": {
+                "countryCode": "TH",
+                "postalCode": "10560",
+                "cityName": "SAMUT PRAKAN",
+                "lines": [
+                    "268 MOO 4, TAMBON BANG BO, AMPHOE BANG BO"
+                ]
+            },
+            "masterChainCode": "BW",
+            "lastUpdate": "2025-10-22T08:26:56"
+        },
+        {
+            "chainCode": "BW",
+            "iataCode": "BKK",
+            "dupeId": 701188621,
+            "name": "BEST WESTERN CHATUCHAK",
+            "hotelId": "BWBKK930",
+            "geoCode": {
+                "latitude": 13.79842,
+                "longitude": 100.54694
+            },
+            "address": {
+                "countryCode": "TH",
+                "postalCode": "10900",
+                "cityName": "CHATUCHAK",
+                "lines": [
+                    "18 KAMPHAENG PHET ROAD"
+                ]
+            },
+            "masterChainCode": "EW",
+            "lastUpdate": "2025-10-18T08:41:32"
+        },
+        {
+            "chainCode": "RD",
+            "iataCode": "BKK",
+            "dupeId": 701304065,
+            "name": "RADISSON HOTEL DON MUEANG BANGKOK",
+            "hotelId": "RDBKK37A",
+            "geoCode": {
+                "latitude": 13.91552,
+                "longitude": 100.58564
+            },
+            "address": {
+                "countryCode": "TH",
+                "postalCode": "10110",
+                "cityName": "BANGKOK",
+                "lines": [
+                    "439/1 CHANG AKAT UTHIT ROAD,",
+                    "DON MUEANG SUB-DISTRICT, DON MUEANG DISTRICT"
+                ]
+            },
+            "masterChainCode": "CW",
+            "lastUpdate": "2025-07-25T09:05:04"
+        },
+        {
+            "chainCode": "PU",
+            "iataCode": "BKK",
+            "dupeId": 700047801,
+            "name": "PULLMAN BANGKOK KING POWER",
+            "hotelId": "PUBKKPUL",
+            "geoCode": {
+                "latitude": 13.7586,
+                "longitude": 100.53735
+            },
+            "address": {
+                "countryCode": "TH",
+                "postalCode": "10400",
+                "cityName": "BANGKOK",
+                "lines": [
+                    "8/2 RANGNAM ROAD",
+                    "THANON PHAYATHAI RATCHATHEWI"
+                ]
+            },
+            "masterChainCode": "RT",
+            "lastUpdate": "2025-11-19T10:23:57"
+        },
+        {
+            "chainCode": "YX",
+            "iataCode": "BKK",
+            "dupeId": 700163823,
+            "name": "SHAMA SUKHUMVIT BANGKOK",
+            "hotelId": "YXBKKSHA",
+            "geoCode": {
+                "latitude": 13.74063,
+                "longitude": 100.55246
+            },
+            "address": {
+                "countryCode": "TH",
+                "postalCode": "10110",
+                "cityName": "BANGKOK",
+                "lines": [
+                    "39 1 SOI SUKHUMVIT 2"
+                ]
+            },
+            "lastUpdate": "2025-10-22T06:44:24"
+        },
+        {
+            "chainCode": "YX",
+            "iataCode": "BKK",
+            "dupeId": 700072302,
+            "name": "CENTARA LIFE HOTEL PHRA NAKHON",
+            "hotelId": "YXBKKCCH",
+            "geoCode": {
+                "latitude": 13.76073,
+                "longitude": 100.50461
+            },
+            "address": {
+                "countryCode": "TH",
+                "postalCode": "10200",
+                "cityName": "BANGKOK",
+                "lines": [
+                    "78 PRAJATIPATAI ROAD",
+                    "BAN PHAN THOM"
+                ]
+            },
+            "lastUpdate": "2025-11-06T15:12:58"
+        },
+        {
+            "chainCode": "YX",
+            "iataCode": "BKK",
+            "dupeId": 700048508,
+            "name": "SHAMA LAKEVIEW ASOKE BANGKOK",
+            "hotelId": "YXBKK127",
+            "geoCode": {
+                "latitude": 13.72993,
+                "longitude": 100.56147
+            },
+            "address": {
+                "countryCode": "TH",
+                "postalCode": "10110",
+                "cityName": "BANGKOK",
+                "lines": [
+                    "41 SUKHUMVIT SOI 16",
+                    "KLONGTOEY"
+                ]
+            },
+            "lastUpdate": "2025-11-18T09:44:11"
+        },
+        {
+            "chainCode": "VX",
+            "iataCode": "BKK",
+            "dupeId": 536262174,
+            "name": "VOCO SURAWONG BY IHG",
+            "hotelId": "VXBKKEDF",
+            "geoCode": {
+                "latitude": 13.72799,
+                "longitude": 100.52562
+            },
+            "address": {
+                "countryCode": "TH",
+                "postalCode": "10500",
+                "cityName": "BANGKOK",
+                "lines": [
+                    "80 SURAWONG ROAD BANGRAK"
+                ]
+            },
+            "masterChainCode": "6C",
+            "lastUpdate": "2025-10-30T12:37:34"
+        },
+        {
+            "chainCode": "IC",
+            "iataCode": "BKK",
+            "dupeId": 701113242,
+            "name": "INTERCONTINENTAL KHAO YAI RESORT",
+            "hotelId": "ICBKK043",
+            "geoCode": {
+                "latitude": 14.51176,
+                "longitude": 101.534
+            },
+            "address": {
+                "countryCode": "TH",
+                "postalCode": "30450",
+                "cityName": "KHAO YAI",
+                "lines": [
+                    "262 MOO 6 PONG TALONG SUB-DISTRICT",
+                    "PAK CHONG DISTRICT, NAKHON RATCHSIMA"
+                ]
+            },
+            "masterChainCode": "6C",
+            "lastUpdate": "2025-10-02T06:25:19"
+        },
+        {
+            "chainCode": "HS",
+            "iataCode": "BKK",
+            "dupeId": 700095389,
+            "name": "ABLOOM EXCLUSIVE SERVICED APARTMENT",
+            "hotelId": "HSBKKAOM",
+            "geoCode": {
+                "latitude": 13.77311,
+                "longitude": 100.54127
+            },
+            "address": {
+                "countryCode": "TH",
+                "postalCode": "10400",
+                "cityName": "BANGKOK",
+                "lines": [
+                    "29 PHAHONYOTHIN SOI 3"
+                ]
+            },
+            "lastUpdate": "2023-08-01T09:57:56"
+        },
+        {
+            "chainCode": "RT",
+            "iataCode": "BKK",
+            "dupeId": 701228964,
+            "name": "MERCURE BANGKOK SURAWONG",
+            "hotelId": "RTBKKMEC",
+            "geoCode": {
+                "latitude": 13.72794,
+                "longitude": 100.52561
+            },
+            "address": {
+                "countryCode": "TH",
+                "postalCode": "10500",
+                "cityName": "BANGKOK",
+                "lines": [
+                    "222 SURAWONG ROAD",
+                    "SI PHRAYA BANGRAK DISTRICT"
+                ]
+            },
+            "masterChainCode": "RT",
+            "lastUpdate": "2025-11-15T17:47:40"
+        },
+        {
+            "chainCode": "WV",
+            "iataCode": "BKK",
+            "dupeId": 700221932,
+            "name": "U SATHORN BANGKOK",
+            "hotelId": "WVBKK703",
+            "geoCode": {
+                "latitude": 13.72435,
+                "longitude": 100.54854
+            },
+            "address": {
+                "countryCode": "TH",
+                "postalCode": "10120",
+                "cityName": "BANGKOK",
+                "lines": [
+                    "105 1 SOI NGAM DUPHLI"
+                ]
+            },
+            "masterChainCode": "TC",
+            "lastUpdate": "2025-10-10T17:47:02"
+        },
+        {
+            "chainCode": "GD",
+            "iataCode": "BKK",
+            "dupeId": 700046008,
+            "name": "VALIA HOTEL BANGKOK",
+            "hotelId": "GDBKKVHB",
+            "geoCode": {
+                "latitude": 13.72153,
+                "longitude": 100.56544
+            },
+            "address": {
+                "countryCode": "TH",
+                "postalCode": "10110",
+                "cityName": "BANGKOK",
+                "lines": [
+                    "95 370 SUKHUMVIT 24 22  KLONGTON  KLONGTOEY"
+                ]
+            },
+            "lastUpdate": "2025-10-21T10:25:09"
+        },
+        {
+            "chainCode": "MO",
+            "iataCode": "BKK",
+            "dupeId": 700003621,
+            "name": "MANDARIN ORIENTAL BANGKOK",
+            "hotelId": "MOBKK888",
+            "geoCode": {
+                "latitude": 13.72405,
+                "longitude": 100.51408
+            },
+            "address": {
+                "countryCode": "TH",
+                "postalCode": "10500",
+                "cityName": "BANGKOK",
+                "lines": [
+                    "48 ORIENTAL AVENUE"
+                ]
+            },
+            "lastUpdate": "2025-05-02T22:36:36"
+        },
+        {
+            "chainCode": "CN",
+            "iataCode": "BKK",
+            "dupeId": 700021324,
+            "name": "CONRAD BANGKOK",
+            "hotelId": "CNBKK259",
+            "geoCode": {
+                "latitude": 13.73888,
+                "longitude": 100.5483
+            },
+            "address": {
+                "countryCode": "TH",
+                "postalCode": "10330",
+                "cityName": "BANGKOK",
+                "lines": [
+                    "87 WIRELESS ROAD"
+                ]
+            },
+            "masterChainCode": "EH",
+            "lastUpdate": "2025-10-31T12:32:09"
+        },
+        {
+            "chainCode": "VT",
+            "iataCode": "BKK",
+            "dupeId": 700982515,
+            "name": "VIGNETTE COLLECTION SINDHORN MIDTOWN ",
+            "hotelId": "VTBKK355",
+            "geoCode": {
+                "latitude": 13.73761,
+                "longitude": 100.54245
+            },
+            "address": {
+                "countryCode": "TH",
+                "postalCode": "10330",
+                "cityName": "BANGKOK",
+                "lines": [
+                    "68 LANGSUAN ROAD"
+                ]
+            },
+            "masterChainCode": "6C",
+            "lastUpdate": "2025-08-22T22:05:01"
+        },
+        {
+            "chainCode": "ON",
+            "iataCode": "BKK",
+            "dupeId": 700435822,
+            "name": "CROSS VIBE BANGKOK SUKHUMVIT",
+            "hotelId": "ONBKKVSU",
+            "geoCode": {
+                "latitude": 13.70411,
+                "longitude": 100.59926
+            },
+            "address": {
+                "countryCode": "TH",
+                "postalCode": "10260",
+                "cityName": "BANGKOK",
+                "lines": [
+                    "10 20 SUKHUMVIT 52 ALY PHRA KHANONG"
+                ]
+            },
+            "lastUpdate": "2025-11-14T04:56:11"
+        },
+        {
+            "chainCode": "WV",
+            "iataCode": "BKK",
+            "dupeId": 700358360,
+            "name": "U KHAO YAI",
+            "hotelId": "WVBKK783",
+            "geoCode": {
+                "latitude": 14.55308,
+                "longitude": 101.47233
+            },
+            "address": {
+                "countryCode": "TH",
+                "postalCode": "30130",
+                "cityName": "KHAO YAI",
+                "lines": [
+                    "99/22 MOO1  MOOSI PAK CHONG"
+                ]
+            },
+            "masterChainCode": "TC",
+            "lastUpdate": "2025-10-10T17:45:27"
+        },
+        {
+            "chainCode": "HY",
+            "iataCode": "BKK",
+            "dupeId": 700042606,
+            "name": "HYATT REGENCY BANGKOK SUVARNABHUMI APT",
+            "hotelId": "HYBKKSUV",
+            "geoCode": {
+                "latitude": 13.69757,
+                "longitude": 100.75183
+            },
+            "address": {
+                "countryCode": "TH",
+                "postalCode": "10540",
+                "cityName": "SAMUTPRAKAN",
+                "lines": [
+                    "999 SUVARNABHUMI AIRPORT HOTEL BUILDING, MOO 1",
+                    "NONGPRUE, BANG PHLI,"
+                ]
+            },
+            "masterChainCode": "LH",
+            "lastUpdate": "2025-09-10T06:01:43"
+        },
+        {
+            "chainCode": "BW",
+            "iataCode": "BKK",
+            "dupeId": 700731451,
+            "name": "VIB BEST WESTERN SANAM PAO",
+            "hotelId": "BWBKK365",
+            "geoCode": {
+                "latitude": 13.77306,
+                "longitude": 100.54205
+            },
+            "address": {
+                "countryCode": "TH",
+                "postalCode": "10400",
+                "cityName": "BANGKOK",
+                "lines": [
+                    "1029 PHAHOLYOTHIN ROAD SAMSEN NAI",
+                    "PHAYATHAI THAI DISTRICT"
+                ]
+            },
+            "masterChainCode": "EW",
+            "lastUpdate": "2025-10-31T15:47:30"
+        },
+        {
+            "chainCode": "AZ",
+            "iataCode": "BKK",
+            "dupeId": 700071979,
+            "name": "OAKWOOD RESIDENCE SUKHUMVIT 24",
+            "hotelId": "AZBKK024",
+            "geoCode": {
+                "latitude": 13.72805,
+                "longitude": 100.56928
+            },
+            "address": {
+                "countryCode": "TH",
+                "postalCode": "10110",
+                "cityName": "BANGKOK",
+                "lines": [
+                    "KLONGTON SUBDISTRICT",
+                    "15 SUKHUMVIT SOI 24"
+                ]
+            },
+            "lastUpdate": "2025-11-14T17:59:25"
+        },
+        {
+            "chainCode": "CN",
+            "iataCode": "BKK",
+            "dupeId": 700162733,
+            "name": "CONRAD BANGKOK RESIDENCES",
+            "hotelId": "CNBKK260",
+            "geoCode": {
+                "latitude": 13.73869,
+                "longitude": 100.54822
+            },
+            "address": {
+                "countryCode": "TH",
+                "postalCode": "10330",
+                "cityName": "BANGKOK",
+                "lines": [
+                    "ALL SEASONS PLACE 87/3 WIRELESS"
+                ]
+            },
+            "masterChainCode": "EH",
+            "lastUpdate": "2025-10-31T04:51:05"
+        },
+        {
+            "chainCode": "MC",
+            "iataCode": "BKK",
+            "dupeId": 700096705,
+            "name": "MARRIOTT EXEC APTS SATHORN VIS",
+            "hotelId": "MCBKKEAM",
+            "geoCode": {
+                "latitude": 13.72303,
+                "longitude": 100.53693
+            },
+            "address": {
+                "countryCode": "TH",
+                "postalCode": "10120",
+                "cityName": "BANGKOK",
+                "lines": [
+                    "1 SATHORN SOI 3 SOUTH SATHORN"
+                ]
+            },
+            "masterChainCode": "EM",
+            "lastUpdate": "2025-11-16T09:54:28"
+        },
+        {
+            "chainCode": "RT",
+            "iataCode": "BKK",
+            "dupeId": 700436869,
+            "name": "IBIS BANGKOK IMPACT",
+            "hotelId": "RTBKKIIM",
+            "geoCode": {
+                "latitude": 13.91622,
+                "longitude": 100.55156
+            },
+            "address": {
+                "countryCode": "TH",
+                "postalCode": "11120",
+                "cityName": "NONTHABURI",
+                "lines": [
+                    "93 POPULAR ROAD",
+                    "BANMAI SUBDISTRICT"
+                ]
+            },
+            "masterChainCode": "RT",
+            "lastUpdate": "2025-10-24T23:27:22"
+        },
+        {
+            "chainCode": "FP",
+            "iataCode": "BKK",
+            "dupeId": 534937332,
+            "name": "FOUR POINTS BY SHERATON BANGKOK, SUKHUM",
+            "hotelId": "FPBKKFOO",
+            "geoCode": {
+                "latitude": 13.72984,
+                "longitude": 100.56502
+            },
+            "address": {
+                "countryCode": "TH",
+                "postalCode": "10110",
+                "cityName": "BANGKOK",
+                "lines": [
+                    "30 SUKHUMVIT ROAD SOI 22",
+                    "KHLONG TOEI DISTRICT"
+                ]
+            },
+            "masterChainCode": "EM",
+            "lastUpdate": "2025-11-18T22:30:20"
+        },
+        {
+            "chainCode": "BW",
+            "iataCode": "BKK",
+            "dupeId": 700286046,
+            "name": "BEST WESTERN PLUS WANDA GRAND",
+            "hotelId": "BWBKK363",
+            "geoCode": {
+                "latitude": 13.90383,
+                "longitude": 100.53085
+            },
+            "address": {
+                "countryCode": "TH",
+                "postalCode": "11120",
+                "cityName": "PAKKRED",
+                "lines": [
+                    "111 M.4 CHAENGWATTANA ROAD",
+                    "PAKKRED"
+                ]
+            },
+            "masterChainCode": "EW",
+            "lastUpdate": "2025-10-31T15:46:49"
+        },
+        {
+            "chainCode": "LX",
+            "iataCode": "BKK",
+            "dupeId": 537257561,
+            "name": "SIRI SALA PRIVATE THAI VILLA",
+            "hotelId": "LXBKKSSP",
+            "geoCode": {
+                "latitude": 13.76543,
+                "longitude": 100.47695
+            },
+            "address": {
+                "countryCode": "TH",
+                "postalCode": "10700",
+                "cityName": "BANGKOK",
+                "lines": [
+                    "28 8 CHARAN SANITWONG 34",
+                    "ARUN AMARIN"
+                ]
+            },
+            "lastUpdate": "2025-11-19T15:46:13"
+        },
+        {
+            "chainCode": "GI",
+            "iataCode": "BKK",
+            "dupeId": 700143734,
+            "name": "THE HILTON GARDEN INN BANGKOK SILOM ",
+            "hotelId": "GIBKKFEN",
+            "geoCode": {
+                "latitude": 13.72307,
+                "longitude": 100.51845
+            },
+            "address": {
+                "countryCode": "TH",
+                "postalCode": "10500",
+                "cityName": "BANGKOK",
+                "lines": [
+                    "320 SILOM ROAD"
+                ]
+            },
+            "masterChainCode": "EH",
+            "lastUpdate": "2025-10-31T04:57:29"
+        },
+        {
+            "chainCode": "YX",
+            "iataCode": "BKK",
+            "dupeId": 700143222,
+            "name": "SHAMA PETCHBURI 47 BANGKOK",
+            "hotelId": "YXBKKARB",
+            "geoCode": {
+                "latitude": 13.74803,
+                "longitude": 100.58481
+            },
+            "address": {
+                "countryCode": "TH",
+                "postalCode": "10310",
+                "cityName": "BANGKOK",
+                "lines": [
+                    "36 SOI SOONVIJAI NEW PETCHBURI RD",
+                    "BANGKAPI HUAY KWANG"
+                ]
+            },
+            "lastUpdate": "2025-10-17T05:44:15"
+        },
+        {
+            "chainCode": "RT",
+            "iataCode": "BKK",
+            "dupeId": 700949309,
+            "name": "MERCURE BANGKOK SUKHUMVIT 24",
+            "hotelId": "RTBKKOVO",
+            "geoCode": {
+                "latitude": 13.72939,
+                "longitude": 100.56933
+            },
+            "address": {
+                "countryCode": "TH",
+                "postalCode": "10110",
+                "cityName": "BANGKOK",
+                "lines": [
+                    "51  SUKHUMVIT 24 ROAD",
+                    "KLONG TUN  KLONG TOEY"
+                ]
+            },
+            "masterChainCode": "RT",
+            "lastUpdate": "2025-11-19T13:18:34"
+        },
+        {
+            "chainCode": "PU",
+            "iataCode": "BKK",
+            "dupeId": 700002574,
+            "name": "PULLMAN BANGKOK HOTEL G",
+            "hotelId": "PUBKKMON",
+            "geoCode": {
+                "latitude": 13.72604,
+                "longitude": 100.52631
+            },
+            "address": {
+                "countryCode": "TH",
+                "postalCode": "10500",
+                "cityName": "BANGKOK",
+                "lines": [
+                    "188 SILOM ROAD",
+                    "BANGRAK"
+                ]
+            },
+            "masterChainCode": "RT",
+            "lastUpdate": "2025-11-19T09:44:36"
+        },
+        {
+            "chainCode": "PK",
+            "iataCode": "BKK",
+            "dupeId": 700149064,
+            "name": "PARK PLAZA BANGKOK SOI 18",
+            "hotelId": "PKBKK616",
+            "geoCode": {
+                "latitude": 13.73328,
+                "longitude": 100.56269
+            },
+            "address": {
+                "countryCode": "TH",
+                "postalCode": "10110",
+                "cityName": "BANGKOK",
+                "lines": [
+                    "SUKHUMVIT SOI 18 SUKHUMVIT ROA"
+                ]
+            },
+            "masterChainCode": "CW",
+            "lastUpdate": "2025-10-15T07:30:34"
+        },
+        {
+            "chainCode": "GD",
+            "iataCode": "BKK",
+            "dupeId": 701303398,
+            "name": "GRANDE CENTRE POINT LUMPHINI BANGKOK",
+            "hotelId": "GDBKKGCL",
+            "geoCode": {
+                "latitude": 13.72464,
+                "longitude": 100.54756
+            },
+            "address": {
+                "countryCode": "TH",
+                "postalCode": "10120",
+                "cityName": "BANGKOK",
+                "lines": [
+                    "1188 RAMA 4 RD SATHON"
+                ]
+            },
+            "lastUpdate": "2025-08-18T15:48:31"
+        },
+        {
+            "chainCode": "YZ",
+            "iataCode": "BKK",
+            "dupeId": 700886896,
+            "name": "STAYBRIDGE STES THONGLOR",
+            "hotelId": "YZBKK67E",
+            "geoCode": {
+                "latitude": 13.72834,
+                "longitude": 100.58072
+            },
+            "address": {
+                "countryCode": "TH",
+                "postalCode": "10110",
+                "cityName": "BANGKOK",
+                "lines": [
+                    "101 SOI SUKHUMVIT 55 (THONGLOR ROAD)",
+                    "KHWAENG KHLONG TAN NUEA, KHET WATTHANA"
+                ]
+            },
+            "masterChainCode": "6C",
+            "lastUpdate": "2025-11-18T11:37:30"
+        },
+        {
+            "chainCode": "IC",
+            "iataCode": "BKK",
+            "dupeId": 701214270,
+            "name": "INTERCONTINENTAL SUKHUMVIT",
+            "hotelId": "ICBKKD10",
+            "geoCode": {
+                "latitude": 13.72251,
+                "longitude": 100.58145
+            },
+            "address": {
+                "countryCode": "TH",
+                "postalCode": "10110",
+                "cityName": "BANGKOK",
+                "lines": [
+                    "10 SOI SUKHUMVIT 59, SUKHUMVIT ROAD",
+                    "KLONGTAN NUA, WATTHANA"
+                ]
+            },
+            "masterChainCode": "6C",
+            "lastUpdate": "2025-11-17T17:40:18"
+        },
+        {
+            "chainCode": "FG",
+            "iataCode": "BKK",
+            "dupeId": 700013406,
+            "name": "MONTIEN HOTEL SURAWONG BANGKOK",
+            "hotelId": "FGBKKMSB",
+            "geoCode": {
+                "latitude": 13.73054,
+                "longitude": 100.5311
+            },
+            "address": {
+                "countryCode": "TH",
+                "postalCode": "10500",
+                "cityName": "BANGKOK",
+                "lines": [
+                    "54 SURAWONG ROAD, SILOM"
+                ]
+            },
+            "lastUpdate": "2023-08-01T09:47:40"
+        },
+        {
+            "chainCode": "WV",
+            "iataCode": "BKK",
+            "dupeId": 701147956,
+            "name": "CHATRIUM GRAND BANGKOK",
+            "hotelId": "WVBKK425",
+            "geoCode": {
+                "latitude": 13.75071,
+                "longitude": 100.53488
+            },
+            "address": {
+                "countryCode": "TH",
+                "postalCode": "10400",
+                "cityName": "BANGKOK",
+                "lines": [
+                    "728 PETCHABURI ROAD, RATCHATHEWI"
+                ]
+            },
+            "masterChainCode": "TC",
+            "lastUpdate": "2024-07-09T15:44:59"
+        },
+        {
+            "chainCode": "WV",
+            "iataCode": "BKK",
+            "dupeId": 700050942,
+            "name": "KIRIMAYA GOLF RESORT SPA",
+            "hotelId": "WVBKKKIR",
+            "geoCode": {
+                "latitude": 14.51055,
+                "longitude": 101.4223
+            },
+            "address": {
+                "countryCode": "TH",
+                "postalCode": "30130",
+                "cityName": "NAKORN RATCHASHIMA",
+                "lines": [
+                    "1-3 MOO 6 THANARAT RD"
+                ]
+            },
+            "masterChainCode": "TC",
+            "lastUpdate": "2024-02-17T09:16:46"
+        },
+        {
+            "chainCode": "ON",
+            "iataCode": "BKK",
+            "dupeId": 700188113,
+            "name": "LUMEN BANGKOK SRINAKARIN",
+            "hotelId": "ONBKKSRI",
+            "geoCode": {
+                "latitude": 13.69054,
+                "longitude": 100.64659
+            },
+            "address": {
+                "countryCode": "TH",
+                "postalCode": "10250",
+                "cityName": "BANGKOK",
+                "lines": [
+                    "90 PER 9 SRINAKARIN ROAD"
+                ]
+            },
+            "lastUpdate": "2025-04-29T20:05:22"
+        },
+        {
+            "chainCode": "RA",
+            "iataCode": "BKK",
+            "dupeId": 700053696,
+            "name": "D'MA BANGKOK",
+            "hotelId": "RABKK001",
+            "geoCode": {
+                "latitude": 13.75306,
+                "longitude": 100.54624
+            },
+            "address": {
+                "countryCode": "TH",
+                "postalCode": "10400",
+                "cityName": "BANGKOK",
+                "lines": [
+                    "NAKORN LUANG PLAZA 1091 388 PETCHBURI ROAD"
+                ]
+            },
+            "masterChainCode": "WR",
+            "lastUpdate": "2025-07-09T14:01:09"
+        },
+        {
+            "chainCode": "AM",
+            "iataCode": "BKK",
+            "dupeId": 701248741,
+            "name": "AMAN NAI LERT BANGKOK",
+            "hotelId": "AMBKKANL",
+            "geoCode": {
+                "latitude": 13.74713,
+                "longitude": 100.54656
+            },
+            "address": {
+                "countryCode": "TH",
+                "postalCode": "10330",
+                "cityName": "BANGKOK",
+                "lines": [
+                    "1 SOI SOMKID",
+                    "LUMPINI PATHUMWAN"
+                ]
+            },
+            "lastUpdate": "2025-09-30T03:34:33"
+        },
+        {
+            "chainCode": "FP",
+            "iataCode": "BKK",
+            "dupeId": 700146426,
+            "name": "FOUR POINTS BANGKOK PLOENCHIT",
+            "hotelId": "FPBKKPUO",
+            "geoCode": {
+                "latitude": 13.74268,
+                "longitude": 100.54938
+            },
+            "address": {
+                "countryCode": "TH",
+                "postalCode": "10330",
+                "cityName": "BANGKOK",
+                "lines": [
+                    "566 PLOENCHIT ROAD",
+                    "LUMPINI PATUMWAN"
+                ]
+            },
+            "masterChainCode": "EM",
+            "lastUpdate": "2025-11-18T20:47:16"
+        },
+        {
+            "chainCode": "YX",
+            "iataCode": "BKK",
+            "dupeId": 700055523,
+            "name": "FURAMAXCLUSIVE ASOKE BANGKOK",
+            "hotelId": "YXBKKXAB",
+            "geoCode": {
+                "latitude": 13.74006,
+                "longitude": 100.56162
+            },
+            "address": {
+                "countryCode": "TH",
+                "postalCode": "10110",
+                "cityName": "BANGKOK",
+                "lines": [
+                    "SUKHUMVIT SOI 21",
+                    "WATTANA"
+                ]
+            },
+            "lastUpdate": "2025-10-28T11:00:39"
+        },
+        {
+            "chainCode": "RT",
+            "iataCode": "BKK",
+            "dupeId": 700132030,
+            "name": "GRAND MERCURE ASOKE RESIDENCE",
+            "hotelId": "RTBKKASO",
+            "geoCode": {
+                "latitude": 13.74154,
+                "longitude": 100.56067
+            },
+            "address": {
+                "countryCode": "TH",
+                "postalCode": "10110",
+                "cityName": "BANGKOK",
+                "lines": [
+                    "50 5 SUKHUMVIT SOI 19",
+                    "WATTANA DISTRICT"
+                ]
+            },
+            "masterChainCode": "RT",
+            "lastUpdate": "2025-11-15T11:18:48"
+        },
+        {
+            "chainCode": "RT",
+            "iataCode": "BKK",
+            "dupeId": 700658400,
+            "name": "NOVOTEL SUKHUMVIT 4",
+            "hotelId": "RTBKKKOK",
+            "geoCode": {
+                "latitude": 13.73935,
+                "longitude": 100.55305
+            },
+            "address": {
+                "countryCode": "TH",
+                "postalCode": "10110",
+                "cityName": "BANGKOK",
+                "lines": [
+                    "27 SUKHUMVIT 4",
+                    "KLONGTOEY"
+                ]
+            },
+            "masterChainCode": "RT",
+            "lastUpdate": "2025-11-19T13:10:25"
+        },
+        {
+            "chainCode": "DS",
+            "iataCode": "BKK",
+            "dupeId": 700052965,
+            "name": "PUBLIC HOUSE BANGKOK",
+            "hotelId": "DSBKKPHB",
+            "geoCode": {
+                "latitude": 13.73912,
+                "longitude": 100.56705
+            },
+            "address": {
+                "countryCode": "TH",
+                "postalCode": "10110",
+                "cityName": "WATTHANA",
+                "lines": [
+                    "249 SOI SUKHUMVIT 31",
+                    "KHLONG TAN NUEA"
+                ]
+            },
+            "lastUpdate": "2025-10-14T10:44:36"
+        },
+        {
+            "chainCode": "AZ",
+            "iataCode": "BKK",
+            "dupeId": 700079420,
+            "name": "CITADINES SUKHUMVIT 11 BANGKOK",
+            "hotelId": "AZBKK256",
+            "geoCode": {
+                "latitude": 13.7439,
+                "longitude": 100.55695
+            },
+            "address": {
+                "countryCode": "TH",
+                "postalCode": "10110",
+                "cityName": "BANGKOK",
+                "lines": [
+                    "22 22 SOI SUKHUMVIT 11",
+                    "SUKHUMVIT ROAD"
+                ]
+            },
+            "lastUpdate": "2025-11-14T17:56:16"
+        },
+        {
+            "chainCode": "HL",
+            "iataCode": "BKK",
+            "dupeId": 700042345,
+            "name": "DBLTREE HILTON PLOENCHIT",
+            "hotelId": "HLBKK372",
+            "geoCode": {
+                "latitude": 13.74032,
+                "longitude": 100.55171
+            },
+            "address": {
+                "countryCode": "TH",
+                "postalCode": "10110",
+                "cityName": "BANGKOK",
+                "lines": [
+                    "12 SUKHUMVIT SOI 2"
+                ]
+            },
+            "masterChainCode": "EH",
+            "lastUpdate": "2025-11-07T16:01:44"
+        },
+        {
+            "chainCode": "YX",
+            "iataCode": "BKK",
+            "dupeId": 700162963,
+            "name": "CENTARA WATERGATE",
+            "hotelId": "YXBKKCWP",
+            "geoCode": {
+                "latitude": 13.7515,
+                "longitude": 100.5423
+            },
+            "address": {
+                "countryCode": "TH",
+                "postalCode": "10400",
+                "cityName": "BANGKOK",
+                "lines": [
+                    "567 RATCHAPRAROP ROAD"
+                ]
+            },
+            "lastUpdate": "2025-11-06T15:13:31"
+        },
+        {
+            "chainCode": "WV",
+            "iataCode": "BKK",
+            "dupeId": 700046001,
+            "name": "EMPORIUM SUITES BY CHATRIUM",
+            "hotelId": "WVBKK079",
+            "geoCode": {
+                "latitude": 13.73112,
+                "longitude": 100.56863
+            },
+            "address": {
+                "countryCode": "TH",
+                "postalCode": "10110",
+                "cityName": "BANGKOK",
+                "lines": [
+                    "622 SUKHUMVIT SOI 24",
+                    "KLONGTOEY"
+                ]
+            },
+            "masterChainCode": "TC",
+            "lastUpdate": "2024-07-12T17:56:00"
+        },
+        {
+            "chainCode": "MC",
+            "iataCode": "BKK",
+            "dupeId": 700002564,
+            "name": "BANGKOK MARRIOTT QUEENS PARK",
+            "hotelId": "MCBKKQPM",
+            "geoCode": {
+                "latitude": 13.73038,
+                "longitude": 100.56553
+            },
+            "address": {
+                "countryCode": "TH",
+                "postalCode": "10110",
+                "cityName": "BANGKOK",
+                "lines": [
+                    "199 SUKHUMVIT SOI 22 KLONG TON"
+                ]
+            },
+            "masterChainCode": "EM",
+            "lastUpdate": "2025-11-18T20:01:08"
+        },
+        {
+            "chainCode": "YX",
+            "iataCode": "BKK",
+            "dupeId": 700055363,
+            "name": "CENTARA GRAND CENTRALWORLD",
+            "hotelId": "YXBKK695",
+            "geoCode": {
+                "latitude": 13.7477,
+                "longitude": 100.5383
+            },
+            "address": {
+                "countryCode": "TH",
+                "postalCode": "10330",
+                "cityName": "BANGKOK",
+                "lines": [
+                    "999/99 RAMA 1 ROAD,"
+                ]
+            },
+            "lastUpdate": "2025-11-06T15:12:17"
+        },
+        {
+            "chainCode": "LX",
+            "iataCode": "BKK",
+            "dupeId": 700502252,
+            "name": "137 PILLARS SUITES BANGKOK",
+            "hotelId": "LXBKKPSR",
+            "geoCode": {
+                "latitude": 13.73752,
+                "longitude": 100.57182
+            },
+            "address": {
+                "countryCode": "TH",
+                "postalCode": "10110",
+                "cityName": "BANGKOK",
+                "lines": [
+                    "59 1 SUKHUMVIT 39 PROMPONG",
+                    "SUKHUMVIT ROAD KLONGTON NUA"
+                ]
+            },
+            "lastUpdate": "2025-10-16T07:05:33"
+        },
+        {
+            "chainCode": "UI",
+            "iataCode": "BKK",
+            "dupeId": 700141338,
+            "name": "KINGSTON SUITES",
+            "hotelId": "UIBKKKSB",
+            "geoCode": {
+                "latitude": 13.74129,
+                "longitude": 100.55852
+            },
+            "address": {
+                "countryCode": "TH",
+                "postalCode": "10110",
+                "cityName": "BANGKOK",
+                "lines": [
+                    "39/3-7 SUKHUMVIT SOI 15"
+                ]
+            },
+            "lastUpdate": "2025-03-19T00:32:36"
+        },
+        {
+            "chainCode": "RA",
+            "iataCode": "BKK",
+            "dupeId": 701139688,
+            "name": "RAMADA WYNDHAM BANGKOK TEN EKAMAI RESI",
+            "hotelId": "RABKK102",
+            "geoCode": {
+                "latitude": 13.72909,
+                "longitude": 100.59052
+            },
+            "address": {
+                "countryCode": "TH",
+                "postalCode": "10110",
+                "cityName": "BANGKOK",
+                "lines": [
+                    "33/39 EKAMAI SOI 10 SUKHUMVIT 63",
+                    "ROAD 33/55 SOI EKKAMAI 10  YEAK 6"
+                ]
+            },
+            "masterChainCode": "WR",
+            "lastUpdate": "2025-09-10T16:01:01"
+        },
+        {
+            "chainCode": "RT",
+            "iataCode": "BKK",
+            "dupeId": 700696071,
+            "name": "IBIS STYLES BANGKOK SUKHUMVIT4",
+            "hotelId": "RTBKKVIT",
+            "geoCode": {
+                "latitude": 13.73919,
+                "longitude": 100.55325
+            },
+            "address": {
+                "countryCode": "TH",
+                "postalCode": "10110",
+                "cityName": "BANGKOK",
+                "lines": [
+                    "27 SUKHUMVIT 4",
+                    "KLONGTOEY"
+                ]
+            },
+            "masterChainCode": "RT",
+            "lastUpdate": "2025-11-19T13:10:13"
+        },
+        {
+            "chainCode": "WV",
+            "iataCode": "BKK",
+            "dupeId": 700046267,
+            "name": "CHATRIUM RESIDENCE SATHON BANGKOK",
+            "hotelId": "WVBKKAGF",
+            "geoCode": {
+                "latitude": 13.7026,
+                "longitude": 100.53724
+            },
+            "address": {
+                "countryCode": "TH",
+                "postalCode": "10120",
+                "cityName": "BANGKOK",
+                "lines": [
+                    "291 SOI NARADHIWAS",
+                    "RAJANAGARINDRA 24,NEW SATHON ROAD"
+                ]
+            },
+            "masterChainCode": "TC",
+            "lastUpdate": "2024-07-12T17:33:05"
+        },
+        {
+            "chainCode": "NT",
+            "iataCode": "BKK",
+            "dupeId": 700013476,
+            "name": "ANANTARA SIAM BANGKOK",
+            "hotelId": "NTBKK710",
+            "geoCode": {
+                "latitude": 13.74087,
+                "longitude": 100.53995
+            },
+            "address": {
+                "countryCode": "TH",
+                "postalCode": "10330",
+                "cityName": "BANGKOK",
+                "lines": [
+                    "155 RAJADAMRI ROAD"
+                ]
+            },
+            "masterChainCode": "MW",
+            "lastUpdate": "2025-11-11T08:22:37"
+        },
+        {
+            "chainCode": "CV",
+            "iataCode": "BKK",
+            "dupeId": 700032260,
+            "name": "COMO METROPOLITAN BANGKOK",
+            "hotelId": "CVBKK885",
+            "geoCode": {
+                "latitude": 13.72334,
+                "longitude": 100.53899
+            },
+            "address": {
+                "countryCode": "TH",
+                "postalCode": "10120",
+                "cityName": "TUNGMAHAMEK",
+                "lines": [
+                    "27 SOUTH SATHORN ROAD"
+                ]
+            },
+            "lastUpdate": "2025-11-12T03:47:30"
+        },
+        {
+            "chainCode": "YX",
+            "iataCode": "BKK",
+            "dupeId": 701235668,
+            "name": "CENTARA AYUTTHAYA",
+            "hotelId": "YXBKKAYU",
+            "geoCode": {
+                "latitude": 14.33281,
+                "longitude": 100.61004
+            },
+            "address": {
+                "countryCode": "TH",
+                "postalCode": "13000",
+                "cityName": "BANGKOK",
+                "lines": [
+                    "129 4 MOO 3 KHLONG SUAN PHLU",
+                    "SUB DISTRICT PHRA NAKHON"
+                ]
+            },
+            "lastUpdate": "2025-11-06T05:17:53"
+        },
+        {
+            "chainCode": "UR",
+            "iataCode": "BKK",
+            "dupeId": 700504189,
+            "name": "SURESTAY PLUS BY BEST WESTERN SUKHUMVIT2",
+            "hotelId": "URBKK001",
+            "geoCode": {
+                "latitude": 13.73915,
+                "longitude": 100.55196
+            },
+            "address": {
+                "countryCode": "TH",
+                "postalCode": "10110",
+                "cityName": "BANGKOK",
+                "lines": [
+                    "89 SUKHUMVIT SOI 2 KHLONG TOEY"
+                ]
+            },
+            "masterChainCode": "BW",
+            "lastUpdate": "2025-11-01T23:21:04"
+        },
+        {
+            "chainCode": "HL",
+            "iataCode": "BKK",
+            "dupeId": 700046003,
+            "name": "DBLTREE BY HILTON SUKHUMVIT BANGKOK",
+            "hotelId": "HLBKK196",
+            "geoCode": {
+                "latitude": 13.72803,
+                "longitude": 100.57
+            },
+            "address": {
+                "countryCode": "TH",
+                "postalCode": "10110",
+                "cityName": "BANGKOK",
+                "lines": [
+                    "18/1 SUKHUMVIT SOI 26"
+                ]
+            },
+            "masterChainCode": "EH",
+            "lastUpdate": "2025-11-12T07:55:31"
+        },
+        {
+            "chainCode": "WV",
+            "iataCode": "BKK",
+            "dupeId": 700082358,
+            "name": "CHATRIUM RIVERSIDE BANGKOK",
+            "hotelId": "WVBKKCHA",
+            "geoCode": {
+                "latitude": 13.71114,
+                "longitude": 100.50939
+            },
+            "address": {
+                "countryCode": "TH",
+                "postalCode": "10120",
+                "cityName": "BANGKOK",
+                "lines": [
+                    "28 CHAROENKRUNG ROAD",
+                    "WATPRAYAKRAI"
+                ]
+            },
+            "masterChainCode": "TC",
+            "lastUpdate": "2024-07-09T16:16:31"
+        },
+        {
+            "chainCode": "WV",
+            "iataCode": "BKK",
+            "dupeId": 700502254,
+            "name": "137 PILLARS RESIDENCES BANGKOK",
+            "hotelId": "WVBKK618",
+            "geoCode": {
+                "latitude": 13.73752,
+                "longitude": 100.57237
+            },
+            "address": {
+                "countryCode": "TH",
+                "postalCode": "10110",
+                "cityName": "BANGKOK",
+                "lines": [
+                    "59 1 SUKHUMVIT 39 PROMPONG",
+                    "SUKHUMVIT"
+                ]
+            },
+            "masterChainCode": "TC",
+            "lastUpdate": "2024-04-17T10:49:23"
+        },
+        {
+            "chainCode": "LX",
+            "iataCode": "BKK",
+            "dupeId": 700028919,
+            "name": "MUU BANGKOK HOTEL",
+            "hotelId": "LXBKKPSB",
+            "geoCode": {
+                "latitude": 13.73035,
+                "longitude": 100.58205
+            },
+            "address": {
+                "countryCode": "TH",
+                "postalCode": "10110",
+                "cityName": "BANGKOK",
+                "lines": [
+                    "88 333 SUKHUMVIT 55",
+                    "THONGLOR 8 SUKHUMVIT ROAD"
+                ]
+            },
+            "lastUpdate": "2025-02-05T17:15:43"
+        },
+        {
+            "chainCode": "RT",
+            "iataCode": "BKK",
+            "dupeId": 700330608,
+            "name": "IBIS STYLES BANGKOK SUKHUMVIT",
+            "hotelId": "RTBKKBSU",
+            "geoCode": {
+                "latitude": 13.70203,
+                "longitude": 100.58771
+            },
+            "address": {
+                "countryCode": "TH",
+                "postalCode": "10260",
+                "cityName": "BANGKOK",
+                "lines": [
+                    "2026 11 SUKHUMVIT 50",
+                    "PHRA KHANONG"
+                ]
+            },
+            "masterChainCode": "RT",
+            "lastUpdate": "2025-10-24T23:27:30"
+        },
+        {
+            "chainCode": "RA",
+            "iataCode": "BKK",
+            "dupeId": 700052377,
+            "name": "RAMADA BY WYNDHAM BANGKOK SUKHUMVIT 11",
+            "hotelId": "RABKK554",
+            "geoCode": {
+                "latitude": 13.74092,
+                "longitude": 100.55688
+            },
+            "address": {
+                "countryCode": "TH",
+                "postalCode": "10110",
+                "cityName": "BANGKOK",
+                "lines": [
+                    "155 23-24 SUKHUMVIT SOI 11",
+                    "KHWAENG KHLONG TOEI NUEA"
+                ]
+            },
+            "masterChainCode": "WR",
+            "lastUpdate": "2025-09-10T16:01:05"
+        },
+        {
+            "chainCode": "BY",
+            "iataCode": "BKK",
+            "dupeId": 700021182,
+            "name": "BANYAN TREE BANGKOK",
+            "hotelId": "BYBKK800",
+            "geoCode": {
+                "latitude": 13.72312,
+                "longitude": 100.53991
+            },
+            "address": {
+                "countryCode": "TH",
+                "postalCode": "10120",
+                "cityName": "BANGKOK",
+                "lines": [
+                    "21 100 SOUTH SATHON ROAD"
+                ]
+            },
+            "masterChainCode": "RT",
+            "lastUpdate": "2025-11-13T12:30:19"
+        },
+        {
+            "chainCode": "AZ",
+            "iataCode": "BKK",
+            "dupeId": 700048497,
+            "name": "ASCOTT SATHORN BANGKOK",
+            "hotelId": "AZBKK126",
+            "geoCode": {
+                "latitude": 13.72066,
+                "longitude": 100.52806
+            },
+            "address": {
+                "countryCode": "TH",
+                "postalCode": "10120",
+                "cityName": "BANGKOK",
+                "lines": [
+                    "7 SOUTH SATHORN ROAD YANNAWA",
+                    "SATHORN BANGKOK"
+                ]
+            },
+            "lastUpdate": "2025-11-14T17:53:09"
+        },
+        {
+            "chainCode": "FS",
+            "iataCode": "BKK",
+            "dupeId": 700923175,
+            "name": "FOUR SEASONS HOTEL BANGKOK",
+            "hotelId": "FSBKK357",
+            "geoCode": {
+                "latitude": 13.71154,
+                "longitude": 100.5101
+            },
+            "address": {
+                "countryCode": "TH",
+                "postalCode": "10120",
+                "cityName": "BANGKOK",
+                "lines": [
+                    "300/1 CHAROEN KRUNG ROAD"
+                ]
+            },
+            "lastUpdate": "2025-11-07T22:18:09"
+        },
+        {
+            "chainCode": "OH",
+            "iataCode": "BKK",
+            "dupeId": 700801597,
+            "name": "AVANI SUKHUMVIT BANGKOK HOTEL",
+            "hotelId": "OHBKKASB",
+            "geoCode": {
+                "latitude": 13.70518,
+                "longitude": 100.60151
+            },
+            "address": {
+                "countryCode": "TH",
+                "postalCode": "10260",
+                "cityName": "BANGKOK",
+                "lines": [
+                    "2089 SUKHUMVIT ROAD PHRA KHANONG NUEA",
+                    "WATTHANA"
+                ]
+            },
+            "masterChainCode": "NH",
+            "lastUpdate": "2025-11-15T19:08:52"
+        },
+        {
+            "chainCode": "WV",
+            "iataCode": "BKK",
+            "dupeId": 700217291,
+            "name": "AD LIB HOTEL BANGKOK",
+            "hotelId": "WVBKK900",
+            "geoCode": {
+                "latitude": 13.74527,
+                "longitude": 100.55234
+            },
+            "address": {
+                "countryCode": "TH",
+                "postalCode": "10110",
+                "cityName": "BANGKOK",
+                "lines": [
+                    "230/5 SUKHUMVIT SOI 1 ALLEY",
+                    "WATTHANA"
+                ]
+            },
+            "masterChainCode": "TC",
+            "lastUpdate": "2025-06-17T12:09:05"
+        },
+        {
+            "chainCode": "CY",
+            "iataCode": "BKK",
+            "dupeId": 700047041,
+            "name": "COURTYARD BANGKOK MARRIOTT",
+            "hotelId": "CYBKKCYC",
+            "geoCode": {
+                "latitude": 13.74119,
+                "longitude": 100.54161
+            },
+            "address": {
+                "countryCode": "TH",
+                "postalCode": "10330",
+                "cityName": "BANGKOK",
+                "lines": [
+                    "1551 SOI MAHADLEKLUANG 1 RATCH"
+                ]
+            },
+            "masterChainCode": "EM",
+            "lastUpdate": "2025-11-18T13:27:24"
+        },
+        {
+            "chainCode": "WV",
+            "iataCode": "BKK",
+            "dupeId": 701211870,
+            "name": "EASTIN GRAND HOTEL PHAYATHAI",
+            "hotelId": "WVBKK446",
+            "geoCode": {
+                "latitude": 13.75444,
+                "longitude": 100.53098
+            },
+            "address": {
+                "countryCode": "TH",
+                "postalCode": "10400",
+                "cityName": "BANGKOK",
+                "lines": [
+                    "18 PHAYA THAI ROAD",
+                    "THUNG PHAYA THAI"
+                ]
+            },
+            "masterChainCode": "TC",
+            "lastUpdate": "2025-10-10T17:41:46"
+        },
+        {
+            "chainCode": "LC",
+            "iataCode": "BKK",
+            "dupeId": 700018809,
+            "name": "THE ATHENEE HOTEL BANGKOK",
+            "hotelId": "LCBKK889",
+            "geoCode": {
+                "latitude": 13.74141,
+                "longitude": 100.54754
+            },
+            "address": {
+                "countryCode": "TH",
+                "postalCode": "10330",
+                "cityName": "BANGKOK",
+                "lines": [
+                    "61 WIRELESS ROAD WITTHAYU"
+                ]
+            },
+            "masterChainCode": "EM",
+            "lastUpdate": "2025-11-17T18:22:23"
+        },
+        {
+            "chainCode": "MC",
+            "iataCode": "BKK",
+            "dupeId": 700266265,
+            "name": "MARRIOTT EXE APRT BANGKOK SUKHUMVIT 101",
+            "hotelId": "MCBKKEOM",
+            "geoCode": {
+                "latitude": 13.6919,
+                "longitude": 100.60793
+            },
+            "address": {
+                "countryCode": "TH",
+                "postalCode": "10260",
+                "cityName": "BANGKOK",
+                "lines": [
+                    "3029 SUKHUMVIT ROAD",
+                    "PHRA KANONG"
+                ]
+            },
+            "masterChainCode": "EM",
+            "lastUpdate": "2025-11-17T18:21:01"
+        },
+        {
+            "chainCode": "FG",
+            "iataCode": "BKK",
+            "dupeId": 700155022,
+            "name": "MODE SATHORN HOTEL",
+            "hotelId": "FGBKKAOZ",
+            "geoCode": {
+                "latitude": 13.71964,
+                "longitude": 100.52172
+            },
+            "address": {
+                "countryCode": "TH",
+                "postalCode": "10500",
+                "cityName": "BANGKOK",
+                "lines": [
+                    "144 NORTH SATHORN"
+                ]
+            },
+            "lastUpdate": "2023-08-01T10:07:16"
+        },
+        {
+            "chainCode": "HY",
+            "iataCode": "BKK",
+            "dupeId": 700415426,
+            "name": "PARK HYATT BANGKOK",
+            "hotelId": "HYBKKPHB",
+            "geoCode": {
+                "latitude": 13.74376,
+                "longitude": 100.54736
+            },
+            "address": {
+                "countryCode": "TH",
+                "postalCode": "10330",
+                "cityName": "BANGKOK",
+                "lines": [
+                    "CENTRAL EMBASSY, 88 WIRELESS ROAD, PATHUMWAN"
+                ]
+            },
+            "masterChainCode": "LH",
+            "lastUpdate": "2025-08-13T11:09:26"
+        },
+        {
+            "chainCode": "AZ",
+            "iataCode": "BKK",
+            "dupeId": 700077954,
+            "name": "CITADINES SUKHUMVIT 16 BANGKOK",
+            "hotelId": "AZBKK450",
+            "geoCode": {
+                "latitude": 13.7336,
+                "longitude": 100.56086
+            },
+            "address": {
+                "countryCode": "TH",
+                "postalCode": "10110",
+                "cityName": "BANGKOK",
+                "lines": [
+                    "38 SOI SUKHUMVIT 16",
+                    "SUKHUMVIT ROAD"
+                ]
+            },
+            "lastUpdate": "2025-11-14T17:57:18"
+        },
+        {
+            "chainCode": "RT",
+            "iataCode": "BKK",
+            "dupeId": 700182885,
+            "name": "MERCURE BANGKOK SIAM",
+            "hotelId": "RTBKKMER",
+            "geoCode": {
+                "latitude": 13.74721,
+                "longitude": 100.52895
+            },
+            "address": {
+                "countryCode": "TH",
+                "postalCode": "10330",
+                "cityName": "BANGKOK",
+                "lines": [
+                    "RAMA 1 WANGMAI",
+                    "PATHUMWAN"
+                ]
+            },
+            "masterChainCode": "RT",
+            "lastUpdate": "2025-11-15T12:27:01"
+        },
+        {
+            "chainCode": "RT",
+            "iataCode": "BKK",
+            "dupeId": 700288401,
+            "name": "MOVENPICK RESORT PATTAYA",
+            "hotelId": "RTBKKMPT",
+            "geoCode": {
+                "latitude": 12.83379,
+                "longitude": 100.90985
+            },
+            "address": {
+                "countryCode": "TH",
+                "postalCode": "20250",
+                "cityName": "SATTAHIP",
+                "lines": [
+                    "55 MOO 2",
+                    "SUKHUMVIT ROAD"
+                ]
+            },
+            "masterChainCode": "RT",
+            "lastUpdate": "2025-11-18T09:07:08"
+        },
+        {
+            "chainCode": "HY",
+            "iataCode": "BKK",
+            "dupeId": 700671654,
+            "name": "HYATT REGENCY BANGKOK SUKHUMVIT",
+            "hotelId": "HYBKKHRB",
+            "geoCode": {
+                "latitude": 13.74011,
+                "longitude": 100.55723
+            },
+            "address": {
+                "countryCode": "TH",
+                "postalCode": "10110",
+                "cityName": "BANGKOK",
+                "lines": [
+                    "1 SUKHUMIT SOI 13 ROAD",
+                    "KLONGTOEY NUA, WATTANA"
+                ]
+            },
+            "masterChainCode": "LH",
+            "lastUpdate": "2025-08-13T11:09:25"
+        },
+        {
+            "chainCode": "RT",
+            "iataCode": "BKK",
+            "dupeId": 700949882,
+            "name": "IBIS BANGKOK SUKHUMVIT 24",
+            "hotelId": "RTBKKBIS",
+            "geoCode": {
+                "latitude": 13.72918,
+                "longitude": 100.56985
+            },
+            "address": {
+                "countryCode": "TH",
+                "postalCode": "10110",
+                "cityName": "BANGKOK",
+                "lines": [
+                    "5.1 SUKHUMVIT 24 ROAD",
+                    "KLONG TAN"
+                ]
+            },
+            "masterChainCode": "RT",
+            "lastUpdate": "2025-10-24T23:28:21"
+        },
+        {
+            "chainCode": "GD",
+            "iataCode": "BKK",
+            "dupeId": 701042918,
+            "name": "MAITRIA HOTEL RAMA 9 BANGKOK",
+            "hotelId": "GDBKKMR9",
+            "geoCode": {
+                "latitude": 13.7509,
+                "longitude": 100.57914
+            },
+            "address": {
+                "countryCode": "TH",
+                "postalCode": "10310",
+                "cityName": "BANGKOK",
+                "lines": [
+                    "908 RIM KLONG SAMSEN RD"
+                ]
+            },
+            "lastUpdate": "2025-08-06T12:11:19"
+        },
+        {
+            "chainCode": "QQ",
+            "iataCode": "BKK",
+            "dupeId": 701289747,
+            "name": "KROMO CURIO COLLECTION BY HILTON",
+            "hotelId": "QQBKK533",
+            "geoCode": {
+                "latitude": 13.73406,
+                "longitude": 100.56549
+            },
+            "address": {
+                "countryCode": "TH",
+                "postalCode": "10110",
+                "cityName": "BANGKOK",
+                "lines": [
+                    "525 SUKHUMVIT RD KLONGTOEY NUA WAT"
+                ]
+            },
+            "masterChainCode": "EH",
+            "lastUpdate": "2025-10-31T04:50:48"
+        },
+        {
+            "chainCode": "RW",
+            "iataCode": "BKK",
+            "dupeId": 700770133,
+            "name": "ROSEWOOD BANGKOK",
+            "hotelId": "RWBKKRWB",
+            "geoCode": {
+                "latitude": 13.74344,
+                "longitude": 100.54906
+            },
+            "address": {
+                "countryCode": "TH",
+                "postalCode": "10330",
+                "cityName": "BANGKOK",
+                "lines": [
+                    "1041 38 PLOENCHIT ROAD",
+                    "LUMPINI PATHUMWAN"
+                ]
+            },
+            "lastUpdate": "2025-09-24T12:46:10"
+        },
+        {
+            "chainCode": "KI",
+            "iataCode": "BKK",
+            "dupeId": 700984064,
+            "name": "SINDHORN KEMPINSKI BANGKOK",
+            "hotelId": "KIBKKSKB",
+            "geoCode": {
+                "latitude": 13.73668,
+                "longitude": 100.54361
+            },
+            "address": {
+                "countryCode": "TH",
+                "postalCode": "10330",
+                "cityName": "BANGKOK",
+                "lines": [
+                    "80 SOI TON SON",
+                    "LUMPHINI, PATHUM WAN"
+                ]
+            },
+            "masterChainCode": "GL",
+            "lastUpdate": "2025-11-07T17:00:09"
+        },
+        {
+            "chainCode": "YX",
+            "iataCode": "BKK",
+            "dupeId": 700033535,
+            "name": "FURAMA SILOM BANGKOK",
+            "hotelId": "YXBKKFSB",
+            "geoCode": {
+                "latitude": 13.72472,
+                "longitude": 100.52549
+            },
+            "address": {
+                "countryCode": "TH",
+                "postalCode": "10500",
+                "cityName": "BANGKOK",
+                "lines": [
+                    "533 SILOM ROAD",
+                    "SILOM BANGRAK"
+                ]
+            },
+            "lastUpdate": "2025-10-28T01:34:31"
+        },
+        {
+            "chainCode": "GD",
+            "iataCode": "BKK",
+            "dupeId": 700099370,
+            "name": "BLISTON SUWAN PARK VIEW BANGKO",
+            "hotelId": "GDBKKAJP",
+            "geoCode": {
+                "latitude": 13.7421,
+                "longitude": 100.54535
+            },
+            "address": {
+                "countryCode": "TH",
+                "postalCode": "10330",
+                "cityName": "BANGKOK",
+                "lines": [
+                    "9 SOI TONSON, PLOENCHIT ROAD, LUMPINI"
+                ]
+            },
+            "lastUpdate": "2025-01-30T05:27:33"
+        },
+        {
+            "chainCode": "HI",
+            "iataCode": "BKK",
+            "dupeId": 700154245,
+            "name": "HOLIDAY INN EXP SIAM",
+            "hotelId": "HIBKKEFF",
+            "geoCode": {
+                "latitude": 13.7471,
+                "longitude": 100.52779
+            },
+            "address": {
+                "countryCode": "TH",
+                "postalCode": "10330",
+                "cityName": "BANGKOK",
+                "lines": [
+                    "889 RAMA 1 RD WANG MAI PATHUMW"
+                ]
+            },
+            "masterChainCode": "6C",
+            "lastUpdate": "2025-11-06T08:24:15"
+        },
+        {
+            "chainCode": "BW",
+            "iataCode": "BKK",
+            "dupeId": 701167488,
+            "name": "BEST WESTERN RATCHADA HOTEL",
+            "hotelId": "BWBKK931",
+            "geoCode": {
+                "latitude": 13.76306,
+                "longitude": 100.5655
+            },
+            "address": {
+                "countryCode": "TH",
+                "postalCode": "10400",
+                "cityName": "DIN DAENG",
+                "lines": [
+                    "322/433 RATCHADAPHISEK 3"
+                ]
+            },
+            "masterChainCode": "EW",
+            "lastUpdate": "2025-11-01T07:51:27"
+        },
+        {
+            "chainCode": "HS",
+            "iataCode": "BKK",
+            "dupeId": 700163011,
+            "name": "FX HOTEL METROLINK MAKKASAN FORMERLY UNI",
+            "hotelId": "HSBKKAOQ",
+            "geoCode": {
+                "latitude": 13.74962,
+                "longitude": 100.56286
+            },
+            "address": {
+                "countryCode": "TH",
+                "postalCode": "10310",
+                "cityName": "BANGKOK",
+                "lines": [
+                    "57 ASOKE-DINDAENG ROAD, MAKKASAN AIRPORT LINK"
+                ]
+            },
+            "lastUpdate": "2023-08-01T10:36:50"
+        },
+        {
+            "chainCode": "WV",
+            "iataCode": "BKK",
+            "dupeId": 700573981,
+            "name": "EASTIN THANA CITY GOLF RESORT BANGKOK",
+            "hotelId": "WVBKK755",
+            "geoCode": {
+                "latitude": 13.64204,
+                "longitude": 100.73345
+            },
+            "address": {
+                "countryCode": "TH",
+                "postalCode": "10540",
+                "cityName": "BANGKOK",
+                "lines": [
+                    "104 MOO4, BANGNA-TRAD HIGHWAY KM 14"
+                ]
+            },
+            "masterChainCode": "TC",
+            "lastUpdate": "2025-10-10T17:43:30"
+        },
+        {
+            "chainCode": "YX",
+            "iataCode": "BKK",
+            "dupeId": 701192602,
+            "name": "RAKXA WELLNESS & MEDICAL RETREAT",
+            "hotelId": "YXBKKSIF",
+            "geoCode": {
+                "latitude": 13.67415,
+                "longitude": 100.57646
+            },
+            "address": {
+                "countryCode": "TH",
+                "postalCode": "10130",
+                "cityName": "SAMUTPRAKARN",
+                "lines": [
+                    "28 8 MOO 9 SOI PHETCHA HUENG 26 BANGNAMPHUNG",
+                    "SUB DISTRICT PHRA PRADAENG DISTRICT"
+                ]
+            },
+            "lastUpdate": "2025-10-31T23:24:30"
+        },
+        {
+            "chainCode": "AZ",
+            "iataCode": "BKK",
+            "dupeId": 700988151,
+            "name": "LYF SUKHUMVIT 8 BANGKOK",
+            "hotelId": "AZBKKLYF",
+            "geoCode": {
+                "latitude": 13.73927,
+                "longitude": 100.556
+            },
+            "address": {
+                "countryCode": "TH",
+                "postalCode": "10110",
+                "cityName": "BANGKOK",
+                "lines": [
+                    "35 SOI SUKHUMVIT 8",
+                    "SUKHUMVIT ROAD"
+                ]
+            },
+            "lastUpdate": "2025-11-14T17:59:18"
+        },
+        {
+            "chainCode": "GD",
+            "iataCode": "BKK",
+            "dupeId": 701196515,
+            "name": "VILLA DEVA RESORT AND HOTEL BANGKOK",
+            "hotelId": "GDBKKVDR",
+            "geoCode": {
+                "latitude": 13.72364,
+                "longitude": 100.5444
+            },
+            "address": {
+                "countryCode": "TH",
+                "postalCode": "10120",
+                "cityName": "BANGKOK",
+                "lines": [
+                    "88 SOI SATHON 1, ATTHAKAN PRASIT",
+                    "THUNG MAHA MEK"
+                ]
+            },
+            "lastUpdate": "2025-05-01T15:25:22"
+        },
+        {
+            "chainCode": "BW",
+            "iataCode": "BKK",
+            "dupeId": 701234490,
+            "name": "BW CLICK SATHORN 11 BANGKOK",
+            "hotelId": "BWBKK933",
+            "geoCode": {
+                "latitude": 13.71838,
+                "longitude": 100.52682
+            },
+            "address": {
+                "countryCode": "TH",
+                "postalCode": "10120",
+                "cityName": "BANGKOK",
+                "lines": [
+                    "3 SOI SATHORN 11 YEAK 2, SOUTH SATHORN RD"
+                ]
+            },
+            "masterChainCode": "EW",
+            "lastUpdate": "2025-10-21T08:10:28"
+        },
+        {
+            "chainCode": "GI",
+            "iataCode": "BKK",
+            "dupeId": 701246538,
+            "name": "HILTON GARDEN INN BANGKOK RIVERSIDE",
+            "hotelId": "GIBKK705",
+            "geoCode": {
+                "latitude": 13.72641,
+                "longitude": 100.50855
+            },
+            "address": {
+                "countryCode": "TH",
+                "postalCode": "10600",
+                "cityName": "BANGKOK",
+                "lines": [
+                    "168 ICS TOWER CHAROEN NAKHON RD K"
+                ]
+            },
+            "masterChainCode": "EH",
+            "lastUpdate": "2025-11-03T00:48:16"
+        },
+        {
+            "chainCode": "LW",
+            "iataCode": "BKK",
+            "dupeId": 700171249,
+            "name": "THE OKURA PRESTIGE BANGKOK",
+            "hotelId": "LWBKK832",
+            "geoCode": {
+                "latitude": 13.74285,
+                "longitude": 100.54772
+            },
+            "address": {
+                "countryCode": "TH",
+                "postalCode": "10330",
+                "cityName": "BANGKOK",
+                "lines": [
+                    "PARK VENTURES ECOPLEX",
+                    "57 WIRELESS ROAD"
+                ]
+            },
+            "lastUpdate": "2025-10-26T16:27:54"
+        },
+        {
+            "chainCode": "OH",
+            "iataCode": "BKK",
+            "dupeId": 700290928,
+            "name": "AVANI  BANGKOK",
+            "hotelId": "OHBKKRIV",
+            "geoCode": {
+                "latitude": 13.70483,
+                "longitude": 100.49141
+            },
+            "address": {
+                "countryCode": "TH",
+                "postalCode": "10600",
+                "cityName": "BANGKOK",
+                "lines": [
+                    "257 CHAROENNAKORN ROAD",
+                    "THON BURI"
+                ]
+            },
+            "masterChainCode": "NH",
+            "lastUpdate": "2025-07-10T10:51:25"
+        },
+        {
+            "chainCode": "RT",
+            "iataCode": "BKK",
+            "dupeId": 701236429,
+            "name": "TRIBE LIVING BANGKOK SUKHUMVIT 39",
+            "hotelId": "RTBKKTRI",
+            "geoCode": {
+                "latitude": 13.73716,
+                "longitude": 100.5709
+            },
+            "address": {
+                "countryCode": "TH",
+                "postalCode": "10110",
+                "cityName": "BANGKOK",
+                "lines": [
+                    "122 SOI PROM CHIT 39",
+                    "SUKHUMVIT ROAD KLONGTON NUEA"
+                ]
+            },
+            "masterChainCode": "RT",
+            "lastUpdate": "2025-11-19T13:52:21"
+        },
+        {
+            "chainCode": "ON",
+            "iataCode": "BKK",
+            "dupeId": 701313005,
+            "name": "AWAY BANGKOK SUKHUMVIT",
+            "hotelId": "ONBKKABS",
+            "geoCode": {
+                "latitude": 13.72883,
+                "longitude": 100.5642
+            },
+            "address": {
+                "countryCode": "TH",
+                "postalCode": "10110",
+                "cityName": "BANGKOK",
+                "lines": [
+                    "172 SOI SUKHUMVIT 20",
+                    "KHLONG TOEI"
+                ]
+            },
+            "lastUpdate": "2025-11-14T04:54:59"
+        },
+        {
+            "chainCode": "GD",
+            "iataCode": "BKK",
+            "dupeId": 700140849,
+            "name": "S31 SUKHUMVIT HOTEL",
+            "hotelId": "GDBKKS31",
+            "geoCode": {
+                "latitude": 13.7336,
+                "longitude": 100.56594
+            },
+            "address": {
+                "countryCode": "TH",
+                "postalCode": "10110",
+                "cityName": "BANGKOK",
+                "lines": [
+                    "545 SUKHUMVIT 31",
+                    "KLONGTOEY-NUA WATTANA"
+                ]
+            },
+            "lastUpdate": "2025-05-01T15:23:57"
+        },
+        {
+            "chainCode": "RT",
+            "iataCode": "BKK",
+            "dupeId": 700010562,
+            "name": "NOVOTEL ON SIAM SQUARE",
+            "hotelId": "RTBKKNOV",
+            "geoCode": {
+                "latitude": 13.74432,
+                "longitude": 100.53472
+            },
+            "address": {
+                "countryCode": "TH",
+                "postalCode": "10330",
+                "cityName": "BANGKOK",
+                "lines": [
+                    "392-44 SIAM SQUARE SOI 6",
+                    "RAMA I ROAD PATHUMWAN"
+                ]
+            },
+            "masterChainCode": "RT",
+            "lastUpdate": "2025-11-19T08:12:55"
+        },
+        {
+            "chainCode": "WH",
+            "iataCode": "BKK",
+            "dupeId": 700183608,
+            "name": "W BANGKOK",
+            "hotelId": "WHBKK258",
+            "geoCode": {
+                "latitude": 13.72226,
+                "longitude": 100.52972
+            },
+            "address": {
+                "countryCode": "TH",
+                "postalCode": "10500",
+                "cityName": "BANGKOK",
+                "lines": [
+                    "106 NORTH SATHORN ROAD",
+                    "SILOM BANGRAK"
+                ]
+            },
+            "masterChainCode": "EM",
+            "lastUpdate": "2025-11-19T12:28:40"
+        },
+        {
+            "chainCode": "MC",
+            "iataCode": "BKK",
+            "dupeId": 701245686,
+            "name": "MARRIOTT EXECUTIVE APARTMENTS BANGKOK TO",
+            "hotelId": "MCBKKTSM",
+            "geoCode": {
+                "latitude": 13.73301,
+                "longitude": 100.57714
+            },
+            "address": {
+                "countryCode": "TH",
+                "postalCode": "10110",
+                "cityName": "BANGKOK",
+                "lines": [
+                    "88/8 SOI SUKHUMVIT 49, KHLONG TAN NUEA SUB DISTRICT"
+                ]
+            },
+            "masterChainCode": "EM",
+            "lastUpdate": "2025-11-16T11:39:45"
+        },
+        {
+            "chainCode": "SB",
+            "iataCode": "BKK",
+            "dupeId": 700082359,
+            "name": "VIE HOTEL BANGKOK MGALLERY",
+            "hotelId": "SBBKKVIE",
+            "geoCode": {
+                "latitude": 13.75057,
+                "longitude": 100.53204
+            },
+            "address": {
+                "countryCode": "TH",
+                "postalCode": "10400",
+                "cityName": "BANGKOK",
+                "lines": [
+                    "117-39 PHAYA THAI ROAD",
+                    "RATCHATHEWI"
+                ]
+            },
+            "masterChainCode": "RT",
+            "lastUpdate": "2025-11-19T10:28:53"
+        },
+        {
+            "chainCode": "NK",
+            "iataCode": "BKK",
+            "dupeId": 700071978,
+            "name": "HOTEL JAL CITY BANGKOK",
+            "hotelId": "NKBKKJCB",
+            "geoCode": {
+                "latitude": 13.7257,
+                "longitude": 100.57886
+            },
+            "address": {
+                "countryCode": "TH",
+                "postalCode": "10110",
+                "cityName": "BANGKOK",
+                "lines": [
+                    "22 L 1 SOI SUKHUMVIT 55",
+                    "(THONGLOR), SUKHUMVIT ROAD"
+                ]
+            },
+            "masterChainCode": "NK",
+            "lastUpdate": "2025-05-30T13:40:54"
+        },
+        {
+            "chainCode": "FP",
+            "iataCode": "BKK",
+            "dupeId": 700142144,
+            "name": "FOUR POINTS SHERATON BANGKOK SUKHUMVIT",
+            "hotelId": "FPBKK409",
+            "geoCode": {
+                "latitude": 13.73943,
+                "longitude": 100.55874
+            },
+            "address": {
+                "countryCode": "TH",
+                "postalCode": "10110",
+                "cityName": "BANGKOK",
+                "lines": [
+                    "4 SUKHUMVIT SOI 15",
+                    "SUKHUMVIT ROAD, WATTANA"
+                ]
+            },
+            "masterChainCode": "EM",
+            "lastUpdate": "2025-11-19T00:12:08"
+        },
+        {
+            "chainCode": "AP",
+            "iataCode": "BKK",
+            "dupeId": 701108707,
+            "name": "THE STANDARD BANGKOK",
+            "hotelId": "APBKKSBM",
+            "geoCode": {
+                "latitude": 13.72341,
+                "longitude": 100.5282
+            },
+            "address": {
+                "countryCode": "TH",
+                "postalCode": "10500",
+                "cityName": "BANGKOK",
+                "lines": [
+                    "114 NARATHIWAS ROAD"
+                ]
+            },
+            "lastUpdate": "2025-11-14T07:00:49"
+        },
+        {
+            "chainCode": "HY",
+            "iataCode": "BKK",
+            "dupeId": 700162121,
+            "name": "HYATT PLACE BANGKOK SUKHUMVIT 1",
+            "hotelId": "HYBKK356",
+            "geoCode": {
+                "latitude": 13.74699,
+                "longitude": 100.55276
+            },
+            "address": {
+                "countryCode": "TH",
+                "postalCode": "10110",
+                "cityName": "BANGKOK",
+                "lines": [
+                    "78 SUKHUMVIT SOI 1",
+                    "KLONG TOEI NUEA"
+                ]
+            },
+            "masterChainCode": "LH",
+            "lastUpdate": "2025-09-10T05:54:43"
+        },
+        {
+            "chainCode": "ON",
+            "iataCode": "BKK",
+            "dupeId": 701244006,
+            "name": "LUMEN BANGKOK UDOMSUK STATION",
+            "hotelId": "ONBKKLUM",
+            "geoCode": {
+                "latitude": 13.67934,
+                "longitude": 100.60943
+            },
+            "address": {
+                "countryCode": "TH",
+                "postalCode": "10260",
+                "cityName": "BANGKOK",
+                "lines": [
+                    "15 SUKHUMVIT 103 RD BANG NA"
+                ]
+            },
+            "lastUpdate": "2025-11-14T04:55:00"
+        },
+        {
+            "chainCode": "GT",
+            "iataCode": "BKK",
+            "dupeId": 700148463,
+            "name": "GOLDEN TULIP MANDISON SUITES",
+            "hotelId": "GTBKKMAN",
+            "geoCode": {
+                "latitude": 13.73004,
+                "longitude": 100.56367
+            },
+            "address": {
+                "countryCode": "TH",
+                "postalCode": "10110",
+                "cityName": "BANGKOK",
+                "lines": [
+                    "70 1 SUKHUMVIT 20, SUKHUMVIT ROAD"
+                ]
+            },
+            "masterChainCode": "LI",
+            "lastUpdate": "2025-03-12T06:24:58"
+        },
+        {
+            "chainCode": "UR",
+            "iataCode": "BKK",
+            "dupeId": 701138535,
+            "name": "SURESTAY BY BW ICONIC ARI-JATUJAK",
+            "hotelId": "URBKK938",
+            "geoCode": {
+                "latitude": 13.79163,
+                "longitude": 100.55285
+            },
+            "address": {
+                "countryCode": "TH",
+                "postalCode": "10400",
+                "cityName": "BANGKOK",
+                "lines": [
+                    "23/1 SOI INTHAMARA 3, SUTHISANWINITCHAI ROAD"
+                ]
+            },
+            "masterChainCode": "BW",
+            "lastUpdate": "2025-10-22T08:27:06"
+        },
+        {
+            "chainCode": "HI",
+            "iataCode": "BKK",
+            "dupeId": 700002563,
+            "name": "HOLIDAY INN BANGKOK SILOM",
+            "hotelId": "HIBKKCAC",
+            "geoCode": {
+                "latitude": 13.7228,
+                "longitude": 100.52006
+            },
+            "address": {
+                "countryCode": "TH",
+                "postalCode": "10500",
+                "cityName": "BANGKOK",
+                "lines": [
+                    "981 SILOM ROAD"
+                ]
+            },
+            "masterChainCode": "6C",
+            "lastUpdate": "2025-10-02T05:21:12"
+        },
+        {
+            "chainCode": "BY",
+            "iataCode": "BKK",
+            "dupeId": 701259216,
+            "name": "CASSIA RAMA 9 BANGKOK",
+            "hotelId": "BYBKKCSS",
+            "geoCode": {
+                "latitude": 13.75543,
+                "longitude": 100.5835
+            },
+            "address": {
+                "countryCode": "TH",
+                "postalCode": "10310",
+                "cityName": "BANGKOK",
+                "lines": [
+                    "395 1063 RAMA 9 ROAD",
+                    "BANGKAPI HUAI KHWANG"
+                ]
+            },
+            "masterChainCode": "RT",
+            "lastUpdate": "2025-04-15T23:06:24"
+        },
+        {
+            "chainCode": "RT",
+            "iataCode": "BKK",
+            "dupeId": 700099349,
+            "name": "NOVOTEL LIVING SUKHUVMVIT LEGACY",
+            "hotelId": "RTBKKNOL",
+            "geoCode": {
+                "latitude": 13.73519,
+                "longitude": 100.56542
+            },
+            "address": {
+                "countryCode": "TH",
+                "postalCode": "10110",
+                "cityName": "BANGKOK",
+                "lines": [
+                    "12-14 SUKHUMVIT 29 ALLEY",
+                    "KLONG TOEY NUA WATTHANA"
+                ]
+            },
+            "masterChainCode": "RT",
+            "lastUpdate": "2025-11-15T17:46:17"
+        },
+        {
+            "chainCode": "RT",
+            "iataCode": "BKK",
+            "dupeId": 700152795,
+            "name": "NOVOTEL IMPACT",
+            "hotelId": "RTBKKBGK",
+            "geoCode": {
+                "latitude": 13.91528,
+                "longitude": 100.54853
+            },
+            "address": {
+                "countryCode": "TH",
+                "postalCode": "11120",
+                "cityName": "NONTHABURI",
+                "lines": [
+                    "94 POPULAR ROAD",
+                    "BANMAI SUBDISTRICT"
+                ]
+            },
+            "masterChainCode": "RT",
+            "lastUpdate": "2025-11-19T11:14:25"
+        },
+        {
+            "chainCode": "WV",
+            "iataCode": "BKK",
+            "dupeId": 701125989,
+            "name": "AWAY BANGKOK RIVERSIDE KENE",
+            "hotelId": "WVBKK299",
+            "geoCode": {
+                "latitude": 13.7113,
+                "longitude": 100.50338
+            },
+            "address": {
+                "countryCode": "TH",
+                "postalCode": "10600",
+                "cityName": "BANGKOK",
+                "lines": [
+                    "1 SOI CHAROENNAKORN 35",
+                    "BANGLAMPULANG"
+                ]
+            },
+            "masterChainCode": "TC",
+            "lastUpdate": "2025-01-29T08:29:16"
+        },
+        {
+            "chainCode": "HS",
+            "iataCode": "BKK",
+            "dupeId": 700188121,
+            "name": "HUA CHANG HERITAGE HOTEL",
+            "hotelId": "HSBKKAUI",
+            "geoCode": {
+                "latitude": 13.74903,
+                "longitude": 100.53075
+            },
+            "address": {
+                "countryCode": "TH",
+                "postalCode": "10330",
+                "cityName": "BANGKOK",
+                "lines": [
+                    "400 PHAYATHAI ROAD, PATHUMWAN"
+                ]
+            },
+            "lastUpdate": "2023-08-01T10:14:36"
+        },
+        {
+            "chainCode": "RT",
+            "iataCode": "BKK",
+            "dupeId": 700435609,
+            "name": "MERCURE BANGKOK MAKKASAN",
+            "hotelId": "RTBKKMBA",
+            "geoCode": {
+                "latitude": 13.7514,
+                "longitude": 100.55728
+            },
+            "address": {
+                "countryCode": "TH",
+                "postalCode": "10400",
+                "cityName": "BANGKOK",
+                "lines": [
+                    "1599 KAMPHAENG PHET 7 ROAD",
+                    "MAKKASAN"
+                ]
+            },
+            "masterChainCode": "RT",
+            "lastUpdate": "2025-11-16T08:03:12"
+        },
+        {
+            "chainCode": "BW",
+            "iataCode": "BKK",
+            "dupeId": 700148352,
+            "name": "BW SUKHUMVIT 20",
+            "hotelId": "BWBKK353",
+            "geoCode": {
+                "latitude": 13.73203,
+                "longitude": 100.56407
+            },
+            "address": {
+                "countryCode": "TH",
+                "postalCode": "10110",
+                "cityName": "BANGKOK",
+                "lines": [
+                    "17 SUKHUMVIT SOI 20"
+                ]
+            },
+            "masterChainCode": "EW",
+            "lastUpdate": "2025-11-01T07:45:36"
+        },
+        {
+            "chainCode": "HS",
+            "iataCode": "BKK",
+            "dupeId": 700028130,
+            "name": "MIRACLE GRAND CONVENTION HOTEL BUSINESS",
+            "hotelId": "HSBKKAMH",
+            "geoCode": {
+                "latitude": 13.87668,
+                "longitude": 100.57615
+            },
+            "address": {
+                "countryCode": "TH",
+                "postalCode": "10210",
+                "cityName": "BANGKOK",
+                "lines": [
+                    "VIBHAVADI RANGSIT ROAD 99"
+                ]
+            },
+            "lastUpdate": "2023-08-01T09:50:52"
+        },
+        {
+            "chainCode": "GD",
+            "iataCode": "BKK",
+            "dupeId": 700044315,
+            "name": "NOUVO CITY HOTEL",
+            "hotelId": "GDBKKAAP",
+            "geoCode": {
+                "latitude": 13.76298,
+                "longitude": 100.49942
+            },
+            "address": {
+                "countryCode": "TH",
+                "postalCode": "10200",
+                "cityName": "BANGKOK",
+                "lines": [
+                    "2 SAMSEN 2, SAMSEN ROAD",
+                    "PRANAKORN, BANGLUMPHU"
+                ]
+            },
+            "lastUpdate": "2025-08-04T12:36:23"
+        },
+        {
+            "chainCode": "HS",
+            "iataCode": "BKK",
+            "dupeId": 700052360,
+            "name": "CENTRE POINT SUKHUMVIT THONGLO",
+            "hotelId": "HSBKKAKR",
+            "geoCode": {
+                "latitude": 13.73143,
+                "longitude": 100.58202
+            },
+            "address": {
+                "countryCode": "TH",
+                "postalCode": "10110",
+                "cityName": "KHLONG TOEY",
+                "lines": [
+                    "304 SOI SUKHUMVIT 55 THONG LO 8 , SUKHUMVIT RD.,"
+                ]
+            },
+            "lastUpdate": "2023-08-01T09:59:49"
+        },
+        {
+            "chainCode": "EN",
+            "iataCode": "BKK",
+            "dupeId": 700149669,
+            "name": "SO BANGKOK",
+            "hotelId": "ENBKKSOB",
+            "geoCode": {
+                "latitude": 13.72624,
+                "longitude": 100.54318
+            },
+            "address": {
+                "countryCode": "TH",
+                "postalCode": "10500",
+                "cityName": "BANGKOK",
+                "lines": [
+                    "2 NORTH SATHORN ROAD",
+                    "SILOM BANGRAK"
+                ]
+            },
+            "masterChainCode": "RT",
+            "lastUpdate": "2025-11-19T10:46:04"
+        },
+        {
+            "chainCode": "PL",
+            "iataCode": "BKK",
+            "dupeId": 700141340,
+            "name": "PARKROYAL SUITES BANGKOK",
+            "hotelId": "PLBKKPSB",
+            "geoCode": {
+                "latitude": 13.73943,
+                "longitude": 100.55378
+            },
+            "address": {
+                "countryCode": "TH",
+                "postalCode": "10110",
+                "cityName": "BANGKOK",
+                "lines": [
+                    "22 SUKHUMVIT SOI 6 KLONGTOEY",
+                    "OPP. WORLD TRADE CENTER,XIAMEN ROAD"
+                ]
+            },
+            "masterChainCode": "GL",
+            "lastUpdate": "2025-05-21T13:28:38"
+        },
+        {
+            "chainCode": "MC",
+            "iataCode": "BKK",
+            "dupeId": 700425098,
+            "name": "MARRIOTT EXE APRT BANGKOK SUKHUMVIT 50",
+            "hotelId": "MCBKKEFM",
+            "geoCode": {
+                "latitude": 13.70448,
+                "longitude": 100.59416
+            },
+            "address": {
+                "countryCode": "TH",
+                "postalCode": "10110",
+                "cityName": "BANGKOK",
+                "lines": [
+                    "908 SUKHUMVIT ROAD",
+                    "PHRA KHANONG"
+                ]
+            },
+            "masterChainCode": "EM",
+            "lastUpdate": "2025-11-16T11:13:19"
+        },
+        {
+            "chainCode": "AZ",
+            "iataCode": "BKK",
+            "dupeId": 700144992,
+            "name": "SOMERSET THONGLOR SUKHUMVIT",
+            "hotelId": "AZBKK512",
+            "geoCode": {
+                "latitude": 13.72905,
+                "longitude": 100.58049
+            },
+            "address": {
+                "countryCode": "TH",
+                "postalCode": "10110",
+                "cityName": "BANGKOK",
+                "lines": [
+                    "115 SUKHUMVIT 55",
+                    "SUKHUMVIT ROAD, WATTANA"
+                ]
+            },
+            "lastUpdate": "2025-11-14T18:09:20"
+        },
+        {
+            "chainCode": "YX",
+            "iataCode": "BKK",
+            "dupeId": 700022544,
+            "name": "AMARI BANGSAEN",
+            "hotelId": "YXBKKAMB",
+            "geoCode": {
+                "latitude": 13.28963,
+                "longitude": 100.91157
+            },
+            "address": {
+                "countryCode": "TH",
+                "postalCode": "20130",
+                "cityName": "CHONBURI",
+                "lines": [
+                    "44 SOI 1 BANGSAEN ROAD 1",
+                    "TAMBOL SAENSUK AMPHOE MUEANG"
+                ]
+            },
+            "lastUpdate": "2025-10-24T06:42:15"
+        },
+        {
+            "chainCode": "AZ",
+            "iataCode": "BKK",
+            "dupeId": 701142213,
+            "name": "ASCOTT THONGLOR BANGKOK",
+            "hotelId": "AZBKKATB",
+            "geoCode": {
+                "latitude": 13.72218,
+                "longitude": 100.57052
+            },
+            "address": {
+                "countryCode": "TH",
+                "postalCode": "10110",
+                "cityName": "BANGKOK",
+                "lines": [
+                    "1 SOI SUKHUMVIT 59 BOONCHANA"
+                ]
+            },
+            "lastUpdate": "2025-11-14T17:54:11"
+        },
+        {
+            "chainCode": "RT",
+            "iataCode": "BKK",
+            "dupeId": 700085146,
+            "name": "IBIS BANGKOK SATHORN",
+            "hotelId": "RTBKKSAT",
+            "geoCode": {
+                "latitude": 13.72168,
+                "longitude": 100.54672
+            },
+            "address": {
+                "countryCode": "TH",
+                "postalCode": "10120",
+                "cityName": "BANGKOK",
+                "lines": [
+                    "SOI NGAM DUPHLI RAMA IV",
+                    "SATHORN"
+                ]
+            },
+            "masterChainCode": "RT",
+            "lastUpdate": "2025-11-15T11:35:59"
+        },
+        {
+            "chainCode": "YX",
+            "iataCode": "BKK",
+            "dupeId": 700004447,
+            "name": "AMARI DON MUANG AIRPORT BANGKO",
+            "hotelId": "YXBKKADM",
+            "geoCode": {
+                "latitude": 13.92067,
+                "longitude": 100.60033
+            },
+            "address": {
+                "countryCode": "TH",
+                "postalCode": "10210",
+                "cityName": "BANGKOK",
+                "lines": [
+                    "333 CHERT WUDTHAKAS ROAD"
+                ]
+            },
+            "lastUpdate": "2025-11-19T10:44:56"
+        },
+        {
+            "chainCode": "IN",
+            "iataCode": "BKK",
+            "dupeId": 700231067,
+            "name": "HOTEL INDIGO WIRELESS ROAD",
+            "hotelId": "INBKK443",
+            "geoCode": {
+                "latitude": 13.74171,
+                "longitude": 100.54716
+            },
+            "address": {
+                "countryCode": "TH",
+                "postalCode": "10330",
+                "cityName": "BANGKOK",
+                "lines": [
+                    "81 WIRELESS ROAD LUMPINI",
+                    "PATHUMWAN"
+                ]
+            },
+            "masterChainCode": "6C",
+            "lastUpdate": "2025-10-29T17:12:44"
+        },
+        {
+            "chainCode": "RT",
+            "iataCode": "BKK",
+            "dupeId": 700010529,
+            "name": "NOVOTEL  BANGKOK BANGNA",
+            "hotelId": "RTBKKBAN",
+            "geoCode": {
+                "latitude": 13.67293,
+                "longitude": 100.647
+            },
+            "address": {
+                "countryCode": "TH",
+                "postalCode": "10250",
+                "cityName": "BANGKOK",
+                "lines": [
+                    "333 SRINAKARIN ROAD",
+                    "NONGBON"
+                ]
+            },
+            "masterChainCode": "RT",
+            "lastUpdate": "2025-11-19T08:48:45"
+        },
+        {
+            "chainCode": "AZ",
+            "iataCode": "BKK",
+            "dupeId": 700048506,
+            "name": "SOMERSET PARK SUANPLU BANGKOK",
+            "hotelId": "AZBKK128",
+            "geoCode": {
+                "latitude": 13.72154,
+                "longitude": 100.53826
+            },
+            "address": {
+                "countryCode": "TH",
+                "postalCode": "10120",
+                "cityName": "BANGKOK",
+                "lines": [
+                    "39 SOI SUANPLU",
+                    "SOUTH SATHORN ROAD"
+                ]
+            },
+            "lastUpdate": "2025-11-14T18:05:15"
+        },
+        {
+            "chainCode": "YX",
+            "iataCode": "BKK",
+            "dupeId": 700151478,
+            "name": "TOWER CLUB AT LEBUA",
+            "hotelId": "YXBKKLST",
+            "geoCode": {
+                "latitude": 13.72185,
+                "longitude": 100.51673
+            },
+            "address": {
+                "countryCode": "TH",
+                "postalCode": "10550",
+                "cityName": "BANGKOK",
+                "lines": [
+                    "1055/42 SILOM ROAD",
+                    "BANGRAK"
+                ]
+            },
+            "lastUpdate": "2025-10-27T06:00:13"
+        },
+        {
+            "chainCode": "AZ",
+            "iataCode": "BKK",
+            "dupeId": 700686155,
+            "name": "HOTEL SOMERSET MAISON ASOKE BANGKOK",
+            "hotelId": "AZBKKSMA",
+            "geoCode": {
+                "latitude": 13.74363,
+                "longitude": 100.56386
+            },
+            "address": {
+                "countryCode": "TH",
+                "postalCode": "10110",
+                "cityName": "BANGKOK",
+                "lines": [
+                    "84 SUKHUMVIT 23 PRASANMITR",
+                    "KLONGTOEY NUA WATTANA"
+                ]
+            },
+            "lastUpdate": "2025-11-14T18:03:43"
+        },
+        {
+            "chainCode": "RT",
+            "iataCode": "BKK",
+            "dupeId": 700156530,
+            "name": "NOVOTEL PLATINUM PRATUNAM",
+            "hotelId": "RTBKKPLA",
+            "geoCode": {
+                "latitude": 13.74977,
+                "longitude": 100.54061
+            },
+            "address": {
+                "countryCode": "TH",
+                "postalCode": "10400",
+                "cityName": "BANGKOK",
+                "lines": [
+                    "220 PETCHABURI ROAD",
+                    "RATCHATEVEE"
+                ]
+            },
+            "masterChainCode": "RT",
+            "lastUpdate": "2025-11-15T12:06:06"
+        },
+        {
+            "chainCode": "NK",
+            "iataCode": "BKK",
+            "dupeId": 536915568,
+            "name": "GRAND NIKKO BANGKOK SATHORN",
+            "hotelId": "NKBKKSAT",
+            "geoCode": {
+                "latitude": 13.72299,
+                "longitude": 100.53489
+            },
+            "address": {
+                "countryCode": "TH",
+                "postalCode": "10120",
+                "cityName": "BANGKOK",
+                "lines": [
+                    "117 SOUTH SATHORN ROAD",
+                    "THUNG MAHA MEK SATHORN"
+                ]
+            },
+            "masterChainCode": "NK",
+            "lastUpdate": "2025-11-19T06:35:08"
+        },
+        {
+            "chainCode": "DW",
+            "iataCode": "BKK",
+            "dupeId": 700006946,
+            "name": "DUSIT THANI BANGKOK",
+            "hotelId": "DWBKK827",
+            "geoCode": {
+                "latitude": 13.72829,
+                "longitude": 100.53733
+            },
+            "address": {
+                "countryCode": "TH",
+                "postalCode": "10500",
+                "cityName": "BANGKOK",
+                "lines": [
+                    "98 RAMA IV ROAD SILOM",
+                    "BANGRAK"
+                ]
+            },
+            "masterChainCode": "PV",
+            "lastUpdate": "2025-11-11T01:29:08"
+        },
+        {
+            "chainCode": "UR",
+            "iataCode": "BKK",
+            "dupeId": 701138790,
+            "name": "SEEKERS FINDERS RAMA IV SURESTAY",
+            "hotelId": "URBKK927",
+            "geoCode": {
+                "latitude": 13.71681,
+                "longitude": 100.57233
+            },
+            "address": {
+                "countryCode": "TH",
+                "postalCode": "10110",
+                "cityName": "BANGKOK",
+                "lines": [
+                    "1198 RAMA IV ROAD",
+                    "KLONGTOEI"
+                ]
+            },
+            "masterChainCode": "BW",
+            "lastUpdate": "2025-10-31T15:47:50"
+        },
+        {
+            "chainCode": "HL",
+            "iataCode": "BKK",
+            "dupeId": 700054159,
+            "name": "HILTON BANGKOK GRANDE ASOKE",
+            "hotelId": "HLBKKPLM",
+            "geoCode": {
+                "latitude": 13.73893,
+                "longitude": 100.5623
+            },
+            "address": {
+                "countryCode": "TH",
+                "postalCode": "10110",
+                "cityName": "BANGKOK",
+                "lines": [
+                    "30 SUKHUMVIT 21 ASOKE ROAD",
+                    "KLONGTOEY NUA WATTANA"
+                ]
+            },
+            "masterChainCode": "EH",
+            "lastUpdate": "2025-10-31T12:48:22"
+        },
+        {
+            "chainCode": "OH",
+            "iataCode": "BKK",
+            "dupeId": 700003620,
+            "name": "NH BANGKOK SUKHUMVIT BOULEVARD",
+            "hotelId": "OHBKKSUK",
+            "geoCode": {
+                "latitude": 13.74205,
+                "longitude": 100.55429
+            },
+            "address": {
+                "countryCode": "TH",
+                "postalCode": "10110",
+                "cityName": "BANGKOK",
+                "lines": [
+                    "2 SUKHUMVIT 5 ALLEY",
+                    "KHLONG TOEI TUEA WATTHANA"
+                ]
+            },
+            "masterChainCode": "NH",
+            "lastUpdate": "2025-09-09T09:16:16"
+        },
+        {
+            "chainCode": "UZ",
+            "iataCode": "BKK",
+            "dupeId": 700165162,
+            "name": "THE CONTINENT HOTEL",
+            "hotelId": "UZBKK969",
+            "geoCode": {
+                "latitude": 13.73619,
+                "longitude": 100.56202
+            },
+            "address": {
+                "countryCode": "TH",
+                "postalCode": "10110",
+                "cityName": "BANGKOK",
+                "lines": [
+                    "413 SUKHUMVIT ROAD, NEAR ASOKE BTS STATION AND",
+                    "SUKHUMVIT MRT STATION"
+                ]
+            },
+            "lastUpdate": "2025-04-16T17:31:43"
+        },
+        {
+            "chainCode": "MC",
+            "iataCode": "BKK",
+            "dupeId": 700045871,
+            "name": "JUBILEE PRESTIGE HOTEL RATCHADAPISEK",
+            "hotelId": "MCBKKJRM",
+            "geoCode": {
+                "latitude": 13.77639,
+                "longitude": 100.57386
+            },
+            "address": {
+                "countryCode": "TH",
+                "postalCode": "10320",
+                "cityName": "BANGKOK",
+                "lines": [
+                    "204 RATCHADAPISEK ROAD",
+                    "HUAY KWANG"
+                ]
+            },
+            "masterChainCode": "EM",
+            "lastUpdate": "2025-11-17T18:16:57"
+        },
+        {
+            "chainCode": "UR",
+            "iataCode": "BKK",
+            "dupeId": 700778773,
+            "name": "SURESTAY BEST WESTERN BANGKOK RAMINTRA",
+            "hotelId": "URBKK934",
+            "geoCode": {
+                "latitude": 13.81856,
+                "longitude": 100.67694
+            },
+            "address": {
+                "countryCode": "TH",
+                "postalCode": "10230",
+                "cityName": "BANGKOK",
+                "lines": [
+                    "90/1 RATCHADA-RAMINTRA RD",
+                    "KHAN NA YAO SUBDISTRICT, KHAN NA YAO DISTRICT"
+                ]
+            },
+            "masterChainCode": "BW",
+            "lastUpdate": "2025-11-18T23:47:43"
+        },
+        {
+            "chainCode": "AK",
+            "iataCode": "BKK",
+            "dupeId": 701239129,
+            "name": "MADI PAIDI BANGKOK AUTOGRAPH COLLECTION",
+            "hotelId": "AKBKKBHA",
+            "geoCode": {
+                "latitude": 13.72614,
+                "longitude": 100.578
+            },
+            "address": {
+                "countryCode": "TH",
+                "postalCode": "10110",
+                "cityName": "BANGKOK",
+                "lines": [
+                    "22 SOI SUKHUMVIT 53 SUKHUMVIT ROAD",
+                    "KLONGTON NUA, WATTANA"
+                ]
+            },
+            "masterChainCode": "EM",
+            "lastUpdate": "2025-11-18T13:45:10"
+        },
+        {
+            "chainCode": "YX",
+            "iataCode": "BKK",
+            "dupeId": 701214212,
+            "name": "RXV WELLNESS",
+            "hotelId": "YXBKKRXW",
+            "geoCode": {
+                "latitude": 13.73536,
+                "longitude": 100.24343
+            },
+            "address": {
+                "countryCode": "TH",
+                "postalCode": "73110",
+                "cityName": "NAKHON PATHOM",
+                "lines": [
+                    "88 YAI CHA SAMPRAN DISTRICT"
+                ]
+            },
+            "lastUpdate": "2025-11-19T08:00:07"
+        },
+        {
+            "chainCode": "YX",
+            "iataCode": "BKK",
+            "dupeId": 700081110,
+            "name": "FURAMAXCLUSIVE SATHORN",
+            "hotelId": "YXBKKFUR",
+            "geoCode": {
+                "latitude": 13.72383,
+                "longitude": 100.53104
+            },
+            "address": {
+                "countryCode": "TH",
+                "postalCode": "10500",
+                "cityName": "BANGKOK",
+                "lines": [
+                    "59 SILOM SOI 3 PIPHAT 2",
+                    "SILOM ROAD"
+                ]
+            },
+            "lastUpdate": "2025-10-28T10:59:37"
+        },
+        {
+            "chainCode": "PH",
+            "iataCode": "BKK",
+            "dupeId": 700013373,
+            "name": "THE LANDMARK BANGKOK LIF",
+            "hotelId": "PHBKKLAN",
+            "geoCode": {
+                "latitude": 13.74086,
+                "longitude": 100.55396
+            },
+            "address": {
+                "countryCode": "TH",
+                "postalCode": "10110",
+                "cityName": "BANGKOK",
+                "lines": [
+                    "138 SUKHUMVIT ROAD"
+                ]
+            },
+            "masterChainCode": "PV",
+            "lastUpdate": "2025-11-06T03:17:41"
+        },
+        {
+            "chainCode": "BR",
+            "iataCode": "BKK",
+            "dupeId": 700141056,
+            "name": "RENAISSANCE BANGKOK RATCHAPRASONG HOTEL",
+            "hotelId": "BRBKKBRB",
+            "geoCode": {
+                "latitude": 13.74282,
+                "longitude": 100.54177
+            },
+            "address": {
+                "countryCode": "TH",
+                "postalCode": "10330",
+                "cityName": "BANGKOK",
+                "lines": [
+                    "518 8 PLOENCHIT ROAD"
+                ]
+            },
+            "masterChainCode": "EM",
+            "lastUpdate": "2025-11-18T02:05:50"
+        },
+        {
+            "chainCode": "NK",
+            "iataCode": "BKK",
+            "dupeId": 700698250,
+            "name": "HOTEL NIKKO BANGKOK",
+            "hotelId": "NKBKKHNB",
+            "geoCode": {
+                "latitude": 13.72514,
+                "longitude": 100.57929
+            },
+            "address": {
+                "countryCode": "TH",
+                "postalCode": "10110",
+                "cityName": "BANGKOK",
+                "lines": [
+                    "27 SUKHUMVIT 55"
+                ]
+            },
+            "masterChainCode": "NK",
+            "lastUpdate": "2025-09-23T03:35:43"
+        },
+        {
+            "chainCode": "HI",
+            "iataCode": "BKK",
+            "dupeId": 701265564,
+            "name": "HOLIDAY INN EXPRESS BANGKOK PHAYATHAI",
+            "hotelId": "HIBKKD73",
+            "geoCode": {
+                "latitude": 13.75641,
+                "longitude": 100.53346
+            },
+            "address": {
+                "countryCode": "TH",
+                "postalCode": "10400",
+                "cityName": "BANGKOK",
+                "lines": [
+                    "PHAYATHAI ROAD PHAYA THAI DISTRICT"
+                ]
+            },
+            "masterChainCode": "6C",
+            "lastUpdate": "2025-10-22T22:39:34"
+        },
+        {
+            "chainCode": "HS",
+            "iataCode": "BKK",
+            "dupeId": 700055574,
+            "name": "S15 SUKHUMVIT HOTEL",
+            "hotelId": "HSBKKAJT",
+            "geoCode": {
+                "latitude": 13.73892,
+                "longitude": 100.55831
+            },
+            "address": {
+                "countryCode": "TH",
+                "postalCode": "10110",
+                "cityName": "BANGKOK",
+                "lines": [
+                    "217 SUKHUMVIT 15, KLOEYTOEY-NUE,"
+                ]
+            },
+            "lastUpdate": "2023-08-01T10:02:31"
+        },
+        {
+            "chainCode": "HI",
+            "iataCode": "BKK",
+            "dupeId": 700513154,
+            "name": "HOLIDAY INN EXP SOI SOONVIJAI",
+            "hotelId": "HIBKK158",
+            "geoCode": {
+                "latitude": 13.74788,
+                "longitude": 100.58468
+            },
+            "address": {
+                "countryCode": "TH",
+                "postalCode": "10310",
+                "cityName": "BANGKOK",
+                "lines": [
+                    "19 SOI SOONVIJAI, NEW PETCHBURI ROAD",
+                    "HUAYWANG, BANGKAPI"
+                ]
+            },
+            "masterChainCode": "6C",
+            "lastUpdate": "2025-10-06T04:49:07"
+        },
+        {
+            "chainCode": "CY",
+            "iataCode": "BKK",
+            "dupeId": 701239881,
+            "name": "COURTYARD MARRIOTT BKK SUVARNABHUMI APT",
+            "hotelId": "CYBKKAPC",
+            "geoCode": {
+                "latitude": 13.72243,
+                "longitude": 100.72731
+            },
+            "address": {
+                "countryCode": "TH",
+                "postalCode": "10520",
+                "cityName": "BANGKOK",
+                "lines": [
+                    "599/9 LAT KRABANG ROAD, LAT KRABANG"
+                ]
+            },
+            "masterChainCode": "EM",
+            "lastUpdate": "2025-11-18T13:40:59"
+        },
+        {
+            "chainCode": "LC",
+            "iataCode": "BKK",
+            "dupeId": 700012604,
+            "name": "SHERATON GRANDE SUKHUMVIT",
+            "hotelId": "LCBKK357",
+            "geoCode": {
+                "latitude": 13.73734,
+                "longitude": 100.55905
+            },
+            "address": {
+                "countryCode": "TH",
+                "postalCode": "10110",
+                "cityName": "BANGKOK",
+                "lines": [
+                    "250 SUKHUMVIT ROAD"
+                ]
+            },
+            "masterChainCode": "EM",
+            "lastUpdate": "2025-11-18T14:23:08"
+        },
+        {
+            "chainCode": "HY",
+            "iataCode": "BKK",
+            "dupeId": 700505079,
+            "name": "HYATT PLACE BANGKOK SUKHUMVIT 24",
+            "hotelId": "HYBKKHZS",
+            "geoCode": {
+                "latitude": 13.72799,
+                "longitude": 100.56822
+            },
+            "address": {
+                "countryCode": "TH",
+                "postalCode": "10110",
+                "cityName": "BANGKOK",
+                "lines": [
+                    "22 5 SUKHUMVIT SOI 24",
+                    "KLONGTOEI"
+                ]
+            },
+            "masterChainCode": "LH",
+            "lastUpdate": "2025-09-10T06:01:43"
+        },
+        {
+            "chainCode": "WV",
+            "iataCode": "BKK",
+            "dupeId": 700012670,
+            "name": "THE SUKOSOL HOTEL BANGKOK",
+            "hotelId": "WVBKKSCH",
+            "geoCode": {
+                "latitude": 13.75794,
+                "longitude": 100.53622
+            },
+            "address": {
+                "countryCode": "TH",
+                "postalCode": "10400",
+                "cityName": "BANGKOK",
+                "lines": [
+                    "477 THANON SI AYUTTHAYA, KHWAENG THANON PHAYA THAI",
+                    "KHET RATCHATHEWI"
+                ]
+            },
+            "masterChainCode": "TC",
+            "lastUpdate": "2023-08-01T09:47:31"
+        },
+        {
+            "chainCode": "MD",
+            "iataCode": "BKK",
+            "dupeId": 700230737,
+            "name": "LE MERIDIEN SUVARNABHUMI BANGKOK",
+            "hotelId": "MDBKK031",
+            "geoCode": {
+                "latitude": 13.65547,
+                "longitude": 100.70564
+            },
+            "address": {
+                "countryCode": "TH",
+                "postalCode": "10540",
+                "cityName": "BANGKOK",
+                "lines": [
+                    "789 MOO 14 BANGNA TRAD ROAD KM10.5",
+                    "BANGPLEEYAI BANGPLEE"
+                ]
+            },
+            "masterChainCode": "EM",
+            "lastUpdate": "2025-11-17T18:41:48"
+        },
+        {
+            "chainCode": "GD",
+            "iataCode": "BKK",
+            "dupeId": 700038706,
+            "name": "GRANDE CENTRE POINT PLOENCHIT",
+            "hotelId": "GDBKKSWR",
+            "geoCode": {
+                "latitude": 13.74227,
+                "longitude": 100.54698
+            },
+            "address": {
+                "countryCode": "TH",
+                "postalCode": "10330",
+                "cityName": "BANGKOK",
+                "lines": [
+                    "100 WIRELESS ROAD",
+                    "LUMPINI"
+                ]
+            },
+            "lastUpdate": "2025-10-17T06:46:29"
+        },
+        {
+            "chainCode": "WV",
+            "iataCode": "BKK",
+            "dupeId": 700154503,
+            "name": "EASTIN GRAND HOTEL SATHORN",
+            "hotelId": "WVBKK941",
+            "geoCode": {
+                "latitude": 13.71777,
+                "longitude": 100.51712
+            },
+            "address": {
+                "countryCode": "TH",
+                "postalCode": "10120",
+                "cityName": "BANGKOK",
+                "lines": [
+                    "33/1 SOUTH SATHORN ROAD YANNAWA SATHORN"
+                ]
+            },
+            "masterChainCode": "TC",
+            "lastUpdate": "2025-10-10T17:42:35"
+        },
+        {
+            "chainCode": "HL",
+            "iataCode": "BKK",
+            "dupeId": 700034863,
+            "name": "HILTON MILLENNIUM BANGKOK  ",
+            "hotelId": "HLBKK101",
+            "geoCode": {
+                "latitude": 13.72845,
+                "longitude": 100.50965
+            },
+            "address": {
+                "countryCode": "TH",
+                "postalCode": "10600",
+                "cityName": "BANGKOK",
+                "lines": [
+                    "123 CHAROENNAKORN ROAD",
+                    "KLONGSMAN"
+                ]
+            },
+            "masterChainCode": "EH",
+            "lastUpdate": "2025-11-12T07:55:01"
+        },
+        {
+            "chainCode": "LX",
+            "iataCode": "BKK",
+            "dupeId": 700171233,
+            "name": "ORIENTAL RESIDENCE BANGKOK",
+            "hotelId": "LXBKK067",
+            "geoCode": {
+                "latitude": 13.73834,
+                "longitude": 100.54641
+            },
+            "address": {
+                "countryCode": "TH",
+                "postalCode": "10330",
+                "cityName": "BANGKOK",
+                "lines": [
+                    "110 WIRELESS ROAD",
+                    "LUMPINI"
+                ]
+            },
+            "lastUpdate": "2025-09-17T14:37:10"
+        },
+        {
+            "chainCode": "WV",
+            "iataCode": "BKK",
+            "dupeId": 700505014,
+            "name": "HAVENT MET BANGKOK SILOM",
+            "hotelId": "WVBKK028",
+            "geoCode": {
+                "latitude": 13.72421,
+                "longitude": 100.52951
+            },
+            "address": {
+                "countryCode": "TH",
+                "postalCode": "32118",
+                "cityName": "BANGKOK",
+                "lines": [
+                    "88-188  SOI PIPAT 2",
+                    "SILOM"
+                ]
+            },
+            "masterChainCode": "TC",
+            "lastUpdate": "2023-08-01T10:52:07"
+        },
+        {
+            "chainCode": "DW",
+            "iataCode": "BKK",
+            "dupeId": 700117495,
+            "name": "DUSIT SUITES HOTEL RATCHADAMRI",
+            "hotelId": "DWBKK646",
+            "geoCode": {
+                "latitude": 13.7387,
+                "longitude": 100.5412
+            },
+            "address": {
+                "countryCode": "TH",
+                "postalCode": "10330",
+                "cityName": "BANGKOK",
+                "lines": [
+                    "3 SOI MAHARDLEKLUANG 3 RAJDAMRI",
+                    "LUMPINEE PATHUMWAN PATHUMWAN"
+                ]
+            },
+            "masterChainCode": "PV",
+            "lastUpdate": "2025-11-13T09:27:21"
+        },
+        {
+            "chainCode": "HS",
+            "iataCode": "BKK",
+            "dupeId": 700163820,
+            "name": "S33 SUKHUMVIT HOTEL",
+            "hotelId": "HSBKKAOO",
+            "geoCode": {
+                "latitude": 13.73483,
+                "longitude": 100.5676
+            },
+            "address": {
+                "countryCode": "TH",
+                "postalCode": "10110",
+                "cityName": "BANGKOK",
+                "lines": [
+                    "9-10-14 SOI SUKHUMVIT 33, KLONGTOEY-NUA,"
+                ]
+            },
+            "lastUpdate": "2023-08-01T10:37:03"
+        },
+        {
+            "chainCode": "WV",
+            "iataCode": "BKK",
+            "dupeId": 700308052,
+            "name": "THE RAWEEKANLAYA BANGKOK WELLNESS CUISIN",
+            "hotelId": "WVBKK857",
+            "geoCode": {
+                "latitude": 13.7678,
+                "longitude": 100.50506
+            },
+            "address": {
+                "countryCode": "TH",
+                "postalCode": "10200",
+                "cityName": "BANGKOK",
+                "lines": [
+                    "164-172 SOI THEWET2 KRUNG KASEM ROAD",
+                    "PHRA NAKON"
+                ]
+            },
+            "masterChainCode": "TC",
+            "lastUpdate": "2023-08-01T10:49:37"
+        },
+        {
+            "chainCode": "PH",
+            "iataCode": "BKK",
+            "dupeId": 700335889,
+            "name": "LANCASTER BANGKOK LIF",
+            "hotelId": "PHBKKLKH",
+            "geoCode": {
+                "latitude": 13.74871,
+                "longitude": 100.56728
+            },
+            "address": {
+                "countryCode": "TH",
+                "postalCode": "10310",
+                "cityName": "BANGKOK",
+                "lines": [
+                    "1777 NEW PHETCHABURI ROAD",
+                    "HUAY KWANG"
+                ]
+            },
+            "masterChainCode": "PV",
+            "lastUpdate": "2025-11-18T04:17:22"
+        },
+        {
+            "chainCode": "HI",
+            "iataCode": "BKK",
+            "dupeId": 700034865,
+            "name": "HOLIDAY INN BANGKOK",
+            "hotelId": "HIBKK47E",
+            "geoCode": {
+                "latitude": 13.74456,
+                "longitude": 100.54185
+            },
+            "address": {
+                "countryCode": "TH",
+                "postalCode": "10330",
+                "cityName": "BANGKOK",
+                "lines": [
+                    "971 PLOEN CHIT ROAD",
+                    "PATHUM WAN"
+                ]
+            },
+            "masterChainCode": "6C",
+            "lastUpdate": "2025-10-24T21:21:42"
+        },
+        {
+            "chainCode": "AP",
+            "iataCode": "BKK",
+            "dupeId": 701248746,
+            "name": "THE STANDARDX BANGKOK",
+            "hotelId": "APBKKSTX",
+            "geoCode": {
+                "latitude": 13.76319,
+                "longitude": 100.49481
+            },
+            "address": {
+                "countryCode": "TH",
+                "postalCode": "10200",
+                "cityName": "BANGKOK",
+                "lines": [
+                    "45 1 2 PHRA ARTHIT RD",
+                    "CHANA SONGKHRAM PHRA NAKHON"
+                ]
+            },
+            "lastUpdate": "2025-10-29T01:49:56"
+        },
+        {
+            "chainCode": "SC",
+            "iataCode": "BKK",
+            "dupeId": 700319944,
+            "name": "SKYVIEW HOTEL BANGKOK",
+            "hotelId": "SCBKKCSH",
+            "geoCode": {
+                "latitude": 13.7292,
+                "longitude": 100.5692
+            },
+            "address": {
+                "countryCode": "TH",
+                "postalCode": "10110",
+                "cityName": "BANGKOK",
+                "lines": [
+                    "12 SUKHUMVIT 24",
+                    "KLONGTON"
+                ]
+            },
+            "lastUpdate": "2025-10-25T02:10:07"
+        },
+        {
+            "chainCode": "HI",
+            "iataCode": "BKK",
+            "dupeId": 701243977,
+            "name": "HOLIDAY INN EXP STES CENTRAL PIER",
+            "hotelId": "HIBKK515",
+            "geoCode": {
+                "latitude": 13.71786,
+                "longitude": 100.51625
+            },
+            "address": {
+                "countryCode": "TH",
+                "postalCode": "10120",
+                "cityName": "BANGKOK",
+                "lines": [
+                    "513/13 SATHORN 23 ALLEY",
+                    "KHWAENG YANNAWA, KHET SATHRON"
+                ]
+            },
+            "masterChainCode": "6C",
+            "lastUpdate": "2025-11-15T08:47:27"
+        },
+        {
+            "chainCode": "GD",
+            "iataCode": "BKK",
+            "dupeId": 700162420,
+            "name": "GRANDE CENTRE POINT TERMINAL 21",
+            "hotelId": "GDBKKGCP",
+            "geoCode": {
+                "latitude": 13.73842,
+                "longitude": 100.56059
+            },
+            "address": {
+                "countryCode": "TH",
+                "postalCode": "10110",
+                "cityName": "BANGKOK",
+                "lines": [
+                    "2 88 SUKHUMVIT SOI 19",
+                    "SUKHUMVIT ROAD -KLONGTOEY NUA"
+                ]
+            },
+            "lastUpdate": "2025-04-18T14:32:20"
+        },
+        {
+            "chainCode": "WV",
+            "iataCode": "BKK",
+            "dupeId": 700141846,
+            "name": "THE TARNTAWAN HOTEL SURAWONG BANGKOK",
+            "hotelId": "WVBKK853",
+            "geoCode": {
+                "latitude": 13.73063,
+                "longitude": 100.53313
+            },
+            "address": {
+                "countryCode": "TH",
+                "postalCode": "10500",
+                "cityName": "BANGKOK",
+                "lines": [
+                    "5-10 SURAWONG ROAD SURIYAWONG"
+                ]
+            },
+            "masterChainCode": "TC",
+            "lastUpdate": "2023-08-01T10:07:13"
+        },
+        {
+            "chainCode": "AZ",
+            "iataCode": "BKK",
+            "dupeId": 700985271,
+            "name": "SOMERSET RAMA 9 BANGKOK",
+            "hotelId": "AZBKKSRB",
+            "geoCode": {
+                "latitude": 13.761,
+                "longitude": 100.576
+            },
+            "address": {
+                "countryCode": "TH",
+                "postalCode": "10400",
+                "cityName": "BANGKOK",
+                "lines": [
+                    "22 RATCHAPHISEK",
+                    "DINDAENG DINDAENG"
+                ]
+            },
+            "lastUpdate": "2025-04-18T14:07:51"
+        },
+        {
+            "chainCode": "UP",
+            "iataCode": "BKK",
+            "dupeId": 700540100,
+            "name": "METROPOLIS SUITES BANGKOK TAPESTRY COLL",
+            "hotelId": "UPBKKNSS",
+            "geoCode": {
+                "latitude": 13.73654,
+                "longitude": 100.5735
+            },
+            "address": {
+                "countryCode": "TH",
+                "postalCode": "10110",
+                "cityName": "BANGKOK",
+                "lines": [
+                    "5/9 SOI PHROMSRI, SUKHUMVIT 39 KLONGTON-NUA",
+                    "WATTANA"
+                ]
+            },
+            "masterChainCode": "EH",
+            "lastUpdate": "2025-11-13T11:50:27"
+        },
+        {
+            "chainCode": "YX",
+            "iataCode": "BKK",
+            "dupeId": 700005920,
+            "name": "CENTARA GRAND CENTRAL LADPRAO",
+            "hotelId": "YXBKKSOF",
+            "geoCode": {
+                "latitude": 13.81781,
+                "longitude": 100.55983
+            },
+            "address": {
+                "countryCode": "TH",
+                "postalCode": "10900",
+                "cityName": "BANGKOK",
+                "lines": [
+                    "1695 PHAHOLYOTHIN ROAD"
+                ]
+            },
+            "lastUpdate": "2025-11-06T15:12:36"
+        },
+        {
+            "chainCode": "AZ",
+            "iataCode": "BKK",
+            "dupeId": 700162113,
+            "name": "OAKWOOD RESIDENCE SUKHUMVIT TH",
+            "hotelId": "AZBKKDDW",
+            "geoCode": {
+                "latitude": 13.7347,
+                "longitude": 100.58077
+            },
+            "address": {
+                "countryCode": "TH",
+                "postalCode": "10110",
+                "cityName": "BANGKOK",
+                "lines": [
+                    "113 SUKHUMVIT 55 ROAD",
+                    "SOI THONGLOR 13,KLONGTON NUA WATTANA"
+                ]
+            },
+            "lastUpdate": "2025-11-14T18:01:49"
+        },
+        {
+            "chainCode": "BY",
+            "iataCode": "BKK",
+            "dupeId": 700989573,
+            "name": "HOMM SUKHUMVIT 34 BANGKOK",
+            "hotelId": "BYBKKHOM",
+            "geoCode": {
+                "latitude": 13.72392,
+                "longitude": 100.57252
+            },
+            "address": {
+                "countryCode": "TH",
+                "postalCode": "10110",
+                "cityName": "BANGKOK",
+                "lines": [
+                    "40 SUKHUMVIT34",
+                    "SUKHUMVITROAD KLONGTAN KLONGTOEY"
+                ]
+            },
+            "masterChainCode": "RT",
+            "lastUpdate": "2025-10-27T00:02:41"
+        },
+        {
+            "chainCode": "RT",
+            "iataCode": "BKK",
+            "dupeId": 700028918,
+            "name": "MERCURE BANGKOK SUKHUMVIT 11",
+            "hotelId": "RTBKKHUM",
+            "geoCode": {
+                "latitude": 13.74323,
+                "longitude": 100.5568
+            },
+            "address": {
+                "countryCode": "TH",
+                "postalCode": "10110",
+                "cityName": "BANGKOK",
+                "lines": [
+                    "18 SUHKUMVIT SOI 11",
+                    "NANA"
+                ]
+            },
+            "masterChainCode": "RT",
+            "lastUpdate": "2025-11-18T08:22:42"
+        },
+        {
+            "chainCode": "AZ",
+            "iataCode": "BKK",
+            "dupeId": 700358362,
+            "name": "SOMERSET EKAMAI BANGKOK",
+            "hotelId": "AZBKKSEB",
+            "geoCode": {
+                "latitude": 13.72318,
+                "longitude": 100.5866
+            },
+            "address": {
+                "countryCode": "TH",
+                "postalCode": "10110",
+                "cityName": "BANGKOK",
+                "lines": [
+                    "22 1 EKAMAI SOI 2 SUKHUMVIT 63 ROAD",
+                    "PHRA KHANONG NUA WATTANA"
+                ]
+            },
+            "lastUpdate": "2025-11-14T18:02:53"
+        },
+        {
+            "chainCode": "FI",
+            "iataCode": "BKK",
+            "dupeId": 700366312,
+            "name": "MODENA BY FRASER BANGKOK",
+            "hotelId": "FIBKKFMB",
+            "geoCode": {
+                "latitude": 13.72094,
+                "longitude": 100.55997
+            },
+            "address": {
+                "countryCode": "TH",
+                "postalCode": "10110",
+                "cityName": "BANGKOK",
+                "lines": [
+                    "2527 RAMA IV ROAD",
+                    "FYI CENTER KHLONGTOEI DISTRICT"
+                ]
+            },
+            "lastUpdate": "2025-09-12T08:57:30"
+        },
+        {
+            "chainCode": "WW",
+            "iataCode": "BKK",
+            "dupeId": 700965012,
+            "name": "CARLTON BANGKOK SUKHUMVIT",
+            "hotelId": "WWBKKCHB",
+            "geoCode": {
+                "latitude": 13.73434,
+                "longitude": 100.56444
+            },
+            "address": {
+                "countryCode": "TH",
+                "postalCode": "10110",
+                "cityName": "BANGKOK",
+                "lines": [
+                    "491 SUKHUMVIT ROAD",
+                    "KHLONGTOEY NUA WATTANA"
+                ]
+            },
+            "masterChainCode": "EW",
+            "lastUpdate": "2025-10-30T09:28:43"
+        },
+        {
+            "chainCode": "OH",
+            "iataCode": "BKK",
+            "dupeId": 535192764,
+            "name": "HASO",
+            "hotelId": "OHBKK559",
+            "geoCode": {
+                "latitude": 13.78718,
+                "longitude": 100.57473
+            },
+            "address": {
+                "countryCode": "TH",
+                "postalCode": "10110",
+                "cityName": "BANGKOK",
+                "lines": [
+                    "16 RATCHADAPISEK ROAD",
+                    "SUKHUMVIT, KHLONGYOEY"
+                ]
+            },
+            "masterChainCode": "NH",
+            "lastUpdate": "2025-09-22T04:12:13"
+        },
+        {
+            "chainCode": "GT",
+            "iataCode": "BKK",
+            "dupeId": 700002567,
+            "name": "GOLDEN TULIP SOVEREIGN HOTEL BANGKOK",
+            "hotelId": "GTBKK509",
+            "geoCode": {
+                "latitude": 13.75342,
+                "longitude": 100.5725
+            },
+            "address": {
+                "countryCode": "TH",
+                "postalCode": "10320",
+                "cityName": "BANGKOK",
+                "lines": [
+                    "92 SOI SAENGCHAM RAMA 9 ROAD"
+                ]
+            },
+            "masterChainCode": "LI",
+            "lastUpdate": "2025-03-25T06:26:40"
+        },
+        {
+            "chainCode": "WY",
+            "iataCode": "BKK",
+            "dupeId": 701126795,
+            "name": "WYNDHAM GARDEN BANGKOK SUKHUMVIT 42",
+            "hotelId": "WYBKK444",
+            "geoCode": {
+                "latitude": 13.71659,
+                "longitude": 100.58485
+            },
+            "address": {
+                "countryCode": "TH",
+                "postalCode": "10110",
+                "cityName": "KHLONG TAEI",
+                "lines": [
+                    "19 SOI SUKHUMVIT 42",
+                    "PHRA KHANONG SUB DISTRICT"
+                ]
+            },
+            "masterChainCode": "WR",
+            "lastUpdate": "2025-09-15T18:01:06"
+        },
+        {
+            "chainCode": "RT",
+            "iataCode": "BKK",
+            "dupeId": 700004448,
+            "name": "GRAND MERCURE BANGKOK ATRIUM",
+            "hotelId": "RTBKKARI",
+            "geoCode": {
+                "latitude": 13.74699,
+                "longitude": 100.57019
+            },
+            "address": {
+                "countryCode": "TH",
+                "postalCode": "10310",
+                "cityName": "BANGKOK",
+                "lines": [
+                    "1880 NEW PHETCHABURI ROAD"
+                ]
+            },
+            "masterChainCode": "RT",
+            "lastUpdate": "2025-11-15T17:13:49"
+        },
+        {
+            "chainCode": "PW",
+            "iataCode": "BKK",
+            "dupeId": 700549597,
+            "name": "TRAVELODGE SUKHUMVIT 11",
+            "hotelId": "PWBKKTS1",
+            "geoCode": {
+                "latitude": 13.74497,
+                "longitude": 100.55733
+            },
+            "address": {
+                "countryCode": "TH",
+                "postalCode": "10110",
+                "cityName": "BANGKOK",
+                "lines": [
+                    "30/9-10 SOI SUKHUMVIT 11,",
+                    "KHWAENG KHLONG TOEI NUEA, KHET WATTHANA"
+                ]
+            },
+            "lastUpdate": "2025-04-19T07:20:19"
+        },
+        {
+            "chainCode": "RT",
+            "iataCode": "BKK",
+            "dupeId": 700182958,
+            "name": "IBIS BANGKOK SIAM",
+            "hotelId": "RTBKKSIA",
+            "geoCode": {
+                "latitude": 13.74694,
+                "longitude": 100.5289
+            },
+            "address": {
+                "countryCode": "TH",
+                "postalCode": "10330",
+                "cityName": "BANGKOK",
+                "lines": [
+                    "RAMA 1 WANGMAI",
+                    "PATHUMWAN"
+                ]
+            },
+            "masterChainCode": "RT",
+            "lastUpdate": "2025-11-15T12:27:11"
+        },
+        {
+            "chainCode": "GD",
+            "iataCode": "BKK",
+            "dupeId": 700053532,
+            "name": "GRANDE CENTRE POINT RATCHADAMRI",
+            "hotelId": "GDBKKGCR",
+            "geoCode": {
+                "latitude": 13.74165,
+                "longitude": 100.54097
+            },
+            "address": {
+                "countryCode": "TH",
+                "postalCode": "10330",
+                "cityName": "BANGKOK",
+                "lines": [
+                    "153 2 SOI MAHATLEK",
+                    "RATCHADAMRI ROAD LUMPINI"
+                ]
+            },
+            "lastUpdate": "2025-05-01T15:17:17"
+        },
+        {
+            "chainCode": "PN",
+            "iataCode": "BKK",
+            "dupeId": 700013450,
+            "name": "THE PENINSULA BANGKOK",
+            "hotelId": "PNBKK831",
+            "geoCode": {
+                "latitude": 13.7229,
+                "longitude": 100.51111
+            },
+            "address": {
+                "countryCode": "TH",
+                "postalCode": "10600",
+                "cityName": "KLONGSAN BANGKOK",
+                "lines": [
+                    "333 CHAROENNAKORN ROAD"
+                ]
+            },
+            "lastUpdate": "2025-10-31T23:06:06"
+        },
+        {
+            "chainCode": "YX",
+            "iataCode": "BKK",
+            "dupeId": 700666778,
+            "name": "FOUR SISTER HOMESTAY",
+            "hotelId": "YXBKKFSH",
+            "geoCode": {
+                "latitude": 13.73198,
+                "longitude": 100.51387
+            },
+            "address": {
+                "countryCode": "TH",
+                "postalCode": "10100",
+                "cityName": "BANGKOK",
+                "lines": [
+                    "78 YOTHA 1 ALLEY",
+                    "KHWAENG TALAT NOI KHET SAMPHANTHAWONG"
+                ]
+            },
+            "lastUpdate": "2025-10-31T11:21:17"
+        },
+        {
+            "chainCode": "YX",
+            "iataCode": "BKK",
+            "dupeId": 701126368,
+            "name": "SHAMA YEN-AKAT BANGKOK",
+            "hotelId": "YXBKKSYA",
+            "geoCode": {
+                "latitude": 13.71134,
+                "longitude": 100.54301
+            },
+            "address": {
+                "countryCode": "TH",
+                "postalCode": "10120",
+                "cityName": "BANGKOK",
+                "lines": [
+                    "69 YEN AKAT ROAD"
+                ]
+            },
+            "lastUpdate": "2025-11-01T16:21:49"
+        },
+        {
+            "chainCode": "CP",
+            "iataCode": "BKK",
+            "dupeId": 700148084,
+            "name": "CROWNE PLAZA LUMPINI PARK",
+            "hotelId": "CPBKK3C3",
+            "geoCode": {
+                "latitude": 13.72967,
+                "longitude": 100.53503
+            },
+            "address": {
+                "countryCode": "TH",
+                "postalCode": "10500",
+                "cityName": "BANGKOK",
+                "lines": [
+                    "952 RAMA IV ROAD  SURIYAWONGSE / BANGRAK"
+                ]
+            },
+            "masterChainCode": "6C",
+            "lastUpdate": "2025-10-24T09:29:56"
+        },
+        {
+            "chainCode": "AL",
+            "iataCode": "BKK",
+            "dupeId": 700147217,
+            "name": "ALOFT BANGKOK SUKHUMVIT",
+            "hotelId": "ALBKK211",
+            "geoCode": {
+                "latitude": 13.74427,
+                "longitude": 100.55653
+            },
+            "address": {
+                "countryCode": "TH",
+                "postalCode": "10110",
+                "cityName": "BANGKOK",
+                "lines": [
+                    "35 SUKHUMVIT SOI 11 SUKHUMVITT",
+                    "KLONGTOEY NUA WATTANA"
+                ]
+            },
+            "masterChainCode": "EM",
+            "lastUpdate": "2025-11-18T13:05:55"
+        },
+        {
+            "chainCode": "MC",
+            "iataCode": "BKK",
+            "dupeId": 700189984,
+            "name": "MARRIOTT EXEC APTS THONGLOR",
+            "hotelId": "MCBKKBPM",
+            "geoCode": {
+                "latitude": 13.72341,
+                "longitude": 100.58037
+            },
+            "address": {
+                "countryCode": "TH",
+                "postalCode": "10110",
+                "cityName": "BANGKOK",
+                "lines": [
+                    "2 SUKHUMVIT SOI 57 KLONGTON NU"
+                ]
+            },
+            "masterChainCode": "EM",
+            "lastUpdate": "2025-11-16T10:21:58"
+        },
+        {
+            "chainCode": "HS",
+            "iataCode": "BKK",
+            "dupeId": 700116986,
+            "name": "AYUTTHAYA KANTARY HOTEL - SERVICED APART",
+            "hotelId": "HSBKKAUS",
+            "geoCode": {
+                "latitude": 14.34506,
+                "longitude": 100.60823
+            },
+            "address": {
+                "countryCode": "TH",
+                "postalCode": "13000",
+                "cityName": "PHRA NAKHON SI AYUTTHAYA",
+                "lines": [
+                    "ROJANA ROAD,TAMBOL TANU,AUMPHUR U-THAI 1"
+                ]
+            },
+            "lastUpdate": "2024-08-31T09:16:10"
+        },
+        {
+            "chainCode": "AZ",
+            "iataCode": "BKK",
+            "dupeId": 701145330,
+            "name": "OAKWOOD STUDIOS SUKHUMVIT BKK",
+            "hotelId": "AZBKK061",
+            "geoCode": {
+                "latitude": 13.72108,
+                "longitude": 100.57633
+            },
+            "address": {
+                "countryCode": "TH",
+                "postalCode": "10110",
+                "cityName": "BANGKOK",
+                "lines": [
+                    "70 SOI SUKHUMVIT 36",
+                    "KLONGTON SUBDISTRICT"
+                ]
+            },
+            "lastUpdate": "2025-11-14T18:01:47"
+        },
+        {
+            "chainCode": "AZ",
+            "iataCode": "BKK",
+            "dupeId": 700466114,
+            "name": "OAKWOOD HOTEL BANGKOK",
+            "hotelId": "AZBKKOAW",
+            "geoCode": {
+                "latitude": 13.71769,
+                "longitude": 100.51652
+            },
+            "address": {
+                "countryCode": "TH",
+                "postalCode": "10120",
+                "cityName": "BANGKOK",
+                "lines": [
+                    "143 S SATHON RD",
+                    "KHET SATHON. KHWAENG YAN NAWA"
+                ]
+            },
+            "lastUpdate": "2025-10-17T07:03:10"
+        },
+        {
+            "chainCode": "DW",
+            "iataCode": "BKK",
+            "dupeId": 700077950,
+            "name": "DUSITPRINCESSSRINAKARINBANGKOK",
+            "hotelId": "DWBKKRPS",
+            "geoCode": {
+                "latitude": 13.69721,
+                "longitude": 100.64798
+            },
+            "address": {
+                "countryCode": "TH",
+                "postalCode": "10250",
+                "cityName": "BANGKOK",
+                "lines": [
+                    "53 SRINAKARIN ROAD",
+                    "NONGBON, PRAVET"
+                ]
+            },
+            "masterChainCode": "PV",
+            "lastUpdate": "2025-11-11T01:29:10"
+        },
+        {
+            "chainCode": "IC",
+            "iataCode": "BKK",
+            "dupeId": 700012671,
+            "name": "INTERCONTINENTAL BANGKOK",
+            "hotelId": "ICBKKICB",
+            "geoCode": {
+                "latitude": 13.74477,
+                "longitude": 100.54145
+            },
+            "address": {
+                "countryCode": "TH",
+                "postalCode": "10330",
+                "cityName": "BANGKOK",
+                "lines": [
+                    "973 PLOENCHIT ROAD"
+                ]
+            },
+            "masterChainCode": "6C",
+            "lastUpdate": "2025-10-24T17:13:26"
+        },
+        {
+            "chainCode": "RA",
+            "iataCode": "BKK",
+            "dupeId": 700005959,
+            "name": "RAMADA BY WYNDHAM CHAOPHYA PARK",
+            "hotelId": "RABKKAKM",
+            "geoCode": {
+                "latitude": 13.77795,
+                "longitude": 100.57353
+            },
+            "address": {
+                "countryCode": "TH",
+                "postalCode": "10400",
+                "cityName": "BANGKOK",
+                "lines": [
+                    "247 RACHADAPISEK ROAD"
+                ]
+            },
+            "masterChainCode": "WR",
+            "lastUpdate": "2025-01-14T21:52:11"
+        },
+        {
+            "chainCode": "RD",
+            "iataCode": "BKK",
+            "dupeId": 700217197,
+            "name": "RADISSON BLU PLAZA BANGKOK",
+            "hotelId": "RDBKK591",
+            "geoCode": {
+                "latitude": 13.73476,
+                "longitude": 100.56398
+            },
+            "address": {
+                "countryCode": "TH",
+                "postalCode": "10110",
+                "cityName": "BANGKOK",
+                "lines": [
+                    "489 SUKHUMVIT ROAD KLONGTOEY N"
+                ]
+            },
+            "masterChainCode": "CW",
+            "lastUpdate": "2025-10-18T09:17:15"
+        },
+        {
+            "chainCode": "OX",
+            "iataCode": "BKK",
+            "dupeId": 701236979,
+            "name": "MOXY BANGKOK RATCHAPRASONG",
+            "hotelId": "OXBKKOXX",
+            "geoCode": {
+                "latitude": 13.74797,
+                "longitude": 100.54126
+            },
+            "address": {
+                "countryCode": "TH",
+                "postalCode": "10330",
+                "cityName": "BANGKOK",
+                "lines": [
+                    "111 RATCHADAMRI ROAD",
+                    "LUMPHINI PATHUM WAN"
+                ]
+            },
+            "masterChainCode": "EM",
+            "lastUpdate": "2025-11-18T23:40:39"
+        },
+        {
+            "chainCode": "SM",
+            "iataCode": "BKK",
+            "dupeId": 701188044,
+            "name": "INNSIDE BANGKOK SUKHUMVIT",
+            "hotelId": "SMBKKSUK",
+            "geoCode": {
+                "latitude": 13.71094,
+                "longitude": 100.59714
+            },
+            "address": {
+                "countryCode": "TH",
+                "postalCode": "10110",
+                "cityName": "BANGKOK",
+                "lines": [
+                    "1472 SUKHUMVIT ROAD, PHRA KHANONG, KHLONG TOEI"
+                ]
+            },
+            "lastUpdate": "2025-11-08T11:50:34"
+        },
+        {
+            "chainCode": "HI",
+            "iataCode": "BKK",
+            "dupeId": 700181648,
+            "name": "HOLIDAY INN BANGKOK SUKHUMVIT",
+            "hotelId": "HIBKK426",
+            "geoCode": {
+                "latitude": 13.7332,
+                "longitude": 100.5653
+            },
+            "address": {
+                "countryCode": "TH",
+                "postalCode": "10110",
+                "cityName": "BANGKOK",
+                "lines": [
+                    "1 SUKHUMVIT 22",
+                    "KLONGTON, KLONGTOEY"
+                ]
+            },
+            "masterChainCode": "6C",
+            "lastUpdate": "2025-11-17T11:41:46"
+        },
+        {
+            "chainCode": "AZ",
+            "iataCode": "BKK",
+            "dupeId": 700079418,
+            "name": "CITADINES SUKHUMVIT 8 BANGKOK",
+            "hotelId": "AZBKK293",
+            "geoCode": {
+                "latitude": 13.73574,
+                "longitude": 100.556
+            },
+            "address": {
+                "countryCode": "TH",
+                "postalCode": "10110",
+                "cityName": "BANGKOK",
+                "lines": [
+                    "77 7 SOI SUKHUMVIT 8",
+                    "SUKHUMVIT ROAD"
+                ]
+            },
+            "lastUpdate": "2025-11-14T17:58:30"
+        },
+        {
+            "chainCode": "NK",
+            "iataCode": "BKK",
+            "dupeId": 701126375,
+            "name": "HOTEL NIKKO AMATA CITY CHONBURI",
+            "hotelId": "NKBKKNAM",
+            "geoCode": {
+                "latitude": 13.42023,
+                "longitude": 101.00515
+            },
+            "address": {
+                "countryCode": "TH",
+                "postalCode": "20000",
+                "cityName": "CHONBURI",
+                "lines": [
+                    "700 333 MOO 1 KLONGTAMRU",
+                    "MUANG CHONBURI"
+                ]
+            },
+            "masterChainCode": "NK",
+            "lastUpdate": "2025-09-05T08:35:33"
+        },
+        {
+            "chainCode": "NT",
+            "iataCode": "BKK",
+            "dupeId": 700003618,
+            "name": "ANANTARA RIVERSIDE BANGKOK RESORT",
+            "hotelId": "NTBKKTHM",
+            "geoCode": {
+                "latitude": 13.70439,
+                "longitude": 100.49283
+            },
+            "address": {
+                "countryCode": "TH",
+                "postalCode": "10600",
+                "cityName": "BANGKOK",
+                "lines": [
+                    "257 1-3 CHAROEN NAKHON RD",
+                    "KHWAENG SAMRE"
+                ]
+            },
+            "masterChainCode": "MW",
+            "lastUpdate": "2025-10-15T07:37:32"
+        },
+        {
+            "chainCode": "GD",
+            "iataCode": "BKK",
+            "dupeId": 700163010,
+            "name": "THE GRAND FOURWINGS CONVENTION HOTEL",
+            "hotelId": "GDBKKGRA",
+            "geoCode": {
+                "latitude": 13.75432,
+                "longitude": 100.64637
+            },
+            "address": {
+                "countryCode": "TH",
+                "postalCode": "10240",
+                "cityName": "BANGKOK",
+                "lines": [
+                    "333 SRINAKARIN ROAD"
+                ]
+            },
+            "lastUpdate": "2025-08-05T07:05:21"
+        },
+        {
+            "chainCode": "SI",
+            "iataCode": "BKK",
+            "dupeId": 700002569,
+            "name": "ROYAL ORCHID SHERATON RIVERSIDE HOTEL",
+            "hotelId": "SIBKK172",
+            "geoCode": {
+                "latitude": 13.72906,
+                "longitude": 100.51357
+            },
+            "address": {
+                "countryCode": "TH",
+                "postalCode": "10500",
+                "cityName": "BANGKOK",
+                "lines": [
+                    "2 CHAROEN KRUNG RD SOI 30",
+                    "CPT BUSH LN SIPHYA BANGRAK"
+                ]
+            },
+            "masterChainCode": "EM",
+            "lastUpdate": "2025-11-18T02:09:47"
+        },
+        {
+            "chainCode": "GD",
+            "iataCode": "BKK",
+            "dupeId": 701219617,
+            "name": "GRANDE CENTRE POINT SURAWONG BANGKOK",
+            "hotelId": "GDBKKGCS",
+            "geoCode": {
+                "latitude": 13.72591,
+                "longitude": 100.5192
+            },
+            "address": {
+                "countryCode": "TH",
+                "postalCode": "10500",
+                "cityName": "BANGKOK",
+                "lines": [
+                    "299 SURAWONG ROAD"
+                ]
+            },
+            "lastUpdate": "2025-04-18T14:33:15"
+        },
+        {
+            "chainCode": "WV",
+            "iataCode": "BKK",
+            "dupeId": 700163784,
+            "name": "AMORA NEOLUXE SUITES BANGKOK",
+            "hotelId": "WVBKK950",
+            "geoCode": {
+                "latitude": 13.73398,
+                "longitude": 100.56639
+            },
+            "address": {
+                "countryCode": "TH",
+                "postalCode": "10110",
+                "cityName": "BANGKOK",
+                "lines": [
+                    "6/1 SUKHUMVIT 31 ROAD",
+                    "KLONGTOEYNUA, WATTANA"
+                ]
+            },
+            "masterChainCode": "TC",
+            "lastUpdate": "2023-08-01T10:37:07"
+        },
+        {
+            "chainCode": "HS",
+            "iataCode": "BKK",
+            "dupeId": 700056249,
+            "name": "CAPE HOUSE SERVICED APARTMENTS",
+            "hotelId": "HSBKKAHS",
+            "geoCode": {
+                "latitude": 13.74099,
+                "longitude": 100.54364
+            },
+            "address": {
+                "countryCode": "TH",
+                "postalCode": "10330",
+                "cityName": "BANGKOK",
+                "lines": [
+                    "43 SOI LANGSUAN, PLOENCHIT ROAD, LUMPINI"
+                ]
+            },
+            "lastUpdate": "2023-08-01T10:02:54"
+        },
+        {
+            "chainCode": "MC",
+            "iataCode": "BKK",
+            "dupeId": 700128264,
+            "name": "MARRIOTT EXEC APTS SUKHUMVT PK",
+            "hotelId": "MCBKKSPM",
+            "geoCode": {
+                "latitude": 13.72424,
+                "longitude": 100.56684
+            },
+            "address": {
+                "countryCode": "TH",
+                "postalCode": "10110",
+                "cityName": "BANGKOK",
+                "lines": [
+                    "90 SUKHUMVIT SOI 24 KLONGTON K"
+                ]
+            },
+            "masterChainCode": "EM",
+            "lastUpdate": "2025-11-17T18:39:05"
+        },
+        {
+            "chainCode": "OH",
+            "iataCode": "BKK",
+            "dupeId": 700016103,
+            "name": "AVANI RATCHADA BANGKOK HOTEL",
+            "hotelId": "OHBKKGFH",
+            "geoCode": {
+                "latitude": 13.7566,
+                "longitude": 100.5647
+            },
+            "address": {
+                "countryCode": "TH",
+                "postalCode": "10400",
+                "cityName": "BANGKOK",
+                "lines": [
+                    "1 RATCHADAPHISEK ROAD DINDAENG"
+                ]
+            },
+            "masterChainCode": "NH",
+            "lastUpdate": "2025-10-21T02:35:54"
+        },
+        {
+            "chainCode": "WV",
+            "iataCode": "BKK",
+            "dupeId": 700145119,
+            "name": "NORTHGATE RATCHAYOTHIN",
+            "hotelId": "WVBKK033",
+            "geoCode": {
+                "latitude": 13.82959,
+                "longitude": 100.56338
+            },
+            "address": {
+                "countryCode": "TH",
+                "postalCode": "10900",
+                "cityName": "BANGKOK",
+                "lines": [
+                    "248 RATCHADAPISEK RD",
+                    "LADYAO CHATUCHAK"
+                ]
+            },
+            "masterChainCode": "TC",
+            "lastUpdate": "2023-08-01T10:05:32"
+        },
+        {
+            "chainCode": "MC",
+            "iataCode": "BKK",
+            "dupeId": 700008853,
+            "name": "JW MARRIOTT HOTEL BANGKOK",
+            "hotelId": "MCBKKDTM",
+            "geoCode": {
+                "latitude": 13.74165,
+                "longitude": 100.55213
+            },
+            "address": {
+                "countryCode": "TH",
+                "postalCode": "10110",
+                "cityName": "BANGKOK",
+                "lines": [
+                    "4 SUKHUMVIT SOI 2"
+                ]
+            },
+            "masterChainCode": "EM",
+            "lastUpdate": "2025-11-18T14:50:58"
+        },
+        {
+            "chainCode": "HS",
+            "iataCode": "BKK",
+            "dupeId": 700235205,
+            "name": "LEMONTEA HOTEL",
+            "hotelId": "HSBKKATB",
+            "geoCode": {
+                "latitude": 13.75371,
+                "longitude": 100.53756
+            },
+            "address": {
+                "countryCode": "TH",
+                "postalCode": "10400",
+                "cityName": "BANGKOK",
+                "lines": [
+                    "55 SOI PETCHBURI15 PETCHBURI RD., RATCHTHEVI"
+                ]
+            },
+            "lastUpdate": "2023-08-01T10:41:53"
+        }
+    ],
+    "meta": {
+        "count": 280,
+        "links": {
+            "self": "https://api.amadeus.com/v1/reference-data/locations/hotels/by-city?cityCode=BKK"
+        }
+    }
+}
