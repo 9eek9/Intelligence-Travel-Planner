@@ -1,4 +1,5 @@
 # services/sentiment_service.py
+
 import os
 import requests
 import numpy as np
@@ -8,8 +9,9 @@ from sklearn.feature_extraction.text import CountVectorizer
 import google.generativeai as genai
 
 from sqlalchemy.orm import Session
+
 from database.database import SessionLocal
-from models.sentiment_review import SentimentCache
+from models.sentiment_review import SentimentCache, SentimentReview
 
 load_dotenv()
 
@@ -22,10 +24,9 @@ DETAILS_URL = "https://maps.googleapis.com/maps/api/place/details/json"
 
 
 # ---------------------------------------------------------
-# Fetch place name using Google Place Details API
+# GET PLACE NAME (used if missing)
 # ---------------------------------------------------------
 def get_place_name(place_id: str):
-    """Fetch only the place name from Google Places."""
     try:
         params = {
             "place_id": place_id,
@@ -36,19 +37,14 @@ def get_place_name(place_id: str):
         resp.raise_for_status()
         data = resp.json()
         return data.get("result", {}).get("name")
-    except Exception:
+    except:
         return None
 
 
 # ---------------------------------------------------------
-# Fetch basic place details (for /sentiment/{place_id})
+# BASIC DETAILS (rating, address, etc.)
 # ---------------------------------------------------------
 def get_place_basic_details(place_id: str):
-    """
-    Fetch basic details for a place: name, address, rating, user_ratings_total, photo_url.
-
-    Used mainly by /sentiment/{place_id} to build a rich 'place' block.
-    """
     try:
         params = {
             "place_id": place_id,
@@ -56,7 +52,6 @@ def get_place_basic_details(place_id: str):
             "key": PLACES_KEY,
         }
         resp = requests.get(DETAILS_URL, params=params, timeout=20)
-        resp.raise_for_status()
         data = resp.json().get("result", {}) or {}
 
         name = data.get("name")
@@ -64,17 +59,14 @@ def get_place_basic_details(place_id: str):
         rating = data.get("rating")
         user_ratings_total = data.get("user_ratings_total")
 
-        # Derive a photo URL, if photos are present
         photo_url = None
         photos = data.get("photos", [])
         if photos:
-            photo_ref = photos[0].get("photo_reference")
-            if photo_ref:
+            ref = photos[0].get("photo_reference")
+            if ref:
                 photo_url = (
                     f"https://maps.googleapis.com/maps/api/place/photo"
-                    f"?maxwidth=800"
-                    f"&photo_reference={photo_ref}"
-                    f"&key={PLACES_KEY}"
+                    f"?maxwidth=800&photo_reference={ref}&key={PLACES_KEY}"
                 )
 
         return {
@@ -85,7 +77,7 @@ def get_place_basic_details(place_id: str):
             "photo_url": photo_url,
         }
 
-    except Exception:
+    except:
         return {
             "name": None,
             "address": None,
@@ -96,10 +88,9 @@ def get_place_basic_details(place_id: str):
 
 
 # ---------------------------------------------------------
-# Fetch reviews from Google Places
+# FETCH REVIEWS
 # ---------------------------------------------------------
 def get_place_reviews(place_id: str, max_reviews: int = 5):
-    """Fetch up to 5 latest reviews for a given Google place."""
     try:
         params = {
             "place_id": place_id,
@@ -107,19 +98,19 @@ def get_place_reviews(place_id: str, max_reviews: int = 5):
             "key": PLACES_KEY,
         }
         resp = requests.get(DETAILS_URL, params=params, timeout=20)
-        resp.raise_for_status()
         data = resp.json()
+
         reviews = data.get("result", {}).get("reviews", [])
         return [r.get("text", "") for r in reviews if r.get("text")][:max_reviews]
-    except Exception:
+
+    except:
         return []
 
 
+# ---------------------------------------------------------
+# FETCH PHOTO URL
+# ---------------------------------------------------------
 def get_place_photo_url(place_id: str, max_width: int = 800):
-    """
-    Fetch the first photo reference for a place and convert it
-    into a real Google Place Photo URL.
-    """
     try:
         params = {
             "place_id": place_id,
@@ -127,34 +118,27 @@ def get_place_photo_url(place_id: str, max_width: int = 800):
             "key": PLACES_KEY,
         }
         resp = requests.get(DETAILS_URL, params=params, timeout=20)
-        resp.raise_for_status()
         data = resp.json()
 
         photos = data.get("result", {}).get("photos", [])
         if not photos:
             return None
 
-        # Use the FIRST photo reference
-        photo_ref = photos[0].get("photo_reference")
-        if not photo_ref:
+        ref = photos[0].get("photo_reference")
+        if not ref:
             return None
 
-        # Generate actual accessible URL
-        url = (
+        return (
             f"https://maps.googleapis.com/maps/api/place/photo"
-            f"?maxwidth={max_width}"
-            f"&photo_reference={photo_ref}"
-            f"&key={PLACES_KEY}"
+            f"?maxwidth={max_width}&photo_reference={ref}&key={PLACES_KEY}"
         )
 
-        return url
-
-    except Exception:
+    except:
         return None
 
 
 # ---------------------------------------------------------
-# Run DistilBERT sentiment analysis
+# SENTIMENT ANALYSIS WITH DISTILBERT
 # ---------------------------------------------------------
 sentiment_pipeline = pipeline(
     "sentiment-analysis",
@@ -163,47 +147,41 @@ sentiment_pipeline = pipeline(
 
 
 def analyze_reviews(reviews):
-    """Analyze sentiment (POSITIVE / NEGATIVE + score)."""
     results = []
     for text in reviews:
         try:
-            out = sentiment_pipeline(text[:512])[0]  # truncate long reviews
-            results.append(
-                {
-                    "text": text,
-                    "label": out["label"],
-                    "score": float(round(out["score"], 3)),  # ensure Python float
-                }
-            )
-        except Exception:
+            out = sentiment_pipeline(text[:512])[0]
+            results.append({
+                "text": text,
+                "label": out["label"],
+                "score": float(round(out["score"], 3)),
+            })
+        except:
             continue
     return results
 
 
 # ---------------------------------------------------------
-# Keyword extraction
+# KEYWORD EXTRACTION
 # ---------------------------------------------------------
 def extract_keywords(texts, max_keywords=5):
     if not texts:
         return []
-
     try:
-        vectorizer = CountVectorizer(stop_words="english", max_features=50)
-        X = vectorizer.fit_transform(texts)
+        v = CountVectorizer(stop_words="english", max_features=50)
+        X = v.fit_transform(texts)
         counts = X.toarray().sum(axis=0)
-        vocab = vectorizer.get_feature_names_out()
-
-        top_indices = counts.argsort()[::-1][:max_keywords]
-        return [str(vocab[i]) for i in top_indices]
-    except Exception:
+        vocab = v.get_feature_names_out()
+        idx = counts.argsort()[::-1][:max_keywords]
+        return [vocab[i] for i in idx]
+    except:
         return []
 
 
 # ---------------------------------------------------------
-# Summarize sentiment numbers
+# SUMMARY NUMBERS
 # ---------------------------------------------------------
 def summarize_sentiment(results):
-    """Aggregate numeric sentiment statistics."""
     if not results:
         return {
             "avg_score": 0.0,
@@ -215,78 +193,108 @@ def summarize_sentiment(results):
     pos = [r["score"] for r in results if r["label"] == "POSITIVE"]
     neg = [r["score"] for r in results if r["label"] == "NEGATIVE"]
 
-    avg_score = np.mean(pos + [-s for s in neg]) if results else 0.0
-    positive_ratio = len(pos) / len(results) if results else 0.0
+    all_scores = pos + [-s for s in neg]
+    avg = np.mean(all_scores)
+    pos_ratio = len(pos) / len(results)
 
     summary = (
-        f"{positive_ratio * 100:.1f}% of reviews are positive "
-        f"with an average score of {avg_score:+.2f}."
+        f"{pos_ratio * 100:.1f}% of reviews are positive "
+        f"with an average score of {avg:+.2f}."
     )
 
     return {
-        "avg_score": float(round(avg_score, 2)),
-        "positive_ratio": float(round(positive_ratio * 100, 1)),
+        "avg_score": float(round(avg, 2)),
+        "positive_ratio": float(round(pos_ratio * 100, 1)),
         "keywords": extract_keywords([r["text"] for r in results]),
         "summary": summary,
     }
 
 
 # ---------------------------------------------------------
-# Gemini LLM summary
+# GEMINI LLM SUMMARY
 # ---------------------------------------------------------
-def summarize_with_gemini(place_name: str, sentiment_data: dict, reviews: list):
-    """Generate human-style description of sentiment."""
+def summarize_with_gemini(place_name, sentiment_data, reviews):
     try:
         model = genai.GenerativeModel(MODEL_NAME)
-
-        reviews_text = "\n".join([r["text"] for r in reviews[:5]]) or "No reviews found."
+        reviews_text = "\n".join([r["text"] for r in reviews[:5]]) or "No reviews."
 
         prompt = f"""
-You are an AI travel assistant. Based on the following Google reviews for {place_name},
-write ONE short, human-like summary (max 2 sentences).
+Write a short 1–2 sentence human-like summary for {place_name}.
 
-Sentiment Statistics:
+Sentiment Stats:
 - {sentiment_data["summary"]}
-- Positive ratio: {sentiment_data["positive_ratio"]}%
-- Keywords: {', '.join(sentiment_data['keywords'])}
+- Keywords: {', '.join(sentiment_data["keywords"])}
 
 Reviews:
 {reviews_text}
-
-Example format:
-"Most travelers enjoyed the skyline views but mentioned long wait times."
-
-Now write your summary:
 """
 
-        response = model.generate_content(prompt)
-        return response.text.strip()
+        resp = model.generate_content(prompt)
+        return resp.text.strip()
 
-    except Exception:
+    except:
         return "Visitors had mixed experiences."
 
 
 # ---------------------------------------------------------
-# Main: Sentiment Insights with DB Cache
+# DB HELPERS (SAVE + LOAD)
+# ---------------------------------------------------------
+def save_reviews_to_db(place_id: str, reviews: list):
+    db = SessionLocal()
+    try:
+        # Remove old reviews
+        db.query(SentimentReview).filter(
+            SentimentReview.place_id == place_id
+        ).delete()
+
+        # Insert new reviews
+        for r in reviews:
+            db.add(
+                SentimentReview(
+                    place_id=place_id,
+                    text=r["text"],
+                    label=r["label"],
+                    score=float(r["score"]),
+                )
+            )
+
+        db.commit()
+    finally:
+        db.close()
+
+
+def load_reviews_from_db(place_id: str):
+    db = SessionLocal()
+    try:
+        rows = (
+            db.query(SentimentReview)
+            .filter(SentimentReview.place_id == place_id)
+            .limit(5)
+            .all()
+        )
+        return [
+            {"text": r.text, "label": r.label, "score": r.score}
+            for r in rows
+        ]
+    finally:
+        db.close()
+
+
+# ---------------------------------------------------------
+# MAIN: SENTIMENT INSIGHTS
 # ---------------------------------------------------------
 def get_sentiment_insights(place_id: str, place_name: str | None = None):
-    """
-    Return sentiment for a place:
-      1) Check DB cache
-      2) If not found, compute → save → return
-
-    Also returns a photo_url (either from cache or a fresh lookup),
-    and we include it in the sentiment payload for consistency.
-    """
     db: Session = SessionLocal()
 
     try:
         # -------------------------
-        # 1) Try cached result
+        # 1) Try cached summary
         # -------------------------
         cached = db.query(SentimentCache).filter_by(place_id=place_id).first()
 
         if cached:
+            samples = load_reviews_from_db(place_id)
+
             return {
                 "place_id": cached.place_id,
                 "place_name": cached.place_name,
@@ -296,18 +304,17 @@ def get_sentiment_insights(place_id: str, place_name: str | None = None):
                 "positive_ratio": float(cached.positive_ratio),
                 "keywords": cached.keywords,
                 "human_summary": cached.human_summary,
-                "photo_url": cached.photo_url,  
+                "photo_url": cached.photo_url,
+                "samples": samples,
                 "last_updated": (
                     cached.last_updated.isoformat()
-                    if cached.last_updated
-                    else None
+                    if cached.last_updated else None
                 ),
             }
 
         # -------------------------
-        # 2) Not cached → process reviews
+        # 2) Not cached → compute fresh
         # -------------------------
-        # Fetch place name if missing (ID endpoint)
         if not place_name:
             place_name = get_place_name(place_id)
 
@@ -319,29 +326,33 @@ def get_sentiment_insights(place_id: str, place_name: str | None = None):
             place_name or "this place", summary, analyzed
         )
 
-        # Get photo URL for this place
         photo_url = get_place_photo_url(place_id)
 
         # -------------------------
-        # 3) Save to DB
+        # 3) SAVE cache summary
         # -------------------------
-        cache_row = SentimentCache(
+        cache = SentimentCache(
             place_id=place_id,
-            place_name=place_name or get_place_name(place_id),
-            avg_score=float(summary["avg_score"]),
-            positive_ratio=float(summary["positive_ratio"]),
-            keywords=summary["keywords"],  # JSON-safe
+            place_name=place_name,
+            avg_score=summary["avg_score"],
+            positive_ratio=summary["positive_ratio"],
+            keywords=summary["keywords"],
             summary=summary["summary"],
             human_summary=gemini_summary,
-            num_reviews=int(len(reviews)),
-            photo_url=photo_url, 
+            num_reviews=len(reviews),
+            photo_url=photo_url,
         )
 
-        db.add(cache_row)
+        db.add(cache)
         db.commit()
 
         # -------------------------
-        # 4) Final return
+        # 4) SAVE raw review samples
+        # -------------------------
+        save_reviews_to_db(place_id, analyzed[:5])
+
+        # -------------------------
+        # 5) Return final structure
         # -------------------------
         return {
             "place_id": place_id,
@@ -352,8 +363,8 @@ def get_sentiment_insights(place_id: str, place_name: str | None = None):
             "positive_ratio": summary["positive_ratio"],
             "keywords": summary["keywords"],
             "human_summary": gemini_summary,
-            "photo_url": photo_url,     
-            "samples": analyzed[:3],
+            "photo_url": photo_url,
+            "samples": analyzed[:5],   # matches DB
         }
 
     finally:
