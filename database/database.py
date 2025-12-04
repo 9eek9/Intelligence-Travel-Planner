@@ -8,7 +8,8 @@ from sqlalchemy.orm import sessionmaker, declarative_base
 # -------------------------------------------------------------
 # PostgreSQL Connection (Local Development)
 # -------------------------------------------------------------
-DATABASE_URL = "postgresql://postgres:admin123@localhost:5433/SmartTravelDB"
+# DATABASE_URL = "postgresql://postgres:admin123@localhost:5433/SmartTravelDB" #local
+DATABASE_URL = "postgresql://dbadmin:ChangeMe123!@capstone-project-postgresql.cj04aqs6srh6.ca-central-1.rds.amazonaws.com:5432/SmartTravelDB" 
 
 # -------------------------------------------------------------
 # Create engine (SQLAlchemy 2.0 config)
