@@ -41,21 +41,6 @@ def fetch_activities(start_date: str, end_date: str, amadeus_key: str, amadeus_s
         response.raise_for_status()
         activities = response.json().get("data", [])
 
-        # Convert activity prices to target currency
-        # Validate and convert activity prices
-        # for activity in activities:
-        #     if "price" in activity:
-        #         try:
-        #             price_amount = float(activity["price"].get("amount", 0))  # Ensure price is a float
-        #             converted_price = convert_currency(price_amount, activity["price"].get("currencyCode"), target_currency)
-        #             activity["price"] = {
-        #                 "amount": round(converted_price, 2),  # Round to 2 decimal places
-        #                 "currency": target_currency
-        #             }
-        #         except (ValueError, TypeError) as e:
-        #             print(f"Error converting price for activity: {e}")
-        #             activity["price"] = {"amount": 0, "currency": target_currency}
-
         return activities
     except requests.exceptions.RequestException as e:
         print(f"Failed to fetch activities: {e}")

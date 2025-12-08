@@ -6226,22 +6226,6 @@
     "transit_percent": 5.76,
     "reasoning": "ML-optimized allocation for Bangkok (5 days, 1 traveler). Moderate style: balanced allocation. Higher hotel allocation (45.8%) for comfortable stays. Enhanced activities budget (12.64%) for richer experiences."
   },
-  "progress": [
-    "📍 STEP 1: Fetching travel data from Amadeus...",
-    "  ✈️  Fetching flights...",
-    "  ✅ Found 250 flights",
-    "  🏨 Fetching hotels...",
-    "  ✅ Found 5 hotels",
-    "  🎭 Fetching activities...",
-    "  ✅ Found 277 activities",
-    "🤖 STEP 2: Using LLM (Gemini) to calculate meal & transit costs...",
-    "🎯 STEP 3: Composing travel packages...",
-    "📊 STEP 4: Scoring packages with XGBoost ML model...",
-    "  ✅ All packages scored successfully",
-    "💰 STEP 5: Generating budget allocation suggestion...",
-    "  ✅ Allocation: Hotels 45.8%",
-    "✅ COMPLETE! All processing done."
-  ],
   "stats": {
     "flights_found": 250,
     "hotels_found": 5,

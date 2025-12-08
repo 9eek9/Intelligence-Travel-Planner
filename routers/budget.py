@@ -13,6 +13,8 @@ import asyncio
 import json
 from datetime import datetime
 import requests
+import time
+import concurrent.futures
 
 # Add budget_service to path
 budget_service_path = os.path.join(os.path.dirname(__file__), '..', 'services', 'budget_service')
@@ -23,7 +25,7 @@ from services.budget_service.budget_optimizer_service import BudgetOptimizerServ
 from services.budget_service.flights_client import get_flight_offers
 from services.budget_service.hotels_client import get_hotel_offers
 from services.budget_service.fx_client import convert_currency
-from services.budget_service.optimizer import compose_and_optimize, calculate_meal_costs
+from services.budget_service.optimizer import compose_and_optimize
 from services.budget_service.activities_client import fetch_activities_by_city_name
 from services.budget_service.llm_cost_calculator import calculate_costs_with_llm  # LLM for meals/transit
 from services.budget_service.package_scorer import score_package  # XGBoost scorer
@@ -56,7 +58,7 @@ class TripOptimizationRequest(BaseModel):
                 "destination": "Bangkok",  # Pass city name instead of city code
                 "depart_date": "2026-03-25",
                 "return_date": "2026-03-30",
-                "budget": 3000,
+                "budget": 6000,
                 "currency": "CAD",
                 "travel_style": "moderate", #"moderate/budget/luxury"
             }
@@ -131,84 +133,97 @@ def get_amadeus_access_token(amadeus_key: str, amadeus_secret: str) -> str:
 @router.post("/optimize-trip", summary="Get Multiple Packages with AI/ML")
 async def optimize_trip(request: TripOptimizationRequest):
     """
-    Complete AI/ML Pipeline:
-    1. Fetch data from Amadeus
-    2. Use LLM (Gemini) for meal/transit estimation
-    3. Compose packages
-    4. Score packages with XGBoost
-    5. Suggest budget allocation with XGBoost
+    Complete AI/ML Pipeline with optimized parallel processing
     """
+    start_time = time.time()
+    
     try:
         progress_logs = []
-
+        suggested_allocation = None
+        
         # ========================================================================
         # STEP 1: FETCH TRAVEL DATA FROM AMADEUS API
         # ========================================================================
-        progress_logs.append("📍 STEP 1: Fetching travel data from Amadeus...")
         
-        # Resolve city codes
+        progress_logs.append(f"Resolving city code for origin: {request.origin}...")
         origin_city_code = get_city_code_from_amadeus(
             city_name=request.origin,
             amadeus_key=budget_service.amadeus_key,
             amadeus_secret=budget_service.amadeus_secret
         )
+        progress_logs.append(f"Resolved origin code: {origin_city_code}")
+        
+        progress_logs.append(f"Resolving city code for destination: {request.destination}...")
         destination_city_code = get_city_code_from_amadeus(
             city_name=request.destination,
             amadeus_key=budget_service.amadeus_key,
             amadeus_secret=budget_service.amadeus_secret
         )
+        progress_logs.append(f"Resolved destination code: {destination_city_code}")
         
-        # Fetch flights
-        progress_logs.append(f"  ✈️  Fetching flights...")
-        flight_data = get_flight_offers(
-            origin_city_code, destination_city_code,
-            request.depart_date, request.return_date,
-            budget_service.amadeus_key, budget_service.amadeus_secret
-        )
+        # ========================================================================
+        # STEP 1: FETCH TRAVEL DATA IN PARALLEL (OPTIMIZED - NO TIMEOUT)
+        # ========================================================================
+        
+        progress_logs.append("Fetching flights, hotels, and activities in parallel...")
+        
+        def fetch_flights():
+            return get_flight_offers(
+                origin_city_code, destination_city_code,
+                request.depart_date, request.return_date,
+                budget_service.amadeus_key, budget_service.amadeus_secret
+            )
+        
+        def fetch_hotels():
+            return get_hotel_offers(
+                city_code=destination_city_code,
+                check_in_date=request.depart_date,
+                check_out_date=request.return_date,
+                amadeus_key=budget_service.amadeus_key,
+                amadeus_secret=budget_service.amadeus_secret,
+                currency=request.currency
+            )
+        
+        def fetch_activities():
+            return fetch_activities_by_city_name(
+                city_name=request.destination,
+                start_date=request.depart_date,
+                end_date=request.return_date,
+                amadeus_key=budget_service.amadeus_key,
+                amadeus_secret=budget_service.amadeus_secret,
+                target_currency=request.currency
+            )
+        
+        # Execute all API calls in parallel (NO TIMEOUT - more reliable)
+        with concurrent.futures.ThreadPoolExecutor(max_workers=3) as executor:
+            future_flights = executor.submit(fetch_flights)
+            future_hotels = executor.submit(fetch_hotels)
+            future_activities = executor.submit(fetch_activities)
+            
+            # Wait for all results without timeout
+            flight_data = future_flights.result()
+            hotel_data = future_hotels.result()
+            activities = future_activities.result()
+        
         flights = flight_data.get("data", [])
+        hotels = hotel_data.get("data", [])
         
-        # Extract dictionaries for airline and aircraft names
+        elapsed = time.time() - start_time
+        progress_logs.append(f"✅ Data fetched in {elapsed:.1f}s: {len(flights)} flights, {len(hotels)} hotels, {len(activities)} activities")
+        
+        # Extract dictionaries
         dictionaries = flight_data.get("dictionaries", {})
         carriers_dict = dictionaries.get("carriers", {})
         aircraft_dict = dictionaries.get("aircraft", {})
         
-        progress_logs.append(f"  ✅ Found {len(flights)} flights")
-
-        # Fetch hotels
-        progress_logs.append(f"  🏨 Fetching hotels...")
-        hotel_data = get_hotel_offers(
-            city_code=destination_city_code,
-            check_in_date=request.depart_date,
-            check_out_date=request.return_date,
-            amadeus_key=budget_service.amadeus_key,
-            amadeus_secret=budget_service.amadeus_secret,
-            currency=request.currency
-        )
-        hotels = hotel_data.get("data", [])
-        progress_logs.append(f"  ✅ Found {len(hotels)} hotels")
-        
-        # Fetch activities
-        progress_logs.append(f"  🎭 Fetching activities...")
-        activities = fetch_activities_by_city_name(
-            city_name=request.destination,
-            start_date=request.depart_date,
-            end_date=request.return_date,
-            amadeus_key=budget_service.amadeus_key,
-            amadeus_secret=budget_service.amadeus_secret,
-            target_currency=request.currency
-        )
-        progress_logs.append(f"  ✅ Found {len(activities)} activities")
-
         # ========================================================================
         # STEP 2: CALCULATE MEAL & TRANSIT USING LLM (GEMINI)
         # ========================================================================
-        progress_logs.append("🤖 STEP 2: Using LLM (Gemini) to calculate meal & transit costs...")
         # This happens inside compose_and_optimize()
         
         # ========================================================================
         # STEP 3: COMPOSE & OPTIMIZE PACKAGES
         # ========================================================================
-        progress_logs.append("🎯 STEP 3: Composing travel packages...")
         
         fx_snapshot = {
             "base": request.currency,
@@ -216,6 +231,9 @@ async def optimize_trip(request: TripOptimizationRequest):
             "rates": {}
         }
 
+        progress_logs.append("Optimizing packages...")
+        opt_start = time.time()
+        
         optimized = compose_and_optimize(
             flights=flights,
             hotels=hotels,
@@ -229,10 +247,15 @@ async def optimize_trip(request: TripOptimizationRequest):
             travel_style=request.travel_style
         )
         
+        opt_elapsed = time.time() - opt_start
+        progress_logs.append(f"✅ Optimization complete in {opt_elapsed:.1f}s")
+        
         # ========================================================================
-        # STEP 4: SCORE PACKAGES USING ML (XGBOOST)
+        # STEP 4: SCORE PACKAGES USING ML (XGBOOST) - KEEP FUNCTIONALITY
         # ========================================================================
-        progress_logs.append("📊 STEP 4: Scoring packages with XGBoost ML model...")
+        
+        progress_logs.append("Scoring packages with ML...")
+        score_start = time.time()
         
         try:
             for i, package in enumerate(optimized):
@@ -255,14 +278,10 @@ async def optimize_trip(request: TripOptimizationRequest):
                     "model": quality_score.get("model_used", "Rule-Based")
                 }
             
-            progress_logs.append(f"  ✅ All packages scored successfully")
-            
         except Exception as e:
-            print(f"❌ Scoring error: {str(e)}")
+            print(f"Scoring error: {str(e)}")
             import traceback
             traceback.print_exc()
-            progress_logs.append(f"  ⚠️  Scoring failed: {str(e)}")
-            # Add default scores so API doesn't crash
             for package in optimized:
                 if "quality_score" not in package:
                     package["quality_score"] = 50.0
@@ -274,13 +293,15 @@ async def optimize_trip(request: TripOptimizationRequest):
                         "model": "Error"
                     }
         
-        # Sort packages by quality score (best first)
-        optimized = sorted(optimized, key=lambda x: x.get("quality_score", 0), reverse=True)
-
+        score_elapsed = time.time() - score_start
+        progress_logs.append(f"✅ Quality scoring complete in {score_elapsed:.1f}s")
+        
         # ========================================================================
-        # STEP 5: SUGGEST BUDGET ALLOCATION USING ML (XGBOOST)
+        # STEP 5: SUGGEST BUDGET ALLOCATION USING ML (XGBOOST) - KEEP FUNCTIONALITY
         # ========================================================================
-        progress_logs.append("💰 STEP 5: Generating budget allocation suggestion...")
+        
+        progress_logs.append("Generating budget allocation suggestions...")
+        alloc_start = time.time()
         
         try:
             days = (datetime.strptime(request.return_date, "%Y-%m-%d") - 
@@ -292,28 +313,25 @@ async def optimize_trip(request: TripOptimizationRequest):
                 days=days,
                 travel_style=request.travel_style
             )
-            progress_logs.append(f"  ✅ Allocation: Hotels {suggested_allocation['hotels_percent']:.1f}%")
             
         except Exception as e:
-            print(f"❌ Budget allocation error: {str(e)}")
-            import traceback
-            traceback.print_exc()
-            # Provide default allocation
+            print(f"Budget allocation error: {str(e)}")
             suggested_allocation = {
-                "flights_percent": 25.0,
-                "hotels_percent": 40.0,
-                "activities_percent": 12.0,
-                "meals_percent": 18.0,
+                "flights_percent": 40.0,
+                "hotels_percent": 30.0,
+                "activities_percent": 15.0,
+                "meals_percent": 10.0,
                 "transit_percent": 5.0,
-                "reasoning": "Default allocation (error occurred)",
-                "model_used": "Error"
+                "reasoning": "Default allocation used due to error",
+                "model_used": "Fallback"
             }
-            progress_logs.append(f"  ⚠️  Using default allocation")
+        
+        alloc_elapsed = time.time() - alloc_start
+        progress_logs.append(f"✅ Budget allocation complete in {alloc_elapsed:.1f}s")
 
         # ========================================================================
         # STEP 6: FORMAT RESPONSE
         # ========================================================================
-        progress_logs.append("✅ COMPLETE! All processing done.")
 
         # Fill in airline/aircraft names from Amadeus dictionaries
         for package in optimized:
@@ -343,43 +361,55 @@ async def optimize_trip(request: TripOptimizationRequest):
                         else:
                             segment["aircraft_name"] = f"Aircraft {aircraft_code}"
             
-            # Add activity details
-            package["activities"] = {
-                "total": package.get("activities", {}).get("total", 0),
-                "details": [
+            # Ensure activities has proper structure
+            if "activities" not in package or not isinstance(package["activities"], dict):
+                package["activities"] = {
+                    "total": 0,
+                    "details": []
+                }
+            
+            # Get the activities from the package (already converted in optimizer)
+            package_activities = package.get("activities", {}).get("details", [])
+            
+            # Format activity details with the package currency
+            if package_activities:
+                package["activities"]["details"] = [
                     {
-                        "name": activity["name"],
+                        "name": activity.get("name", "Unknown Activity"),
                         "price": float(activity["price"]["amount"]),
-                        "currencyCode": activity["price"]["currencyCode"],
+                        "currencyCode": package["currency"],  # Use package currency instead of original
                         "duration": activity.get("minimumDuration"),
                         "bookinglink": activity.get("bookingLink")
                     }
-                    for activity in activities
+                    for activity in package_activities
                     if "price" in activity and "amount" in activity["price"]
                 ]
-            }
+
+        total_elapsed = time.time() - start_time
+        progress_logs.append(f"🎉 Total processing time: {total_elapsed:.1f}s")
 
         return {
             "success": True,
             "packages": optimized,
             "total_packages": len(optimized),
-            "message": f"Found {len(optimized)} AI-optimized packages",
+            "message": f"Found {len(optimized)} AI-optimized packages in {total_elapsed:.1f}s",
+            "progress": progress_logs,
+            "processing_time_seconds": round(total_elapsed, 2),
             "ai_ml_pipeline": {
-                "step1_data_source": "Amadeus API",
+                "step1_data_source": "Amadeus API (Parallel)",
                 "step2_meal_transit": "LLM (Gemini)",
                 "step3_optimization": "Greedy Algorithm",
-                "step4_scoring": suggested_allocation.get("model_used", "XGBoost"),
-                "step5_allocation": suggested_allocation.get("model_used", "XGBoost")
+                "step4_scoring": suggested_allocation.get("model_used", "XGBoost") if suggested_allocation else "XGBoost",
+                "step5_allocation": suggested_allocation.get("model_used", "XGBoost") if suggested_allocation else "XGBoost"
             },
             "budget_suggestion": {
-                "flights_percent": suggested_allocation["flights_percent"],
-                "hotels_percent": suggested_allocation["hotels_percent"],
-                "activities_percent": suggested_allocation["activities_percent"],
-                "meals_percent": suggested_allocation["meals_percent"],
-                "transit_percent": suggested_allocation["transit_percent"],
-                "reasoning": suggested_allocation["reasoning"]
+                "flights_percent": suggested_allocation.get("flights_percent", 0) if suggested_allocation else 0,
+                "hotels_percent": suggested_allocation.get("hotels_percent", 0) if suggested_allocation else 0,
+                "activities_percent": suggested_allocation.get("activities_percent", 0) if suggested_allocation else 0,
+                "meals_percent": suggested_allocation.get("meals_percent", 0) if suggested_allocation else 0,
+                "transit_percent": suggested_allocation.get("transit_percent", 0) if suggested_allocation else 0,
+                "reasoning": suggested_allocation.get("reasoning", "No reasoning available") if suggested_allocation else "No reasoning available"
             },
-            "progress": progress_logs,
             "stats": {
                 "flights_found": len(flights),
                 "hotels_found": len(hotels),
@@ -390,8 +420,14 @@ async def optimize_trip(request: TripOptimizationRequest):
         }
 
     except ValueError as e:
+        print(f"ValueError: {str(e)}")
+        import traceback
+        traceback.print_exc()
         raise HTTPException(status_code=400, detail=str(e))
     except Exception as e:
+        print(f"Unexpected error: {str(e)}")
+        import traceback
+        traceback.print_exc()
         raise HTTPException(status_code=500, detail=f"Internal server error: {str(e)}")
 
 # ...existing convert_currency_endpoint...

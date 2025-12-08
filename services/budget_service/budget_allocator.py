@@ -22,7 +22,7 @@ class BudgetAllocator:
             with open(model_path, 'rb') as f:
                 return pickle.load(f)
         except FileNotFoundError:
-            print("⚠️  Budget allocation model not found, using rules")
+            print("Budget allocation model not found, using rules")
             return None
     
     def suggest_allocation(

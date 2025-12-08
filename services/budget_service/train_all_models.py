@@ -12,7 +12,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.metrics import mean_squared_error, r2_score, mean_absolute_error
 
 print("="*70)
-print("🚀 TRAINING ALL ML MODELS FOR SMART TRAVEL SYSTEM")
+print("TRAINING ALL ML MODELS FOR SMART TRAVEL SYSTEM")
 print("="*70)
 
 # ============================================================================
@@ -22,10 +22,10 @@ def train_package_scorer():
     """Train XGBoost model for package scoring"""
     
     print("\n" + "="*70)
-    print("📊 MODEL 1: PACKAGE SCORER")
+    print("MODEL 1: PACKAGE SCORER")
     print("="*70)
     
-    print("\n📊 Generating training data...")
+    print("\nGenerating training data...")
     np.random.seed(42)
     
     data = []
@@ -94,7 +94,7 @@ def train_package_scorer():
     ]
     
     df = pd.DataFrame(data, columns=columns)
-    print(f"✅ Generated {len(df)} training samples")
+    print(f"Generated {len(df)} training samples")
     
     X = df.drop('score', axis=1)
     y = df['score']
@@ -106,7 +106,7 @@ def train_package_scorer():
     print(f"   Training set: {len(X_train)} samples")
     print(f"   Test set: {len(X_test)} samples")
     
-    print("\n🤖 Training XGBoost model...")
+    print("\nTraining XGBoost model...")
     model = xgb.XGBRegressor(
         objective='reg:squarederror',
         n_estimators=100,
@@ -125,7 +125,7 @@ def train_package_scorer():
     test_mae = mean_absolute_error(y_test, y_pred_test)
     test_r2 = r2_score(y_test, y_pred_test)
     
-    print(f"\n📈 Model Performance:")
+    print(f"\nModel Performance:")
     print(f"   MSE:  {test_mse:.2f}")
     print(f"   MAE:  {test_mae:.2f}")
     print(f"   R²:   {test_r2:.4f}")
@@ -137,7 +137,7 @@ def train_package_scorer():
     with open(model_path, 'wb') as f:
         pickle.dump(model, f)
     
-    print(f"\n💾 Model saved to: {model_path}")
+    print(f"\n Model saved to: {model_path}")
     return model
 
 # ============================================================================
@@ -147,10 +147,10 @@ def train_budget_allocator():
     """Train XGBoost models for budget allocation"""
     
     print("\n" + "="*70)
-    print("💰 MODEL 2: BUDGET ALLOCATOR")
+    print(" MODEL 2: BUDGET ALLOCATOR")
     print("="*70)
     
-    print("\n📊 Generating training data...")
+    print("\n Generating training data...")
     np.random.seed(42)
     
     # Generate 5000 synthetic travel budget allocations
@@ -230,7 +230,7 @@ def train_budget_allocator():
     ]
     
     df = pd.DataFrame(data, columns=columns)
-    print(f"✅ Generated {len(df)} training samples")
+    print(f" Generated {len(df)} training samples")
     
     # Feature columns
     feature_cols = ['duration', 'total_budget', 'travelers', 'budget_per_day',
@@ -244,7 +244,7 @@ def train_budget_allocator():
               'activities_pct', 'miscellaneous_pct']
     
     for target in targets:
-        print(f"\n🤖 Training model for {target}...")
+        print(f"\n Training model for {target}...")
         y = df[target]
         
         X_train, X_test, y_train, y_test = train_test_split(
@@ -284,7 +284,7 @@ def train_budget_allocator():
     with open(model_path, 'wb') as f:
         pickle.dump(model_data, f)
     
-    print(f"\n💾 Models saved to: {model_path}")
+    print(f"\n Models saved to: {model_path}")
     return models
 
 # ============================================================================
@@ -299,14 +299,14 @@ if __name__ == "__main__":
         allocator_model = train_budget_allocator()
         
         print("\n" + "="*70)
-        print("🎉 ALL MODELS TRAINED SUCCESSFULLY!")
+        print("ALL MODELS TRAINED SUCCESSFULLY!")
         print("="*70)
-        print("\n✅ Package Scorer: READY (XGBoost)")
-        print("✅ Budget Allocator: READY (XGBoost)")
+        print("\nPackage Scorer: READY (XGBoost)")
+        print("Budget Allocator: READY (XGBoost)")
         print("\nRestart your FastAPI server to use the trained models.")
         print("="*70)
         
     except Exception as e:
-        print(f"\n❌ Error: {e}")
+        print(f"\n Error: {e}")
         import traceback
         traceback.print_exc()

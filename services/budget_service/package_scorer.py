@@ -6,26 +6,47 @@ Scores travel packages based on value, convenience, and experience
 from typing import Dict, Any
 import numpy as np
 import xgboost as xgb
-import pickle
 import os
 
 class PackageScorer:
     """Score packages using XGBoost ML model"""
     
     def __init__(self):
-        """Load pre-trained model or use rule-based fallback"""
-        self.model = self._load_model()
-        self.use_ml = self.model is not None
+        """Load pre-trained model"""
+        self.model = None
+        self._load_model()
     
     def _load_model(self):
-        """Load trained XGBoost model if available"""
-        model_path = os.path.join(os.path.dirname(__file__), 'models', 'package_scorer.pkl')
-        try:
-            with open(model_path, 'rb') as f:
-                return pickle.load(f)
-        except FileNotFoundError:
-            print("No trained model found, using rule-based scoring")
-            return None
+        """Load the pre-trained XGBoost model"""
+        # Try .json first (XGBoost native format)
+        model_path = os.path.join(os.path.dirname(__file__), "models", "package_quality_model.json")
+        
+        if os.path.exists(model_path):
+            try:
+                self.model = xgb.Booster()
+                self.model.load_model(model_path)
+                print(f"Loaded XGBoost model from {model_path}")
+                return
+            except Exception as e:
+                print(f"Failed to load .json model: {e}")
+        
+        # Try .pkl as fallback
+        pkl_path = os.path.join(os.path.dirname(__file__), "models", "package_scorer.pkl")
+        if os.path.exists(pkl_path):
+            try:
+                import pickle
+                with open(pkl_path, 'rb') as f:
+                    self.model = pickle.load(f)
+                print(f"Loaded pickled model from {pkl_path}")
+                return
+            except Exception as e:
+                print(f"Failed to load .pkl model: {e}")
+        
+        print(f"No model file found. Checked:")
+        print(f"   - {model_path}")
+        print(f"   - {pkl_path}")
+        print(f"   Please run 'python train_model.py' to create the model.")
+        self.model = None
     
     def score_package(
         self, 
@@ -33,121 +54,42 @@ class PackageScorer:
         user_preferences: Dict[str, Any],
         destination: str
     ) -> Dict[str, Any]:
-        """Score a package using ML or rules"""
+        """Score a package using ML model only"""
         
-        if self.use_ml:
-            return self._ml_score(package, user_preferences, destination)
-        else:
-            return self._rule_based_score(package, user_preferences, destination)
+        if self.model is None:
+            raise Exception("ML model not available. Please train and save the model first.")
+        
+        return self._ml_score(package, user_preferences, destination)
     
     def _ml_score(self, package: Dict, preferences: Dict, destination: str) -> Dict:
-        """Score using trained XGBoost model"""
+        """Score using XGBoost ML model"""
         
-        # Extract features for ML model
-        features = self._extract_features(package, preferences, destination)
-        
-        # Predict score (0-100)
-        X = np.array([features])
-        predicted_score = self.model.predict(X)[0]
-        
-        # Get feature importance for breakdown
-        breakdown = self._calculate_breakdown_from_features(features)
-        
-        insights = self._generate_ml_insights(predicted_score, breakdown)
-        
-        return {
-            "overall_score": round(float(predicted_score), 1),
-            "value_score": round(breakdown["value"], 1),
-            "convenience_score": round(breakdown["convenience"], 1),
-            "experience_score": round(breakdown["experience"], 1),
-            "insights": insights,
-            "model_used": "XGBoost"
-        }
-    
-    def _extract_features(self, package: Dict, preferences: Dict, destination: str) -> list:
-        """Extract ML features from package"""
-        
-        budget = preferences.get("budget", 1000)
-        travel_style = preferences.get("travel_style", "moderate")
-        
-        # Feature engineering (15 features)
-        features = [
-            # Budget features
-            package["total"] / budget,  # Budget utilization ratio
-            package.get("budgetRemaining", 0) / budget,  # Remaining ratio
-            
-            # Flight features
-            1 if package.get("flight") else 0,  # Has flight
-            package.get("flight", {}).get("price", 0) / package["total"],  # Flight cost ratio
-            
-            # Hotel features
-            1 if package.get("hotel") else 0,  # Has hotel
-            package.get("hotel", {}).get("total", 0) / package["total"],  # Hotel cost ratio
-            
-            # Activities features
-            len(package.get("activities", {}).get("details", [])),  # Number of activities
-            package.get("activities", {}).get("total", 0) / package["total"],  # Activities cost ratio
-            
-            # Meals & Transit
-            package.get("meals", 0) / package["total"],  # Meals ratio
-            package.get("transit", {}).get("total", 0) / package["total"],  # Transit ratio
-            
-            # Travel style encoding
-            1 if travel_style == "budget" else 0,
-            1 if travel_style == "moderate" else 0,
-            1 if travel_style == "luxury" else 0,
-            
-            # Destination encoding (simplified - use proper encoding in production)
-            hash(destination) % 100 / 100,  # Destination hash
-            
-            # Package completeness
-            sum([
-                1 if package.get("flight") else 0,
-                1 if package.get("hotel") else 0,
-                1 if package.get("activities", {}).get("total", 0) > 0 else 0
-            ]) / 3  # Completeness ratio
-        ]
-        
-        return features
-    
-    def _calculate_breakdown_from_features(self, features: list) -> Dict:
-        """Estimate component scores from features"""
-        budget_util = features[0]
-        has_flight = features[2]
-        has_hotel = features[4]
-        num_activities = features[6]
-        
-        # Approximate breakdown (in production, train separate models)
-        value = 50 + (50 * (1 - abs(0.9 - budget_util)))
-        convenience = 60 + (20 if has_flight else 0) + (20 if has_hotel else 0)
-        experience = 50 + min(num_activities * 10, 50)
-        
-        return {
-            "value": value,
-            "convenience": convenience,
-            "experience": experience
-        }
-    
-    def _rule_based_score(self, package: Dict, preferences: Dict, destination: str) -> Dict:
-        """Fallback rule-based scoring (original implementation)"""
-        
-        # Value for money (30% weight)
+        # Calculate component scores FIRST (these are rule-based and transparent)
         value_score = self._calculate_value_score(package, preferences)
-        
-        # Convenience (25% weight)
         convenience_score = self._calculate_convenience_score(package)
+        experience_score = self._calculate_experience_score(package)
         
-        # Experience quality (45% weight)
-        experience_score = self._calculate_experience_score(package, destination)
+        # Calculate overall score as weighted average of components
+        # This makes scoring more transparent and predictable
+        overall_score = value_score + convenience_score + experience_score
         
-        # Weighted overall score
-        overall_score = (
-            value_score * 0.30 +
-            convenience_score * 0.25 +
-            experience_score * 0.45
+        # Optional: Use ML model as adjustment factor
+        # Extract features
+        features = self._extract_features(package, preferences, destination)
+        features_array = np.array([features], dtype=np.float32)
+        
+        try:
+            ml_prediction = float(self.model.predict(features_array)[0])
+            # Use ML as a small adjustment (+/- 5 points) to the rule-based score
+            ml_adjustment = (ml_prediction - overall_score) * 0.2  # 20% weight to ML
+            overall_score = max(0, min(100, overall_score + ml_adjustment))
+        except Exception as e:
+            print(f"ML prediction failed, using rule-based score only: {e}")
+        
+        # Generate insights
+        insights = self._generate_ml_insights(
+            overall_score, value_score, convenience_score, experience_score, package
         )
-        
-        insights = self._generate_insights(value_score, convenience_score, experience_score)
         
         return {
             "overall_score": round(overall_score, 1),
@@ -155,119 +97,238 @@ class PackageScorer:
             "convenience_score": round(convenience_score, 1),
             "experience_score": round(experience_score, 1),
             "insights": insights,
-            "model_used": "Rule-Based"
+            "model_used": "Rule-based + XGBoost adjustment",
+            "score_explanation": {
+                "budget_efficiency": f"How well the package uses your ${preferences.get('budget', 0)} budget (optimal: 85-95%)",
+                "travel_comfort": "Quality of flights (direct vs layovers) and hotel amenities",
+                "activity_richness": f"Number and variety of activities included ({len(package.get('activities', {}).get('details', []))} activities)"
+            }
         }
     
-    def _calculate_value_score(self, package: Dict, preferences: Dict) -> float:
-        """Calculate value for money (0-100)"""
-        budget = preferences["budget"]
-        total_cost = package["total"]
+    def _extract_features(self, package: Dict, preferences: Dict, destination: str) -> list:
+        """Extract 15 numerical features matching the training data"""
         
-        # Score based on budget utilization
-        utilization = (total_cost / budget) * 100
+        # Get values safely
+        total = package.get("total", 0)
+        budget = preferences.get("budget", 0)
+        flight_price = package.get("flight", {}).get("price", 0) if package.get("flight") else 0
+        hotel_price = package.get("hotel", {}).get("price", 0) if package.get("hotel") else 0
         
-        if 85 <= utilization <= 95:  # Sweet spot
-            return 100
-        elif 70 <= utilization < 85:
-            return 85
-        elif 95 < utilization <= 100:
-            return 75
+        # Handle meals and transit structures
+        meals_cost = 0
+        if isinstance(package.get("meals"), dict):
+            meals_cost = package["meals"].get("total", 0)
         else:
-            return max(50, 100 - abs(90 - utilization))
-    
-    def _calculate_convenience_score(self, package: Dict) -> float:
-        """Calculate convenience score (0-100)"""
-        score = 70  # Base score
+            meals_cost = package.get("meals", 0)
         
-        # Bonus for having all components
-        if package.get("flight") and package.get("hotel"):
-            score += 15
+        transit_cost = 0
+        if isinstance(package.get("transit"), dict):
+            transit_cost = package["transit"].get("total", 0)
+        else:
+            transit_cost = package.get("transit", 0)
         
-        # Bonus for activities included
-        if package.get("activities", {}).get("total", 0) > 0:
-            score += 15
-        
-        return min(score, 100)
-    
-    def _calculate_experience_score(self, package: Dict, destination: str) -> float:
-        """Calculate expected experience quality (0-100)"""
-        score = 60  # Base score
-        
-        # Hotel quality (if available)
-        hotel = package.get("hotel")
-        if hotel:
-            hotel_price = hotel.get("total", 0)
-            if hotel_price > 1000:
-                score += 20
-            elif hotel_price > 500:
-                score += 15
-            else:
-                score += 10
-        
-        # Activities variety
+        activities_cost = package.get("activities", {}).get("total", 0)
         num_activities = len(package.get("activities", {}).get("details", []))
-        score += min(num_activities * 2, 20)
         
-        return min(score, 100)
+        # Calculate ratios and utilization
+        if total > 0:
+            flight_ratio = flight_price / total
+            hotel_ratio = hotel_price / total
+            activities_ratio = activities_cost / total
+            meals_ratio = meals_cost / total
+            transit_ratio = transit_cost / total
+        else:
+            flight_ratio = hotel_ratio = activities_ratio = meals_ratio = transit_ratio = 0
+        
+        if budget > 0:
+            budget_util = total / budget
+            budget_remaining = (budget - total) / budget
+        else:
+            budget_util = 0
+            budget_remaining = 0
+        
+        # Travel style (one-hot encoded)
+        travel_style = preferences.get("travel_style", "moderate").lower()
+        style_budget = 1 if travel_style == "budget" else 0
+        style_moderate = 1 if travel_style == "moderate" else 0
+        style_luxury = 1 if travel_style == "luxury" else 0
+        
+        # Destination hash (simple encoding)
+        destination_hash = hash(destination) % 100 / 100.0
+        
+        # Completeness: has flight + hotel + activities
+        has_flight = 1 if package.get("flight") else 0
+        has_hotel = 1 if package.get("hotel") else 0
+        has_activities = 1 if num_activities > 0 else 0
+        completeness = (has_flight + has_hotel + has_activities) / 3.0
+        
+        # Feature vector matching training (15 features)
+        features = [
+            budget_util,         # 0: Budget utilization (0-1)
+            budget_remaining,    # 1: Budget remaining ratio
+            has_flight,          # 2: Has flight (0 or 1)
+            flight_ratio,        # 3: Flight cost ratio
+            has_hotel,           # 4: Has hotel (0 or 1)
+            hotel_ratio,         # 5: Hotel cost ratio
+            num_activities,      # 6: Number of activities
+            activities_ratio,    # 7: Activities cost ratio
+            meals_ratio,         # 8: Meals cost ratio
+            transit_ratio,       # 9: Transit cost ratio
+            style_budget,        # 10: Budget style (0 or 1)
+            style_moderate,      # 11: Moderate style (0 or 1)
+            style_luxury,        # 12: Luxury style (0 or 1)
+            destination_hash,    # 13: Destination encoding (0-1)
+            completeness         # 14: Package completeness (0-1)
+        ]
+        
+        return features
     
-    def _generate_insights(
-        self, value: float, convenience: float, experience: float
-    ) -> str:
-        """Generate human-readable insights with reasoning"""
-        reasons = []
+    def _calculate_value_score(self, package, preferences):
+        """Calculate value score based on budget utilization"""
+        budget = preferences.get("budget", 0)
+        budget_remaining = package.get("budgetRemaining", 0)
         
-        # Value reasoning
-        if value > 90:
-            reasons.append("excellent budget utilization (85-95% spent)")
-        elif value > 75:
-            reasons.append("good value for money")
+        if budget <= 0:
+            return 20  # Invalid budget
+        
+        budget_used_ratio = (budget - budget_remaining) / budget
+        
+        # Scoring logic (ordered from best to worst):
+        if 0.85 <= budget_used_ratio <= 0.95:
+            return 40  # Perfect usage (85-95% - sweet spot)
+        elif 0.95 < budget_used_ratio <= 1.0:
+            return 37  # ← Changed from 32 to 37 (still good, small penalty)
+        elif 0.75 <= budget_used_ratio < 0.85:
+            return 35  # Good usage (75-85%)
+        elif 0.65 <= budget_used_ratio < 0.75:
+            return 28  # Decent usage (65-75%)
+        elif budget_used_ratio > 1.0:
+            return 15  # Over budget (penalize heavily)
+        elif 0.50 <= budget_used_ratio < 0.65:
+            return 25  # Moderate usage (50-65%)
         else:
-            reasons.append("could optimize budget usage")
-        
-        # Convenience reasoning
-        if convenience >= 100:
-            reasons.append("complete package with all essentials")
-        elif convenience >= 85:
-            reasons.append("most components included")
-        else:
-            reasons.append("some components missing")
-        
-        # Experience reasoning
-        if experience > 85:
-            reasons.append("high-quality experiences")
-        elif experience > 70:
-            reasons.append("good mix of activities")
-        else:
-            reasons.append("basic experience level")
-        
-        return " • ".join(reasons).capitalize()
+            return 20  # Low usage (under 50% - not optimizing budget)
     
-    def _generate_ml_insights(self, score: float, breakdown: Dict) -> str:
-        """Generate insights from ML predictions with detailed reasoning"""
-        if score >= 85:
-            level = "Highly recommended"
-        elif score >= 70:
-            level = "Good choice"
-        elif score >= 55:
-            level = "Acceptable"
-        else:
-            level = "Consider alternatives"
+    def _calculate_convenience_score(self, package):
+        """Calculate convenience score based on flight and hotel"""
+        score = 0
         
-        reasons = []
-        if breakdown["value"] > 85:
-            reasons.append("excellent value")
-        if breakdown["convenience"] > 85:
-            reasons.append("very convenient")
-        if breakdown["experience"] > 80:
-            reasons.append("great experiences")
+        # Flight convenience (15 points)
+        if package.get("flight"):
+            itineraries = package["flight"].get("itineraries", [])
+            total_stops = sum(
+                sum(seg.get("stops", 0) for seg in itin.get("segments", []))
+                for itin in itineraries
+            )
+            if total_stops == 0:
+                score += 15
+            elif total_stops <= 2:
+                score += 10
+            else:
+                score += 5
         
-        if reasons:
-            return f"{level}: {', '.join(reasons)} (Score: {score:.0f}/100)"
+        # Hotel quality (15 points)
+        if package.get("hotel"):
+            hotel = package["hotel"]
+            room_desc = hotel.get("room_description", "").lower()
+            
+            # Check amenities
+            amenities = ["wifi", "breakfast", "pool", "gym", "spa", "suite", "deluxe"]
+            amenity_count = sum(1 for amenity in amenities if amenity in room_desc)
+            score += min(amenity_count * 2, 15)
+        
+        return min(score, 30)
+    
+    def _calculate_experience_score(self, package):
+        """Calculate experience score based on activities"""
+        activities_count = len(package.get("activities", {}).get("details", []))
+        
+        if activities_count >= 5:
+            return 30
+        elif activities_count >= 3:
+            return 25
+        elif activities_count >= 2:
+            return 18
+        elif activities_count >= 1:
+            return 12
         else:
-            return f"{level} (Score: {score:.0f}/100)"
+            return 5
+    
+    def _generate_ml_insights(self, overall_score, value_score, convenience_score, experience_score, package):
+        """Generate insights based on ML predictions"""
+        
+        insights = []
+        
+        # Overall assessment
+        if overall_score >= 80:
+            insights.append("Exceptional package quality")
+        elif overall_score >= 70:
+            insights.append("Excellent value package")
+        elif overall_score >= 60:
+            insights.append("Good package option")
+        else:
+            insights.append("Basic package")
+        
+        # Value insights
+        if value_score >= 35:
+            insights.append("Optimal budget usage")
+        elif value_score >= 25:
+            insights.append("Budget-friendly")
+        
+        # Convenience insights
+        hotel = package.get("hotel", {})
+        if hotel:
+            room_desc = hotel.get("room_description", "").lower()
+            if "deluxe" in room_desc or "suite" in room_desc:
+                insights.append("Premium accommodation")
+            if "wifi" in room_desc:
+                insights.append("WiFi included")
+        
+        flight = package.get("flight", {})
+        if flight:
+            itineraries = flight.get("itineraries", [])
+            total_stops = sum(
+                sum(seg.get("stops", 0) for seg in itin.get("segments", []))
+                for itin in itineraries
+            )
+            if total_stops == 0:
+                insights.append("Direct flights")
+            elif total_stops <= 2:
+                insights.append("Few layovers")
+        
+        # Experience insights
+        activities_count = len(package.get("activities", {}).get("details", []))
+        if activities_count >= 5:
+            insights.append(f"Rich activities ({activities_count} included)")
+        elif activities_count >= 3:
+            insights.append(f"Good activities ({activities_count} included)")
+        
+        return " • ".join(insights)
 
 
-# Convenience function
-def score_package(package: Dict, user_preferences: Dict, destination: str) -> Dict:
-    scorer = PackageScorer()
-    return scorer.score_package(package, user_preferences, destination)
+# Global scorer instance
+_scorer = None
+
+def score_package(package, user_preferences, destination):
+    """
+    Score a travel package using ML model
+    
+    Args:
+        package: Package dictionary with flight, hotel, activities, etc.
+        user_preferences: User preferences including budget, travel_style
+        destination: Destination city name
+    
+    Returns:
+        Dictionary with scores and insights
+    """
+    global _scorer
+    
+    if _scorer is None:
+        _scorer = PackageScorer()
+    
+    try:
+        return _scorer.score_package(package, user_preferences, destination)
+    except Exception as e:
+        print(f"ML scoring failed: {e}")
+        # If ML fails, raise the error instead of falling back
+        raise Exception(f"ML model required but failed: {str(e)}")

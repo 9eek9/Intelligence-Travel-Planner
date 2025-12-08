@@ -79,7 +79,7 @@ def get_hotel_offers(
     headers = {"Authorization": f"Bearer {access_token}"}
     
     # Step 1: Search for hotels by city
-    print(f"🔍 Searching hotels in {city_code}...")
+    print(f"Searching hotels in {city_code}...")
     search_url = "https://api.amadeus.com/v1/reference-data/locations/hotels/by-city"
     search_params = {
         "cityCode": city_code,
@@ -97,12 +97,12 @@ def get_hotel_offers(
         print(f"   Found {len(hotels_list)} hotels in search")
         
         if not hotels_list:
-            print(f"   ⚠️  No hotels found in {city_code}")
+            print(f"No hotels found in {city_code}")
             return {"data": []}
         
         # Get first N hotel IDs
         hotel_ids = [h["hotelId"] for h in hotels_list[:max_hotels]]
-        print(f"   Selected {len(hotel_ids)} hotels: {hotel_ids}")
+        print(f"Selected {len(hotel_ids)} hotels: {hotel_ids}")
         
     except requests.exceptions.HTTPError as e:
         error_msg = f"Failed to search hotels: {e}"
@@ -113,7 +113,7 @@ def get_hotel_offers(
         raise Exception(f"Failed to search hotels: {e}")
     
     # Step 2: Get offers for those hotels
-    print(f"🏨 Fetching offers for {len(hotel_ids)} hotels...")
+    print(f"Fetching offers for {len(hotel_ids)} hotels...")
     offers_url = "https://api.amadeus.com/v3/shopping/hotel-offers"
     offers_params = {
         "hotelIds": ",".join(hotel_ids),
@@ -129,7 +129,7 @@ def get_hotel_offers(
         # Check if we got an error
         if offers_response.status_code == 400:
             error_detail = offers_response.json()
-            print(f"   ⚠️  Hotel offers API error: {error_detail}")
+            print(f"Hotel offers API error: {error_detail}")
             
             # Check if error is due to invalid hotel IDs
             if "errors" in error_detail:
@@ -145,18 +145,18 @@ def get_hotel_offers(
                     
                     if offers_response.status_code != 200:
                         # Still failing - return empty
-                        print(f"   ⚠️  Still failing after retry, returning empty results")
+                        print(f"Still failing after retry, returning empty results")
                         return {"data": []}
         
         offers_response.raise_for_status()
         offers_data = offers_response.json()
         
         hotel_offers = offers_data.get("data", [])
-        print(f"   ✅ Got {len(hotel_offers)} hotel offers")
+        print(f"Got {len(hotel_offers)} hotel offers")
         
         # Check if hotel offers are empty
         if not hotel_offers:
-            print(f"   ⚠️  No offers available for the selected hotels")
+            print(f"No offers available for the selected hotels")
             return {"data": []}
         
 
@@ -172,34 +172,12 @@ def get_hotel_offers(
                 error_msg += f" - Response: {e.response.text}"
         
         # Don't raise error, return empty instead
-        print(f"   ⚠️  {error_msg}")
-        print(f"   Returning empty hotel list")
+        print(f"{error_msg}")
+        print(f"Returning empty hotel list")
         return {"data": []}
         
     except Exception as e:
-        print(f"   ⚠️  Failed to fetch hotel offers: {e}")
+        print(f"Failed to fetch hotel offers: {e}")
         return {"data": []}
 
-# def get_hotel_offers(hotel_id: str, target_currency: str):
-#     """
-#     Step 2: Get hotel offers by hotel ID and convert prices to target currency.
-#     """
-#     try:
-#         response = amadeus.shopping.hotel_offers_by_hotel.get(hotelId=hotel_id)
-#         offers = response.data  # List of offers for the hotel
-
-#         # Convert hotel offer prices to target currency
-#         for offer in offers:
-#             if "price" in offer:
-#                 original_price = float(offer["price"].get("total", 0))
-#                 original_currency = offer["price"].get("currency", "EUR")
-#                 if original_currency != target_currency:
-#                     converted_price = convert_currency(original_price, original_currency, target_currency)
-#                     offer["price"]["convertedTotal"] = converted_price
-#                     offer["price"]["convertedCurrency"] = target_currency
-
-#         return offers
-#     except ResponseError as error:
-#         print(f"Error fetching offers for hotel {hotel_id}: {error}")
-#         return []
 

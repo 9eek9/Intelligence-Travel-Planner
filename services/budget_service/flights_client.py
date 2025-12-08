@@ -1,4 +1,5 @@
 import requests
+from cache_manager import api_cache
 
 def get_amadeus_token(api_key, api_secret):
     """
@@ -19,6 +20,17 @@ def get_amadeus_token(api_key, api_secret):
     return token_data["access_token"]
 
 def get_flight_offers(origin, destination, depart_date, return_date, api_key, api_secret, target_currency="CAD"):
+    """
+    Fetch flight offers with caching
+    """
+    # Create cache key
+    cache_key = api_cache._make_key("flights", origin, destination, depart_date, return_date)
+    
+    # Check cache first
+    cached = api_cache.get(cache_key)
+    if cached:
+        return cached
+
     # Get access token
     access_token = get_amadeus_token(api_key, api_secret)
 
@@ -35,4 +47,8 @@ def get_flight_offers(origin, destination, depart_date, return_date, api_key, ap
         "max": 2
     }
     resp = requests.post(url, json=payload, headers=headers)
-    return resp.json()
+    data = resp.json()
+
+    # Cache the result
+    api_cache.set(cache_key, data)
+    return data

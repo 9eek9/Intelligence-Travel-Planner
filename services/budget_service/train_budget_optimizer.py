@@ -22,11 +22,11 @@ def train_budget_allocation_model():
     """Train XGBoost model to predict optimal budget allocation"""
     
     print("="*60)
-    print("🎓 TRAINING BUDGET ALLOCATION MODEL WITH YOUR DATA")
+    print("TRAINING BUDGET ALLOCATION MODEL WITH YOUR DATA")
     print("="*60)
     
     # Generate data using your sophisticated generator
-    print("\n📊 Generating training data...")
+    print("\nGenerating training data...")
     generator = SyntheticDataGenerator()
     df = generator.generate_training_data(n_samples=10000)
     
@@ -34,7 +34,7 @@ def train_budget_allocation_model():
     generator.print_statistics(df)
     
     # Prepare features
-    print("🔧 Preparing features...")
+    print("Preparing features...")
     
     # Encode categorical variables
     le_destination = LabelEncoder()
@@ -72,7 +72,7 @@ def train_budget_allocation_model():
     for target in ['accommodation_pct', 'transportation_pct', 'food_pct', 
                    'activities_pct', 'miscellaneous_pct']:
         
-        print(f"\n🤖 Training model for {target}...")
+        print(f"\nTraining model for {target}...")
         y = df[target]
         
         X_train, X_test, y_train, y_test = train_test_split(
@@ -119,9 +119,9 @@ def train_budget_allocation_model():
     with open(model_path, 'wb') as f:
         pickle.dump(model_data, f)
     
-    print(f"\n💾 Models saved to: {model_path}")
+    print(f"\nModels saved to: {model_path}")
     print("="*60)
-    print("✅ TRAINING COMPLETE!")
+    print("TRAINING COMPLETE!")
     print("="*60)
     
     return models, encoders

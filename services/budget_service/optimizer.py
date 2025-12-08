@@ -3,26 +3,6 @@ from datetime import datetime
 from fx_client import convert_currency
 from llm_cost_calculator import calculate_costs_with_llm
 
-def calculate_meal_costs(checkin: str, checkout: str,daily_meals: float = 75.0) -> Dict[str, float]:
-    """
-    Calculate  meal costs based on trip duration
-    
-    Args:
-        checkin: Check-in date (YYYY-MM-DD)
-        checkout: Check-out date (YYYY-MM-DD)
-        daily_meals: Cost per day for meals (default: 75 CAD)
-    
-    Returns:
-        Dictionary with meals total costs
-    """
-    checkin_date = datetime.strptime(checkin, "%Y-%m-%d")
-    checkout_date = datetime.strptime(checkout, "%Y-%m-%d")
-    nights = (checkout_date - checkin_date).days
-    
-    return {
-        "meals": round(nights * daily_meals, 2)
-    }
-
 def _compose_candidates(
     flights: List[Dict[str, Any]], 
     hotels: List[Dict[str, Any]], 
@@ -31,8 +11,10 @@ def _compose_candidates(
     meal: Optional[Dict[str, Any]], 
     currency: str,
     budget: float,
-    max_flights: int = 2,
-    max_hotels: int = 2
+    transit_reasoning: Optional[str] = None,  # Add transit reasoning
+    meals_reasoning: Optional[str] = None,  # Add meals reasoning
+    max_flights: int = 3,
+    max_hotels: int = 3
 ) -> List[Dict[str, Any]]:
     """
     Compose candidate travel packages from flights, hotels, and activities
@@ -60,13 +42,14 @@ def _compose_candidates(
         meal = {"meals": 0}
     
     combos = []
+    seen_keys = set()  # Track unique flight+hotel combinations
     
     # Sort activities by price (ascending)
     sorted_activities = sorted(activities, key=lambda x: float(x["price"]["amount"]))
 
     # Case 1: Only hotels available (no flights)
     if not flights and hotels:
-        print(f"\n⚠️  No flights available - creating hotel-only packages")
+        print(f"\nNo flights available - creating hotel-only packages")
         top_hotels = hotels[:max_hotels]
         for h in top_hotels:
             try:
@@ -94,56 +77,82 @@ def _compose_candidates(
                 current_activities_total = 0
 
                 for activity in sorted_activities:
-                    activity_currency = activity["price"].get("currencyCode", currency)  # Use default currency if missing
-                    print(f"🔍 Processing activity: {activity.get('name', 'Unknown')} - Currency: {activity_currency}")  # Log currency code
+                    # Create a deep copy to avoid modifying the original
+                    activity_copy = {
+                        "name": activity.get("name"),
+                        "price": {
+                            "amount": float(activity["price"]["amount"]),
+                            "currencyCode": activity["price"].get("currencyCode", currency)
+                        },
+                        "minimumDuration": activity.get("minimumDuration"),  # Fixed: Added closing quote
+                        "bookingLink": activity.get("bookingLink")
+                    }
+                    
+                    activity_currency = activity_copy["price"]["currencyCode"]
+                    print(f"Processing activity: {activity_copy.get('name', 'Unknown')} - Currency: {activity_currency}")
 
                     # Convert activity price to the target currency if needed
                     if activity_currency != currency:
-                        activity["price"]["amount"] = convert_currency(
-                            float(activity["price"]["amount"]),
+                        activity_copy["price"]["amount"] = convert_currency(
+                            activity_copy["price"]["amount"],
                             activity_currency,
                             currency
                         )
-                        activity["price"]["currencyCode"] = currency
-                        activity["price"]["amount"] = round(activity["price"]["amount"], 2)
+                        activity_copy["price"]["currencyCode"] = currency
+                        activity_copy["price"]["amount"] = round(activity_copy["price"]["amount"], 2)
 
                     # Filter activities within the remaining budget
-                    activity_price = float(activity["price"]["amount"])  # Ensure price is a float
+                    activity_price = activity_copy["price"]["amount"]
                     if activity_price <= remaining_budget:
-                        affordable_activities.append(activity)
+                        affordable_activities.append(activity_copy)
                         current_activities_total += activity_price
-                        remaining_budget -= activity_price  # Update remaining budget
+                        remaining_budget -= activity_price
                     else:
-                        break  # Stop adding activities once the budget is exceeded
+                        break
 
                 # Calculate total activity cost
                 total_activity_cost = current_activities_total
 
                 total = hotel_price + transit_cost + total_activity_cost + meals_cost
 
+                # Check for duplicates using Set
+                unique_key = ("no-flight", hotel_id)
+                if unique_key in seen_keys:
+                    print(f"  ⏭️ Skipping duplicate: No flight + Hotel {hotel_id}")
+                    continue
+                
+                seen_keys.add(unique_key)
+                
+                # Now append (only if not duplicate)
                 combos.append({
                     "flight": None,
                     "hotel": {
                         "id": hotel_id,
                         "name": hotel_name,
-                        "total": hotel_price,
+                        "price": hotel_price,  # Changed from "total" to "price"
                         "currency": hotel_currency,
                         "offer_id": offer.get("id", "unknown"),
-                        "room_description": room_description  # Add room description here
+                        "room_description": room_description
                     },
-                    "transit": transit,
+                    "transit": {
+                        **transit,
+                        "reasoning": transit_reasoning
+                    },
                     "activities": {
                         "total": total_activity_cost,
-                        "details": affordable_activities  # Include filtered activity data
+                        "details": affordable_activities
                     },
-                    "meals": meals_cost,
+                    "meals": {
+                        "total": meals_cost,
+                        "reasoning": meals_reasoning
+                    },
                     "currency": currency,
                     "total": round(total, 2)
                 })
 
-                print(f"✅ Hotel-only package: ${total:.2f}")
+                print(f"Hotel-only package: ${total:.2f}")
             except (KeyError, ValueError, TypeError) as e:
-                print(f"⚠️  Skipping hotel - {str(e)}")
+                print(f"Skipping hotel - {str(e)}")
                 continue
 
         if combos:
@@ -153,10 +162,11 @@ def _compose_candidates(
     
     # Case 2: Only flights available (no hotels)
     if flights and not hotels:
-        print(f"\n⚠️  No hotels available - creating flight-only packages")
+        print(f"\nNo hotels available - creating flight-only packages")
         top_flights = flights[:max_flights * 2]  # Get more flights when no hotels
         for f in top_flights:
             try:
+                flight_id = f.get("id", "unknown")
                 flight_price = float(f["price"]["total"])
                 flight_currency = f["price"].get("currency", currency)
                 transit_cost = float(transit.get("total", 0))
@@ -168,23 +178,34 @@ def _compose_candidates(
                 current_activities_total = 0
 
                 for activity in sorted_activities:
-                    activity_currency = activity["price"].get("currencyCode", currency)  # Use default currency if missing
-                    print(f"🔍 Processing activity: {activity.get('name', 'Unknown')} - Currency: {activity_currency}" ) # Log currency code
+                    # Create a deep copy to avoid modifying the original
+                    activity_copy = {
+                        "name": activity.get("name"),
+                        "price": {
+                            "amount": float(activity["price"]["amount"]),
+                            "currencyCode": activity["price"].get("currencyCode", currency)
+                        },
+                        "minimumDuration": activity.get("minimumDuration"),  # Fixed: Added closing quote
+                        "bookingLink": activity.get("bookingLink")
+                    }
+                    
+                    activity_currency = activity_copy["price"]["currencyCode"]
+                    print(f"Processing activity: {activity_copy.get('name', 'Unknown')} - Currency: {activity_currency}" ) # Log currency code
 
                     # Convert activity price to the target currency if needed
                     if activity_currency != currency:
-                        activity["price"]["amount"] = convert_currency(
-                            float(activity["price"]["amount"]),
+                        activity_copy["price"]["amount"] = convert_currency(
+                            activity_copy["price"]["amount"],
                             activity_currency,
                             currency
                         )
-                        activity["price"]["currencyCode"] = currency
-                        activity["price"]["amount"] = round(activity["price"]["amount"], 2)
+                        activity_copy["price"]["currencyCode"] = currency
+                        activity_copy["price"]["amount"] = round(activity_copy["price"]["amount"], 2)
 
                     # Filter activities within the remaining budget
-                    activity_price = float(activity["price"]["amount"])  # Ensure price is a float
+                    activity_price = activity_copy["price"]["amount"]  # Ensure price is a float
                     if activity_price <= remaining_budget:
-                        affordable_activities.append(activity)
+                        affordable_activities.append(activity_copy)
                         current_activities_total += activity_price
                         remaining_budget -= activity_price  # Update remaining budget
                     else:
@@ -195,26 +216,41 @@ def _compose_candidates(
 
                 total = flight_price + transit_cost + total_activity_cost + meals_cost
 
+                # Check for duplicates using Set
+                unique_key = (flight_id, "no-hotel")
+                if unique_key in seen_keys:
+                    print(f"Skipping duplicate: Flight {flight_id} + No hotel")
+                    continue
+                
+                seen_keys.add(unique_key)
+                
+                # Now append (only if not duplicate)
                 combos.append({
                     "flight": {
-                        "id": f.get("id", "unknown"),
+                        "id": flight_id,
                         "price": flight_price,
                         "currency": flight_currency
                     },
                     "hotel": None,
-                    "transit": transit,
+                    "transit": {
+                        **transit,
+                        "reasoning": transit_reasoning
+                    },
                     "activities": {
                         "total": total_activity_cost,
-                        "details": affordable_activities  # Include filtered activity data
+                        "details": affordable_activities
                     },
-                    "meals": meals_cost,
+                    "meals": {
+                        "total": meals_cost,
+                        "reasoning": meals_reasoning
+                    },
                     "currency": currency,
                     "total": round(total, 2)
                 })
 
-                print(f"✅ Flight-only package: ${total:.2f}")
+                print(f"Flight-only package: ${total:.2f}")
             except (KeyError, ValueError, TypeError) as e:
-                print(f"⚠️  Skipping flight - {str(e)}")
+                print(f"Skipping flight - {str(e)}")
                 continue
 
         if combos:
@@ -226,14 +262,13 @@ def _compose_candidates(
     top_flights = flights[:max_flights]
     top_hotels = hotels[:max_hotels]
 
-    print(f"\n🔄 Processing {len(top_flights)} flights × {len(top_hotels)} hotels...")
+    print(f"\nProcessing {len(top_flights)} flights × {len(top_hotels)} hotels...")
 
     for f in top_flights:
         try:
+            flight_id = f.get("id", "unknown")
             flight_price = float(f["price"]["total"])
             flight_currency = f["price"].get("currency", currency)
-            
-            # Extract detailed flight information
             carrier_code = f.get("validatingAirlineCodes", ["Unknown"])[0]
             
             flight_details = {
@@ -280,7 +315,7 @@ def _compose_candidates(
                 try:
                     # Amadeus hotel format: h["offers"][0]["price"]["total"]
                     if "offers" not in h or len(h["offers"]) == 0:
-                        print(f"⚠️  Skipping hotel - no offers available")
+                        print(f"Skipping hotel - no offers available")
                         continue
 
                     # Get first offer
@@ -305,22 +340,33 @@ def _compose_candidates(
                     current_activities_total = 0
 
                     for activity in sorted_activities:
-                        activity_currency = activity["price"].get("currencyCode", currency)  # Use default currency if missing
+                        # Create a deep copy to avoid modifying the original
+                        activity_copy = {
+                            "name": activity.get("name"),
+                            "price": {
+                                "amount": float(activity["price"]["amount"]),
+                                "currencyCode": activity["price"].get("currencyCode", currency)
+                            },
+                            "minimumDuration": activity.get("minimumDuration"),      # Fixed: Added closing quote
+                            "bookingLink": activity.get("bookingLink")
+                        }
+                        
+                        activity_currency = activity_copy["price"]["currencyCode"]
 
                         # Convert activity price to the target currency if needed
                         if activity_currency != currency:
-                            activity["price"]["amount"] = convert_currency(
-                                float(activity["price"]["amount"]),
+                            activity_copy["price"]["amount"] = convert_currency(
+                                activity_copy["price"]["amount"],
                                 activity_currency,
                                 currency
                             )
-                            activity["price"]["currencyCode"] = currency
-                            activity["price"]["amount"] = round(activity["price"]["amount"], 2)
+                            activity_copy["price"]["currencyCode"] = currency
+                            activity_copy["price"]["amount"] = round(activity_copy["price"]["amount"], 2)
 
                         # Filter activities within the remaining budget
-                        activity_price = float(activity["price"]["amount"])  # Ensure price is a float
+                        activity_price = activity_copy["price"]["amount"]  # Ensure price is a float
                         if activity_price <= remaining_budget:
-                            affordable_activities.append(activity)
+                            affordable_activities.append(activity_copy)
                             current_activities_total += activity_price
                             remaining_budget -= activity_price  # Update remaining budget
                         else:
@@ -331,42 +377,50 @@ def _compose_candidates(
 
                     # Calculate the total cost for this combination
                     total = flight_price + hotel_price + transit_cost + total_activity_cost + meals_cost
+                    if any(combo["total"] == round(total, 2) for combo in combos):
+                        print(f"totals exist in combos",round(total, 2))
+                        continue
+
 
                     combos.append({
-                        "flight": flight_details,  # Enhanced flight details
+                        "flight": flight_details,
                         "hotel": {
                             "id": hotel_id,
                             "name": hotel_name,
-                            "total": hotel_price,
+                            "price": hotel_price,
                             "currency": hotel_currency,
                             "offer_id": offer.get("id", "unknown"),
-                            "room_description": room_description  # Add room description here
+                            "room_description": room_description
                         },
-                        "transit": transit,
+                        "transit": {
+                            **transit,
+                            "reasoning": transit_reasoning
+                        },
                         "activities": {
                             "total": total_activity_cost,
-                            "details": affordable_activities  # Include filtered activity data
+                            "details": affordable_activities
                         },
-                        "meals": meals_cost,
+                        "meals": {
+                            "total": meals_cost,
+                            "reasoning": meals_reasoning
+                        },
                         "currency": currency,
                         "total": round(total, 2)
                     })
 
-                    # Add debug log for total calculation
-                    print(f"✅ Combo: Flight ${flight_price:.2f} {flight_currency} + Hotel ${hotel_price:.2f} {hotel_currency} + Transit ${transit_cost:.2f} + Activities ${total_activity_cost:.2f} + Meals ${meals_cost:.2f} = ${total:.2f}")
-
+                    
                 except (KeyError, ValueError, TypeError) as e:
-                    print(f"⚠️  Skipping hotel combination - {str(e)}")
+                    print(f"Skipping hotel combination - {str(e)}")
                     continue
 
         except (KeyError, ValueError, TypeError) as e:
-            print(f"⚠️  Skipping flight - {str(e)}")
+            print(f"Skipping flight - {str(e)}")
             continue
     
     if not combos:
         raise ValueError("No valid combinations could be created")
     
-    print(f"\n✅ Created {len(combos)} valid package combinations")
+    print(f"\nCreated {len(combos)} unique package combinations")
     return combos
 
 def compose_and_optimize(
@@ -382,11 +436,29 @@ def compose_and_optimize(
     travel_style: str = "moderate",
     max_results: int = 3
 ) -> List[Dict[str, Any]]:
-
+    """
+    Compose and optimize travel packages based on flight, hotel, and activity options
+    
+    Args:
+        flights: List of flight offers
+        hotels: List of hotel offers (Amadeus format)
+        activities: List of activities fetched from the API
+        fx_snapshot: Foreign exchange snapshot for currency conversion
+        budget: Maximum budget for the trip
+        currency: Currency code for the budget
+        destination: Travel destination
+        depart_date: Departure date
+        return_date: Return date
+        travel_style: Preferred travel style (e.g., luxury, moderate, budget)
+        max_results: Maximum number of package results to return
+    
+    Returns:
+        List of optimized travel packages
+    """
     if budget <= 0:
         raise ValueError("Budget must be positive")
     
-    print(f"\n🧮 Calculating meal and transit costs...")
+    print(f"\nCalculating meal and transit costs...")
     
     # Calculate minimum REQUIRED costs (flights + hotels only)
     # Activities are optional and will be added later based on remaining budget
@@ -412,7 +484,7 @@ def compose_and_optimize(
     
     estimated_remaining = budget - min_flight_cost - min_hotel_cost - activity_budget_reserve
     
-    print(f"💰 Budget Analysis:")
+    print(f"   Budget Analysis:")
     print(f"   Total Budget: ${budget:.2f} {currency}")
     print(f"   Min Flight: ${min_flight_cost:.2f} {currency}")
     print(f"   Min Hotel: ${min_hotel_cost:.2f} {currency}")
@@ -420,8 +492,12 @@ def compose_and_optimize(
     print(f"   Estimated for meals/transit: ${max(estimated_remaining, 0):.2f} {currency}")
     
     # Calculate meal and transit costs using LLM
+    transit_reasoning = None
+    meals_reasoning = None
+    
+    
     try:
-        print("🤖 Using AI to estimate meal and transit costs...")
+        print("Using AI to estimate meal and transit costs...")
         llm_costs = calculate_costs_with_llm(
             destination=destination,
             depart_date=depart_date,
@@ -432,34 +508,68 @@ def compose_and_optimize(
             travel_style=travel_style
         )
         
+        # Override with LLM values if successful
         meal = {"meals": llm_costs["total_meals"]}
         transit = {"total": llm_costs["total_transit"]}
         
+        # Split reasoning by sentences
+        full_reasoning = llm_costs.get("reasoning", "No reasoning provided")
+        
+        # Split by sentences (ending with .)
+        sentences = [s.strip() + '.' for s in full_reasoning.split('.') if s.strip()]
+        
+        # Separate meals and transit sentences
+        meals_sentences = []
+        transit_sentences = []
+        
+        for sentence in sentences:
+            sentence_lower = sentence.lower()
+            # Check if sentence is about meals/food
+            if any(keyword in sentence_lower for keyword in ['meal', 'food', 'eat', 'restaurant', 'street food', 'snack', 'drink', 'dining']):
+                meals_sentences.append(sentence)
+            # Check if sentence is about transit/transport
+            elif any(keyword in sentence_lower for keyword in ['transit', 'transport', 'bts', 'mrt', 'grab', 'taxi', 'tuk-tuk', 'ride', 'public transport']):
+                transit_sentences.append(sentence)
+            # If neither, add to both (like intro sentences)
+            elif 'these estimates' in sentence_lower or 'travel style' in sentence_lower:
+                meals_sentences.append(sentence)
+                transit_sentences.append(sentence)
+        
+        # Join sentences back together
+        meals_reasoning = ' '.join(meals_sentences) if meals_sentences else full_reasoning
+        transit_reasoning = ' '.join(transit_sentences) if transit_sentences else full_reasoning
+        
         print(f"AI calculated meals: ${meal['meals']:.2f}")
         print(f"AI calculated transit: ${transit['total']:.2f}")
-        print(f"AI Reasoning: {llm_costs['reasoning']}")
+        print(f"\nMeals Reasoning:\n{meals_reasoning}")
+        print(f"\nTransit Reasoning:\n{transit_reasoning}")
+        
     except Exception as e:
         print(f"LLM calculation failed: {str(e)}, using fallback values")
-        # Use manual calculation as fallback
-        meal = calculate_meal_costs(depart_date, return_date)
-        transit = {"total": 50.0}
-        print(f"Fallback meal calculation: ${meal['meals']:.2f}")
-        print(f"Fallback transit cost: ${transit['total']:.2f}")
+        # Use fallback reasoning
+        transit_reasoning = f"Using default transit estimate due to API limits. Estimated ${transit['total']:.2f} {currency} for local transportation."
+        meals_reasoning = f"Using default meal estimate due to API limits. Estimated ${meal['meals']:.2f} {currency} for meals during the trip."
+        
+        print(f"Fallback meals: ${meal['meals']:.2f}")
+        print(f"Fallback transit: ${transit['total']:.2f}")
     
-    # Compose candidates (handles empty flights or hotels gracefully)
-    candidates = _compose_candidates(flights, hotels, transit, activities, meal, currency, budget)
+    # Compose candidates (pass separate reasoning)
+    candidates = _compose_candidates(
+        flights, hotels, transit, activities, meal, currency, budget, 
+        transit_reasoning=transit_reasoning,
+        meals_reasoning=meals_reasoning
+    )
     
     # Greedy: choose those within budget, sort by total ascending
     within = [c for c in candidates if c["total"] <= budget]
     within.sort(key=lambda x: x["total"])
     
-    print(f"\n{len(within)} packages within budget of ${budget:.2f} {currency}")
+    print(f"{len(within)} packages within budget of ${budget:.2f} {currency}")
     
     # Get top results
     if within:
         top = within[:max_results]
     else:
-        # If nothing within budget, return cheapest options
         print(f"No packages within budget, returning {max_results} cheapest options")
         top = sorted(candidates, key=lambda x: x["total"])[:max_results]
 
@@ -468,5 +578,14 @@ def compose_and_optimize(
         q["fxSnapshot"] = {"base": fx_snapshot["base"], "ts": fx_snapshot["ts"]}
         q["status"] = "within-budget" if q["total"] <= budget else "over-budget"
         q["budgetRemaining"] = round(budget - q["total"], 2) if q["total"] <= budget else 0
+        
+        # Verify reasoning is present in transit and meals
+        if "transit" in q and isinstance(q["transit"], dict):
+            if "reasoning" not in q["transit"]:
+                q["transit"]["reasoning"] = transit_reasoning
+        
+        if "meals" in q and isinstance(q["meals"], dict):
+            if "reasoning" not in q["meals"]:
+                q["meals"]["reasoning"] = meals_reasoning
     
-    return top
+    return top  # Return only the packages list

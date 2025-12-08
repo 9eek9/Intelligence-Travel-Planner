@@ -145,8 +145,8 @@ Provide only valid JSON, no additional text."""
                 raise ValueError(f"Invalid LLM values: meals=${daily_meals}, transit=${daily_transit}")
             
             # Log what we got from LLM for debugging
-            print(f"🤖 LLM Response - Meals: ${daily_meals}/day, Transit: ${daily_transit}/day")
-            print(f"💡 LLM Reasoning: {reasoning}")
+            print(f"LLM Response - Meals: ${daily_meals}/day, Transit: ${daily_transit}/day")
+            print(f"LLM Reasoning: {reasoning}")
             
             return {
                 "daily_meals": round(daily_meals, 2),
@@ -159,7 +159,7 @@ Provide only valid JSON, no additional text."""
             }
         except (json.JSONDecodeError, KeyError, ValueError) as e:
             # Don't use fallback values - raise error instead
-            print(f"⚠️  LLM parsing failed: {str(e)}")
+            print(f"LLM parsing failed: {str(e)}")
             print(f"Raw LLM response: {response[:500]}")
             raise RuntimeError(f"Failed to get valid cost estimates from LLM: {str(e)}")
 
