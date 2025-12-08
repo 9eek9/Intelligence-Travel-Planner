@@ -32,3 +32,11 @@ psycopg2-binary
 # Seasonal Suggestions
 geopy
 
+<<<<<<< Updated upstream
+=======
+# budget optimization
+xgboost
+
+# chat-service
+google-generativeai
+>>>>>>> Stashed changes

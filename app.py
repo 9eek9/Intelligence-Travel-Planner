@@ -1,6 +1,7 @@
 from fastapi import FastAPI
 from routers import itinerary, sentiment, budget, chat, places, user
 from database.database import create_tables
+from routers.seasonal import router as seasonal_router # Tania added
 
 
 app = FastAPI(title="SmartTravelSystem API", version="1.0.0")
@@ -18,6 +19,9 @@ app.include_router(sentiment.router, prefix="/sentiment", tags=["Sentiment"])
 app.include_router(budget.router, prefix="/budget", tags=["budget"])
 app.include_router(chat.router, prefix="/chat", tags=["Chat"])
 app.include_router(user.router, prefix="/users", tags=["Users"])
+from routers.test_unsplash import router as debug_unsplash_router
+app.include_router(debug_unsplash_router)
+app.include_router(seasonal_router)
 
 
 @app.get("/")
