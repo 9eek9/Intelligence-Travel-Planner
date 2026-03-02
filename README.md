@@ -5,7 +5,7 @@ This repository contains my backend contributions to the Fanshawe College Capsto
 I developed two key backend modules - **Smart Itinerary Generation** ,**Sentiment Insights**, ,**Language**  using **FastAPI**, **Google Places API**,  **Google Reviews API** , **Gemini Flash 2.5** and **LLM Capabilities**.  
 These features enable the system to generate personalized travel itineraries and analyze user reviews dynamically.
 
-The related front project link is 
+The related frontend project link is 
 https://github.com/9eek9/Intelligence-Travel-Planner_FrontEnd 
 
 ---
